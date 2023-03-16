@@ -118,13 +118,15 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun playFroggerGame() {
+        val froggerGameBoardTextView = binding.froggerGameBoard
+
         val game = FroggerGame(11, 7) { board ->
             // Update the UI with the new board state.
-            // Replace this with the appropriate method to display the board in your UI.
-            Log.d("FroggerGame", board.joinToString(separator = "\n"))
+            val boardText = board.joinToString(separator = "\n") { row -> row.joinToString("") }
+            if (froggerGameBoardTextView != null) {
+                froggerGameBoardTextView.text = boardText
+            }
         }
-
-        game.printBoard()
 
         // Example movements: up, right, up, left, up
         game.movePlayer(0, -1)
@@ -132,10 +134,8 @@ class LoginActivity : AppCompatActivity() {
         game.movePlayer(0, -1)
         game.movePlayer(-1, 0)
         game.movePlayer(0, -1)
-
-        Log.d("FroggerGame", "\nAfter movements:")
-        game.printBoard()
     }
+
 
 }
 
