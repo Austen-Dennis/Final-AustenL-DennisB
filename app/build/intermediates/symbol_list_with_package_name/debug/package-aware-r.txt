@@ -2556,6 +2556,7 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
+id Camera
 id FUNCTION
 id META
 id NO_DEBUG
@@ -2775,6 +2776,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageview1
 id immediateStop
 id included
 id info
@@ -2895,6 +2897,7 @@ id peekHeight
 id percent
 id pin
 id position
+id post
 id postLayout
 id progress_circular
 id progress_horizontal
@@ -2941,6 +2944,7 @@ id sin
 id skipCollapsed
 id skipped
 id slide
+id sms
 id snackbar_action
 id snackbar_text
 id snap
@@ -3148,6 +3152,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout homepage
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3200,6 +3205,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout post
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

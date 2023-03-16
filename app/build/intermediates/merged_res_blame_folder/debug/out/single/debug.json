@@ -8,8 +8,16 @@
         "source": "finals.project.app-main-38:/mipmap-mdpi/ic_launcher.webp"
     },
     {
+        "merged": "finals.project.app-merged_res-36:/layout_homepage.xml.flat",
+        "source": "finals.project.app-main-38:/layout/homepage.xml"
+    },
+    {
         "merged": "finals.project.app-merged_res-36:/mipmap-anydpi-v33_ic_launcher.xml.flat",
         "source": "finals.project.app-main-38:/mipmap-anydpi-v33/ic_launcher.xml"
+    },
+    {
+        "merged": "finals.project.app-merged_res-36:/layout_post.xml.flat",
+        "source": "finals.project.app-main-38:/layout/post.xml"
     },
     {
         "merged": "finals.project.app-merged_res-36:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",

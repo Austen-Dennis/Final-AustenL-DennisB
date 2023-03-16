@@ -1,39 +1,39 @@
-finals.project.app-browser-1.4.0-0 C:\Users\mrden\.gradle\caches\transforms-3\0512bc401e954585d97ec8483d21717a\transformed\browser-1.4.0\res
-finals.project.app-lifecycle-runtime-2.4.0-1 C:\Users\mrden\.gradle\caches\transforms-3\0958c8dae50986cd00cde509f7377851\transformed\lifecycle-runtime-2.4.0\res
-finals.project.app-lifecycle-livedata-core-ktx-2.4.1-2 C:\Users\mrden\.gradle\caches\transforms-3\12027c20b6c9c99bfb1777d91496f4de\transformed\lifecycle-livedata-core-ktx-2.4.1\res
-finals.project.app-startup-runtime-1.0.0-3 C:\Users\mrden\.gradle\caches\transforms-3\196e22951359461b6cbc5db9fdbb1d3f\transformed\startup-runtime-1.0.0\res
-finals.project.app-coordinatorlayout-1.1.0-4 C:\Users\mrden\.gradle\caches\transforms-3\2844fd6d4ed497a3c34abf9f53fb6222\transformed\coordinatorlayout-1.1.0\res
-finals.project.app-lifecycle-process-2.4.0-5 C:\Users\mrden\.gradle\caches\transforms-3\2a198af58697c8e55604d3f874b1a981\transformed\lifecycle-process-2.4.0\res
-finals.project.app-lifecycle-livedata-ktx-2.4.1-6 C:\Users\mrden\.gradle\caches\transforms-3\31dfd7ccf1e16b6abd2a161ef84e777d\transformed\lifecycle-livedata-ktx-2.4.1\res
-finals.project.app-emoji2-1.0.0-7 C:\Users\mrden\.gradle\caches\transforms-3\31ff867d78f606501f65fca0fb143884\transformed\emoji2-1.0.0\res
-finals.project.app-firebase-common-20.3.1-8 C:\Users\mrden\.gradle\caches\transforms-3\372799ab33058ac48c6de36f8363efee\transformed\firebase-common-20.3.1\res
-finals.project.app-transition-1.2.0-9 C:\Users\mrden\.gradle\caches\transforms-3\38bae9de9200ee8429f20dc6474e26a8\transformed\transition-1.2.0\res
-finals.project.app-constraintlayout-2.1.3-10 C:\Users\mrden\.gradle\caches\transforms-3\3d62c862341b0a5741488ec20a98e26b\transformed\constraintlayout-2.1.3\res
-finals.project.app-appcompat-1.4.1-11 C:\Users\mrden\.gradle\caches\transforms-3\42312a05b17b387eb3812e0f7ba027bc\transformed\appcompat-1.4.1\res
-finals.project.app-lifecycle-livedata-2.4.1-12 C:\Users\mrden\.gradle\caches\transforms-3\522202ec6294502f6fe031872424976c\transformed\lifecycle-livedata-2.4.1\res
-finals.project.app-lifecycle-viewmodel-2.4.1-13 C:\Users\mrden\.gradle\caches\transforms-3\64c17de9ea72ff7a6b0e17488ede6109\transformed\lifecycle-viewmodel-2.4.1\res
-finals.project.app-viewpager2-1.0.0-14 C:\Users\mrden\.gradle\caches\transforms-3\6a91b9a0f6e238f89efe2d836e0a4023\transformed\viewpager2-1.0.0\res
-finals.project.app-fragment-1.3.6-15 C:\Users\mrden\.gradle\caches\transforms-3\711ee2d5f181b77cfa7a09caaa887031\transformed\fragment-1.3.6\res
-finals.project.app-material-1.5.0-16 C:\Users\mrden\.gradle\caches\transforms-3\80fb5fef4ef0f82d01421baae568371e\transformed\material-1.5.0\res
-finals.project.app-core-1.7.0-17 C:\Users\mrden\.gradle\caches\transforms-3\8841cb2bf8fde8de52c1b69ca8d3093d\transformed\core-1.7.0\res
-finals.project.app-cardview-1.0.0-18 C:\Users\mrden\.gradle\caches\transforms-3\9c945454013d3c81bc36445a64710e0b\transformed\cardview-1.0.0\res
-finals.project.app-drawerlayout-1.1.1-19 C:\Users\mrden\.gradle\caches\transforms-3\a151514ee601bf8e0ed45ac018e420f2\transformed\drawerlayout-1.1.1\res
-finals.project.app-annotation-experimental-1.1.0-20 C:\Users\mrden\.gradle\caches\transforms-3\a1715a8c8fb2d4609ad3dfe50f130069\transformed\annotation-experimental-1.1.0\res
-finals.project.app-lifecycle-livedata-core-2.4.1-21 C:\Users\mrden\.gradle\caches\transforms-3\bbf3dbac0517a2a786ccb27a171966f0\transformed\lifecycle-livedata-core-2.4.1\res
-finals.project.app-savedstate-1.1.0-22 C:\Users\mrden\.gradle\caches\transforms-3\bc0142d95569f0f8fae890e8eee1aa12\transformed\savedstate-1.1.0\res
-finals.project.app-play-services-basement-18.1.0-23 C:\Users\mrden\.gradle\caches\transforms-3\bcd6e3128d0937bd5ceee27ccd61b98b\transformed\play-services-basement-18.1.0\res
-finals.project.app-appcompat-resources-1.4.1-24 C:\Users\mrden\.gradle\caches\transforms-3\df8380df734ebf3c71f426e6b8771f82\transformed\appcompat-resources-1.4.1\res
-finals.project.app-core-ktx-1.7.0-25 C:\Users\mrden\.gradle\caches\transforms-3\e0d1a14ad00ff44c21df65df62004a5e\transformed\core-ktx-1.7.0\res
-finals.project.app-emoji2-views-helper-1.0.0-26 C:\Users\mrden\.gradle\caches\transforms-3\e643fad97fc8d24e366e38c64de3bd88\transformed\emoji2-views-helper-1.0.0\res
-finals.project.app-lifecycle-viewmodel-ktx-2.4.1-27 C:\Users\mrden\.gradle\caches\transforms-3\e9011b384a318d82522bd88692e9ce03\transformed\lifecycle-viewmodel-ktx-2.4.1\res
-finals.project.app-play-services-base-17.1.0-28 C:\Users\mrden\.gradle\caches\transforms-3\eeecdf6640e720ac21476e7aa53decbb\transformed\play-services-base-17.1.0\res
-finals.project.app-recyclerview-1.1.0-29 C:\Users\mrden\.gradle\caches\transforms-3\f0dde5f6c2d45ab638253d2b6fc999a5\transformed\recyclerview-1.1.0\res
-finals.project.app-google-services-30 C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\build\generated\res\google-services\debug
-finals.project.app-pngs-31 C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\build\generated\res\pngs\debug
-finals.project.app-resValues-32 C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\build\generated\res\resValues\debug
-finals.project.app-rs-33 C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\build\generated\res\rs\debug
-finals.project.app-packageDebugResources-34 C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-finals.project.app-packageDebugResources-35 C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-finals.project.app-merged_res-36 C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\build\intermediates\merged_res\debug
-finals.project.app-debug-37 C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\debug\res
-finals.project.app-main-38 C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\res
+finals.project.app-browser-1.4.0-0 C:\Users\Austen Lowder\.gradle\caches\transforms-3\0512bc401e954585d97ec8483d21717a\transformed\browser-1.4.0\res
+finals.project.app-lifecycle-runtime-2.4.0-1 C:\Users\Austen Lowder\.gradle\caches\transforms-3\0958c8dae50986cd00cde509f7377851\transformed\lifecycle-runtime-2.4.0\res
+finals.project.app-lifecycle-livedata-core-ktx-2.4.1-2 C:\Users\Austen Lowder\.gradle\caches\transforms-3\12027c20b6c9c99bfb1777d91496f4de\transformed\lifecycle-livedata-core-ktx-2.4.1\res
+finals.project.app-startup-runtime-1.0.0-3 C:\Users\Austen Lowder\.gradle\caches\transforms-3\196e22951359461b6cbc5db9fdbb1d3f\transformed\startup-runtime-1.0.0\res
+finals.project.app-coordinatorlayout-1.1.0-4 C:\Users\Austen Lowder\.gradle\caches\transforms-3\2844fd6d4ed497a3c34abf9f53fb6222\transformed\coordinatorlayout-1.1.0\res
+finals.project.app-lifecycle-process-2.4.0-5 C:\Users\Austen Lowder\.gradle\caches\transforms-3\2a198af58697c8e55604d3f874b1a981\transformed\lifecycle-process-2.4.0\res
+finals.project.app-lifecycle-livedata-ktx-2.4.1-6 C:\Users\Austen Lowder\.gradle\caches\transforms-3\31dfd7ccf1e16b6abd2a161ef84e777d\transformed\lifecycle-livedata-ktx-2.4.1\res
+finals.project.app-emoji2-1.0.0-7 C:\Users\Austen Lowder\.gradle\caches\transforms-3\31ff867d78f606501f65fca0fb143884\transformed\emoji2-1.0.0\res
+finals.project.app-firebase-common-20.3.1-8 C:\Users\Austen Lowder\.gradle\caches\transforms-3\372799ab33058ac48c6de36f8363efee\transformed\firebase-common-20.3.1\res
+finals.project.app-transition-1.2.0-9 C:\Users\Austen Lowder\.gradle\caches\transforms-3\38bae9de9200ee8429f20dc6474e26a8\transformed\transition-1.2.0\res
+finals.project.app-constraintlayout-2.1.3-10 C:\Users\Austen Lowder\.gradle\caches\transforms-3\3d62c862341b0a5741488ec20a98e26b\transformed\constraintlayout-2.1.3\res
+finals.project.app-appcompat-1.4.1-11 C:\Users\Austen Lowder\.gradle\caches\transforms-3\42312a05b17b387eb3812e0f7ba027bc\transformed\appcompat-1.4.1\res
+finals.project.app-lifecycle-livedata-2.4.1-12 C:\Users\Austen Lowder\.gradle\caches\transforms-3\522202ec6294502f6fe031872424976c\transformed\lifecycle-livedata-2.4.1\res
+finals.project.app-lifecycle-viewmodel-2.4.1-13 C:\Users\Austen Lowder\.gradle\caches\transforms-3\64c17de9ea72ff7a6b0e17488ede6109\transformed\lifecycle-viewmodel-2.4.1\res
+finals.project.app-viewpager2-1.0.0-14 C:\Users\Austen Lowder\.gradle\caches\transforms-3\6a91b9a0f6e238f89efe2d836e0a4023\transformed\viewpager2-1.0.0\res
+finals.project.app-fragment-1.3.6-15 C:\Users\Austen Lowder\.gradle\caches\transforms-3\711ee2d5f181b77cfa7a09caaa887031\transformed\fragment-1.3.6\res
+finals.project.app-material-1.5.0-16 C:\Users\Austen Lowder\.gradle\caches\transforms-3\80fb5fef4ef0f82d01421baae568371e\transformed\material-1.5.0\res
+finals.project.app-core-1.7.0-17 C:\Users\Austen Lowder\.gradle\caches\transforms-3\8841cb2bf8fde8de52c1b69ca8d3093d\transformed\core-1.7.0\res
+finals.project.app-cardview-1.0.0-18 C:\Users\Austen Lowder\.gradle\caches\transforms-3\9c945454013d3c81bc36445a64710e0b\transformed\cardview-1.0.0\res
+finals.project.app-drawerlayout-1.1.1-19 C:\Users\Austen Lowder\.gradle\caches\transforms-3\a151514ee601bf8e0ed45ac018e420f2\transformed\drawerlayout-1.1.1\res
+finals.project.app-annotation-experimental-1.1.0-20 C:\Users\Austen Lowder\.gradle\caches\transforms-3\a1715a8c8fb2d4609ad3dfe50f130069\transformed\annotation-experimental-1.1.0\res
+finals.project.app-lifecycle-livedata-core-2.4.1-21 C:\Users\Austen Lowder\.gradle\caches\transforms-3\bbf3dbac0517a2a786ccb27a171966f0\transformed\lifecycle-livedata-core-2.4.1\res
+finals.project.app-savedstate-1.1.0-22 C:\Users\Austen Lowder\.gradle\caches\transforms-3\bc0142d95569f0f8fae890e8eee1aa12\transformed\savedstate-1.1.0\res
+finals.project.app-play-services-basement-18.1.0-23 C:\Users\Austen Lowder\.gradle\caches\transforms-3\bcd6e3128d0937bd5ceee27ccd61b98b\transformed\play-services-basement-18.1.0\res
+finals.project.app-appcompat-resources-1.4.1-24 C:\Users\Austen Lowder\.gradle\caches\transforms-3\df8380df734ebf3c71f426e6b8771f82\transformed\appcompat-resources-1.4.1\res
+finals.project.app-core-ktx-1.7.0-25 C:\Users\Austen Lowder\.gradle\caches\transforms-3\e0d1a14ad00ff44c21df65df62004a5e\transformed\core-ktx-1.7.0\res
+finals.project.app-emoji2-views-helper-1.0.0-26 C:\Users\Austen Lowder\.gradle\caches\transforms-3\e643fad97fc8d24e366e38c64de3bd88\transformed\emoji2-views-helper-1.0.0\res
+finals.project.app-lifecycle-viewmodel-ktx-2.4.1-27 C:\Users\Austen Lowder\.gradle\caches\transforms-3\e9011b384a318d82522bd88692e9ce03\transformed\lifecycle-viewmodel-ktx-2.4.1\res
+finals.project.app-play-services-base-17.1.0-28 C:\Users\Austen Lowder\.gradle\caches\transforms-3\eeecdf6640e720ac21476e7aa53decbb\transformed\play-services-base-17.1.0\res
+finals.project.app-recyclerview-1.1.0-29 C:\Users\Austen Lowder\.gradle\caches\transforms-3\f0dde5f6c2d45ab638253d2b6fc999a5\transformed\recyclerview-1.1.0\res
+finals.project.app-google-services-30 C:\Users\Austen Lowder\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\build\generated\res\google-services\debug
+finals.project.app-pngs-31 C:\Users\Austen Lowder\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\build\generated\res\pngs\debug
+finals.project.app-resValues-32 C:\Users\Austen Lowder\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\build\generated\res\resValues\debug
+finals.project.app-rs-33 C:\Users\Austen Lowder\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\build\generated\res\rs\debug
+finals.project.app-packageDebugResources-34 C:\Users\Austen Lowder\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+finals.project.app-packageDebugResources-35 C:\Users\Austen Lowder\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+finals.project.app-merged_res-36 C:\Users\Austen Lowder\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\build\intermediates\merged_res\debug
+finals.project.app-debug-37 C:\Users\Austen Lowder\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\debug\res
+finals.project.app-main-38 C:\Users\Austen Lowder\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\res
