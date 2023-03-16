@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "134883669912",
+    "project_id": "get-together-efaf7",
+    "storage_bucket": "get-together-efaf7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134883669912:android:70bf9391825e023e7f1ded",
+        "android_client_info": {
+          "package_name": "finals.project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134883669912-d6b281r87piopscif1ib0k8jtjoqu2hi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDonUrMtkV6Drg92MuRyXA3O-RUOT_itfo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134883669912-d6b281r87piopscif1ib0k8jtjoqu2hi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

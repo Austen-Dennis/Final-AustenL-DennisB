@@ -8,6 +8,7 @@ import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
@@ -15,6 +16,7 @@ import android.widget.Toast
 import finals.project.databinding.ActivityLoginBinding
 
 import finals.project.R
+import finals.project.ui.captcha.FroggerGame
 
 class LoginActivity : AppCompatActivity() {
 
@@ -22,6 +24,10 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        /** play frogger game **/
+        playFroggerGame()
+
         super.onCreate(savedInstanceState)
 
         binding = ActivityLoginBinding.inflate(layoutInflater)
@@ -62,7 +68,7 @@ class LoginActivity : AppCompatActivity() {
             setResult(Activity.RESULT_OK)
 
             //Complete and destroy login activity once successful
-            finish()
+            //finish()
         })
 
         username.afterTextChanged {
@@ -98,13 +104,11 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun updateUiWithUser(model: LoggedInUserView) {
-        val welcome = getString(R.string.welcome)
-        val displayName = model.displayName
+   private fun updateUiWithUser(model: LoggedInUserView) {
         // TODO : initiate successful logged in experience
         Toast.makeText(
                 applicationContext,
-                "$welcome $displayName",
+                "Log in successful",
                 Toast.LENGTH_LONG
         ).show()
     }
@@ -112,7 +116,33 @@ class LoginActivity : AppCompatActivity() {
     private fun showLoginFailed(@StringRes errorString: Int) {
         Toast.makeText(applicationContext, errorString, Toast.LENGTH_SHORT).show()
     }
+
+    private fun playFroggerGame() {
+        val game = FroggerGame(11, 7) { board ->
+            // Update the UI with the new board state.
+            // Replace this with the appropriate method to display the board in your UI.
+            Log.d("FroggerGame", board.joinToString(separator = "\n"))
+        }
+
+        game.printBoard()
+
+        // Example movements: up, right, up, left, up
+        game.movePlayer(0, -1)
+        game.movePlayer(1, 0)
+        game.movePlayer(0, -1)
+        game.movePlayer(-1, 0)
+        game.movePlayer(0, -1)
+
+        Log.d("FroggerGame", "\nAfter movements:")
+        game.printBoard()
+    }
+
 }
+
+/***
+ * Captcha Minigame
+ */
+
 
 /**
  * Extension function to simplify setting an afterTextChanged action to EditText components.
