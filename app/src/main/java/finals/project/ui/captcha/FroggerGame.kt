@@ -1,7 +1,6 @@
 package finals.project.ui.captcha
 
-class FroggerGame(private val width: Int, private val height: Int, private val onUpdate: (CharArray) -> Unit) {
-    // ...
+class FroggerGame(private val width: Int, private val height: Int, private val onUpdate: (Array<CharArray>) -> Unit) {
     private val board: Array<CharArray> = Array(height) { CharArray(width) }
     private var playerX = width / 2
     private var playerY = height - 1
@@ -21,6 +20,7 @@ class FroggerGame(private val width: Int, private val height: Int, private val o
             }
         }
         board[playerY][playerX] = 'F'
+        onUpdate(board)
     }
 
     fun printBoard() {
@@ -41,6 +41,7 @@ class FroggerGame(private val width: Int, private val height: Int, private val o
             playerX = newX
             playerY = newY
             board[playerY][playerX] = 'F'
+            onUpdate(board)
         }
     }
 }
