@@ -68,7 +68,7 @@ class LoginActivity : AppCompatActivity() {
             setResult(Activity.RESULT_OK)
 
             //Complete and destroy login activity once successful
-            finish()
+            //finish()
         })
 
         username.afterTextChanged {
@@ -104,13 +104,11 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun updateUiWithUser(model: LoggedInUserView) {
-        val welcome = getString(R.string.welcome)
-        val displayName = model.displayName
+   private fun updateUiWithUser(model: LoggedInUserView) {
         // TODO : initiate successful logged in experience
         Toast.makeText(
                 applicationContext,
-                "$welcome $displayName",
+                "Log in successful",
                 Toast.LENGTH_LONG
         ).show()
     }

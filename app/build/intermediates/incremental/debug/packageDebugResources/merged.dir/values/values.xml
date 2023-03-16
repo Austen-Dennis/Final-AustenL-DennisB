@@ -11,10 +11,17 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="app_name">FInalProject</string>
+    <string name="app_name">FinalProject</string>
+    <string name="default_web_client_id" translatable="false">134883669912-d6b281r87piopscif1ib0k8jtjoqu2hi.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">134883669912</string>
+    <string name="google_api_key" translatable="false">AIzaSyDonUrMtkV6Drg92MuRyXA3O-RUOT_itfo</string>
+    <string name="google_app_id" translatable="false">1:134883669912:android:70bf9391825e023e7f1ded</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDonUrMtkV6Drg92MuRyXA3O-RUOT_itfo</string>
+    <string name="google_storage_bucket" translatable="false">get-together-efaf7.appspot.com</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="project_id" translatable="false">get-together-efaf7</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="welcome">"Welcome !"</string>
