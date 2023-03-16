@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -24,6 +25,23 @@ public final class ActivityLoginBinding implements ViewBinding {
   @NonNull
   public final ConstraintLayout container;
 
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout-w1240dp/</li>
+   *   <li>layout-w936dp/</li>
+   * </ul>
+   */
+  @Nullable
+  public final TextView froggerGameBoard;
+
   @NonNull
   public final ProgressBar loading;
 
@@ -37,10 +55,12 @@ public final class ActivityLoginBinding implements ViewBinding {
   public final EditText username;
 
   private ActivityLoginBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout container, @NonNull ProgressBar loading, @NonNull Button login,
-      @NonNull EditText password, @NonNull EditText username) {
+      @NonNull ConstraintLayout container, @Nullable TextView froggerGameBoard,
+      @NonNull ProgressBar loading, @NonNull Button login, @NonNull EditText password,
+      @NonNull EditText username) {
     this.rootView = rootView;
     this.container = container;
+    this.froggerGameBoard = froggerGameBoard;
     this.loading = loading;
     this.login = login;
     this.password = password;
@@ -76,6 +96,9 @@ public final class ActivityLoginBinding implements ViewBinding {
     missingId: {
       ConstraintLayout container = (ConstraintLayout) rootView;
 
+      id = R.id.frogger_game_board;
+      TextView froggerGameBoard = ViewBindings.findChildViewById(rootView, id);
+
       id = R.id.loading;
       ProgressBar loading = ViewBindings.findChildViewById(rootView, id);
       if (loading == null) {
@@ -100,8 +123,8 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityLoginBinding((ConstraintLayout) rootView, container, loading, login,
-          password, username);
+      return new ActivityLoginBinding((ConstraintLayout) rootView, container, froggerGameBoard,
+          loading, login, password, username);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

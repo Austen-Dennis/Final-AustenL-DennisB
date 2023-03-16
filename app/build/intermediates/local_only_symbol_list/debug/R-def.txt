@@ -12,7 +12,9 @@ dimen activity_vertical_margin
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 id Camera
+id channelListView
 id container
+id frogger_game_board
 id home
 id imageview1
 id loading
@@ -24,6 +26,7 @@ id username
 layout activity_login
 layout homepage
 layout post
+layout smspage
 mipmap ic_launcher
 mipmap ic_launcher_round
 string action_sign_in
