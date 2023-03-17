@@ -19,10 +19,14 @@ id home
 id imageview1
 id loading
 id login
+id messageInputView
+id messageListHeaderView
+id messageListView
 id password
 id post
 id sms
 id username
+layout activity_channel
 layout activity_login
 layout homepage
 layout post

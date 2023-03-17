@@ -79,6 +79,7 @@
     <color name="m3_sys_color_dynamic_dark_on_tertiary">@color/m3_ref_palette_dynamic_tertiary20</color>
     <color name="m3_sys_color_dynamic_dark_on_tertiary_container">@color/m3_ref_palette_dynamic_tertiary90</color>
     <color name="m3_sys_color_dynamic_dark_outline">@color/m3_ref_palette_dynamic_neutral_variant60</color>
+    <color name="m3_sys_color_dynamic_dark_outline_variant">@color/m3_ref_palette_dynamic_neutral_variant30</color>
     <color name="m3_sys_color_dynamic_dark_primary">@color/m3_ref_palette_dynamic_primary80</color>
     <color name="m3_sys_color_dynamic_dark_primary_container">@color/m3_ref_palette_dynamic_primary30</color>
     <color name="m3_sys_color_dynamic_dark_secondary">@color/m3_ref_palette_dynamic_secondary80</color>
@@ -101,6 +102,7 @@
     <color name="m3_sys_color_dynamic_light_on_tertiary">@color/m3_ref_palette_dynamic_tertiary100</color>
     <color name="m3_sys_color_dynamic_light_on_tertiary_container">@color/m3_ref_palette_dynamic_tertiary10</color>
     <color name="m3_sys_color_dynamic_light_outline">@color/m3_ref_palette_dynamic_neutral_variant50</color>
+    <color name="m3_sys_color_dynamic_light_outline_variant">@color/m3_ref_palette_dynamic_neutral_variant80</color>
     <color name="m3_sys_color_dynamic_light_primary">@color/m3_ref_palette_dynamic_primary40</color>
     <color name="m3_sys_color_dynamic_light_primary_container">@color/m3_ref_palette_dynamic_primary90</color>
     <color name="m3_sys_color_dynamic_light_secondary">@color/m3_ref_palette_dynamic_secondary40</color>
@@ -175,6 +177,8 @@
     <color name="material_dynamic_tertiary95">@color/m3_ref_palette_dynamic_tertiary95</color>
     <color name="material_dynamic_tertiary99">@color/m3_ref_palette_dynamic_tertiary99</color>
     <style name="Theme.Material3.DynamicColors.Dark" parent="Theme.Material3.Dark">
+    <item name="isMaterial3DynamicColorApplied">true</item>
+
     
     <item name="colorPrimary">@color/m3_sys_color_dynamic_dark_primary</item>
     <item name="colorOnPrimary">@color/m3_sys_color_dynamic_dark_on_primary</item>
@@ -219,6 +223,8 @@
     <item name="android:textColorAlertDialogListItem">@color/m3_dynamic_dark_default_color_primary_text</item>
   </style>
     <style name="Theme.Material3.DynamicColors.Light" parent="Theme.Material3.Light">
+    <item name="isMaterial3DynamicColorApplied">true</item>
+
     
     <item name="colorPrimary">@color/m3_sys_color_dynamic_light_primary</item>
     <item name="colorOnPrimary">@color/m3_sys_color_dynamic_light_on_primary</item>
@@ -263,6 +269,8 @@
     <item name="android:textColorAlertDialogListItem">@color/m3_dynamic_default_color_primary_text</item>
   </style>
     <style name="ThemeOverlay.Material3.DynamicColors.Dark" parent="">
+    <item name="isMaterial3DynamicColorApplied">true</item>
+
     
     <item name="colorPrimary">@color/m3_sys_color_dynamic_dark_primary</item>
     <item name="colorOnPrimary">@color/m3_sys_color_dynamic_dark_on_primary</item>
@@ -286,6 +294,7 @@
     <item name="colorSurfaceInverse">@color/m3_sys_color_dynamic_dark_inverse_surface</item>
     <item name="colorOnSurfaceInverse">@color/m3_sys_color_dynamic_dark_inverse_on_surface</item>
     <item name="colorOutline">@color/m3_sys_color_dynamic_dark_outline</item>
+    <item name="colorOutlineVariant">@color/m3_sys_color_dynamic_dark_outline_variant</item>
     <item name="colorError">@color/m3_sys_color_dark_error</item>
     <item name="colorOnError">@color/m3_sys_color_dark_on_error</item>
     <item name="colorErrorContainer">@color/m3_sys_color_dark_error_container</item>
@@ -307,6 +316,8 @@
     <item name="android:textColorAlertDialogListItem">@color/m3_dynamic_dark_default_color_primary_text</item>
   </style>
     <style name="ThemeOverlay.Material3.DynamicColors.Light" parent="">
+    <item name="isMaterial3DynamicColorApplied">true</item>
+
     
     <item name="colorPrimary">@color/m3_sys_color_dynamic_light_primary</item>
     <item name="colorOnPrimary">@color/m3_sys_color_dynamic_light_on_primary</item>
@@ -330,6 +341,7 @@
     <item name="colorSurfaceInverse">@color/m3_sys_color_dynamic_light_inverse_surface</item>
     <item name="colorOnSurfaceInverse">@color/m3_sys_color_dynamic_light_inverse_on_surface</item>
     <item name="colorOutline">@color/m3_sys_color_dynamic_light_outline</item>
+    <item name="colorOutlineVariant">@color/m3_sys_color_dynamic_light_outline_variant</item>
     <item name="colorError">@color/m3_sys_color_light_error</item>
     <item name="colorOnError">@color/m3_sys_color_light_on_error</item>
     <item name="colorErrorContainer">@color/m3_sys_color_light_error_container</item>

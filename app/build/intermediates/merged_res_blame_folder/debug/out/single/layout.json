@@ -1,18 +1,22 @@
 [
     {
-        "merged": "finals.project.app-mergeDebugResources-55:/layout/post.xml",
-        "source": "finals.project.app-main-58:/layout/post.xml"
+        "merged": "finals.project.app-mergeDebugResources-58:/layout/smspage.xml",
+        "source": "finals.project.app-main-61:/layout/smspage.xml"
     },
     {
-        "merged": "finals.project.app-mergeDebugResources-55:/layout/smspage.xml",
-        "source": "finals.project.app-main-58:/layout/smspage.xml"
+        "merged": "finals.project.app-mergeDebugResources-58:/layout/activity_login.xml",
+        "source": "finals.project.app-main-61:/layout/activity_login.xml"
     },
     {
-        "merged": "finals.project.app-mergeDebugResources-55:/layout/activity_login.xml",
-        "source": "finals.project.app-main-58:/layout/activity_login.xml"
+        "merged": "finals.project.app-mergeDebugResources-58:/layout/homepage.xml",
+        "source": "finals.project.app-main-61:/layout/homepage.xml"
     },
     {
-        "merged": "finals.project.app-mergeDebugResources-55:/layout/homepage.xml",
-        "source": "finals.project.app-main-58:/layout/homepage.xml"
+        "merged": "finals.project.app-mergeDebugResources-58:/layout/post.xml",
+        "source": "finals.project.app-main-61:/layout/post.xml"
+    },
+    {
+        "merged": "finals.project.app-mergeDebugResources-58:/layout/activity_channel.xml",
+        "source": "finals.project.app-main-61:/layout/activity_channel.xml"
     }
 ]
