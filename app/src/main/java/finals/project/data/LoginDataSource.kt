@@ -15,15 +15,6 @@ class LoginDataSource {
             // TODO: handle loggedInUser authentication
             val fakeUser = LoggedInUser(java.util.UUID.randomUUID().toString(), username)
             return Result.Success(fakeUser)
-            FirebaseAuth.getInstance().createUserWithEmailAndPassword(username.toString(),
-                password
-            )
-            val firebaseUser: FirebaseUser
-            /*Toast.makeText(
-                applicationContext,
-                username.toString(),
-                Toast.LENGTH_LONG
-            ).show() */
         } catch (e: Throwable) {
             return Result.Error(IOException("Error logging in", e))
         }

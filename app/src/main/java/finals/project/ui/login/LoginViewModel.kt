@@ -25,15 +25,7 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
 
         if (result is Result.Success) {
             _loginResult.value = LoginResult(success = LoggedInUserView(displayName = result.data.displayName))
-            FirebaseAuth.getInstance().createUserWithEmailAndPassword(username,
-                password
-            )
-            val firebaseUser: FirebaseUser
-            /*Toast.makeText(
-                applicationContext,
-                username.toString(),
-                Toast.LENGTH_LONG
-            ).show()*/
+
         } else {
             _loginResult.value = LoginResult(error = R.string.login_failed)
 
@@ -55,7 +47,7 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
         return if (username.contains('@')) {
             Patterns.EMAIL_ADDRESS.matcher(username).matches()
         } else {
-            username.isNotBlank()
+            return false
         }
     }
 

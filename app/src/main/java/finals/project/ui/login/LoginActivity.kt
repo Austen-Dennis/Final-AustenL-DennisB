@@ -1,6 +1,7 @@
 package finals.project.ui.login
 
 import android.app.Activity
+import android.content.Intent
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -19,6 +20,7 @@ import com.google.firebase.ktx.Firebase
 import finals.project.databinding.ActivityLoginBinding
 
 import finals.project.R
+import finals.project.smsPage.MainActivity
 import finals.project.ui.captcha.FroggerGame
 
 class LoginActivity : AppCompatActivity() {
@@ -73,18 +75,6 @@ class LoginActivity : AppCompatActivity() {
             if (loginResult.success != null) {
                 updateUiWithUser(loginResult.success)
             }
-            FirebaseAuth.getInstance().createUserWithEmailAndPassword(username.toString(),
-                password.toString()
-            )
-            val firebaseUser: FirebaseUser
-            /*Toast.makeText(
-                applicationContext,
-                username.toString(),
-                Toast.LENGTH_LONG
-            ).show() */
-            setResult(Activity.RESULT_OK)
-            //Complete and destroy login activity once successful
-            //finish()
         })
 
         username.afterTextChanged {
@@ -117,7 +107,7 @@ class LoginActivity : AppCompatActivity() {
             login.setOnClickListener {
                 loading.visibility = View.VISIBLE
                 loginViewModel.login(username.text.toString(), password.text.toString())
-
+                setContentView(R.layout.homepage)
             }
         }
     }
