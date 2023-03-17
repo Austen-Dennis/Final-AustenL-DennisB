@@ -12,6 +12,10 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import finals.project.databinding.ActivityLoginBinding
 
 import finals.project.R
@@ -22,11 +26,14 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var loginViewModel: LoginViewModel
     private lateinit var binding: ActivityLoginBinding
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
+        // ...
+        // Initialize Firebase Auth
         /** play frogger game **/
         //playFroggerGame()
-
+        var auth: FirebaseAuth = Firebase.auth
         super.onCreate(savedInstanceState)
 
         binding = ActivityLoginBinding.inflate(layoutInflater)
@@ -36,6 +43,7 @@ class LoginActivity : AppCompatActivity() {
         val password = binding.password
         val login = binding.login
         val loading = binding.loading
+
 
         loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
                 .get(LoginViewModel::class.java)
@@ -52,6 +60,7 @@ class LoginActivity : AppCompatActivity() {
             if (loginState.passwordError != null) {
                 password.error = getString(loginState.passwordError)
             }
+
         })
 
         loginViewModel.loginResult.observe(this@LoginActivity, Observer {
@@ -64,8 +73,16 @@ class LoginActivity : AppCompatActivity() {
             if (loginResult.success != null) {
                 updateUiWithUser(loginResult.success)
             }
+            FirebaseAuth.getInstance().createUserWithEmailAndPassword(username.toString(),
+                password.toString()
+            )
+            val firebaseUser: FirebaseUser
+            /*Toast.makeText(
+                applicationContext,
+                username.toString(),
+                Toast.LENGTH_LONG
+            ).show() */
             setResult(Activity.RESULT_OK)
-
             //Complete and destroy login activity once successful
             //finish()
         })
@@ -91,6 +108,7 @@ class LoginActivity : AppCompatActivity() {
                         loginViewModel.login(
                                 username.text.toString(),
                                 password.text.toString()
+
                         )
                 }
                 false
@@ -99,6 +117,7 @@ class LoginActivity : AppCompatActivity() {
             login.setOnClickListener {
                 loading.visibility = View.VISIBLE
                 loginViewModel.login(username.text.toString(), password.text.toString())
+
             }
         }
     }
@@ -107,9 +126,10 @@ class LoginActivity : AppCompatActivity() {
         // TODO : initiate successful logged in experience
         Toast.makeText(
                 applicationContext,
-                "Log in successful",
+                "User Registered Successfully",
                 Toast.LENGTH_LONG
         ).show()
+
     }
 
     private fun showLoginFailed(@StringRes errorString: Int) {
