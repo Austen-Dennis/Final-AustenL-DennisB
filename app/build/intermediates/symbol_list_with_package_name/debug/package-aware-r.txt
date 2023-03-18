@@ -3850,6 +3850,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable placeholder
 drawable stream_ic_notification
 drawable stream_text_color_selector
 drawable stream_ui_arrow_left
@@ -4334,6 +4335,7 @@ id imageAttachmentContent
 id imageAttachmentView
 id imageCountTextView
 id imageView
+id imageView2
 id imagesPager
 id imageview1
 id immediateStop

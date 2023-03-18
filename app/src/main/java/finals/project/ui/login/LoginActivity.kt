@@ -30,9 +30,6 @@ class LoginActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
-        // ...
-        // Initialize Firebase Auth
         /** play frogger game **/
         //playFroggerGame()
         var auth: FirebaseAuth = Firebase.auth

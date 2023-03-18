@@ -3849,6 +3849,7 @@ int drawable notification_template_icon_bg 0x7f0800f2
 int drawable notification_template_icon_low_bg 0x7f0800f3
 int drawable notification_tile_bg 0x7f0800f4
 int drawable notify_panel_notification_icon_bg 0x7f0800f5
+int drawable placeholder 0x7f080172
 int drawable stream_ic_notification 0x7f0800f6
 int drawable stream_text_color_selector 0x7f0800f7
 int drawable stream_ui_arrow_left 0x7f0800f8
@@ -4333,6 +4334,7 @@ int id imageAttachmentContent 0x7f0a0161
 int id imageAttachmentView 0x7f0a0162
 int id imageCountTextView 0x7f0a0163
 int id imageView 0x7f0a0164
+int id imageView2 0x7f0a032a
 int id imagesPager 0x7f0a0165
 int id imageview1 0x7f0a0166
 int id immediateStop 0x7f0a0167
