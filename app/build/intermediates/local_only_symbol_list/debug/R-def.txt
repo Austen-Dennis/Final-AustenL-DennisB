@@ -12,12 +12,15 @@ dimen activity_vertical_margin
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable placeholder
+drawable the_get_together
+drawable the_get_together_dark_
 id Camera
 id channelListView
 id container
 id frogger_game_board
 id home
 id imageView2
+id imageView4
 id imageview1
 id loading
 id login

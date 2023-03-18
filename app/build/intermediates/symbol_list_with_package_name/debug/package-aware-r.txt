@@ -3973,6 +3973,8 @@ drawable stream_ui_thread_replies_ornament_left
 drawable stream_ui_thread_replies_ornament_right
 drawable stream_ui_white_shape_8dp_corners
 drawable test_level_drawable
+drawable the_get_together
+drawable the_get_together_dark_
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 font stream_roboto_bold
@@ -4336,6 +4338,7 @@ id imageAttachmentView
 id imageCountTextView
 id imageView
 id imageView2
+id imageView4
 id imagesPager
 id imageview1
 id immediateStop

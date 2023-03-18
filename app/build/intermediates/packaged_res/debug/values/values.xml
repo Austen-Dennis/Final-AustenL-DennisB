@@ -11,7 +11,7 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="app_name">GetTogether</string>
+    <string name="app_name">Get Together</string>
     <string name="default_web_client_id" translatable="false">134883669912-d6b281r87piopscif1ib0k8jtjoqu2hi.apps.googleusercontent.com</string>
     <string name="gcm_defaultSenderId" translatable="false">134883669912</string>
     <string name="google_api_key" translatable="false">AIzaSyDonUrMtkV6Drg92MuRyXA3O-RUOT_itfo</string>
@@ -27,8 +27,8 @@
     <string name="welcome">"Welcome !"</string>
     <style name="Theme.FInalProject" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/stream_gray_dark</item>
+        <item name="colorPrimaryVariant">@color/black</item>
         <item name="colorOnPrimary">@color/white</item>
         
         <item name="colorSecondary">@color/teal_200</item>

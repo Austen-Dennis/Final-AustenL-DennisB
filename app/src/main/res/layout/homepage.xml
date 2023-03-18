@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#AFAFAF"
     tools:context=".ui.HomeActivity">
 
     <ImageView
@@ -43,6 +44,6 @@
         android:layout_marginBottom="16dp"
         android:text="SMS"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/post"/>
+        app:layout_constraintStart_toEndOf="@+id/post" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
