@@ -25,4 +25,14 @@ class LoginTest {
         val emailAddress = "Womper@gmail.com"
         assertTrue(LoginViewModel.isUserNameValid(emailAddress))
     }
+    @Test
+    fun passwordIsNotValid() {
+        val password = "womp"
+        assertFalse(LoginViewModel.isPasswordValid(password))
+    }
+    @Test
+    fun passwordIsValid() {
+        val password = "womper"
+        assertTrue(LoginViewModel.isPasswordValid(password))
+    }
 }
