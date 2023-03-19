@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(finals.project.R.layout.activity_main)
 
             displayChatMessages();
+
         val fab = findViewById<View>(R.id.fab) as FloatingActionButton
         fab.setOnClickListener {
             val input = findViewById<View>(R.id.input) as EditText
