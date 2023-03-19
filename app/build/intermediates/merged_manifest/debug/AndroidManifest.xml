@@ -49,7 +49,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.FInalProject" >
         <activity
-            android:name="finals.project.MazeActivity"
+            android:name="finals.project.MainActivity"
             android:exported="false" />
         <activity
             android:name="finals.project.ui.HomeActivity"
