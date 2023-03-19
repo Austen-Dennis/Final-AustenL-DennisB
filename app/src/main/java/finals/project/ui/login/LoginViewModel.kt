@@ -4,8 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import android.util.Patterns
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import finals.project.data.LoginRepository
 import finals.project.data.Result
 
@@ -22,13 +20,11 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
     fun login(username: String, password: String) {
         // can be launched in a separate asynchronous job
         val result = loginRepository.login(username, password)
-
         if (result is Result.Success) {
             _loginResult.value = LoginResult(success = LoggedInUserView(displayName = result.data.displayName))
 
         } else {
             _loginResult.value = LoginResult(error = R.string.login_failed)
-
         }
     }
 
