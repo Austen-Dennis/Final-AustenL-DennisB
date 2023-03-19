@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "finals.project.app-mergeDebugResources-57:/values-w1240dp-v13/values-w1240dp-v13.xml",
+            "outputFile": "finals.project.app-mergeDebugResources-58:/values-w1240dp-v13/values-w1240dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\mrden\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
+                    "source": "C:\\Users\\Austen Lowder\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",

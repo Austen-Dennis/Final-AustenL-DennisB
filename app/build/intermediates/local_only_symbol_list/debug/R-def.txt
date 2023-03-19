@@ -15,7 +15,6 @@ drawable placeholder
 drawable the_get_together
 drawable the_get_together_dark_
 id Camera
-id channelListView
 id container
 id frogger_game_board
 id home
@@ -24,18 +23,13 @@ id imageView4
 id imageview1
 id loading
 id login
-id messageInputView
-id messageListHeaderView
-id messageListView
 id password
 id post
 id sms
 id username
-layout activity_channel
 layout activity_login
 layout homepage
 layout post
-layout smspage
 mipmap ic_launcher
 mipmap ic_launcher_round
 string action_sign_in
