@@ -16,12 +16,12 @@
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-62:\\layout-w936dp\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-60:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-62:\\xml\\backup_rules.xml"
-    },
-    {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-60:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-62:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-60:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-62:\\xml\\backup_rules.xml"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-60:\\xml_data_extraction_rules.xml.flat",
@@ -42,6 +42,10 @@
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-60:\\layout_activity_login.xml.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-62:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "finals.project.app-merged_res-60:/layout_activity_main.xml.flat",
+        "source": "finals.project.app-main-62:/layout/activity_main.xml"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-60:\\layout-w1240dp_activity_login.xml.flat",
@@ -98,9 +102,5 @@
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-60:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-62:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "finals.project.app-merged_res-60:/layout_activity_login.xml.flat",
-        "source": "finals.project.app-main-62:/layout/activity_login.xml"
     }
 ]
