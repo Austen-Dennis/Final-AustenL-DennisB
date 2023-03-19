@@ -25,6 +25,9 @@ id imageview1
 id loading
 id login
 id maze_game_view
+id message_text
+id message_time
+id message_user
 id password
 id post
 id sms

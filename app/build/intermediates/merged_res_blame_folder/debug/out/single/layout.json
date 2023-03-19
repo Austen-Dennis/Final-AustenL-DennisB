@@ -1,18 +1,18 @@
 [
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-59:\\layout\\activity_login.xml",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-62:\\layout\\activity_login.xml"
-    },
-    {
         "merged": "finals.project.app-mergeDebugResources-59:/layout/activity_main.xml",
         "source": "finals.project.app-main-62:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-59:\\layout\\homepage.xml",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-62:\\layout\\homepage.xml"
+        "merged": "finals.project.app-mergeDebugResources-59:/layout/activity_login.xml",
+        "source": "finals.project.app-main-62:/layout/activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-59:\\layout\\post.xml",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-62:\\layout\\post.xml"
+        "merged": "finals.project.app-mergeDebugResources-59:/layout/post.xml",
+        "source": "finals.project.app-main-62:/layout/post.xml"
+    },
+    {
+        "merged": "finals.project.app-mergeDebugResources-59:/layout/homepage.xml",
+        "source": "finals.project.app-main-62:/layout/homepage.xml"
     }
 ]
