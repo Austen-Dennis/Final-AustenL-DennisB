@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.ListView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.firebase.ui.database.FirebaseListAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
@@ -53,7 +54,7 @@ class MainActivity : AppCompatActivity() {
             this, ChatMessage::class.java,
             R.layout.message, FirebaseDatabase.getInstance().reference
         ) {
-            protected fun populateView(v: View, model: ChatMessage, position: Int) {
+           override fun populateView(v: View, model: ChatMessage, position: Int) {
                 // Get references to the views of message.xml
                 val messageText: TextView = v.findViewById<View>(R.id.message_text) as TextView
                 val messageUser: TextView = v.findViewById<View>(R.id.message_user) as TextView

@@ -17,11 +17,15 @@ drawable placeholder
 drawable the_get_together
 drawable the_get_together_dark_
 id Camera
+id activity_main
 id container
+id fab
 id frogger_game_board
 id home
 id imageView2
 id imageview1
+id input
+id list_of_messages
 id loading
 id login
 id maze_game_view
@@ -35,6 +39,7 @@ id username
 layout activity_login
 layout activity_main
 layout homepage
+layout messages
 layout post
 mipmap ic_launcher
 mipmap ic_launcher_round
