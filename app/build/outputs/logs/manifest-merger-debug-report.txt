@@ -34,9 +34,9 @@ MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Austen L
 MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\ca2d0f961702c720012fb772e88b64f7\transformed\firebase-analytics-ktx-21.2.0\AndroidManifest.xml:2:1-17:12
 MERGED from [com.google.firebase:firebase-common-ktx:20.3.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\3a0bdaba1682269d391a14be5cb612df\transformed\firebase-common-ktx-20.3.1\AndroidManifest.xml:2:1-20:12
 MERGED from [com.google.firebase:firebase-messaging:23.1.2] C:\Users\Austen Lowder\.gradle\caches\transforms-3\788a0c7b710912e12732b2820f2d0fcf\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:17:1-61:12
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Austen Lowder\.gradle\caches\transforms-3\b4aeaf90d15439a4fcd7f8b0969b0e94\transformed\firebase-datatransport-18.1.7\AndroidManifest.xml:15:1-33:12
 MERGED from [com.google.firebase:firebase-analytics:21.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\428260922570ff97376cf5646e3f3086\transformed\firebase-analytics-21.2.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c1f61c1816c6b90ae27516e591c724dc\transformed\play-services-measurement-api-21.2.0\AndroidManifest.xml:17:1-37:12
-MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Austen Lowder\.gradle\caches\transforms-3\b4aeaf90d15439a4fcd7f8b0969b0e94\transformed\firebase-datatransport-18.1.7\AndroidManifest.xml:15:1-33:12
 MERGED from [com.google.firebase:firebase-installations:17.1.3] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c784b9370e4ecf4197deecb6cc693afd\transformed\firebase-installations-17.1.3\AndroidManifest.xml:2:1-23:12
 MERGED from [com.google.firebase:firebase-common:20.3.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\f202b05bb193a4bc682027555d8623cf\transformed\firebase-common-20.3.1\AndroidManifest.xml:15:1-39:12
 MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\cefeba72508dd1332f618366dfdc0f0c\transformed\play-services-base-18.0.1\AndroidManifest.xml:16:1-24:12
@@ -72,7 +72,7 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.0] C:\Users\Austen Lowder
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\9decf2a5a1cf10124620c17cd21ba845\transformed\lifecycle-viewmodel-2.6.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\f4456fa193d4eb0af471a927d113d795\transformed\lifecycle-livedata-core-ktx-2.6.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\41e73752604b66e260a91a813d84c634\transformed\lifecycle-viewmodel-savedstate-2.6.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core-ktx:1.12.0-alpha01] C:\Users\Austen Lowder\.gradle\caches\transforms-3\5bf0c9e2dc698847722d2167b3c397b6\transformed\core-ktx-1.12.0-alpha01\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\4b5d0673c45b5505032787209ae62ac1\transformed\core-ktx-1.9.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\e0ccba00f0287bbc011195bff2c3d3d6\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\9b0086379b4332bc21016ebdc302f9bf\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.transition:transition:1.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\5d538e6611b534fc612c8c52d7925f64\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
@@ -86,7 +86,7 @@ MERGED from [androidx.customview:customview:1.1.0] C:\Users\Austen Lowder\.gradl
 MERGED from [androidx.media:media:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\9133a786859088056eabf9fa1df97852\transformed\media-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\783ccdc8201ae5fc13377674f3d2a257\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\77a0200ef30815f8ca21a49d6587550b\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core:1.12.0-alpha01] C:\Users\Austen Lowder\.gradle\caches\transforms-3\aff37ebd18e3a243737b890ee6eb0028\transformed\core-1.12.0-alpha01\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.core:core:1.9.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\a001f40b06b2bb74adf4c042be94e033\transformed\core-1.9.0\AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\52b1953a9c1fdf413db8929ac99a9298\transformed\lifecycle-runtime-2.6.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\a333b95103d804c72262ebf0e5120355\transformed\lifecycle-runtime-ktx-2.6.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.6.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\b83b8df0e325d95764d707715a4ac97b\transformed\lifecycle-livedata-ktx-2.6.0\AndroidManifest.xml:17:1-22:12
@@ -97,19 +97,19 @@ MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] C:\Users\Austen Lowder\.g
 MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\34c23748e6b5af6b38a4ae1f127fa8a0\transformed\savedstate-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\7e6838d28f6a95d3ca865a310a96970f\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\d56c3fafc49b68964a1516562cf93c24\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-components:17.1.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\4270c14274085a0c69368725ed667a07\transformed\firebase-components-17.1.0\AndroidManifest.xml:15:1-22:12
 MERGED from [androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\5573344cb94835796919a92b62bf9923\transformed\profileinstaller-1.2.1\AndroidManifest.xml:17:1-50:12
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\d8d31ed467fac68c9c5188a33c04ba8c\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
-MERGED from [com.google.firebase:firebase-components:17.1.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\4270c14274085a0c69368725ed667a07\transformed\firebase-components-17.1.0\AndroidManifest.xml:15:1-22:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\f653d4ad1ce86ef59399c756d5a2e0f7\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\99b27cdff99ff4f42a46a8eca34e8e9e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.room:room-runtime:2.4.3] C:\Users\Austen Lowder\.gradle\caches\transforms-3\2bfb92e72fd494a9458428c2549687d3\transformed\room-runtime-2.4.3\AndroidManifest.xml:17:1-31:12
 MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\3132d2c9d825915519388a06845e8765\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c5fdc20652bfb79be14f962c15452625\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\Austen Lowder\.gradle\caches\transforms-3\53e945cfac422f6e6ed5a4989aa4c942\transformed\exifinterface-1.3.3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\f653d4ad1ce86ef59399c756d5a2e0f7\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\Austen Lowder\.gradle\caches\transforms-3\79e12b180feef95366f149143df0e1aa\transformed\transport-backend-cct-3.1.8\AndroidManifest.xml:15:1-37:12
 MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\Austen Lowder\.gradle\caches\transforms-3\905de406dfc3ee4358947e30d574f4d0\transformed\transport-runtime-3.1.8\AndroidManifest.xml:15:1-41:12
 MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\b711ecd5c618cddbba4e643643e9b5bc\transformed\transport-api-3.0.0\AndroidManifest.xml:15:1-22:12
 MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\19a70ca9b4ec3dad2350e602ccb542e7\transformed\firebase-encoders-json-18.0.0\AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c5fdc20652bfb79be14f962c15452625\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\Austen Lowder\.gradle\caches\transforms-3\53e945cfac422f6e6ed5a4989aa4c942\transformed\exifinterface-1.3.3\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\953d7542d7732bddd4505afd223f3e60\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\2d3023fa9328c3333d18a239bcd5e8f8\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.sqlite:sqlite-framework:2.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\31bec9ee188dc9672bf134a0979717ca\transformed\sqlite-framework-2.2.0\AndroidManifest.xml:17:1-24:12
@@ -170,12 +170,12 @@ MERGED from [com.google.firebase:firebase-common-ktx:20.3.1] C:\Users\Austen Low
 MERGED from [com.google.firebase:firebase-common-ktx:20.3.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\3a0bdaba1682269d391a14be5cb612df\transformed\firebase-common-ktx-20.3.1\AndroidManifest.xml:10:5-18:19
 MERGED from [com.google.firebase:firebase-messaging:23.1.2] C:\Users\Austen Lowder\.gradle\caches\transforms-3\788a0c7b710912e12732b2820f2d0fcf\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:30:5-59:19
 MERGED from [com.google.firebase:firebase-messaging:23.1.2] C:\Users\Austen Lowder\.gradle\caches\transforms-3\788a0c7b710912e12732b2820f2d0fcf\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:30:5-59:19
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Austen Lowder\.gradle\caches\transforms-3\b4aeaf90d15439a4fcd7f8b0969b0e94\transformed\firebase-datatransport-18.1.7\AndroidManifest.xml:23:5-31:19
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Austen Lowder\.gradle\caches\transforms-3\b4aeaf90d15439a4fcd7f8b0969b0e94\transformed\firebase-datatransport-18.1.7\AndroidManifest.xml:23:5-31:19
 MERGED from [com.google.firebase:firebase-analytics:21.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\428260922570ff97376cf5646e3f3086\transformed\firebase-analytics-21.2.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-analytics:21.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\428260922570ff97376cf5646e3f3086\transformed\firebase-analytics-21.2.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c1f61c1816c6b90ae27516e591c724dc\transformed\play-services-measurement-api-21.2.0\AndroidManifest.xml:27:5-35:19
 MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c1f61c1816c6b90ae27516e591c724dc\transformed\play-services-measurement-api-21.2.0\AndroidManifest.xml:27:5-35:19
-MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Austen Lowder\.gradle\caches\transforms-3\b4aeaf90d15439a4fcd7f8b0969b0e94\transformed\firebase-datatransport-18.1.7\AndroidManifest.xml:23:5-31:19
-MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Austen Lowder\.gradle\caches\transforms-3\b4aeaf90d15439a4fcd7f8b0969b0e94\transformed\firebase-datatransport-18.1.7\AndroidManifest.xml:23:5-31:19
 MERGED from [com.google.firebase:firebase-installations:17.1.3] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c784b9370e4ecf4197deecb6cc693afd\transformed\firebase-installations-17.1.3\AndroidManifest.xml:13:5-21:19
 MERGED from [com.google.firebase:firebase-installations:17.1.3] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c784b9370e4ecf4197deecb6cc693afd\transformed\firebase-installations-17.1.3\AndroidManifest.xml:13:5-21:19
 MERGED from [com.google.firebase:firebase-common:20.3.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\f202b05bb193a4bc682027555d8623cf\transformed\firebase-common-20.3.1\AndroidManifest.xml:24:5-37:19
@@ -208,8 +208,8 @@ MERGED from [androidx.work:work-runtime:2.7.1] C:\Users\Austen Lowder\.gradle\ca
 MERGED from [androidx.work:work-runtime:2.7.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\b20a8e26123d783cb6dd9ce74a171b63\transformed\work-runtime-2.7.1\AndroidManifest.xml:30:5-143:19
 MERGED from [androidx.lifecycle:lifecycle-process:2.6.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\ef81ea74d658f193298dab34baabbf28\transformed\lifecycle-process-2.6.0\AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.lifecycle:lifecycle-process:2.6.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\ef81ea74d658f193298dab34baabbf28\transformed\lifecycle-process-2.6.0\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.core:core:1.12.0-alpha01] C:\Users\Austen Lowder\.gradle\caches\transforms-3\aff37ebd18e3a243737b890ee6eb0028\transformed\core-1.12.0-alpha01\AndroidManifest.xml:28:5-89
-MERGED from [androidx.core:core:1.12.0-alpha01] C:\Users\Austen Lowder\.gradle\caches\transforms-3\aff37ebd18e3a243737b890ee6eb0028\transformed\core-1.12.0-alpha01\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.9.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\a001f40b06b2bb74adf4c042be94e033\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.9.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\a001f40b06b2bb74adf4c042be94e033\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
 MERGED from [androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\5573344cb94835796919a92b62bf9923\transformed\profileinstaller-1.2.1\AndroidManifest.xml:24:5-48:19
 MERGED from [androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\5573344cb94835796919a92b62bf9923\transformed\profileinstaller-1.2.1\AndroidManifest.xml:24:5-48:19
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\d8d31ed467fac68c9c5188a33c04ba8c\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
@@ -225,7 +225,7 @@ MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\
 MERGED from [com.jakewharton.threetenabp:threetenabp:1.4.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\f3af6ecb544be092616af723eebf9967\transformed\threetenabp-1.4.0\AndroidManifest.xml:7:5-20
 MERGED from [com.jakewharton.threetenabp:threetenabp:1.4.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\f3af6ecb544be092616af723eebf9967\transformed\threetenabp-1.4.0\AndroidManifest.xml:7:5-20
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.12.0-alpha01] C:\Users\Austen Lowder\.gradle\caches\transforms-3\aff37ebd18e3a243737b890ee6eb0028\transformed\core-1.12.0-alpha01\AndroidManifest.xml:28:18-86
+		ADDED from [androidx.core:core:1.9.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\a001f40b06b2bb74adf4c042be94e033\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
 		ADDED from C:\Users\Austen Lowder\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:11:9-35
 	android:label
@@ -336,12 +336,12 @@ MERGED from [com.google.firebase:firebase-common-ktx:20.3.1] C:\Users\Austen Low
 MERGED from [com.google.firebase:firebase-common-ktx:20.3.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\3a0bdaba1682269d391a14be5cb612df\transformed\firebase-common-ktx-20.3.1\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-messaging:23.1.2] C:\Users\Austen Lowder\.gradle\caches\transforms-3\788a0c7b710912e12732b2820f2d0fcf\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-messaging:23.1.2] C:\Users\Austen Lowder\.gradle\caches\transforms-3\788a0c7b710912e12732b2820f2d0fcf\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Austen Lowder\.gradle\caches\transforms-3\b4aeaf90d15439a4fcd7f8b0969b0e94\transformed\firebase-datatransport-18.1.7\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Austen Lowder\.gradle\caches\transforms-3\b4aeaf90d15439a4fcd7f8b0969b0e94\transformed\firebase-datatransport-18.1.7\AndroidManifest.xml:18:5-20:41
 MERGED from [com.google.firebase:firebase-analytics:21.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\428260922570ff97376cf5646e3f3086\transformed\firebase-analytics-21.2.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics:21.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\428260922570ff97376cf5646e3f3086\transformed\firebase-analytics-21.2.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c1f61c1816c6b90ae27516e591c724dc\transformed\play-services-measurement-api-21.2.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c1f61c1816c6b90ae27516e591c724dc\transformed\play-services-measurement-api-21.2.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Austen Lowder\.gradle\caches\transforms-3\b4aeaf90d15439a4fcd7f8b0969b0e94\transformed\firebase-datatransport-18.1.7\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Austen Lowder\.gradle\caches\transforms-3\b4aeaf90d15439a4fcd7f8b0969b0e94\transformed\firebase-datatransport-18.1.7\AndroidManifest.xml:18:5-20:41
 MERGED from [com.google.firebase:firebase-installations:17.1.3] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c784b9370e4ecf4197deecb6cc693afd\transformed\firebase-installations-17.1.3\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-installations:17.1.3] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c784b9370e4ecf4197deecb6cc693afd\transformed\firebase-installations-17.1.3\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-common:20.3.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\f202b05bb193a4bc682027555d8623cf\transformed\firebase-common-20.3.1\AndroidManifest.xml:19:5-21:41
@@ -412,8 +412,8 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.0] C:\Users\Aust
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\f4456fa193d4eb0af471a927d113d795\transformed\lifecycle-livedata-core-ktx-2.6.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\41e73752604b66e260a91a813d84c634\transformed\lifecycle-viewmodel-savedstate-2.6.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\41e73752604b66e260a91a813d84c634\transformed\lifecycle-viewmodel-savedstate-2.6.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core-ktx:1.12.0-alpha01] C:\Users\Austen Lowder\.gradle\caches\transforms-3\5bf0c9e2dc698847722d2167b3c397b6\transformed\core-ktx-1.12.0-alpha01\AndroidManifest.xml:5:5-44
-MERGED from [androidx.core:core-ktx:1.12.0-alpha01] C:\Users\Austen Lowder\.gradle\caches\transforms-3\5bf0c9e2dc698847722d2167b3c397b6\transformed\core-ktx-1.12.0-alpha01\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\4b5d0673c45b5505032787209ae62ac1\transformed\core-ktx-1.9.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\4b5d0673c45b5505032787209ae62ac1\transformed\core-ktx-1.9.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\e0ccba00f0287bbc011195bff2c3d3d6\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\e0ccba00f0287bbc011195bff2c3d3d6\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\9b0086379b4332bc21016ebdc302f9bf\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -440,8 +440,8 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Aust
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\783ccdc8201ae5fc13377674f3d2a257\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\77a0200ef30815f8ca21a49d6587550b\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\77a0200ef30815f8ca21a49d6587550b\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.12.0-alpha01] C:\Users\Austen Lowder\.gradle\caches\transforms-3\aff37ebd18e3a243737b890ee6eb0028\transformed\core-1.12.0-alpha01\AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.12.0-alpha01] C:\Users\Austen Lowder\.gradle\caches\transforms-3\aff37ebd18e3a243737b890ee6eb0028\transformed\core-1.12.0-alpha01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.9.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\a001f40b06b2bb74adf4c042be94e033\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.9.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\a001f40b06b2bb74adf4c042be94e033\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\52b1953a9c1fdf413db8929ac99a9298\transformed\lifecycle-runtime-2.6.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\52b1953a9c1fdf413db8929ac99a9298\transformed\lifecycle-runtime-2.6.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\a333b95103d804c72262ebf0e5120355\transformed\lifecycle-runtime-ktx-2.6.0\AndroidManifest.xml:20:5-44
@@ -462,24 +462,20 @@ MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Austen Lowder\.gradle\ca
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\7e6838d28f6a95d3ca865a310a96970f\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\d56c3fafc49b68964a1516562cf93c24\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\d56c3fafc49b68964a1516562cf93c24\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-components:17.1.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\4270c14274085a0c69368725ed667a07\transformed\firebase-components-17.1.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-components:17.1.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\4270c14274085a0c69368725ed667a07\transformed\firebase-components-17.1.0\AndroidManifest.xml:18:5-20:41
 MERGED from [androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\5573344cb94835796919a92b62bf9923\transformed\profileinstaller-1.2.1\AndroidManifest.xml:21:5-22:38
 MERGED from [androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\5573344cb94835796919a92b62bf9923\transformed\profileinstaller-1.2.1\AndroidManifest.xml:21:5-22:38
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\d8d31ed467fac68c9c5188a33c04ba8c\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\d8d31ed467fac68c9c5188a33c04ba8c\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
-MERGED from [com.google.firebase:firebase-components:17.1.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\4270c14274085a0c69368725ed667a07\transformed\firebase-components-17.1.0\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.firebase:firebase-components:17.1.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\4270c14274085a0c69368725ed667a07\transformed\firebase-components-17.1.0\AndroidManifest.xml:18:5-20:41
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\f653d4ad1ce86ef59399c756d5a2e0f7\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\f653d4ad1ce86ef59399c756d5a2e0f7\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\99b27cdff99ff4f42a46a8eca34e8e9e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\99b27cdff99ff4f42a46a8eca34e8e9e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-runtime:2.4.3] C:\Users\Austen Lowder\.gradle\caches\transforms-3\2bfb92e72fd494a9458428c2549687d3\transformed\room-runtime-2.4.3\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-runtime:2.4.3] C:\Users\Austen Lowder\.gradle\caches\transforms-3\2bfb92e72fd494a9458428c2549687d3\transformed\room-runtime-2.4.3\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\3132d2c9d825915519388a06845e8765\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\3132d2c9d825915519388a06845e8765\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c5fdc20652bfb79be14f962c15452625\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c5fdc20652bfb79be14f962c15452625\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\Austen Lowder\.gradle\caches\transforms-3\53e945cfac422f6e6ed5a4989aa4c942\transformed\exifinterface-1.3.3\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\Austen Lowder\.gradle\caches\transforms-3\53e945cfac422f6e6ed5a4989aa4c942\transformed\exifinterface-1.3.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\f653d4ad1ce86ef59399c756d5a2e0f7\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\f653d4ad1ce86ef59399c756d5a2e0f7\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\Austen Lowder\.gradle\caches\transforms-3\79e12b180feef95366f149143df0e1aa\transformed\transport-backend-cct-3.1.8\AndroidManifest.xml:18:5-20:41
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\Austen Lowder\.gradle\caches\transforms-3\79e12b180feef95366f149143df0e1aa\transformed\transport-backend-cct-3.1.8\AndroidManifest.xml:18:5-20:41
 MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\Austen Lowder\.gradle\caches\transforms-3\905de406dfc3ee4358947e30d574f4d0\transformed\transport-runtime-3.1.8\AndroidManifest.xml:18:5-20:41
@@ -488,6 +484,10 @@ MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\Aust
 MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\b711ecd5c618cddbba4e643643e9b5bc\transformed\transport-api-3.0.0\AndroidManifest.xml:18:5-20:41
 MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\19a70ca9b4ec3dad2350e602ccb542e7\transformed\firebase-encoders-json-18.0.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\19a70ca9b4ec3dad2350e602ccb542e7\transformed\firebase-encoders-json-18.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c5fdc20652bfb79be14f962c15452625\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c5fdc20652bfb79be14f962c15452625\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\Austen Lowder\.gradle\caches\transforms-3\53e945cfac422f6e6ed5a4989aa4c942\transformed\exifinterface-1.3.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\Austen Lowder\.gradle\caches\transforms-3\53e945cfac422f6e6ed5a4989aa4c942\transformed\exifinterface-1.3.3\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\953d7542d7732bddd4505afd223f3e60\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\953d7542d7732bddd4505afd223f3e60\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\2d3023fa9328c3333d18a239bcd5e8f8\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
@@ -712,10 +712,10 @@ MERGED from [com.google.firebase:firebase-common-ktx:20.3.1] C:\Users\Austen Low
 MERGED from [com.google.firebase:firebase-common-ktx:20.3.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\3a0bdaba1682269d391a14be5cb612df\transformed\firebase-common-ktx-20.3.1\AndroidManifest.xml:11:9-17:19
 MERGED from [com.google.firebase:firebase-messaging:23.1.2] C:\Users\Austen Lowder\.gradle\caches\transforms-3\788a0c7b710912e12732b2820f2d0fcf\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:52:9-58:19
 MERGED from [com.google.firebase:firebase-messaging:23.1.2] C:\Users\Austen Lowder\.gradle\caches\transforms-3\788a0c7b710912e12732b2820f2d0fcf\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:52:9-58:19
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c1f61c1816c6b90ae27516e591c724dc\transformed\play-services-measurement-api-21.2.0\AndroidManifest.xml:28:9-34:19
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c1f61c1816c6b90ae27516e591c724dc\transformed\play-services-measurement-api-21.2.0\AndroidManifest.xml:28:9-34:19
 MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Austen Lowder\.gradle\caches\transforms-3\b4aeaf90d15439a4fcd7f8b0969b0e94\transformed\firebase-datatransport-18.1.7\AndroidManifest.xml:24:9-30:19
 MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Austen Lowder\.gradle\caches\transforms-3\b4aeaf90d15439a4fcd7f8b0969b0e94\transformed\firebase-datatransport-18.1.7\AndroidManifest.xml:24:9-30:19
+MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c1f61c1816c6b90ae27516e591c724dc\transformed\play-services-measurement-api-21.2.0\AndroidManifest.xml:28:9-34:19
+MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c1f61c1816c6b90ae27516e591c724dc\transformed\play-services-measurement-api-21.2.0\AndroidManifest.xml:28:9-34:19
 MERGED from [com.google.firebase:firebase-installations:17.1.3] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c784b9370e4ecf4197deecb6cc693afd\transformed\firebase-installations-17.1.3\AndroidManifest.xml:14:9-20:19
 MERGED from [com.google.firebase:firebase-installations:17.1.3] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c784b9370e4ecf4197deecb6cc693afd\transformed\firebase-installations-17.1.3\AndroidManifest.xml:14:9-20:19
 MERGED from [com.google.firebase:firebase-common:20.3.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\f202b05bb193a4bc682027555d8623cf\transformed\firebase-common-20.3.1\AndroidManifest.xml:32:9-36:35
@@ -868,6 +868,12 @@ ADDED from [com.google.firebase:firebase-messaging:23.1.2] C:\Users\Austen Lowde
 		ADDED from [com.google.firebase:firebase-messaging:23.1.2] C:\Users\Austen Lowder\.gradle\caches\transforms-3\788a0c7b710912e12732b2820f2d0fcf\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:57:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-messaging:23.1.2] C:\Users\Austen Lowder\.gradle\caches\transforms-3\788a0c7b710912e12732b2820f2d0fcf\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:56:17-119
+meta-data#com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar
+ADDED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Austen Lowder\.gradle\caches\transforms-3\b4aeaf90d15439a4fcd7f8b0969b0e94\transformed\firebase-datatransport-18.1.7\AndroidManifest.xml:27:13-29:85
+	android:value
+		ADDED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Austen Lowder\.gradle\caches\transforms-3\b4aeaf90d15439a4fcd7f8b0969b0e94\transformed\firebase-datatransport-18.1.7\AndroidManifest.xml:29:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Austen Lowder\.gradle\caches\transforms-3\b4aeaf90d15439a4fcd7f8b0969b0e94\transformed\firebase-datatransport-18.1.7\AndroidManifest.xml:28:17-115
 uses-permission#com.google.android.gms.permission.AD_ID
 ADDED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c1f61c1816c6b90ae27516e591c724dc\transformed\play-services-measurement-api-21.2.0\AndroidManifest.xml:25:5-79
 MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\a64d3e7f842447041a2453a0f821acfe\transformed\play-services-measurement-impl-21.2.0\AndroidManifest.xml:27:5-79
@@ -884,12 +890,6 @@ ADDED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\User
 		ADDED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c1f61c1816c6b90ae27516e591c724dc\transformed\play-services-measurement-api-21.2.0\AndroidManifest.xml:33:17-82
 	android:name
 		ADDED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c1f61c1816c6b90ae27516e591c724dc\transformed\play-services-measurement-api-21.2.0\AndroidManifest.xml:32:17-139
-meta-data#com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar
-ADDED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Austen Lowder\.gradle\caches\transforms-3\b4aeaf90d15439a4fcd7f8b0969b0e94\transformed\firebase-datatransport-18.1.7\AndroidManifest.xml:27:13-29:85
-	android:value
-		ADDED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Austen Lowder\.gradle\caches\transforms-3\b4aeaf90d15439a4fcd7f8b0969b0e94\transformed\firebase-datatransport-18.1.7\AndroidManifest.xml:29:17-82
-	android:name
-		ADDED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Austen Lowder\.gradle\caches\transforms-3\b4aeaf90d15439a4fcd7f8b0969b0e94\transformed\firebase-datatransport-18.1.7\AndroidManifest.xml:28:17-115
 meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar
 ADDED from [com.google.firebase:firebase-installations:17.1.3] C:\Users\Austen Lowder\.gradle\caches\transforms-3\c784b9370e4ecf4197deecb6cc693afd\transformed\firebase-installations-17.1.3\AndroidManifest.xml:17:13-19:85
 	android:value
@@ -1179,25 +1179,25 @@ ADDED from [androidx.lifecycle:lifecycle-process:2.6.0] C:\Users\Austen Lowder\.
 	android:name
 		ADDED from [androidx.lifecycle:lifecycle-process:2.6.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\ef81ea74d658f193298dab34baabbf28\transformed\lifecycle-process-2.6.0\AndroidManifest.xml:30:17-78
 permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.12.0-alpha01] C:\Users\Austen Lowder\.gradle\caches\transforms-3\aff37ebd18e3a243737b890ee6eb0028\transformed\core-1.12.0-alpha01\AndroidManifest.xml:22:5-24:47
+ADDED from [androidx.core:core:1.9.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\a001f40b06b2bb74adf4c042be94e033\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
-		ADDED from [androidx.core:core:1.12.0-alpha01] C:\Users\Austen Lowder\.gradle\caches\transforms-3\aff37ebd18e3a243737b890ee6eb0028\transformed\core-1.12.0-alpha01\AndroidManifest.xml:24:9-44
+		ADDED from [androidx.core:core:1.9.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\a001f40b06b2bb74adf4c042be94e033\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
 	android:name
-		ADDED from [androidx.core:core:1.12.0-alpha01] C:\Users\Austen Lowder\.gradle\caches\transforms-3\aff37ebd18e3a243737b890ee6eb0028\transformed\core-1.12.0-alpha01\AndroidManifest.xml:23:9-81
+		ADDED from [androidx.core:core:1.9.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\a001f40b06b2bb74adf4c042be94e033\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
 permission#finals.project.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.12.0-alpha01] C:\Users\Austen Lowder\.gradle\caches\transforms-3\aff37ebd18e3a243737b890ee6eb0028\transformed\core-1.12.0-alpha01\AndroidManifest.xml:22:5-24:47
+ADDED from [androidx.core:core:1.9.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\a001f40b06b2bb74adf4c042be94e033\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
-		ADDED from [androidx.core:core:1.12.0-alpha01] C:\Users\Austen Lowder\.gradle\caches\transforms-3\aff37ebd18e3a243737b890ee6eb0028\transformed\core-1.12.0-alpha01\AndroidManifest.xml:24:9-44
+		ADDED from [androidx.core:core:1.9.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\a001f40b06b2bb74adf4c042be94e033\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
 	android:name
-		ADDED from [androidx.core:core:1.12.0-alpha01] C:\Users\Austen Lowder\.gradle\caches\transforms-3\aff37ebd18e3a243737b890ee6eb0028\transformed\core-1.12.0-alpha01\AndroidManifest.xml:23:9-81
+		ADDED from [androidx.core:core:1.9.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\a001f40b06b2bb74adf4c042be94e033\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
 uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.12.0-alpha01] C:\Users\Austen Lowder\.gradle\caches\transforms-3\aff37ebd18e3a243737b890ee6eb0028\transformed\core-1.12.0-alpha01\AndroidManifest.xml:26:5-97
+ADDED from [androidx.core:core:1.9.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\a001f40b06b2bb74adf4c042be94e033\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
 	android:name
-		ADDED from [androidx.core:core:1.12.0-alpha01] C:\Users\Austen Lowder\.gradle\caches\transforms-3\aff37ebd18e3a243737b890ee6eb0028\transformed\core-1.12.0-alpha01\AndroidManifest.xml:26:22-94
+		ADDED from [androidx.core:core:1.9.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\a001f40b06b2bb74adf4c042be94e033\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 uses-permission#finals.project.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.12.0-alpha01] C:\Users\Austen Lowder\.gradle\caches\transforms-3\aff37ebd18e3a243737b890ee6eb0028\transformed\core-1.12.0-alpha01\AndroidManifest.xml:26:5-97
+ADDED from [androidx.core:core:1.9.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\a001f40b06b2bb74adf4c042be94e033\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
 	android:name
-		ADDED from [androidx.core:core:1.12.0-alpha01] C:\Users\Austen Lowder\.gradle\caches\transforms-3\aff37ebd18e3a243737b890ee6eb0028\transformed\core-1.12.0-alpha01\AndroidManifest.xml:26:22-94
+		ADDED from [androidx.core:core:1.9.0] C:\Users\Austen Lowder\.gradle\caches\transforms-3\a001f40b06b2bb74adf4c042be94e033\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 meta-data#androidx.profileinstaller.ProfileInstallerInitializer
 ADDED from [androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\Austen Lowder\.gradle\caches\transforms-3\5573344cb94835796919a92b62bf9923\transformed\profileinstaller-1.2.1\AndroidManifest.xml:30:13-32:52
 	android:value

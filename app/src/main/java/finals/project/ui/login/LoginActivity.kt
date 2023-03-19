@@ -20,7 +20,6 @@ import com.google.firebase.ktx.Firebase
 import finals.project.databinding.ActivityLoginBinding
 
 import finals.project.R
-import finals.project.smsPage.MainActivity
 import finals.project.ui.captcha.FroggerGame
 
 class LoginActivity : AppCompatActivity() {
