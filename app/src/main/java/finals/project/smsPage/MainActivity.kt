@@ -63,8 +63,7 @@ class MainActivity : AppCompatActivity() {
 
 private fun displayChatMessages() {
     val listOfMessages: ListView = findViewById<ListView>(R.id.list_of_messages)
-        /*val adapter = object : FirebaseListAdapter<ChatMessage?>(this, ChatMessage.class,
-             R.layout.message)*/
+        val adapter = object : FirebaseListAdapter<ChatMessage?>(this, ChatMessage.class, R.layout.message)
 
     fun populateView(v: View, model: ChatMessage, position: Int) {
 
