@@ -18,6 +18,7 @@ import com.google.firebase.database.FirebaseDatabase.*
 import com.google.firebase.database.Query
 import finals.project.R
 import finals.project.data.HomeActivity
+import finals.project.data.PostActivity
 import okhttp3.internal.userAgent
 
 
@@ -30,11 +31,28 @@ class MainActivity : AppCompatActivity() {
 
             displayChatMessages()
         val intentHOME = Intent(this, HomeActivity::class.java)
+        val intentPOST = Intent(this, PostActivity::class.java)
+        val intentSMS = Intent(this, MainActivity::class.java)
+
 
         val homeButton = findViewById<View>(R.id.home)
         homeButton.setOnClickListener {
             startActivity(intentHOME)
         }
+        val postButton = findViewById<View>(R.id.post)
+        postButton.setOnClickListener {
+            startActivity(intentPOST)
+        }
+        val smsButton = findViewById<View>(R.id.sms)
+
+        val typeBox = findViewById<View>(R.id.input)
+        typeBox.setOnClickListener {
+            homeButton.visibility=View.INVISIBLE
+            postButton.visibility=View.INVISIBLE
+            smsButton.visibility=View.INVISIBLE
+        }
+
+
 
         val fab = findViewById<View>(R.id.fab) as FloatingActionButton
         fab.setOnClickListener {

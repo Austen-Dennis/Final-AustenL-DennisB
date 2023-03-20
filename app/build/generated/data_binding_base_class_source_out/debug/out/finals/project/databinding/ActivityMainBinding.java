@@ -7,9 +7,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -21,10 +21,7 @@ import java.lang.String;
 
 public final class ActivityMainBinding implements ViewBinding {
   @NonNull
-  private final RelativeLayout rootView;
-
-  @NonNull
-  public final RelativeLayout activityMain;
+  private final ConstraintLayout rootView;
 
   @NonNull
   public final FloatingActionButton fab;
@@ -39,24 +36,30 @@ public final class ActivityMainBinding implements ViewBinding {
   public final ListView listOfMessages;
 
   @NonNull
+  public final Button post;
+
+  @NonNull
+  public final Button sms;
+
+  @NonNull
   public final TextInputLayout textInputLayout;
 
-  private ActivityMainBinding(@NonNull RelativeLayout rootView,
-      @NonNull RelativeLayout activityMain, @NonNull FloatingActionButton fab, @NonNull Button home,
-      @NonNull EditText input, @NonNull ListView listOfMessages,
-      @NonNull TextInputLayout textInputLayout) {
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull FloatingActionButton fab,
+      @NonNull Button home, @NonNull EditText input, @NonNull ListView listOfMessages,
+      @NonNull Button post, @NonNull Button sms, @NonNull TextInputLayout textInputLayout) {
     this.rootView = rootView;
-    this.activityMain = activityMain;
     this.fab = fab;
     this.home = home;
     this.input = input;
     this.listOfMessages = listOfMessages;
+    this.post = post;
+    this.sms = sms;
     this.textInputLayout = textInputLayout;
   }
 
   @Override
   @NonNull
-  public RelativeLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -81,8 +84,6 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      RelativeLayout activityMain = (RelativeLayout) rootView;
-
       id = R.id.fab;
       FloatingActionButton fab = ViewBindings.findChildViewById(rootView, id);
       if (fab == null) {
@@ -107,14 +108,26 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.post;
+      Button post = ViewBindings.findChildViewById(rootView, id);
+      if (post == null) {
+        break missingId;
+      }
+
+      id = R.id.sms;
+      Button sms = ViewBindings.findChildViewById(rootView, id);
+      if (sms == null) {
+        break missingId;
+      }
+
       id = R.id.textInputLayout;
       TextInputLayout textInputLayout = ViewBindings.findChildViewById(rootView, id);
       if (textInputLayout == null) {
         break missingId;
       }
 
-      return new ActivityMainBinding((RelativeLayout) rootView, activityMain, fab, home, input,
-          listOfMessages, textInputLayout);
+      return new ActivityMainBinding((ConstraintLayout) rootView, fab, home, input, listOfMessages,
+          post, sms, textInputLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
