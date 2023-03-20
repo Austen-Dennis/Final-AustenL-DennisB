@@ -56,10 +56,13 @@
         android:testOnly="true"
         android:theme="@style/Theme.FInalProject" >
         <activity
+            android:name="finals.project.data.PostActivity"
+            android:exported="false" />
+        <activity
             android:name="finals.project.smsPage.MainActivity"
             android:exported="false" />
         <activity
-            android:name="finals.project.ui.HomeActivity"
+            android:name="finals.project.data.HomeActivity"
             android:exported="false" />
         <activity
             android:name="finals.project.ui.login.LoginActivity"

@@ -4284,7 +4284,6 @@ int id action_mode_close_button 0x7f0a0045
 int id action_text 0x7f0a0046
 int id actions 0x7f0a0047
 int id activity_chooser_view_content 0x7f0a0048
-int id activity_main 0x7f0a0049
 int id add 0x7f0a004a
 int id adjust_height 0x7f0a004b
 int id adjust_width 0x7f0a004c
@@ -4979,6 +4978,7 @@ int id tag_window_insets_animation_callback 0x7f0a02fc
 int id text 0x7f0a02fd
 int id text2 0x7f0a02fe
 int id textEnd 0x7f0a02ff
+int id textInputLayout 0x7f0a0365
 int id textSpacerNoButtons 0x7f0a0300
 int id textSpacerNoTitle 0x7f0a0301
 int id textStart 0x7f0a0302

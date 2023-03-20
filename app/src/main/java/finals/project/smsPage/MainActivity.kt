@@ -1,6 +1,7 @@
 package finals.project.smsPage
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
@@ -12,6 +13,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase.*
 import finals.project.R
+import finals.project.data.HomeActivity
+import finals.project.data.PostActivity
 import okhttp3.internal.userAgent
 import java.text.DateFormat
 
@@ -24,6 +27,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
             displayChatMessages()
+        val intentPOST = Intent(this, PostActivity::class.java)
+        val intentHOME = Intent(this, HomeActivity::class.java)
+        val postButton = findViewById<View>(R.id.post)
+        postButton.setOnClickListener {
+            startActivity(intentPOST)
+        }
+        val homeButton = findViewById<View>(R.id.home)
+        homeButton.setOnClickListener {
+            startActivity(intentHOME)
+        }
 
         val fab = findViewById<View>(R.id.fab) as FloatingActionButton
         fab.setOnClickListener {

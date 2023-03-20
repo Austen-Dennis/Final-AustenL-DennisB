@@ -17,7 +17,6 @@ drawable placeholder
 drawable the_get_together
 drawable the_get_together_dark_
 id Camera
-id activity_main
 id container
 id fab
 id frogger_game_board
@@ -35,6 +34,7 @@ id message_user
 id password
 id post
 id sms
+id textInputLayout
 id username
 layout activity_login
 layout activity_main

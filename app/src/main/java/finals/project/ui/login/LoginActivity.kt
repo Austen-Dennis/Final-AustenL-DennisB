@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import finals.project.databinding.ActivityLoginBinding
-import finals.project.ui.HomeActivity
+import finals.project.data.HomeActivity
 import finals.project.ui.captcha.FroggerGame
 
 class LoginActivity : AppCompatActivity() {
