@@ -2,6 +2,7 @@ package finals.project.ui.login
 
 import android.content.Intent
 import android.os.Bundle
+import android.provider.MediaStore
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
@@ -12,8 +13,12 @@ import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import finals.project.R
 import finals.project.databinding.ActivityLoginBinding
 import finals.project.data.HomeActivity
+import finals.project.smsPage.MainActivity
+import finals.project.ui.captcha.CaptchaGame
+import finals.project.ui.captcha.FroggerGame
 
 class LoginActivity : AppCompatActivity() {
 
@@ -21,10 +26,13 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        /** play frogger game **/
+        //playFroggerGame()
         super.onCreate(savedInstanceState)
 
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
 
         val username = binding.username
@@ -32,6 +40,13 @@ class LoginActivity : AppCompatActivity() {
         val login = binding.login
         val loading = binding.loading
         val intent = Intent(this, HomeActivity::class.java)
+        val postButton = findViewById<View>(R.id.verify)
+        postButton.setOnClickListener {
+            postButton.visibility = View.INVISIBLE
+            username.visibility= View.VISIBLE
+            password.visibility=View.VISIBLE
+            login.visibility=View.VISIBLE
+        }
 
         loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
                 .get(LoginViewModel::class.java)
@@ -114,6 +129,27 @@ class LoginActivity : AppCompatActivity() {
         Toast.makeText(applicationContext, errorString, Toast.LENGTH_SHORT).show()
     }
 
+    private fun playFroggerGame() {
+        val froggerGameBoardTextView = binding.froggerGameBoard
+
+        val game = FroggerGame(11, 7) { board ->
+            // Update the UI with the new board state.
+            val boardText = board.joinToString(separator = "\n") { row -> row.joinToString("") }
+            if (froggerGameBoardTextView != null) {
+                froggerGameBoardTextView.text = boardText
+            }
+        }
+
+        // Example movements: up, right, up, left, up
+        game.movePlayer(0, -1)
+        game.movePlayer(1, 0)
+        game.movePlayer(0, -1)
+        game.movePlayer(-1, 0)
+        game.movePlayer(0, -1)
+    }
+
+
+}
 
 
 /**
@@ -131,5 +167,4 @@ fun EditText.afterTextChanged(afterTextChanged: (String) -> Unit) {
 
     })
 
-    }
 }

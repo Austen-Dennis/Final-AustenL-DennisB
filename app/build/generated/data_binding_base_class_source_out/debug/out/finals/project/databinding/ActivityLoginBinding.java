@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -22,23 +23,6 @@ import java.lang.String;
 public final class ActivityLoginBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
-
-  /**
-   * This binding is not available in all configurations.
-   * <p>
-   * Present:
-   * <ul>
-   *   <li>layout/</li>
-   * </ul>
-   *
-   * Absent:
-   * <ul>
-   *   <li>layout-w1240dp/</li>
-   *   <li>layout-w936dp/</li>
-   * </ul>
-   */
-  @Nullable
-  public final Button button2;
 
   @NonNull
   public final ConstraintLayout container;
@@ -89,12 +73,28 @@ public final class ActivityLoginBinding implements ViewBinding {
   @NonNull
   public final EditText username;
 
-  private ActivityLoginBinding(@NonNull ConstraintLayout rootView, @Nullable Button button2,
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout-w1240dp/</li>
+   *   <li>layout-w936dp/</li>
+   * </ul>
+   */
+  @Nullable
+  public final CheckBox verify;
+
+  private ActivityLoginBinding(@NonNull ConstraintLayout rootView,
       @NonNull ConstraintLayout container, @Nullable TextView froggerGameBoard,
       @Nullable ImageView imageView3, @NonNull ProgressBar loading, @NonNull Button login,
-      @NonNull EditText password, @NonNull EditText username) {
+      @NonNull EditText password, @NonNull EditText username, @Nullable CheckBox verify) {
     this.rootView = rootView;
-    this.button2 = button2;
     this.container = container;
     this.froggerGameBoard = froggerGameBoard;
     this.imageView3 = imageView3;
@@ -102,6 +102,7 @@ public final class ActivityLoginBinding implements ViewBinding {
     this.login = login;
     this.password = password;
     this.username = username;
+    this.verify = verify;
   }
 
   @Override
@@ -131,9 +132,6 @@ public final class ActivityLoginBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.button2;
-      Button button2 = ViewBindings.findChildViewById(rootView, id);
-
       ConstraintLayout container = (ConstraintLayout) rootView;
 
       id = R.id.frogger_game_board;
@@ -166,8 +164,11 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityLoginBinding((ConstraintLayout) rootView, button2, container,
-          froggerGameBoard, imageView3, loading, login, password, username);
+      id = R.id.verify;
+      CheckBox verify = ViewBindings.findChildViewById(rootView, id);
+
+      return new ActivityLoginBinding((ConstraintLayout) rootView, container, froggerGameBoard,
+          imageView3, loading, login, password, username, verify);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
