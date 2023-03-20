@@ -23,12 +23,12 @@ id fab
 id frogger_game_board
 id home
 id imageView2
+id imageView3
 id imageview1
 id input
 id list_of_messages
 id loading
 id login
-id maze_game_view
 id message_text
 id message_time
 id message_user

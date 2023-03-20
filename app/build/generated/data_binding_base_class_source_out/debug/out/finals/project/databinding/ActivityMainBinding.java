@@ -4,12 +4,14 @@ package finals.project.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import finals.project.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -20,20 +22,25 @@ public final class ActivityMainBinding implements ViewBinding {
   private final RelativeLayout rootView;
 
   @NonNull
-  public final TextView messageText;
+  public final RelativeLayout activityMain;
 
   @NonNull
-  public final TextView messageTime;
+  public final FloatingActionButton fab;
 
   @NonNull
-  public final TextView messageUser;
+  public final EditText input;
 
-  private ActivityMainBinding(@NonNull RelativeLayout rootView, @NonNull TextView messageText,
-      @NonNull TextView messageTime, @NonNull TextView messageUser) {
+  @NonNull
+  public final ListView listOfMessages;
+
+  private ActivityMainBinding(@NonNull RelativeLayout rootView,
+      @NonNull RelativeLayout activityMain, @NonNull FloatingActionButton fab,
+      @NonNull EditText input, @NonNull ListView listOfMessages) {
     this.rootView = rootView;
-    this.messageText = messageText;
-    this.messageTime = messageTime;
-    this.messageUser = messageUser;
+    this.activityMain = activityMain;
+    this.fab = fab;
+    this.input = input;
+    this.listOfMessages = listOfMessages;
   }
 
   @Override
@@ -63,26 +70,28 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.message_text;
-      TextView messageText = ViewBindings.findChildViewById(rootView, id);
-      if (messageText == null) {
+      RelativeLayout activityMain = (RelativeLayout) rootView;
+
+      id = R.id.fab;
+      FloatingActionButton fab = ViewBindings.findChildViewById(rootView, id);
+      if (fab == null) {
         break missingId;
       }
 
-      id = R.id.message_time;
-      TextView messageTime = ViewBindings.findChildViewById(rootView, id);
-      if (messageTime == null) {
+      id = R.id.input;
+      EditText input = ViewBindings.findChildViewById(rootView, id);
+      if (input == null) {
         break missingId;
       }
 
-      id = R.id.message_user;
-      TextView messageUser = ViewBindings.findChildViewById(rootView, id);
-      if (messageUser == null) {
+      id = R.id.list_of_messages;
+      ListView listOfMessages = ViewBindings.findChildViewById(rootView, id);
+      if (listOfMessages == null) {
         break missingId;
       }
 
-      return new ActivityMainBinding((RelativeLayout) rootView, messageText, messageTime,
-          messageUser);
+      return new ActivityMainBinding((RelativeLayout) rootView, activityMain, fab, input,
+          listOfMessages);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

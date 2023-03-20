@@ -43,12 +43,6 @@ public final class ActivityLoginBinding implements ViewBinding {
   @Nullable
   public final TextView froggerGameBoard;
 
-  @NonNull
-  public final ProgressBar loading;
-
-  @NonNull
-  public final Button login;
-
   /**
    * This binding is not available in all configurations.
    * <p>
@@ -64,7 +58,13 @@ public final class ActivityLoginBinding implements ViewBinding {
    * </ul>
    */
   @Nullable
-  public final ImageView mazeGameView;
+  public final ImageView imageView3;
+
+  @NonNull
+  public final ProgressBar loading;
+
+  @NonNull
+  public final Button login;
 
   @NonNull
   public final EditText password;
@@ -74,14 +74,14 @@ public final class ActivityLoginBinding implements ViewBinding {
 
   private ActivityLoginBinding(@NonNull ConstraintLayout rootView,
       @NonNull ConstraintLayout container, @Nullable TextView froggerGameBoard,
-      @NonNull ProgressBar loading, @NonNull Button login, @Nullable ImageView mazeGameView,
+      @Nullable ImageView imageView3, @NonNull ProgressBar loading, @NonNull Button login,
       @NonNull EditText password, @NonNull EditText username) {
     this.rootView = rootView;
     this.container = container;
     this.froggerGameBoard = froggerGameBoard;
+    this.imageView3 = imageView3;
     this.loading = loading;
     this.login = login;
-    this.mazeGameView = mazeGameView;
     this.password = password;
     this.username = username;
   }
@@ -118,6 +118,9 @@ public final class ActivityLoginBinding implements ViewBinding {
       id = R.id.frogger_game_board;
       TextView froggerGameBoard = ViewBindings.findChildViewById(rootView, id);
 
+      id = R.id.imageView3;
+      ImageView imageView3 = ViewBindings.findChildViewById(rootView, id);
+
       id = R.id.loading;
       ProgressBar loading = ViewBindings.findChildViewById(rootView, id);
       if (loading == null) {
@@ -129,9 +132,6 @@ public final class ActivityLoginBinding implements ViewBinding {
       if (login == null) {
         break missingId;
       }
-
-      id = R.id.maze_game_view;
-      ImageView mazeGameView = ViewBindings.findChildViewById(rootView, id);
 
       id = R.id.password;
       EditText password = ViewBindings.findChildViewById(rootView, id);
@@ -146,7 +146,7 @@ public final class ActivityLoginBinding implements ViewBinding {
       }
 
       return new ActivityLoginBinding((ConstraintLayout) rootView, container, froggerGameBoard,
-          loading, login, mazeGameView, password, username);
+          imageView3, loading, login, password, username);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
