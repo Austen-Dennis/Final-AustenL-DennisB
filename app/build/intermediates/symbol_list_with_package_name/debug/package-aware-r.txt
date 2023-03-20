@@ -4346,6 +4346,7 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id btnClose
 id btn_holder
+id button2
 id buttonBar
 id buttonPanel
 id button_continue

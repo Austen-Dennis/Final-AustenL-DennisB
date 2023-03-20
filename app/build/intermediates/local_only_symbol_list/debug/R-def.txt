@@ -17,6 +17,7 @@ drawable placeholder
 drawable the_get_together
 drawable the_get_together_dark_
 id Camera
+id button2
 id container
 id fab
 id frogger_game_board

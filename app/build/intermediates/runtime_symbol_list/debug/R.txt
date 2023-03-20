@@ -4345,6 +4345,7 @@ int id browser_actions_menu_items 0x7f0a0082
 int id browser_actions_menu_view 0x7f0a0083
 int id btnClose 0x7f0a0084
 int id btn_holder 0x7f0a0085
+int id button2 0x7f0a0364
 int id buttonBar 0x7f0a0086
 int id buttonPanel 0x7f0a0087
 int id button_continue 0x7f0a0088
