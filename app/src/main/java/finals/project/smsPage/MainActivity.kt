@@ -3,13 +3,12 @@ package finals.project.smsPage
 
 import android.content.Intent
 import android.os.Bundle
-import android.text.format.DateFormat
 import android.view.View
 import android.widget.EditText
+import android.widget.ListView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.firebase.ui.database.FirebaseListAdapter
-import com.firebase.ui.database.FirebaseListOptions
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase.*
@@ -20,7 +19,7 @@ import okhttp3.internal.userAgent
 
 
 class MainActivity : AppCompatActivity() {
-    private var adapter: FirebaseListAdapter<ChatMessage>? = null
+    private val adapter: FirebaseListAdapter<ChatMessage>? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -62,33 +61,23 @@ class MainActivity : AppCompatActivity() {
     }
 
 private fun displayChatMessages() {
-    val leaderID = ""
-    val options = FirebaseListOptions.Builder<ChatMessage>()
-        .setQuery(
-            getInstance().getReference("Lobbies").child(leaderID).child("Messages"),
-            ChatMessage::class.java
-        ).setLayout(finals.project.R.layout.messages).build()
+    val listOfMessages: ListView = findViewById<ListView>(R.id.list_of_messages)
+        //val adapter = object : FirebaseListAdapter<ChatMessage?>(this, ChatMessage.class, R.layout.message)
 
-    adapter = object : FirebaseListAdapter<ChatMessage>(options) {
-        override fun populateView(v: View, model: ChatMessage, position: Int) {
-            // Get references to the views of message.xml
-            val messageText = v.findViewById<TextView>(finals.project.R.id.message_text)
-            val messageUser = v.findViewById<TextView>(finals.project.R.id.message_user)
-            val messageTime = v.findViewById<TextView>(finals.project.R.id.message_time)
+    fun populateView(v: View, model: ChatMessage, position: Int) {
 
-            // Set their text
-            messageText.text = model.messageText
-            messageUser.text = model.messageUser
+        val messageText: TextView = v.findViewById<View>(R.id.message_text) as TextView
+        val messageUser: TextView = v.findViewById<View>(R.id.message_user) as TextView
+        val messageTime: TextView = v.findViewById<View>(R.id.message_time) as TextView
 
-            // Format the date before showing it
-            messageTime.setText(
-                DateFormat.format(
-                    "dd-MM-yyyy (HH:mm:ss)",
-                    model.messageTime
-                )
-            )
-        }
+        messageText.text = model.messageText
+        messageUser.text = model.messageUser
+
+        /* messageTime.setText(DateFormat.format("dd-MM-yyyy (HH:mm:ss)",
+             model.messageTime
+         ))*/
     }
+    //listOfMessages.adapter = adapter
 }
 
 }
