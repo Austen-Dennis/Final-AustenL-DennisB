@@ -12,7 +12,7 @@
         android:theme="@style/Theme.FInalProject"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".smsPage.MainActivity"
             android:exported="false" />
         <activity
             android:name=".ui.HomeActivity"
