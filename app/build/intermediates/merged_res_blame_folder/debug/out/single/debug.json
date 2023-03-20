@@ -4,16 +4,16 @@
         "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\drawable_placeholder.jpg.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\drawable\\placeholder.jpg"
     },
     {
         "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\drawable_placeholder.jpg.flat",
-        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\drawable\\placeholder.jpg"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\mipmap-mdpi_ic_launcher.webp.flat",
@@ -26,6 +26,10 @@
     {
         "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\mipmap-anydpi-v33_ic_launcher.xml.flat",
         "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\mipmap-anydpi-v33\\ic_launcher.xml"
+    },
+    {
+        "merged": "finals.project.app-merged_res-64:/layout_activity_main.xml.flat",
+        "source": "finals.project.app-main-66:/layout/activity_main.xml"
     },
     {
         "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\drawable_the_get_together_dark_.jpg.flat",
@@ -82,10 +86,6 @@
     {
         "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\mipmap-hdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\mipmap-hdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "finals.project.app-merged_res-64:/layout_activity_login.xml.flat",
-        "source": "finals.project.app-main-66:/layout/activity_login.xml"
     },
     {
         "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
