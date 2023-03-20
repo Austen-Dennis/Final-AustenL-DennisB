@@ -3,35 +3,34 @@ package finals.project.smsPage
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.format.DateFormat
 import android.view.View
 import android.widget.EditText
 import android.widget.ListView
 import android.widget.TextView
+import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
 import com.firebase.ui.database.FirebaseListAdapter
+import com.firebase.ui.database.FirebaseListOptions
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase.*
+import com.google.firebase.database.Query
 import finals.project.R
 import finals.project.data.HomeActivity
-import finals.project.data.PostActivity
 import okhttp3.internal.userAgent
 
 
 class MainActivity : AppCompatActivity() {
-    private val adapter: FirebaseListAdapter<ChatMessage>? = null
+    private var adapter: FirebaseListAdapter<ChatMessage>? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
 
             displayChatMessages()
-        val intentPOST = Intent(this, PostActivity::class.java)
         val intentHOME = Intent(this, HomeActivity::class.java)
-        val postButton = findViewById<View>(R.id.post)
-        postButton.setOnClickListener {
-            startActivity(intentPOST)
-        }
+
         val homeButton = findViewById<View>(R.id.home)
         homeButton.setOnClickListener {
             startActivity(intentHOME)
@@ -45,14 +44,7 @@ class MainActivity : AppCompatActivity() {
             getInstance()
                 .reference
                 .push()
-                .setValue(
-                    ChatMessage(
-                        input.text.toString(),
-                        FirebaseAuth.getInstance()
-                            .currentUser
-                            ?.displayName ?: userAgent
-                    )
-                )
+                .setValue(ChatMessage(input.text.toString(), FirebaseAuth.getInstance().currentUser?.displayName ?: userAgent))
             // Clear the input
             input.setText("")
         }
@@ -60,27 +52,36 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-private fun displayChatMessages() {
-    val listOfMessages: ListView = findViewById<ListView>(R.id.list_of_messages)
-        //val adapter = object : FirebaseListAdapter<ChatMessage?>(this, ChatMessage.class, R.layout.message)
-
-    fun populateView(v: View, model: ChatMessage, position: Int) {
-
-        val messageText: TextView = v.findViewById<View>(R.id.message_text) as TextView
-        val messageUser: TextView = v.findViewById<View>(R.id.message_user) as TextView
-        val messageTime: TextView = v.findViewById<View>(R.id.message_time) as TextView
-
-        messageText.text = model.messageText
-        messageUser.text = model.messageUser
-
-        /* messageTime.setText(DateFormat.format("dd-MM-yyyy (HH:mm:ss)",
-             model.messageTime
-         ))*/
+    private fun displayChatMessages() {
+        val listOfMessage = findViewById<View>(R.id.list_of_messages) as ListView
+        val query: Query = getInstance().reference.child("chats")
+        val options = FirebaseListOptions.Builder<ChatMessage>()
+            .setQuery(query, ChatMessage::class.java)
+            .setLayout(android.R.layout.simple_list_item_1)
+            .build()
+        adapter = object : FirebaseListAdapter<ChatMessage>(options) {
+            override fun populateView(
+                @NonNull v: View,
+                @NonNull model: ChatMessage,
+                position: Int
+            ) {
+                val messageText: TextView
+                val messageUser: TextView
+                val messageTime: TextView
+                messageText = v.findViewById<TextView>(R.id.message_text)
+                messageUser = v.findViewById<TextView>(R.id.message_user)
+                messageTime = v.findViewById<TextView>(R.id.message_time)
+                messageText.text = model.messageText
+                messageUser.text = model.messageUser
+                messageTime.setText(DateFormat.format("dd-MM-yyyy(HH:mm:ss)", model.messageTime))
+            }
+        }
+        listOfMessage.adapter = adapter
     }
-    //listOfMessages.adapter = adapter
-}
 
 }
+
+
 
 
 
