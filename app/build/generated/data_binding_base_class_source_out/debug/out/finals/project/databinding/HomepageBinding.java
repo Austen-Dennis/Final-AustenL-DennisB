@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -24,19 +23,15 @@ public final class HomepageBinding implements ViewBinding {
   public final Button home;
 
   @NonNull
-  public final ImageView imageView2;
-
-  @NonNull
   public final Button post;
 
   @NonNull
   public final Button sms;
 
   private HomepageBinding(@NonNull ConstraintLayout rootView, @NonNull Button home,
-      @NonNull ImageView imageView2, @NonNull Button post, @NonNull Button sms) {
+      @NonNull Button post, @NonNull Button sms) {
     this.rootView = rootView;
     this.home = home;
-    this.imageView2 = imageView2;
     this.post = post;
     this.sms = sms;
   }
@@ -74,12 +69,6 @@ public final class HomepageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imageView2;
-      ImageView imageView2 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView2 == null) {
-        break missingId;
-      }
-
       id = R.id.post;
       Button post = ViewBindings.findChildViewById(rootView, id);
       if (post == null) {
@@ -92,7 +81,7 @@ public final class HomepageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new HomepageBinding((ConstraintLayout) rootView, home, imageView2, post, sms);
+      return new HomepageBinding((ConstraintLayout) rootView, home, post, sms);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

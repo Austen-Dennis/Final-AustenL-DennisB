@@ -9,7 +9,6 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -26,23 +25,6 @@ public final class ActivityLoginBinding implements ViewBinding {
 
   @NonNull
   public final ConstraintLayout container;
-
-  /**
-   * This binding is not available in all configurations.
-   * <p>
-   * Present:
-   * <ul>
-   *   <li>layout/</li>
-   * </ul>
-   *
-   * Absent:
-   * <ul>
-   *   <li>layout-w1240dp/</li>
-   *   <li>layout-w936dp/</li>
-   * </ul>
-   */
-  @Nullable
-  public final TextView froggerGameBoard;
 
   /**
    * This binding is not available in all configurations.
@@ -91,12 +73,11 @@ public final class ActivityLoginBinding implements ViewBinding {
   public final CheckBox verify;
 
   private ActivityLoginBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout container, @Nullable TextView froggerGameBoard,
-      @Nullable ImageView imageView3, @NonNull ProgressBar loading, @NonNull Button login,
-      @NonNull EditText password, @NonNull EditText username, @Nullable CheckBox verify) {
+      @NonNull ConstraintLayout container, @Nullable ImageView imageView3,
+      @NonNull ProgressBar loading, @NonNull Button login, @NonNull EditText password,
+      @NonNull EditText username, @Nullable CheckBox verify) {
     this.rootView = rootView;
     this.container = container;
-    this.froggerGameBoard = froggerGameBoard;
     this.imageView3 = imageView3;
     this.loading = loading;
     this.login = login;
@@ -134,9 +115,6 @@ public final class ActivityLoginBinding implements ViewBinding {
     missingId: {
       ConstraintLayout container = (ConstraintLayout) rootView;
 
-      id = R.id.frogger_game_board;
-      TextView froggerGameBoard = ViewBindings.findChildViewById(rootView, id);
-
       id = R.id.imageView3;
       ImageView imageView3 = ViewBindings.findChildViewById(rootView, id);
 
@@ -167,8 +145,8 @@ public final class ActivityLoginBinding implements ViewBinding {
       id = R.id.verify;
       CheckBox verify = ViewBindings.findChildViewById(rootView, id);
 
-      return new ActivityLoginBinding((ConstraintLayout) rootView, container, froggerGameBoard,
-          imageView3, loading, login, password, username, verify);
+      return new ActivityLoginBinding((ConstraintLayout) rootView, container, imageView3, loading,
+          login, password, username, verify);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

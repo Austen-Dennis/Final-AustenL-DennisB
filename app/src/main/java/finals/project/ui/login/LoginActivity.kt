@@ -36,9 +36,10 @@ class LoginActivity : AppCompatActivity() {
         val login = binding.login
         val loading = binding.loading
         val intent = Intent(this, HomeActivity::class.java)
-        val postButton = findViewById<View>(R.id.verify)
-        postButton.setOnClickListener {
-            postButton.visibility = View.INVISIBLE
+
+        val verifyButton = findViewById<View>(R.id.verify)
+        verifyButton.setOnClickListener {
+            verifyButton.visibility = View.INVISIBLE
             username.visibility= View.VISIBLE
             password.visibility=View.VISIBLE
             login.visibility=View.VISIBLE
@@ -105,7 +106,6 @@ class LoginActivity : AppCompatActivity() {
                 loading.visibility = View.VISIBLE
                 loginViewModel.login(username.text.toString(), password.text.toString())
                 startActivity(intent)
-
             }
         }
     }
