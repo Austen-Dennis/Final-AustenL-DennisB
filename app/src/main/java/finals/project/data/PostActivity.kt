@@ -6,13 +6,13 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.view.View
 import finals.project.R
-import finals.project.smsPage.MainActivity
+import finals.project.smsPage.SmsPage
 
 class PostActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.post)
-        val intentSMS = Intent(this, MainActivity::class.java)
+        val intentSMS = Intent(this, SmsPage::class.java)
         val intentHOME = Intent(this, HomeActivity::class.java)
         val intentCAMERA = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         val smsButton = findViewById<View>(R.id.sms)

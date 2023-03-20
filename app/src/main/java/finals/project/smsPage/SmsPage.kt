@@ -22,12 +22,12 @@ import finals.project.data.PostActivity
 import okhttp3.internal.userAgent
 
 
-class MainActivity : AppCompatActivity() {
+class SmsPage : AppCompatActivity() {
     private var adapter: FirebaseListAdapter<ChatMessage>? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.smspage)
 
             displayChatMessages()
         val intentHOME = Intent(this, HomeActivity::class.java)
