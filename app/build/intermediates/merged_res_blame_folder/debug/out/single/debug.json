@@ -4,12 +4,12 @@
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\mipmap-xhdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\mipmap-hdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\drawable_the_get_together.jpg.flat",
@@ -22,6 +22,10 @@
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "finals.project.app-merged_res-64:/layout_activity_main.xml.flat",
+        "source": "finals.project.app-main-66:/layout/activity_main.xml"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\xml_backup_rules.xml.flat",
@@ -94,10 +98,6 @@
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\layout_post.xml.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\layout\\post.xml"
-    },
-    {
-        "merged": "finals.project.app-merged_res-64:/layout_post.xml.flat",
-        "source": "finals.project.app-main-66:/layout/post.xml"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\mipmap-mdpi_ic_launcher.webp.flat",

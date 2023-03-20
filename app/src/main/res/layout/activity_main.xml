@@ -47,7 +47,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="360dp"
         android:layout_marginBottom="-50dp"
-        android:clickable="true"
+        android:clickable="false"
         android:tint="@android:color/white"
         app:fabSize="mini"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
