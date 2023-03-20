@@ -1,6 +1,7 @@
 package finals.project.smsPage
 
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.text.format.DateFormat
@@ -24,6 +25,7 @@ import okhttp3.internal.userAgent
 
 class SmsPage : AppCompatActivity() {
     private var adapter: FirebaseListAdapter<ChatMessage>? = null
+    @SuppressLint("MissingInflatedId", "CutPasteId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -32,7 +34,6 @@ class SmsPage : AppCompatActivity() {
             displayChatMessages()
         val intentHOME = Intent(this, HomeActivity::class.java)
         val intentPOST = Intent(this, PostActivity::class.java)
-        val intentSMS = Intent(this, MainActivity::class.java)
 
 
         val homeButton = findViewById<View>(R.id.home)

@@ -56,13 +56,10 @@
         android:testOnly="true"
         android:theme="@style/Theme.FInalProject" >
         <activity
-            android:name="finals.project.ui.captcha.CaptchaGame"
-            android:exported="false" />
-        <activity
             android:name="finals.project.data.PostActivity"
             android:exported="false" />
         <activity
-            android:name="finals.project.smsPage.MainActivity"
+            android:name="finals.project.smsPage.SmsPage"
             android:exported="false" />
         <activity
             android:name="finals.project.data.HomeActivity"

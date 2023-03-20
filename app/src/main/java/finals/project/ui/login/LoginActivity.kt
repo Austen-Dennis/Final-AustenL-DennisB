@@ -16,9 +16,7 @@ import androidx.lifecycle.ViewModelProvider
 import finals.project.R
 import finals.project.databinding.ActivityLoginBinding
 import finals.project.data.HomeActivity
-import finals.project.smsPage.MainActivity
-import finals.project.ui.captcha.CaptchaGame
-import finals.project.ui.captcha.FroggerGame
+import finals.project.smsPage.SmsPage
 
 class LoginActivity : AppCompatActivity() {
 
@@ -26,8 +24,6 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        /** play frogger game **/
-        //playFroggerGame()
         super.onCreate(savedInstanceState)
 
         binding = ActivityLoginBinding.inflate(layoutInflater)
@@ -108,7 +104,6 @@ class LoginActivity : AppCompatActivity() {
             login.setOnClickListener {
                 loading.visibility = View.VISIBLE
                 loginViewModel.login(username.text.toString(), password.text.toString())
-
                 startActivity(intent)
 
             }
@@ -128,26 +123,6 @@ class LoginActivity : AppCompatActivity() {
     private fun showLoginFailed(@StringRes errorString: Int) {
         Toast.makeText(applicationContext, errorString, Toast.LENGTH_SHORT).show()
     }
-
-    private fun playFroggerGame() {
-        val froggerGameBoardTextView = binding.froggerGameBoard
-
-        val game = FroggerGame(11, 7) { board ->
-            // Update the UI with the new board state.
-            val boardText = board.joinToString(separator = "\n") { row -> row.joinToString("") }
-            if (froggerGameBoardTextView != null) {
-                froggerGameBoardTextView.text = boardText
-            }
-        }
-
-        // Example movements: up, right, up, left, up
-        game.movePlayer(0, -1)
-        game.movePlayer(1, 0)
-        game.movePlayer(0, -1)
-        game.movePlayer(-1, 0)
-        game.movePlayer(0, -1)
-    }
-
 
 }
 

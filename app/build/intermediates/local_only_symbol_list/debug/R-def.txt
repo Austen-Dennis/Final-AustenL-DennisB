@@ -39,11 +39,11 @@ id textView
 id username
 id verify
 layout activity_login
-layout activity_main
 layout captcha_game
 layout homepage
 layout messages
 layout post
+layout smspage
 mipmap ic_launcher
 mipmap ic_launcher_round
 string action_sign_in

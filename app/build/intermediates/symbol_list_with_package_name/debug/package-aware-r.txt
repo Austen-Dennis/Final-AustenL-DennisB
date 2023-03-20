@@ -5197,7 +5197,6 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_login
-layout activity_main
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout captcha_game
@@ -5315,6 +5314,7 @@ layout post
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout smspage
 layout stream_activity_attachment_document
 layout stream_toggle_dialog_fragment
 layout stream_toggle_list_item
