@@ -16,11 +16,10 @@ import finals.project.R
 import finals.project.data.HomeActivity
 import finals.project.data.PostActivity
 import okhttp3.internal.userAgent
-import java.text.DateFormat
 
 
 class MainActivity : AppCompatActivity() {
-
+    private val adapter: FirebaseListAdapter<ChatMessage>? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -63,7 +62,7 @@ class MainActivity : AppCompatActivity() {
 
 private fun displayChatMessages() {
     val listOfMessages: ListView = findViewById<ListView>(R.id.list_of_messages)
-        val adapter = object : FirebaseListAdapter<ChatMessage?>(this, ChatMessage.class, R.layout.message)
+        //val adapter = object : FirebaseListAdapter<ChatMessage?>(this, ChatMessage.class, R.layout.message)
 
     fun populateView(v: View, model: ChatMessage, position: Int) {
 
