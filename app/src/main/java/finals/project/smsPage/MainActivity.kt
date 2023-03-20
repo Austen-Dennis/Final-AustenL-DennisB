@@ -17,7 +17,7 @@ import java.text.DateFormat
 
 
 class MainActivity : AppCompatActivity() {
-   /* private fun displayChatMessages() {
+    private fun displayChatMessages() {
         val listOfMessages: ListView = findViewById<ListView>(R.id.list_of_messages)
         val adapter = object : FirebaseListAdapter<ChatMessage?>(this, ChatMessage.class,
                 R.layout.message)
@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         listOfMessages.adapter = adapter
-    }*/
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
