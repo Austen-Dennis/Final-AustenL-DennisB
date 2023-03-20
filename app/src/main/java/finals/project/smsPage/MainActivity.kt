@@ -17,34 +17,13 @@ import java.text.DateFormat
 
 
 class MainActivity : AppCompatActivity() {
-    private fun displayChatMessages() {
-        val listOfMessages: ListView = findViewById<ListView>(R.id.list_of_messages)
-        val adapter = object : FirebaseListAdapter<ChatMessage?>(this, ChatMessage.class,
-                R.layout.message)
-        {
-            override fun populateView(v: View, model: ChatMessage, position: Int) {
-                // Get references to the views of message.xml
-                val messageText: TextView = v.findViewById<View>(R.id.message_text) as TextView
-                val messageUser: TextView = v.findViewById<View>(R.id.message_user) as TextView
-                val messageTime: TextView = v.findViewById<View>(R.id.message_time) as TextView
-                // Set their text
-                messageText.text = model.messageText
-                messageUser.text = model.messageUser
-                // Format the date before showing it
-                messageTime.setText(DateFormat.format("dd-MM-yyyy (HH:mm:ss)",
-                    model.messageTime
-                ))
-            }
-        }
-        listOfMessages.adapter = adapter
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
 
-            //displayChatMessages()
+            displayChatMessages()
 
         val fab = findViewById<View>(R.id.fab) as FloatingActionButton
         fab.setOnClickListener {
@@ -68,7 +47,30 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+private fun displayChatMessages() {
+    val listOfMessages: ListView = findViewById<ListView>(R.id.list_of_messages)
+    /* val adapter = object : FirebaseListAdapter<ChatMessage?>(this, ChatMessage.class,
+             R.layout.message)*/
+
+    fun populateView(v: View, model: ChatMessage, position: Int) {
+
+        val messageText: TextView = v.findViewById<View>(R.id.message_text) as TextView
+        val messageUser: TextView = v.findViewById<View>(R.id.message_user) as TextView
+        val messageTime: TextView = v.findViewById<View>(R.id.message_time) as TextView
+
+        messageText.text = model.messageText
+        messageUser.text = model.messageUser
+
+        /* messageTime.setText(DateFormat.format("dd-MM-yyyy (HH:mm:ss)",
+             model.messageTime
+         ))*/
+    }
+    //listOfMessages.adapter = adapter
 }
+
+}
+
 
 
 
