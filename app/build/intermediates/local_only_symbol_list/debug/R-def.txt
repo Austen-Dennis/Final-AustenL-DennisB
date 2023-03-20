@@ -35,9 +35,11 @@ id password
 id post
 id sms
 id textInputLayout
+id textView
 id username
 layout activity_login
 layout activity_main
+layout captcha_game
 layout homepage
 layout messages
 layout post

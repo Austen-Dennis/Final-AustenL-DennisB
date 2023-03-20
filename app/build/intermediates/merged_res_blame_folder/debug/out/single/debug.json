@@ -64,6 +64,10 @@
         "source": "finals.project.app-main-66:/layout/homepage.xml"
     },
     {
+        "merged": "finals.project.app-merged_res-64:/layout_captcha_game.xml.flat",
+        "source": "finals.project.app-main-66:/layout/captcha_game.xml"
+    },
+    {
         "merged": "finals.project.app-merged_res-64:/layout-w1240dp_activity_login.xml.flat",
         "source": "finals.project.app-main-66:/layout-w1240dp/activity_login.xml"
     },
