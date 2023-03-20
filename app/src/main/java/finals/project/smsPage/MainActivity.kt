@@ -1,6 +1,7 @@
 package finals.project.smsPage
 
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -20,6 +21,7 @@ import okhttp3.internal.userAgent
 
 class MainActivity : AppCompatActivity() {
     private val adapter: FirebaseListAdapter<ChatMessage>? = null
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

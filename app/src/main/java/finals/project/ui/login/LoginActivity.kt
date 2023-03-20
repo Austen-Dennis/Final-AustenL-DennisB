@@ -2,6 +2,7 @@ package finals.project.ui.login
 
 import android.content.Intent
 import android.os.Bundle
+import android.provider.MediaStore
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
@@ -12,8 +13,11 @@ import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import finals.project.R
 import finals.project.databinding.ActivityLoginBinding
 import finals.project.data.HomeActivity
+import finals.project.smsPage.MainActivity
+import finals.project.ui.captcha.CaptchaGame
 import finals.project.ui.captcha.FroggerGame
 
 class LoginActivity : AppCompatActivity() {
@@ -30,11 +34,19 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
+
         val username = binding.username
         val password = binding.password
         val login = binding.login
         val loading = binding.loading
         val intent = Intent(this, HomeActivity::class.java)
+        val postButton = findViewById<View>(R.id.verify)
+        postButton.setOnClickListener {
+            postButton.visibility = View.INVISIBLE
+            username.visibility= View.VISIBLE
+            password.visibility=View.VISIBLE
+            login.visibility=View.VISIBLE
+        }
 
         loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
                 .get(LoginViewModel::class.java)

@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="#AFAFAF"
     tools:context=".data.HomeActivity">
-
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
