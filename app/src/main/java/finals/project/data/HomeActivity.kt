@@ -12,9 +12,12 @@ class HomeActivity : AppCompatActivity() {
     @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.homepage)
+        setContentView(R.layout.homepage) // sets the view using the homepage.xml
+
+        // sets the intent I.E. calls to the class Smspage which displays a layout
         val intentSMS = Intent(this, SmsPage::class.java)
         val intentPOST = Intent(this, PostActivity::class.java)
+        //starts the activity onclick
         val smsButton = findViewById<View>(R.id.sms)
         smsButton.setOnClickListener {
             startActivity(intentSMS)
@@ -25,6 +28,7 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
+    //only for testing.
     companion object {
         fun iscreated(): Any {
             val created = true;
