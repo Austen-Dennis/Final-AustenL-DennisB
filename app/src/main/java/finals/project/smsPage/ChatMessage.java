@@ -15,6 +15,7 @@ public class ChatMessage {
     }
 
     public ChatMessage() {
+        //default constructor
     }
 
     public String getMessageText() {

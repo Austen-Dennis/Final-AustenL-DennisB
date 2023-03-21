@@ -21,11 +21,8 @@ import finals.project.R
 import finals.project.data.HomeActivity
 import finals.project.data.PostActivity
 import okhttp3.internal.userAgent
-
-
 class SmsPage : AppCompatActivity() {
     private var adapter: FirebaseListAdapter<ChatMessage>? = null
-
     @SuppressLint("MissingInflatedId", "CutPasteId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,8 +32,6 @@ class SmsPage : AppCompatActivity() {
         displayChatMessages()
         val intentHOME = Intent(this, HomeActivity::class.java)
         val intentPOST = Intent(this, PostActivity::class.java)
-
-
         val homeButton = findViewById<View>(R.id.home)
         homeButton.setOnClickListener {
             startActivity(intentHOME)
@@ -54,28 +49,17 @@ class SmsPage : AppCompatActivity() {
             smsButton.visibility = View.INVISIBLE
         }
 
-
         val fab = findViewById<View>(R.id.fab) as FloatingActionButton
         fab.setOnClickListener {
             val input = findViewById<View>(R.id.input) as EditText
             // Read the input field and push a new instance
             // of ChatMessage to the Firebase database
-            getInstance()
-                .reference
-                .push()
-                .setValue(
-                    ChatMessage(
-                        input.text.toString(),
-                        FirebaseAuth.getInstance().currentUser?.displayName ?: userAgent
-                    )
-                )
+            getInstance().reference.push().setValue(ChatMessage(input.text.toString(),
+                FirebaseAuth.getInstance().currentUser?.displayName ?: userAgent))
             // Clear the input
             input.setText("")
         }
-
-
     }
-
     private fun displayChatMessages() {
         val listOfMessage = findViewById<View>(R.id.list_of_messages) as ListView
         val query: Query = getInstance().reference.child("chats")
@@ -102,7 +86,6 @@ class SmsPage : AppCompatActivity() {
         }
         listOfMessage.adapter = adapter
     }
-
 }
 
 
