@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import android.util.Patterns
+import android.view.View
 import finals.project.data.LoginRepository
 import finals.project.data.Result
 
@@ -48,6 +49,7 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
         fun isPasswordValid(password: String): Boolean {
             return password.length > 5
         }
+
     }
 }
 
