@@ -86,6 +86,12 @@ class SmsPage : AppCompatActivity() {
         }
         listOfMessage.adapter = adapter
     }
+    companion object {
+        fun iscreated(): Any {
+            val created = true;
+            return created
+        }
+    }
 }
 
 

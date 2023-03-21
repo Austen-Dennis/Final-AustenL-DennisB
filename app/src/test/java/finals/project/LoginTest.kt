@@ -1,7 +1,9 @@
 package finals.project
 
+import finals.project.data.HomeActivity
 import finals.project.ui.login.LoginActivity
 import finals.project.ui.login.LoginViewModel
+import junit.framework.TestCase
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -36,5 +38,10 @@ class LoginTest {
     fun passwordIsValid() {
         val password = "womper"
         assertTrue(LoginViewModel.isPasswordValid(password))
+    }
+    @Test
+    fun isCreatedTest(){
+        val returnValue = LoginActivity.iscreated()
+        TestCase.assertTrue(returnValue as Boolean)
     }
 }

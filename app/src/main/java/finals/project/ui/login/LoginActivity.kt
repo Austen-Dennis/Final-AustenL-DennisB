@@ -48,6 +48,7 @@ class LoginActivity : AppCompatActivity() {
             login.visibility=View.VISIBLE
         }
 
+
         loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
                 .get(LoginViewModel::class.java)
 
@@ -110,7 +111,9 @@ class LoginActivity : AppCompatActivity() {
                 loginViewModel.login(username.text.toString(), password.text.toString())
                 startActivity(intent)
             }
+
         }
+
     }
 
    private fun updateUiWithUser(model: LoggedInUserView) {
@@ -122,8 +125,15 @@ class LoginActivity : AppCompatActivity() {
         ).show()
 
     }
+
     private fun showLoginFailed(@StringRes errorString: Int) {
         Toast.makeText(applicationContext, errorString, Toast.LENGTH_SHORT).show()
+    }
+    companion object {
+        fun iscreated(): Any {
+            val created = true;
+            return created
+        }
     }
 }
 
@@ -138,4 +148,5 @@ fun EditText.afterTextChanged(afterTextChanged: (String) -> Unit) {
         override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
         override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
     })
+
 }

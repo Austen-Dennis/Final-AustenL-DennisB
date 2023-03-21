@@ -23,7 +23,6 @@ class HomeActivity : AppCompatActivity() {
         postButton.setOnClickListener {
             startActivity(intentPOST)
         }
-        iscreated()
     }
 
     companion object {

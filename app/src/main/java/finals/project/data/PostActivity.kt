@@ -28,4 +28,10 @@ class PostActivity : AppCompatActivity() {
             startActivity(intentCAMERA)
         }
     }
+    companion object {
+        fun iscreated(): Any {
+            val created = true;
+            return created
+        }
+    }
 }
