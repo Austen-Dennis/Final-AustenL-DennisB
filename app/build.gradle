@@ -7,6 +7,9 @@ plugins {
 android {
     namespace 'finals.project'
     compileSdk 33
+        testOptions {
+            unitTests.returnDefaultValues = true
+        }
 
     defaultConfig {
         applicationId "finals.project"
