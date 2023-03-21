@@ -16,12 +16,20 @@ class HomeActivity : AppCompatActivity() {
         val intentSMS = Intent(this, SmsPage::class.java)
         val intentPOST = Intent(this, PostActivity::class.java)
         val smsButton = findViewById<View>(R.id.sms)
-            smsButton.setOnClickListener {
-                startActivity(intentSMS)
-            }
+        smsButton.setOnClickListener {
+            startActivity(intentSMS)
+        }
         val postButton = findViewById<View>(R.id.post)
-            postButton.setOnClickListener {
-                startActivity(intentPOST)
-            }
+        postButton.setOnClickListener {
+            startActivity(intentPOST)
+        }
+        iscreated()
+    }
+
+    companion object {
+        fun iscreated(): Any {
+            val created = true;
+            return created
+        }
     }
 }
