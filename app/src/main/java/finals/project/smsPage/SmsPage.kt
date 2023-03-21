@@ -25,13 +25,14 @@ import okhttp3.internal.userAgent
 
 class SmsPage : AppCompatActivity() {
     private var adapter: FirebaseListAdapter<ChatMessage>? = null
+
     @SuppressLint("MissingInflatedId", "CutPasteId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.smspage)
 
-            displayChatMessages()
+        displayChatMessages()
         val intentHOME = Intent(this, HomeActivity::class.java)
         val intentPOST = Intent(this, PostActivity::class.java)
 
@@ -48,11 +49,10 @@ class SmsPage : AppCompatActivity() {
 
         val typeBox = findViewById<View>(R.id.input)
         typeBox.setOnClickListener {
-            homeButton.visibility=View.INVISIBLE
-            postButton.visibility=View.INVISIBLE
-            smsButton.visibility=View.INVISIBLE
+            homeButton.visibility = View.INVISIBLE
+            postButton.visibility = View.INVISIBLE
+            smsButton.visibility = View.INVISIBLE
         }
-
 
 
         val fab = findViewById<View>(R.id.fab) as FloatingActionButton
@@ -63,7 +63,12 @@ class SmsPage : AppCompatActivity() {
             getInstance()
                 .reference
                 .push()
-                .setValue(ChatMessage(input.text.toString(), FirebaseAuth.getInstance().currentUser?.displayName ?: userAgent))
+                .setValue(
+                    ChatMessage(
+                        input.text.toString(),
+                        FirebaseAuth.getInstance().currentUser?.displayName ?: userAgent
+                    )
+                )
             // Clear the input
             input.setText("")
         }
