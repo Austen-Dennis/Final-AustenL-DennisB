@@ -5,21 +5,19 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.firebase.ui.auth.data.model.User
-import com.google.firebase.auth.UserInfo
 import finals.project.R
-import finals.project.data.model.ProfileActivity
-import finals.project.data.model.UserInformation
 import finals.project.smsPage.SmsPage
 
 class HomeActivity : AppCompatActivity() {
     @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        UserInformation()
-        setContentView(R.layout.homepage)
+        setContentView(R.layout.homepage) // sets the view using the homepage.xml
+
+        // sets the intent I.E. calls to the class Smspage which displays a layout
         val intentSMS = Intent(this, SmsPage::class.java)
         val intentPOST = Intent(this, PostActivity::class.java)
+        //starts the activity onclick
         val smsButton = findViewById<View>(R.id.sms)
         smsButton.setOnClickListener {
             startActivity(intentSMS)
@@ -30,6 +28,7 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
+    //only for testing.
     companion object {
         fun iscreated(): Any {
             val created = true;
