@@ -21,6 +21,7 @@ import com.google.firebase.FirebaseOptions
 import com.google.firebase.auth.FirebaseAuth
 import finals.project.R
 import finals.project.data.HomeActivity
+import finals.project.data.model.ProfileActivity
 import finals.project.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
