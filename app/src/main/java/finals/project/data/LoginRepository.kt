@@ -1,6 +1,7 @@
 package finals.project.data
 
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import finals.project.data.model.LoggedInUser
 
 /**
@@ -26,12 +27,13 @@ class LoginRepository(val dataSource: LoginDataSource) {
         if (result is Result.Success) {
             setLoggedInUser(result.data)
             FirebaseAuth.getInstance().createUserWithEmailAndPassword(username, password)
+            val UID = FirebaseAuth.getInstance().uid
+            System.out.println(UID)
         }
         return result
     }
-    private fun setLoggedInUser(loggedInUser: LoggedInUser) {
+    fun setLoggedInUser(loggedInUser: LoggedInUser){
         this.user = loggedInUser
-
     }
 
 }

@@ -1,7 +1,5 @@
 package finals.project.ui.login
 
-import android.annotation.SuppressLint
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
@@ -14,15 +12,15 @@ import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.firebase.ui.auth.AuthUI
-import com.firebase.ui.auth.AuthUI.getApplicationContext
 import com.google.firebase.FirebaseApp
-import com.google.firebase.FirebaseOptions
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import finals.project.R
 import finals.project.data.HomeActivity
-import finals.project.data.model.ProfileActivity
+import finals.project.data.LoginRepository
 import finals.project.databinding.ActivityLoginBinding
+
 
 class LoginActivity : AppCompatActivity() {
 
@@ -30,11 +28,12 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         FirebaseApp.initializeApp(this)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+        val token = FirebaseAuth.getInstance().uid
         val username = binding.username
         val password = binding.password
         val login = binding.login
@@ -115,9 +114,25 @@ class LoginActivity : AppCompatActivity() {
 
         }
 
+
     }
 
-   private fun updateUiWithUser(model: LoggedInUserView) {
+    fun updateUiWithUser(model: LoggedInUserView) {
+        val user = Firebase.auth.currentUser
+        user?.let {
+            // Name, email address, and profile photo Url
+            val name = it.displayName
+            val email = it.email
+            val photoUrl = it.photoUrl
+
+            // Check if user's email is verified
+            val emailVerified = it.isEmailVerified
+
+            // The user's ID, unique to the Firebase project. Do NOT use this value to
+            // authenticate with your backend server, if you have one. Use
+            // FirebaseUser.getIdToken() instead.
+            val uid = it.uid
+
         // TODO : initiate successful logged in experience
         Toast.makeText(
                 applicationContext,
@@ -125,7 +140,7 @@ class LoginActivity : AppCompatActivity() {
                 Toast.LENGTH_LONG
         ).show()
 
-    }
+    }}
 
     private fun showLoginFailed(@StringRes errorString: Int) {
         Toast.makeText(applicationContext, errorString, Toast.LENGTH_SHORT).show()

@@ -56,9 +56,6 @@
         android:testOnly="true"
         android:theme="@style/Theme.FInalProject" >
         <activity
-            android:name="finals.project.data.model.ProfileActivity"
-            android:exported="false" />
-        <activity
             android:name="finals.project.data.PostActivity"
             android:exported="false" />
         <activity
