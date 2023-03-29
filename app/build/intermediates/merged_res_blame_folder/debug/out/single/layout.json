@@ -1,22 +1,26 @@
 [
     {
-        "merged": "finals.project.app-mergeDebugResources-63:/layout/messages.xml",
-        "source": "finals.project.app-main-66:/layout/messages.xml"
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-63:\\layout\\post.xml",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\layout\\post.xml"
     },
     {
-        "merged": "finals.project.app-mergeDebugResources-63:/layout/post.xml",
-        "source": "finals.project.app-main-66:/layout/post.xml"
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-63:\\layout\\homepage.xml",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\layout\\homepage.xml"
     },
     {
-        "merged": "finals.project.app-mergeDebugResources-63:/layout/activity_login.xml",
-        "source": "finals.project.app-main-66:/layout/activity_login.xml"
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-63:\\layout\\messages.xml",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\layout\\messages.xml"
+    },
+    {
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-63:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-63:\\layout\\smspage.xml",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\layout\\smspage.xml"
     },
     {
         "merged": "finals.project.app-mergeDebugResources-63:/layout/homepage.xml",
         "source": "finals.project.app-main-66:/layout/homepage.xml"
-    },
-    {
-        "merged": "finals.project.app-mergeDebugResources-63:/layout/smspage.xml",
-        "source": "finals.project.app-main-66:/layout/smspage.xml"
     }
 ]

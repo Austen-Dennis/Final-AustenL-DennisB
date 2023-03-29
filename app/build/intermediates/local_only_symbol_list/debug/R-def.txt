@@ -32,6 +32,7 @@ id message_user
 id password
 id post
 id sms
+id so
 id textInputLayout
 id username
 id verify
