@@ -108,7 +108,15 @@ class LoginActivity : AppCompatActivity() {
                 loading.visibility = View.VISIBLE
                 loginViewModel.login(username.text.toString(), password.text.toString())
                 startActivity(intent)
+                try {
+                    Thread.sleep(3000);
+                } catch (e: java.lang.Exception){
+                    e.printStackTrace()
+                }
+                val uid = FirebaseAuth.getInstance().currentUser?.uid
+                System.out.println(uid)
             }
+
         }
     }
 
