@@ -30,7 +30,6 @@ class LoginRepository(val dataSource: LoginDataSource) {
         if (result is Result.Success) {
             setLoggedInUser(result.data)
             FirebaseAuth.getInstance().createUserWithEmailAndPassword(username, password)
-
             FirebaseAuth.getInstance().signInWithEmailAndPassword(username, password)
         }
         return result

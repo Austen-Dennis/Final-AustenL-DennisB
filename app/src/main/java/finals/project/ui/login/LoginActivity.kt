@@ -38,6 +38,7 @@ class LoginActivity : AppCompatActivity() {
         val loading = binding.loading
         val intent = Intent(this, HomeActivity::class.java)
 
+
         val verifyButton = findViewById<View>(R.id.verify)
         verifyButton.setOnClickListener {
             verifyButton.visibility = View.INVISIBLE
@@ -73,7 +74,7 @@ class LoginActivity : AppCompatActivity() {
                 showLoginFailed(loginResult.error)
             }
             if (loginResult.success != null) {
-                updateUiWithUser(loginResult.success)
+                //updateUiWithUser(loginResult.success)
             }
         })
 
@@ -87,8 +88,8 @@ class LoginActivity : AppCompatActivity() {
         password.apply {
             afterTextChanged {
                 loginViewModel.loginDataChanged(
-                        username.text.toString(),
-                        password.text.toString()
+                    username.text.toString(),
+                    password.text.toString()
                 )
             }
 
@@ -96,8 +97,8 @@ class LoginActivity : AppCompatActivity() {
                 when (actionId) {
                     EditorInfo.IME_ACTION_DONE ->
                         loginViewModel.login(
-                                username.text.toString(),
-                                password.text.toString()
+                            username.text.toString(),
+                            password.text.toString()
 
                         )
                 }
@@ -107,26 +108,36 @@ class LoginActivity : AppCompatActivity() {
             login.setOnClickListener {
                 loading.visibility = View.VISIBLE
                 loginViewModel.login(username.text.toString(), password.text.toString())
-                startActivity(intent)
                 try {
-                    Thread.sleep(3000);
-                } catch (e: java.lang.Exception){
+                    Thread.sleep(1000);
+                } catch (e: java.lang.Exception) {
                     e.printStackTrace()
                 }
                 val uid = FirebaseAuth.getInstance().currentUser?.uid
-                System.out.println(uid)
+                if (uid != null) {
+                    Toast.makeText(
+                        applicationContext,
+                        "Successful Login for User:" + uid,
+                        Toast.LENGTH_LONG
+                    ).show()
+                    startActivity(intent)
+                } else {
+                    Toast.makeText(
+                        applicationContext,
+                        "Incorrect Password",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
             }
-
         }
     }
 
     fun updateUiWithUser(model: LoggedInUserView) {
-            // TODO : initiate successful logged in experience
-            Toast.makeText(
-                applicationContext,
-                "User Registered Successfully",
-                Toast.LENGTH_LONG
-            ).show()
+        try {
+            Thread.sleep(1000);
+        } catch (e: java.lang.Exception){
+            e.printStackTrace()
+        }
     }
 
     private fun showLoginFailed(@StringRes errorString: Int) {
