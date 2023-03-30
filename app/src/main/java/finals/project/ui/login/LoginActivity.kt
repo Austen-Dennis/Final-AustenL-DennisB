@@ -12,14 +12,11 @@ import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import finals.project.R
 import finals.project.data.HomeActivity
-import finals.project.data.LoginRepository
 import finals.project.databinding.ActivityLoginBinding
 
 
@@ -114,10 +111,12 @@ class LoginActivity : AppCompatActivity() {
                     e.printStackTrace()
                 }
                 val uid = FirebaseAuth.getInstance().currentUser?.uid
+                var displayName = Firebase.auth.currentUser?.email
+                val name = displayName?.let { it1 -> emailTrim(it1) }
                 if (uid != null) {
                     Toast.makeText(
                         applicationContext,
-                        "Successful Login for User:" + uid,
+                        "Successful Login for User: " + name,
                         Toast.LENGTH_LONG
                     ).show()
                     startActivity(intent)
@@ -145,8 +144,13 @@ class LoginActivity : AppCompatActivity() {
     }
     companion object {
         fun iscreated(): Any {
-            val created = true;
+            val created = true
             return created
+        }
+        fun emailTrim(email: String): String? {
+            val name = email?.substring(0, email.indexOf("@"))
+            name?.trim()
+            return name
         }
     }
 }

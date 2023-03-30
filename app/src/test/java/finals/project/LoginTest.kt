@@ -1,6 +1,5 @@
 package finals.project
 
-import finals.project.data.HomeActivity
 import finals.project.ui.login.LoginActivity
 import finals.project.ui.login.LoginViewModel
 import junit.framework.TestCase
@@ -39,5 +38,11 @@ class LoginTest {
     fun isCreatedTest(){
         val returnValue = LoginActivity.iscreated()
         TestCase.assertTrue(returnValue as Boolean)
+    }
+    @Test
+    fun isUserName(){
+        val email = "womper@gmail.com"
+        val name = LoginActivity.emailTrim(email)
+        assertEquals(name,"womper")
     }
 }
