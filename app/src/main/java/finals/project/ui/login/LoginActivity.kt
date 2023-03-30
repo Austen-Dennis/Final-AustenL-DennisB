@@ -154,7 +154,6 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 }
-
 fun EditText.afterTextChanged(afterTextChanged: (String) -> Unit) {
     this.addTextChangedListener(object : TextWatcher {
         override fun afterTextChanged(editable: Editable?) {
