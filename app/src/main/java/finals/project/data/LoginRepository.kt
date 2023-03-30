@@ -2,6 +2,9 @@ package finals.project.data
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.ktx.app
 import finals.project.data.model.LoggedInUser
 
 /**
@@ -27,6 +30,7 @@ class LoginRepository(val dataSource: LoginDataSource) {
         if (result is Result.Success) {
             setLoggedInUser(result.data)
             FirebaseAuth.getInstance().createUserWithEmailAndPassword(username, password)
+            FirebaseAuth.getInstance().signInWithEmailAndPassword(username, password)
             val UID = FirebaseAuth.getInstance().uid
             System.out.println(UID)
         }

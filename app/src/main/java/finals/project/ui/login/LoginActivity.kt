@@ -14,6 +14,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import finals.project.R
@@ -28,12 +29,9 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        FirebaseApp.initializeApp(this)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        val token = FirebaseAuth.getInstance().uid
         val username = binding.username
         val password = binding.password
         val login = binding.login
@@ -111,36 +109,17 @@ class LoginActivity : AppCompatActivity() {
                 loginViewModel.login(username.text.toString(), password.text.toString())
                 startActivity(intent)
             }
-
         }
-
-
     }
 
     fun updateUiWithUser(model: LoggedInUserView) {
-        val user = Firebase.auth.currentUser
-        user?.let {
-            // Name, email address, and profile photo Url
-            val name = it.displayName
-            val email = it.email
-            val photoUrl = it.photoUrl
-
-            // Check if user's email is verified
-            val emailVerified = it.isEmailVerified
-
-            // The user's ID, unique to the Firebase project. Do NOT use this value to
-            // authenticate with your backend server, if you have one. Use
-            // FirebaseUser.getIdToken() instead.
-            val uid = it.uid
-
-        // TODO : initiate successful logged in experience
-        Toast.makeText(
+            // TODO : initiate successful logged in experience
+            Toast.makeText(
                 applicationContext,
                 "User Registered Successfully",
                 Toast.LENGTH_LONG
-        ).show()
-
-    }}
+            ).show()
+    }
 
     private fun showLoginFailed(@StringRes errorString: Int) {
         Toast.makeText(applicationContext, errorString, Toast.LENGTH_SHORT).show()
