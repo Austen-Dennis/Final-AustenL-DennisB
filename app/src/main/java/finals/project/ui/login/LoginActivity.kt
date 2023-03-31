@@ -99,7 +99,6 @@ class LoginActivity : AppCompatActivity() {
                         loginViewModel.login(
                             username.text.toString(),
                             password.text.toString()
-
                         )
                 }
                 false
@@ -128,7 +127,7 @@ class LoginActivity : AppCompatActivity() {
                         } else {
                             Toast.makeText(
                                 applicationContext,
-                                "Email verification link sent to " + username,
+                                "Email verification link sent to " + displayName,
                                 Toast.LENGTH_LONG
                             ).show()
                         }
