@@ -15,6 +15,7 @@ class PostActivity : AppCompatActivity() {
         val intentSMS = Intent(this, SmsPage::class.java)
         val intentHOME = Intent(this, HomeActivity::class.java)
         val intentCAMERA = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        val intentGALLERY = Intent(MediaStore.ACTION_PICK_IMAGES)
         val smsButton = findViewById<View>(R.id.sms)
         smsButton.setOnClickListener {
             startActivity(intentSMS)
@@ -26,6 +27,10 @@ class PostActivity : AppCompatActivity() {
         val cameraButton = findViewById<View>(R.id.Camera)
         cameraButton.setOnClickListener {
             startActivity(intentCAMERA)
+        }
+        val galleryButton = findViewById<View>(R.id.Gallery)
+        galleryButton.setOnClickListener {
+            startActivity(intentGALLERY)
         }
     }
     companion object {

@@ -18,6 +18,7 @@ import com.google.firebase.ktx.Firebase
 import finals.project.R
 import finals.project.data.HomeActivity
 import finals.project.databinding.ActivityLoginBinding
+import java.lang.Exception
 
 
 class LoginActivity : AppCompatActivity() {
@@ -103,16 +104,17 @@ class LoginActivity : AppCompatActivity() {
             }
 
             login.setOnClickListener {
-                loading.visibility = View.VISIBLE
                 loginViewModel.login(username.text.toString(), password.text.toString())
                 try {
-                    Thread.sleep(1000);
-                } catch (e: java.lang.Exception) {
+                    Thread.sleep(500);
+                    loading.visibility=View.VISIBLE
+                } catch (e: Exception) {
                     e.printStackTrace()
                 }
                 val uid = FirebaseAuth.getInstance().currentUser?.uid
                 var displayName = Firebase.auth.currentUser?.email
-                val name = displayName?.let { it1 -> emailTrim(it1) }
+                val name = displayName?.substring(0, displayName.indexOf("@"))
+                name?.trim()
                 if (uid != null) {
                     Toast.makeText(
                         applicationContext,
@@ -121,6 +123,7 @@ class LoginActivity : AppCompatActivity() {
                     ).show()
                     startActivity(intent)
                 } else {
+                    loading.visibility = View.INVISIBLE
                     Toast.makeText(
                         applicationContext,
                         "Incorrect Password",
@@ -147,11 +150,11 @@ class LoginActivity : AppCompatActivity() {
             val created = true
             return created
         }
-        fun emailTrim(email: String): String? {
+        /*fun emailTrim(email: String): String? {
             val name = email?.substring(0, email.indexOf("@"))
             name?.trim()
             return name
-        }
+        }*/
     }
 }
 fun EditText.afterTextChanged(afterTextChanged: (String) -> Unit) {

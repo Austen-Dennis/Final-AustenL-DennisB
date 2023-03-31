@@ -10,18 +10,33 @@
         android:id="@+id/Camera"
         android:layout_width="405dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="22dp"
+        android:layout_marginStart="3dp"
         android:text="Open Camera"
-        app:layout_constraintBottom_toTopOf="@+id/imageview1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/Gallery"
+        app:layout_constraintVertical_bias="0.079" />
+
+    <Button
+        android:id="@+id/Gallery"
+        android:layout_width="405dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="Post From Camera Roll"
+        app:layout_constraintBottom_toTopOf="@+id/imageview1"
+        app:layout_constraintEnd_toEndOf="@id/Camera"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.195" />
 
     <ImageView
         android:id="@+id/imageview1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="130dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
