@@ -3869,6 +3869,7 @@ int dimen tooltip_precise_anchor_threshold 0x7f07038f
 int dimen tooltip_vertical_padding 0x7f070390
 int dimen tooltip_y_offset_non_touch 0x7f070391
 int dimen tooltip_y_offset_touch 0x7f070392
+int drawable _522516 0x7f080180
 int drawable abc_ab_share_pack_mtrl_alpha 0x7f08002d
 int drawable abc_action_bar_item_background_material 0x7f08002e
 int drawable abc_btn_borderless_material 0x7f08002f
@@ -4261,6 +4262,7 @@ int id accessibility_custom_action_6 0x7f0a002e
 int id accessibility_custom_action_7 0x7f0a002f
 int id accessibility_custom_action_8 0x7f0a0030
 int id accessibility_custom_action_9 0x7f0a0031
+int id accountInfo 0x7f0a036a
 int id action0 0x7f0a0032
 int id actionButton 0x7f0a0033
 int id actionDown 0x7f0a0034
@@ -4814,6 +4816,8 @@ int id position 0x7f0a0257
 int id post 0x7f0a0258
 int id postLayout 0x7f0a0259
 int id pressed 0x7f0a025a
+int id profile 0x7f0a0365
+int id profileTitle 0x7f0a0368
 int id progressBar 0x7f0a025b
 int id progress_circular 0x7f0a025c
 int id progress_horizontal 0x7f0a025d
@@ -5039,6 +5043,7 @@ int id unreadCountBadge 0x7f0a0338
 int id unreadCountTextView 0x7f0a0339
 int id up 0x7f0a033a
 int id useLogo 0x7f0a033b
+int id user 0x7f0a0369
 int id userAvatar 0x7f0a033c
 int id userNameTextView 0x7f0a033d
 int id userReactionView 0x7f0a033e
@@ -5195,6 +5200,7 @@ int layout abc_search_view 0x7f0d0019
 int layout abc_select_dialog_material 0x7f0d001a
 int layout abc_tooltip 0x7f0d001b
 int layout activity_login 0x7f0d001c
+int layout activity_profile 0x7f0d00ea
 int layout browser_actions_context_menu_page 0x7f0d001d
 int layout browser_actions_context_menu_row 0x7f0d001e
 int layout custom_dialog 0x7f0d001f
@@ -5695,6 +5701,7 @@ int string path_password_eye 0x7f120117
 int string path_password_eye_mask_strike_through 0x7f120118
 int string path_password_eye_mask_visible 0x7f120119
 int string path_password_strike_through 0x7f12011a
+int string profile_name 0x7f1201c6
 int string project_id 0x7f12011b
 int string prompt_email 0x7f12011c
 int string prompt_password 0x7f12011d

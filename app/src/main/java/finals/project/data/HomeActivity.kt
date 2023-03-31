@@ -23,12 +23,11 @@ class HomeActivity : AppCompatActivity() {
         // sets the intent I.E. calls to the class Smspage which displays a layout
         val intentSMS = Intent(this, SmsPage::class.java)
         val intentPOST = Intent(this, PostActivity::class.java)
-        val intentLogin = Intent(this, LoginActivity::class.java)
+        val intentPROFILE = Intent(this, ProfileActivity::class.java)
         //starts the activity onclick
-        val soButton = findViewById<View>(R.id.so)
-        soButton.setOnClickListener {
-            startActivity(intentLogin)
-            FirebaseAuth.getInstance().signOut()
+        val profileButton = findViewById<View>(R.id.profile)
+        profileButton.setOnClickListener {
+            startActivity(intentPROFILE)
         }
         val smsButton = findViewById<View>(R.id.sms)
         smsButton.setOnClickListener {

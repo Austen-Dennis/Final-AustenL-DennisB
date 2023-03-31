@@ -20,6 +20,10 @@
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
+        "merged": "finals.project.app-merged_res-64:/layout_activity_profile.xml.flat",
+        "source": "finals.project.app-main-66:/layout/activity_profile.xml"
+    },
+    {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\xml_backup_rules.xml.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\xml\\backup_rules.xml"
     },
@@ -72,6 +76,10 @@
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\layout_activity_profile.xml.flat",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\layout\\activity_profile.xml"
+    },
+    {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\drawable\\ic_launcher_background.xml"
     },
@@ -96,10 +104,6 @@
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\layout\\post.xml"
     },
     {
-        "merged": "finals.project.app-merged_res-64:/layout_post.xml.flat",
-        "source": "finals.project.app-main-66:/layout/post.xml"
-    },
-    {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\mipmap-mdpi\\ic_launcher.webp"
     },
@@ -110,5 +114,9 @@
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\drawable__522516.png.flat",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\drawable\\_522516.png"
     }
 ]

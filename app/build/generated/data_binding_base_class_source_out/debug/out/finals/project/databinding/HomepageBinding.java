@@ -23,17 +23,17 @@ public final class HomepageBinding implements ViewBinding {
   public final Button post;
 
   @NonNull
-  public final Button sms;
+  public final Button profile;
 
   @NonNull
-  public final Button so;
+  public final Button sms;
 
   private HomepageBinding(@NonNull ConstraintLayout rootView, @NonNull Button post,
-      @NonNull Button sms, @NonNull Button so) {
+      @NonNull Button profile, @NonNull Button sms) {
     this.rootView = rootView;
     this.post = post;
+    this.profile = profile;
     this.sms = sms;
-    this.so = so;
   }
 
   @Override
@@ -69,19 +69,19 @@ public final class HomepageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.profile;
+      Button profile = ViewBindings.findChildViewById(rootView, id);
+      if (profile == null) {
+        break missingId;
+      }
+
       id = R.id.sms;
       Button sms = ViewBindings.findChildViewById(rootView, id);
       if (sms == null) {
         break missingId;
       }
 
-      id = R.id.so;
-      Button so = ViewBindings.findChildViewById(rootView, id);
-      if (so == null) {
-        break missingId;
-      }
-
-      return new HomepageBinding((ConstraintLayout) rootView, post, sms, so);
+      return new HomepageBinding((ConstraintLayout) rootView, post, profile, sms);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

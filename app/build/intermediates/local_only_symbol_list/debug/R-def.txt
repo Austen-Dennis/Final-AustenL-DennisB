@@ -11,6 +11,7 @@ color teal_700
 color white
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
+drawable _522516
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable placeholder
@@ -18,7 +19,9 @@ drawable the_get_together
 drawable the_get_together_dark_
 id Camera
 id Gallery
+id accountInfo
 id container
+id email
 id fab
 id home
 id imageView3
@@ -32,12 +35,16 @@ id message_time
 id message_user
 id password
 id post
+id profile
+id profileTitle
 id sms
 id so
 id textInputLayout
+id user
 id username
 id verify
 layout activity_login
+layout activity_profile
 layout homepage
 layout messages
 layout post
@@ -56,6 +63,7 @@ string google_storage_bucket
 string invalid_password
 string invalid_username
 string login_failed
+string profile_name
 string project_id
 string prompt_email
 string prompt_password

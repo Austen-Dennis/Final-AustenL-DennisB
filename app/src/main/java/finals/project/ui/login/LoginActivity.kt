@@ -113,8 +113,10 @@ class LoginActivity : AppCompatActivity() {
                 } catch (e: Exception) {
                     e.printStackTrace()
                 }
-                val uid = FirebaseAuth.getInstance().currentUser?.uid
-                var displayName = Firebase.auth.currentUser?.email
+                //val uid = FirebaseAuth.getInstance().currentUser?.uid
+                //var displayName = Firebase.auth.currentUser?.email
+                val uid = uidGrab()
+                val displayName = nameGrab()
                 val name = displayName?.let { it1 -> emailTrim(it1) }
                 if (uid != null) {
                     Toast.makeText(
@@ -155,6 +157,14 @@ class LoginActivity : AppCompatActivity() {
             val name = email?.substring(0, email.indexOf("@"))
             name?.trim()
             return name
+        }
+        fun nameGrab(): String? {
+            var displayName = Firebase.auth.currentUser?.email
+            return displayName
+        }
+        fun uidGrab(): String? {
+            var uid = Firebase.auth.currentUser?.uid
+            return uid
         }
     }
 }

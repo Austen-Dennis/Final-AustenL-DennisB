@@ -3870,6 +3870,7 @@ dimen tooltip_precise_anchor_threshold
 dimen tooltip_vertical_padding
 dimen tooltip_y_offset_non_touch
 dimen tooltip_y_offset_touch
+drawable _522516
 drawable abc_ab_share_pack_mtrl_alpha
 drawable abc_action_bar_item_background_material
 drawable abc_btn_borderless_material
@@ -4262,6 +4263,7 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id accountInfo
 id action0
 id actionButton
 id actionDown
@@ -4815,6 +4817,8 @@ id position
 id post
 id postLayout
 id pressed
+id profile
+id profileTitle
 id progressBar
 id progress_circular
 id progress_horizontal
@@ -5040,6 +5044,7 @@ id unreadCountBadge
 id unreadCountTextView
 id up
 id useLogo
+id user
 id userAvatar
 id userNameTextView
 id userReactionView
@@ -5196,6 +5201,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_login
+layout activity_profile
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog
@@ -5696,6 +5702,7 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string profile_name
 string project_id
 string prompt_email
 string prompt_password

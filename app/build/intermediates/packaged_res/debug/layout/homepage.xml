@@ -17,22 +17,22 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
     <Button
-        android:id="@+id/so"
+        android:id="@+id/profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="54dp"
         android:layout_marginBottom="14dp"
-        android:text="Sign Out"
+        android:text="Profile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/post" />
     <Button
         android:id="@+id/sms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="54dp"
         android:layout_marginBottom="14dp"
         android:text="SMS"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/so" />
+        app:layout_constraintStart_toEndOf="@+id/profile" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
