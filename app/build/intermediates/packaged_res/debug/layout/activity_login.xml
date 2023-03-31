@@ -21,7 +21,6 @@
         android:text="Not a robot?"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintStart_toEndOf="@+id/username" />
-
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="379dp"
@@ -30,7 +29,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/the_get_together_dark_" />
-
     <EditText
         android:id="@+id/username"
         android:layout_width="0dp"
@@ -44,7 +42,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
         android:id="@+id/password"
         android:layout_width="0dp"

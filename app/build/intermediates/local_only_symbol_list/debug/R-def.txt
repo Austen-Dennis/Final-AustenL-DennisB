@@ -28,6 +28,7 @@ id home
 id imageView3
 id imageview1
 id input
+id layout
 id list_of_messages
 id loading
 id login
@@ -38,6 +39,8 @@ id password
 id post
 id profile
 id profileTitle
+id project
+id release
 id sms
 id so
 id textInputLayout

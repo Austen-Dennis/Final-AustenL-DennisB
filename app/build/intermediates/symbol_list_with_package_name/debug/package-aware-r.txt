@@ -4823,6 +4823,7 @@ id profileTitle
 id progressBar
 id progress_circular
 id progress_horizontal
+id project
 id radio
 id ratio
 id reactionContainer
@@ -4833,6 +4834,7 @@ id recentFilesRecyclerView
 id recentFilesTextView
 id rectangles
 id recyclerView
+id release
 id removeButton
 id reply
 id replyAvatarView
