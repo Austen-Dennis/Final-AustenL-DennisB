@@ -27,6 +27,9 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //Verifies that app terminates previous users session
+        FirebaseAuth.getInstance().signOut()
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -66,7 +69,6 @@ class LoginActivity : AppCompatActivity() {
 
         loginViewModel.loginResult.observe(this@LoginActivity, Observer {
             val loginResult = it ?: return@Observer
-
             loading.visibility = View.GONE
             if (loginResult.error != null) {
                 showLoginFailed(loginResult.error)
@@ -113,8 +115,7 @@ class LoginActivity : AppCompatActivity() {
                 }
                 val uid = FirebaseAuth.getInstance().currentUser?.uid
                 var displayName = Firebase.auth.currentUser?.email
-                val name = displayName?.substring(0, displayName.indexOf("@"))
-                name?.trim()
+                val name = displayName?.let { it1 -> emailTrim(it1) }
                 if (uid != null) {
                     Toast.makeText(
                         applicationContext,
@@ -150,11 +151,11 @@ class LoginActivity : AppCompatActivity() {
             val created = true
             return created
         }
-        /*fun emailTrim(email: String): String? {
+        fun emailTrim(email: String): String? {
             val name = email?.substring(0, email.indexOf("@"))
             name?.trim()
             return name
-        }*/
+        }
     }
 }
 fun EditText.afterTextChanged(afterTextChanged: (String) -> Unit) {
