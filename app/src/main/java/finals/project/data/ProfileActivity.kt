@@ -22,6 +22,7 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(finals.project.R.layout.activity_profile)
         val intentLogin = Intent(this, LoginActivity::class.java)
+        val intentReturn = Intent(this, HomeActivity::class.java)
         val displayName = LoginActivity.nameGrab()
         val name = displayName?.let { LoginActivity.emailTrim(it) }
         val uid = LoginActivity.uidGrab()
@@ -45,6 +46,10 @@ class ProfileActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
             }
+        }
+        val returnButton = findViewById<View>(finals.project.R.id.home)
+        returnButton.setOnClickListener {
+            startActivity(intentReturn)
         }
 
         val soButton = findViewById<View>(finals.project.R.id.so)

@@ -68,6 +68,16 @@
                 android:text="Update Password"
                 android:textAlignment="textStart" />
             <Button
+                android:id="@+id/home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="150dp"
+                android:layout_marginBottom="14dp"
+                android:text="Home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/so" />
+
+            <Button
                 android:id="@+id/so"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
