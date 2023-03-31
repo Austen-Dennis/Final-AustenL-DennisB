@@ -105,7 +105,7 @@
                 android:layout_marginBottom="-100dp"
                 android:text="Sign Out"
                 android:translationX="0dp"
-                android:translationY="200dp"
+                android:translationY="40dp"
                 app:layout_constraintBottom_toBottomOf="parent" />
 
         </LinearLayout>
