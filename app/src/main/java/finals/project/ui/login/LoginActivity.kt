@@ -109,30 +109,37 @@ class LoginActivity : AppCompatActivity() {
                 loginViewModel.login(username.text.toString(), password.text.toString())
                 try {
                     Thread.sleep(1000);
-                    loading.visibility=View.VISIBLE
+                    loading.visibility = View.VISIBLE
                 } catch (e: Exception) {
                     e.printStackTrace()
                 }
-                //val uid = FirebaseAuth.getInstance().currentUser?.uid
-                //var displayName = Firebase.auth.currentUser?.email
-                val uid = uidGrab()
-                val displayName = nameGrab()
-                val name = displayName?.let { it1 -> emailTrim(it1) }
-                if (uid != null) {
-                    Toast.makeText(
-                        applicationContext,
-                        "Successful Login for User: " + name,
-                        Toast.LENGTH_LONG
-                    ).show()
-                    startActivity(intent)
-                } else {
-                    loading.visibility = View.INVISIBLE
-                    Toast.makeText(
-                        applicationContext,
-                        "Incorrect Password",
-                        Toast.LENGTH_LONG
-                    ).show()
-                }
+                FirebaseAuth.getInstance().currentUser?.sendEmailVerification()
+                    val uid = uidGrab()
+                    val displayName = nameGrab()
+                    val name = displayName?.let { it1 -> emailTrim(it1) }
+                    if (uid != null) {
+                        if (FirebaseAuth.getInstance().currentUser?.isEmailVerified == true) {
+                            Toast.makeText(
+                                applicationContext,
+                                "Successful Login for User: " + name,
+                                Toast.LENGTH_LONG
+                            ).show()
+                            startActivity(intent)
+                        } else {
+                            Toast.makeText(
+                                applicationContext,
+                                "Email verification link sent to " + username,
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
+                    } else {
+                        loading.visibility = View.INVISIBLE
+                        Toast.makeText(
+                            applicationContext,
+                            "Incorrect Password",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
             }
         }
     }

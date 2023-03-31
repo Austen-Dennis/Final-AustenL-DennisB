@@ -4579,6 +4579,7 @@ int id headerTitleTextView 0x7f0a016a
 int id header_text 0x7f0a016b
 int id header_title 0x7f0a016c
 int id heading 0x7f0a016d
+int id help 0x7f0a036b
 int id hideable 0x7f0a016e
 int id home 0x7f0a016f
 int id homeAsUp 0x7f0a0170
@@ -5042,6 +5043,7 @@ int id unlabeled 0x7f0a0337
 int id unreadCountBadge 0x7f0a0338
 int id unreadCountTextView 0x7f0a0339
 int id up 0x7f0a033a
+int id update 0x7f0a036e
 int id useLogo 0x7f0a033b
 int id user 0x7f0a0369
 int id userAvatar 0x7f0a033c

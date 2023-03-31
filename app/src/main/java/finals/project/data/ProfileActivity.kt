@@ -5,11 +5,16 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
+import finals.project.databinding.ActivityLoginBinding
 import finals.project.ui.login.LoginActivity
-
 
 class ProfileActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -29,6 +34,18 @@ class ProfileActivity : AppCompatActivity() {
         //this will be a way to add people as friends
         val userID = findViewById<View>(finals.project.R.id.user) as TextView
         userID.text = "User ID: \n" + uid
+
+        val updatePassButton = findViewById<View>(finals.project.R.id.update)
+        updatePassButton.setOnClickListener {
+            if (displayName != null) {
+                FirebaseAuth.getInstance().sendPasswordResetEmail(displayName)
+                Toast.makeText(
+                    applicationContext,
+                    "Email sent to " + displayName,
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
 
         val soButton = findViewById<View>(finals.project.R.id.so)
         soButton.setOnClickListener {

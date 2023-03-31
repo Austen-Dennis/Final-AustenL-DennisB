@@ -23,6 +23,7 @@
     <string name="invalid_password">Password must be longer than 5 characters</string>
     <string name="invalid_username">Enter a valid email</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="profile_name"/>
     <string name="project_id" translatable="false">get-together-efaf7</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>

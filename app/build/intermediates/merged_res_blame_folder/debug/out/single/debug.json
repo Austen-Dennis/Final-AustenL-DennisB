@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\mipmap-xhdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\mipmap-hdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\drawable_the_get_together.jpg.flat",

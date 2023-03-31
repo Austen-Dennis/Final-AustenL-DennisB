@@ -23,6 +23,7 @@ id accountInfo
 id container
 id email
 id fab
+id help
 id home
 id imageView3
 id imageview1
@@ -40,6 +41,7 @@ id profileTitle
 id sms
 id so
 id textInputLayout
+id update
 id user
 id username
 id verify

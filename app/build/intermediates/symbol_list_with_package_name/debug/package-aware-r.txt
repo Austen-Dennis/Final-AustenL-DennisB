@@ -4580,6 +4580,7 @@ id headerTitleTextView
 id header_text
 id header_title
 id heading
+id help
 id hideable
 id home
 id homeAsUp
@@ -5043,6 +5044,7 @@ id unlabeled
 id unreadCountBadge
 id unreadCountTextView
 id up
+id update
 id useLogo
 id user
 id userAvatar
