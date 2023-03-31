@@ -17,6 +17,7 @@ drawable placeholder
 drawable the_get_together
 drawable the_get_together_dark_
 id Camera
+id Gallery
 id container
 id fab
 id home

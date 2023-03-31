@@ -106,7 +106,7 @@ class LoginActivity : AppCompatActivity() {
             login.setOnClickListener {
                 loginViewModel.login(username.text.toString(), password.text.toString())
                 try {
-                    Thread.sleep(500);
+                    Thread.sleep(1000);
                     loading.visibility=View.VISIBLE
                 } catch (e: Exception) {
                     e.printStackTrace()

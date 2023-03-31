@@ -24,6 +24,9 @@ public final class PostBinding implements ViewBinding {
   public final Button Camera;
 
   @NonNull
+  public final Button Gallery;
+
+  @NonNull
   public final Button home;
 
   @NonNull
@@ -36,10 +39,11 @@ public final class PostBinding implements ViewBinding {
   public final Button sms;
 
   private PostBinding(@NonNull ConstraintLayout rootView, @NonNull Button Camera,
-      @NonNull Button home, @NonNull ImageView imageview1, @NonNull Button post,
-      @NonNull Button sms) {
+      @NonNull Button Gallery, @NonNull Button home, @NonNull ImageView imageview1,
+      @NonNull Button post, @NonNull Button sms) {
     this.rootView = rootView;
     this.Camera = Camera;
+    this.Gallery = Gallery;
     this.home = home;
     this.imageview1 = imageview1;
     this.post = post;
@@ -79,6 +83,12 @@ public final class PostBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.Gallery;
+      Button Gallery = ViewBindings.findChildViewById(rootView, id);
+      if (Gallery == null) {
+        break missingId;
+      }
+
       id = R.id.home;
       Button home = ViewBindings.findChildViewById(rootView, id);
       if (home == null) {
@@ -103,7 +113,8 @@ public final class PostBinding implements ViewBinding {
         break missingId;
       }
 
-      return new PostBinding((ConstraintLayout) rootView, Camera, home, imageview1, post, sms);
+      return new PostBinding((ConstraintLayout) rootView, Camera, Gallery, home, imageview1, post,
+          sms);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -4218,6 +4218,7 @@ id BOTTOM_START
 id CTRL
 id Camera
 id FUNCTION
+id Gallery
 id META
 id NO_DEBUG
 id SHIFT
