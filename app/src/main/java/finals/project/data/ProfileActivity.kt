@@ -9,6 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import finals.project.smsPage.SmsPage
 import finals.project.ui.login.LoginActivity
 import java.util.logging.Level.parse
 
@@ -18,6 +19,8 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(finals.project.R.layout.activity_profile)
         val intentLogin = Intent(this, LoginActivity::class.java)
+        val intentPost = Intent(this, PostActivity::class.java)
+        val intentSms = Intent(this, SmsPage::class.java)
         val intentReturn = Intent(this, HomeActivity::class.java)
         val urlRelease = "https://github.com/bsu-cs222-spring23-dll/Final-AustenL-DennisB-BeethovenM-JulianR/releases"
         val releaseIntent = Intent(Intent.ACTION_VIEW)
@@ -56,6 +59,16 @@ class ProfileActivity : AppCompatActivity() {
         projectInfoButton.setOnClickListener {
             projectInfoIntent.data = Uri.parse(urlProjectInfo)
             startActivity(projectInfoIntent)
+        }
+
+        val postButton = findViewById<View>(finals.project.R.id.post)
+        postButton.setOnClickListener {
+            startActivity(intentPost)
+        }
+
+        val smsButton = findViewById<View>(finals.project.R.id.sms)
+        smsButton.setOnClickListener {
+            startActivity(intentSms)
         }
 
         val returnButton = findViewById<View>(finals.project.R.id.home)

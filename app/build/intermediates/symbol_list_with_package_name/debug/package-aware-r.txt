@@ -4760,6 +4760,7 @@ id multiply
 id muteIcon
 id name
 id name_layout
+id navigation
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -5706,7 +5707,6 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
-string profile_name
 string project_id
 string prompt_email
 string prompt_password

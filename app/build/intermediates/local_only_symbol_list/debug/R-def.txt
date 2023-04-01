@@ -35,6 +35,7 @@ id login
 id message_text
 id message_time
 id message_user
+id navigation
 id password
 id post
 id profile
@@ -68,7 +69,6 @@ string google_storage_bucket
 string invalid_password
 string invalid_username
 string login_failed
-string profile_name
 string project_id
 string prompt_email
 string prompt_password

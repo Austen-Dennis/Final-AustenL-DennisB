@@ -4759,6 +4759,7 @@ int id multiply 0x7f0a021d
 int id muteIcon 0x7f0a021e
 int id name 0x7f0a021f
 int id name_layout 0x7f0a0220
+int id navigation 0x7f0a0371
 int id navigation_bar_item_active_indicator_view 0x7f0a0221
 int id navigation_bar_item_icon_container 0x7f0a0222
 int id navigation_bar_item_icon_view 0x7f0a0223
@@ -5705,7 +5706,6 @@ int string path_password_eye 0x7f120117
 int string path_password_eye_mask_strike_through 0x7f120118
 int string path_password_eye_mask_visible 0x7f120119
 int string path_password_strike_through 0x7f12011a
-int string profile_name 0x7f1201c6
 int string project_id 0x7f12011b
 int string prompt_email 0x7f12011c
 int string prompt_password 0x7f12011d
