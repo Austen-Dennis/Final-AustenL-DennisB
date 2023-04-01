@@ -4473,6 +4473,7 @@ int id dismissButton 0x7f0a0100
 int id dismissContainer 0x7f0a0101
 int id dismissInputMode 0x7f0a0102
 int id dismissInputModeButton 0x7f0a0103
+int id displayInfo 0x7f0a0372
 int id dragAnticlockwise 0x7f0a0104
 int id dragClockwise 0x7f0a0105
 int id dragDown 0x7f0a0106
@@ -4580,6 +4581,7 @@ int id header_text 0x7f0a016b
 int id header_title 0x7f0a016c
 int id heading 0x7f0a016d
 int id help 0x7f0a036b
+int id hideInfo 0x7f0a0373
 int id hideable 0x7f0a016e
 int id home 0x7f0a016f
 int id homeAsUp 0x7f0a0170

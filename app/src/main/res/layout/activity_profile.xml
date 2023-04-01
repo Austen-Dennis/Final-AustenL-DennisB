@@ -39,23 +39,46 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textSize="26sp" />
 
+            <Button
+                android:id="@+id/displayInfo"
+                android:layout_width="194dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:text="Display Your Info"
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
+
             <TextView
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:textAlignment="viewStart"
+                android:textAlignment="center"
+                android:padding="5dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                tools:visibility="gone" />
 
             <TextView
                 android:id="@+id/user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="5dp"
                 android:layout_marginStart="5dp"
-                android:textAlignment="viewStart"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                tools:visibility="gone" />
+
+            <Button
+                android:id="@+id/hideInfo"
+                android:layout_width="194dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:text="Hide Your Info"
+                android:textAlignment="center"
+                tools:ignore="RtlCompat"
+                tools:visibility="gone" />
 
             <TextView
                 android:id="@+id/help"
@@ -73,7 +96,7 @@
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:text="Update Password"
-                android:textAlignment="textStart"
+                android:textAlignment="center"
                 tools:ignore="RtlCompat" />
 
             <Button

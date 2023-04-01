@@ -30,6 +30,9 @@ class ProfileActivity : AppCompatActivity() {
         val name = displayName?.let { LoginActivity.emailTrim(it) }
         val uid = LoginActivity.uidGrab()
         val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
+        val hideInfoButton = findViewById<View>(finals.project.R.id.hideInfo)
+        val showInfoButton = findViewById<View>(finals.project.R.id.displayInfo)
+
         profileTitle.text = "Welcome " + name + "!"
 
         val email = findViewById<View>(finals.project.R.id.email) as TextView
@@ -39,6 +42,24 @@ class ProfileActivity : AppCompatActivity() {
         val userID = findViewById<View>(finals.project.R.id.user) as TextView
         userID.text = "User ID: \n" + uid
 
+        email.visibility= View.GONE
+        userID.visibility=View.GONE
+        hideInfoButton.visibility=View.GONE
+
+
+        showInfoButton.setOnClickListener {
+            email.visibility= View.VISIBLE
+            userID.visibility=View.VISIBLE
+            hideInfoButton.visibility=View.VISIBLE
+            showInfoButton.visibility=View.GONE
+        }
+
+        hideInfoButton.setOnClickListener {
+            email.visibility= View.GONE
+            userID.visibility=View.GONE
+            showInfoButton.visibility=View.VISIBLE
+            hideInfoButton.visibility=View.GONE
+        }
         val updatePassButton = findViewById<View>(finals.project.R.id.update)
         updatePassButton.setOnClickListener {
             if (displayName != null) {

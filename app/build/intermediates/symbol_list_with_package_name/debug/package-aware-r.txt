@@ -4474,6 +4474,7 @@ id dismissButton
 id dismissContainer
 id dismissInputMode
 id dismissInputModeButton
+id displayInfo
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -4581,6 +4582,7 @@ id header_text
 id header_title
 id heading
 id help
+id hideInfo
 id hideable
 id home
 id homeAsUp
