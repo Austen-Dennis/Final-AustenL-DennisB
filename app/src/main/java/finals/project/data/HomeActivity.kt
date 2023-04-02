@@ -2,9 +2,13 @@ package finals.project.data
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.widget.Toolbar
+import androidx.viewpager.widget.ViewPager
+import com.google.android.material.tabs.TabLayout
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -14,12 +18,14 @@ import finals.project.ui.login.LoginActivity
 import kotlin.system.exitProcess
 
 class HomeActivity : AppCompatActivity() {
+
     @SuppressLint("SuspiciousIndentation", "MissingInflatedId")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.homepage) // sets the view using the homepage.xml
+        val toolbar = findViewById<View>(io.getstream.chat.android.ui.R.id.toolbar)
+        setSupportActionBar(toolbar as Toolbar?)
         // sets the intent I.E. calls to the class Smspage which displays a layout
         val intentSMS = Intent(this, SmsPage::class.java)
         val intentPOST = Intent(this, PostActivity::class.java)

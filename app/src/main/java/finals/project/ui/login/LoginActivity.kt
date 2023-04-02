@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.auth.FirebaseAuth
@@ -27,6 +28,8 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val toolbar = findViewById<View>(io.getstream.chat.android.ui.R.id.toolbar)
+        setSupportActionBar(toolbar as Toolbar?)
 
         //Verifies that app terminates previous users session
         FirebaseAuth.getInstance().signOut()

@@ -15,6 +15,8 @@ drawable _522516
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable placeholder
+drawable rounded_box
+drawable screenshot__9_
 drawable the_get_together
 drawable the_get_together_dark_
 id Camera

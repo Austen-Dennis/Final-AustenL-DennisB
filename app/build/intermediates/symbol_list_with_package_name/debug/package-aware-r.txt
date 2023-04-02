@@ -4084,6 +4084,8 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable placeholder
+drawable rounded_box
+drawable screenshot__9_
 drawable stream_ic_notification
 drawable stream_text_color_selector
 drawable stream_ui_arrow_left

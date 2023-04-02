@@ -10,9 +10,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="40dp">
+        android:translationY="50dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <LinearLayout
             android:id="@+id/layout"
@@ -53,8 +52,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:textAlignment="center"
                 android:padding="5dp"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textSize="20sp"
                 tools:visibility="gone" />
@@ -63,8 +62,8 @@
                 android:id="@+id/user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
                 android:layout_marginStart="5dp"
+                android:padding="5dp"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textSize="20sp"
@@ -114,6 +113,7 @@
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:text="About the Project"
                 app:layout_constraintBottom_toBottomOf="parent" />
+
             <TextView
                 android:id="@+id/navigation"
                 android:layout_width="match_parent"

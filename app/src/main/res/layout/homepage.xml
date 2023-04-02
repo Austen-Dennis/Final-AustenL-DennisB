@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="#AFAFAF"
     tools:context=".data.HomeActivity">
-
     <Button
         android:id="@+id/post"
         android:layout_width="wrap_content"

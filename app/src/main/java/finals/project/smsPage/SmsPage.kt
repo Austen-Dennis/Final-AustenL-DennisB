@@ -11,6 +11,7 @@ import android.widget.ListView
 import android.widget.TextView
 import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import com.firebase.ui.database.FirebaseListAdapter
 import com.firebase.ui.database.FirebaseListOptions
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -28,7 +29,8 @@ class SmsPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.smspage)
-
+        val toolbar = findViewById<View>(io.getstream.chat.android.ui.R.id.toolbar)
+        setSupportActionBar(toolbar as Toolbar?)
         displayChatMessages()
         val intentHOME = Intent(this, HomeActivity::class.java)
         val intentPOST = Intent(this, PostActivity::class.java)

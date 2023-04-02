@@ -16,12 +16,12 @@
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\layout-w1240dp\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\drawable_rounded_box.xml.flat",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\drawable\\rounded_box.xml"
     },
     {
-        "merged": "finals.project.app-merged_res-64:/layout_activity_profile.xml.flat",
-        "source": "finals.project.app-main-66:/layout/activity_profile.xml"
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\xml_backup_rules.xml.flat",
@@ -106,6 +106,14 @@
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "finals.project.app-merged_res-64:/layout_homepage.xml.flat",
+        "source": "finals.project.app-main-66:/layout/homepage.xml"
+    },
+    {
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\drawable_screenshot__9_.png.flat",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\drawable\\screenshot__9_.png"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\drawable-v24_ic_launcher_foreground.xml.flat",
