@@ -60,6 +60,7 @@ layout messages
 layout post
 layout smspage
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 string action_sign_in
 string action_sign_in_short

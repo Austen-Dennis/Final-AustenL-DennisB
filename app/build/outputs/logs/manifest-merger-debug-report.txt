@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:2:1-41:12
+ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:2:1-38:12
 MERGED from [io.getstream:stream-chat-android-ui-components:5.8.2] C:\Users\mrden\.gradle\caches\transforms-3\8d4cce2df582ed05d1e136b0d3ba6481\transformed\stream-chat-android-ui-components-5.8.2\AndroidManifest.xml:17:1-60:12
 MERGED from [androidx.databinding:viewbinding:7.4.2] C:\Users\mrden\.gradle\caches\transforms-3\d48f566b24fee8e0fd8831e93364a120\transformed\viewbinding-7.4.2\AndroidManifest.xml:2:1-7:12
 MERGED from [io.getstream:stream-chat-android-ui-common:5.8.2] C:\Users\mrden\.gradle\caches\transforms-3\6978db0f784d1ec69fbe8fb795bfe90a\transformed\stream-chat-android-ui-common-5.8.2\AndroidManifest.xml:17:1-60:12
@@ -34,10 +34,10 @@ MERGED from [com.google.firebase:firebase-auth:21.1.0] C:\Users\mrden\.gradle\ca
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\mrden\.gradle\caches\transforms-3\c2c676ff198f28c76adfb06fb56ad3cd\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-messaging-ktx:23.1.2] C:\Users\mrden\.gradle\caches\transforms-3\8339988d4fb87c1b3f1ab4277556fb9e\transformed\firebase-messaging-ktx-23.1.2\AndroidManifest.xml:17:1-34:12
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\mrden\.gradle\caches\transforms-3\3a57e849b377b2ff334027e4f8fca478\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-database-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8ad22e0c00b82ffd3b4e310608b71bd7\transformed\firebase-database-ktx-20.1.0\AndroidManifest.xml:2:1-20:12
-MERGED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:15:1-37:12
 MERGED from [com.google.firebase:firebase-storage-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\1c58c145160cdaea5f7c43e642aa9350\transformed\firebase-storage-ktx-20.1.0\AndroidManifest.xml:2:1-20:12
 MERGED from [com.google.firebase:firebase-storage:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8a5b11f5e3ab1a17b8b220e0b696bb59\transformed\firebase-storage-20.1.0\AndroidManifest.xml:15:1-38:12
+MERGED from [com.google.firebase:firebase-database-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8ad22e0c00b82ffd3b4e310608b71bd7\transformed\firebase-database-ktx-20.1.0\AndroidManifest.xml:2:1-20:12
+MERGED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:15:1-37:12
 MERGED from [com.google.firebase:firebase-firestore:24.4.4] C:\Users\mrden\.gradle\caches\transforms-3\6f196664b71be88efede99b522548c5e\transformed\firebase-firestore-24.4.4\AndroidManifest.xml:2:1-25:12
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\mrden\.gradle\caches\transforms-3\543c2e9186832d714ab4034cf8bf84e0\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.0] C:\Users\mrden\.gradle\caches\transforms-3\ca2d0f961702c720012fb772e88b64f7\transformed\firebase-analytics-ktx-21.2.0\AndroidManifest.xml:2:1-17:12
@@ -50,11 +50,11 @@ MERGED from [com.google.firebase:firebase-installations:17.1.3] C:\Users\mrden\.
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.1.1] C:\Users\mrden\.gradle\caches\transforms-3\4e0a5cc11ead3326fa1c398838e956fa\transformed\firebase-appcheck-interop-16.1.1\AndroidManifest.xml:15:1-25:12
 MERGED from [com.google.firebase:firebase-common:20.3.1] C:\Users\mrden\.gradle\caches\transforms-3\f202b05bb193a4bc682027555d8623cf\transformed\firebase-common-20.3.1\AndroidManifest.xml:15:1-39:12
 MERGED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\mrden\.gradle\caches\transforms-3\dbb2b67991ec561b148406ab440b03dc\transformed\play-services-auth-20.3.0\AndroidManifest.xml:17:1-40:12
-MERGED from [androidx.paging:paging-rxjava3:3.0.0] C:\Users\mrden\.gradle\caches\transforms-3\53af5a4717b9f1ca0a6930243c6f3ec8\transformed\paging-rxjava3-3.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\mrden\.gradle\caches\transforms-3\1420835f899870204a1110eec1cb8073\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] C:\Users\mrden\.gradle\caches\transforms-3\f2b86e82bdcef8231ac39d333eddcdba\transformed\play-services-auth-api-phone-18.0.1\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] C:\Users\mrden\.gradle\caches\transforms-3\75cf4a604774e0b857bc19a959bf3444\transformed\play-services-auth-base-18.0.4\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\mrden\.gradle\caches\transforms-3\cefeba72508dd1332f618366dfdc0f0c\transformed\play-services-base-18.0.1\AndroidManifest.xml:16:1-24:12
+MERGED from [androidx.paging:paging-rxjava3:3.0.0] C:\Users\mrden\.gradle\caches\transforms-3\53af5a4717b9f1ca0a6930243c6f3ec8\transformed\paging-rxjava3-3.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-installations-interop:17.1.0] C:\Users\mrden\.gradle\caches\transforms-3\43ce79cd238702577068aea39f36a5ea\transformed\firebase-installations-interop-17.1.0\AndroidManifest.xml:15:1-22:12
 MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] C:\Users\mrden\.gradle\caches\transforms-3\4617928b7349356b446bc880ac85c2f4\transformed\firebase-iid-interop-17.1.0\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\mrden\.gradle\caches\transforms-3\87ce18e1b7833417d0c87d38b6afa5c2\transformed\play-services-cloud-messaging-17.0.1\AndroidManifest.xml:2:1-13:12
@@ -138,27 +138,27 @@ MERGED from [io.grpc:grpc-android:1.52.1] C:\Users\mrden\.gradle\caches\transfor
 MERGED from [net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:2.3.0] C:\Users\mrden\.gradle\caches\transforms-3\cac9ece113e1deee2a1f5e60069abb60\transformed\keyboardvisibilityevent-2.3.0\AndroidManifest.xml:2:1-11:12
 MERGED from [com.jakewharton.threetenabp:threetenabp:1.4.0] C:\Users\mrden\.gradle\caches\transforms-3\f3af6ecb544be092616af723eebf9967\transformed\threetenabp-1.4.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\mrden\.gradle\caches\transforms-3\9df47920ed4482daae3985fe2c588fe4\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:2:1-38:12
 	package
 		INJECTED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:2:1-41:12
+		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:2:1-38:12
 		INJECTED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:2:1-41:12
+		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:2:1-38:12
 		INJECTED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:2:1-41:12
+		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:2:1-38:12
 		INJECTED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:5:5-39:19
+ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:5:5-36:19
 MERGED from [io.getstream:stream-chat-android-ui-components:5.8.2] C:\Users\mrden\.gradle\caches\transforms-3\8d4cce2df582ed05d1e136b0d3ba6481\transformed\stream-chat-android-ui-components-5.8.2\AndroidManifest.xml:29:5-58:19
 MERGED from [io.getstream:stream-chat-android-ui-components:5.8.2] C:\Users\mrden\.gradle\caches\transforms-3\8d4cce2df582ed05d1e136b0d3ba6481\transformed\stream-chat-android-ui-components-5.8.2\AndroidManifest.xml:29:5-58:19
 MERGED from [io.getstream:stream-chat-android-ui-common:5.8.2] C:\Users\mrden\.gradle\caches\transforms-3\6978db0f784d1ec69fbe8fb795bfe90a\transformed\stream-chat-android-ui-common-5.8.2\AndroidManifest.xml:34:5-58:19
@@ -185,14 +185,14 @@ MERGED from [com.google.firebase:firebase-messaging-ktx:23.1.2] C:\Users\mrden\.
 MERGED from [com.google.firebase:firebase-messaging-ktx:23.1.2] C:\Users\mrden\.gradle\caches\transforms-3\8339988d4fb87c1b3f1ab4277556fb9e\transformed\firebase-messaging-ktx-23.1.2\AndroidManifest.xml:24:5-32:19
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\mrden\.gradle\caches\transforms-3\3a57e849b377b2ff334027e4f8fca478\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\mrden\.gradle\caches\transforms-3\3a57e849b377b2ff334027e4f8fca478\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-database-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8ad22e0c00b82ffd3b4e310608b71bd7\transformed\firebase-database-ktx-20.1.0\AndroidManifest.xml:10:5-18:19
-MERGED from [com.google.firebase:firebase-database-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8ad22e0c00b82ffd3b4e310608b71bd7\transformed\firebase-database-ktx-20.1.0\AndroidManifest.xml:10:5-18:19
-MERGED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:27:5-35:19
-MERGED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:27:5-35:19
 MERGED from [com.google.firebase:firebase-storage-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\1c58c145160cdaea5f7c43e642aa9350\transformed\firebase-storage-ktx-20.1.0\AndroidManifest.xml:10:5-18:19
 MERGED from [com.google.firebase:firebase-storage-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\1c58c145160cdaea5f7c43e642aa9350\transformed\firebase-storage-ktx-20.1.0\AndroidManifest.xml:10:5-18:19
 MERGED from [com.google.firebase:firebase-storage:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8a5b11f5e3ab1a17b8b220e0b696bb59\transformed\firebase-storage-20.1.0\AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.firebase:firebase-storage:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8a5b11f5e3ab1a17b8b220e0b696bb59\transformed\firebase-storage-20.1.0\AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-database-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8ad22e0c00b82ffd3b4e310608b71bd7\transformed\firebase-database-ktx-20.1.0\AndroidManifest.xml:10:5-18:19
+MERGED from [com.google.firebase:firebase-database-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8ad22e0c00b82ffd3b4e310608b71bd7\transformed\firebase-database-ktx-20.1.0\AndroidManifest.xml:10:5-18:19
+MERGED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:27:5-35:19
 MERGED from [com.google.firebase:firebase-firestore:24.4.4] C:\Users\mrden\.gradle\caches\transforms-3\6f196664b71be88efede99b522548c5e\transformed\firebase-firestore-24.4.4\AndroidManifest.xml:15:5-23:19
 MERGED from [com.google.firebase:firebase-firestore:24.4.4] C:\Users\mrden\.gradle\caches\transforms-3\6f196664b71be88efede99b522548c5e\transformed\firebase-firestore-24.4.4\AndroidManifest.xml:15:5-23:19
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\mrden\.gradle\caches\transforms-3\543c2e9186832d714ab4034cf8bf84e0\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
@@ -285,54 +285,48 @@ MERGED from [com.jakewharton.threetenabp:threetenabp:1.4.0] C:\Users\mrden\.grad
 		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:12:9-50
 	android:dataExtractionRules
 		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:7:9-65
-activity#finals.project.FriendsActivity
+activity#finals.project.data.ProfileActivity
 ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:14:9-16:40
 	android:exported
 		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:16:13-37
 	android:name
-		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:15:13-44
-activity#finals.project.data.ProfileActivity
+		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:15:13-49
+activity#finals.project.data.PostActivity
 ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:17:9-19:40
 	android:exported
 		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:19:13-37
 	android:name
-		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:18:13-49
-activity#finals.project.data.PostActivity
+		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:18:13-46
+activity#finals.project.smsPage.SmsPage
 ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:20:9-22:40
 	android:exported
 		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:22:13-37
 	android:name
-		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:21:13-46
-activity#finals.project.smsPage.SmsPage
+		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:21:13-44
+activity#finals.project.data.HomeActivity
 ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:23:9-25:40
 	android:exported
 		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:25:13-37
 	android:name
-		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:24:13-44
-activity#finals.project.data.HomeActivity
-ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:26:9-28:40
-	android:exported
-		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:28:13-37
-	android:name
-		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:27:13-46
+		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:24:13-46
 activity#finals.project.ui.login.LoginActivity
-ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:29:9-38:20
+ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:26:9-35:20
 	android:label
-		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:32:13-45
+		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:29:13-45
 	android:exported
-		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:31:13-36
+		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:28:13-36
 	android:name
-		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:30:13-51
+		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:27:13-51
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:33:13-37:29
+ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:30:13-34:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:34:17-69
+ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:31:17-69
 	android:name
-		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:34:25-66
+		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:31:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:36:17-77
+ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:33:17-77
 	android:name
-		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:36:27-74
+		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:33:27-74
 uses-sdk
 INJECTED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml
@@ -397,14 +391,14 @@ MERGED from [com.google.firebase:firebase-messaging-ktx:23.1.2] C:\Users\mrden\.
 MERGED from [com.google.firebase:firebase-messaging-ktx:23.1.2] C:\Users\mrden\.gradle\caches\transforms-3\8339988d4fb87c1b3f1ab4277556fb9e\transformed\firebase-messaging-ktx-23.1.2\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\mrden\.gradle\caches\transforms-3\3a57e849b377b2ff334027e4f8fca478\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\mrden\.gradle\caches\transforms-3\3a57e849b377b2ff334027e4f8fca478\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-database-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8ad22e0c00b82ffd3b4e310608b71bd7\transformed\firebase-database-ktx-20.1.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-database-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8ad22e0c00b82ffd3b4e310608b71bd7\transformed\firebase-database-ktx-20.1.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:18:5-20:41
 MERGED from [com.google.firebase:firebase-storage-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\1c58c145160cdaea5f7c43e642aa9350\transformed\firebase-storage-ktx-20.1.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-storage-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\1c58c145160cdaea5f7c43e642aa9350\transformed\firebase-storage-ktx-20.1.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-storage:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8a5b11f5e3ab1a17b8b220e0b696bb59\transformed\firebase-storage-20.1.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-storage:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8a5b11f5e3ab1a17b8b220e0b696bb59\transformed\firebase-storage-20.1.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-database-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8ad22e0c00b82ffd3b4e310608b71bd7\transformed\firebase-database-ktx-20.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8ad22e0c00b82ffd3b4e310608b71bd7\transformed\firebase-database-ktx-20.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:18:5-20:41
 MERGED from [com.google.firebase:firebase-firestore:24.4.4] C:\Users\mrden\.gradle\caches\transforms-3\6f196664b71be88efede99b522548c5e\transformed\firebase-firestore-24.4.4\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-firestore:24.4.4] C:\Users\mrden\.gradle\caches\transforms-3\6f196664b71be88efede99b522548c5e\transformed\firebase-firestore-24.4.4\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\mrden\.gradle\caches\transforms-3\543c2e9186832d714ab4034cf8bf84e0\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
@@ -429,8 +423,6 @@ MERGED from [com.google.firebase:firebase-common:20.3.1] C:\Users\mrden\.gradle\
 MERGED from [com.google.firebase:firebase-common:20.3.1] C:\Users\mrden\.gradle\caches\transforms-3\f202b05bb193a4bc682027555d8623cf\transformed\firebase-common-20.3.1\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\mrden\.gradle\caches\transforms-3\dbb2b67991ec561b148406ab440b03dc\transformed\play-services-auth-20.3.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\mrden\.gradle\caches\transforms-3\dbb2b67991ec561b148406ab440b03dc\transformed\play-services-auth-20.3.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.paging:paging-rxjava3:3.0.0] C:\Users\mrden\.gradle\caches\transforms-3\53af5a4717b9f1ca0a6930243c6f3ec8\transformed\paging-rxjava3-3.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.paging:paging-rxjava3:3.0.0] C:\Users\mrden\.gradle\caches\transforms-3\53af5a4717b9f1ca0a6930243c6f3ec8\transformed\paging-rxjava3-3.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\mrden\.gradle\caches\transforms-3\1420835f899870204a1110eec1cb8073\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\mrden\.gradle\caches\transforms-3\1420835f899870204a1110eec1cb8073\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] C:\Users\mrden\.gradle\caches\transforms-3\f2b86e82bdcef8231ac39d333eddcdba\transformed\play-services-auth-api-phone-18.0.1\AndroidManifest.xml:5:5-44
@@ -439,6 +431,8 @@ MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] C:\Users\mrd
 MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] C:\Users\mrden\.gradle\caches\transforms-3\75cf4a604774e0b857bc19a959bf3444\transformed\play-services-auth-base-18.0.4\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\mrden\.gradle\caches\transforms-3\cefeba72508dd1332f618366dfdc0f0c\transformed\play-services-base-18.0.1\AndroidManifest.xml:18:5-43
 MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\mrden\.gradle\caches\transforms-3\cefeba72508dd1332f618366dfdc0f0c\transformed\play-services-base-18.0.1\AndroidManifest.xml:18:5-43
+MERGED from [androidx.paging:paging-rxjava3:3.0.0] C:\Users\mrden\.gradle\caches\transforms-3\53af5a4717b9f1ca0a6930243c6f3ec8\transformed\paging-rxjava3-3.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.paging:paging-rxjava3:3.0.0] C:\Users\mrden\.gradle\caches\transforms-3\53af5a4717b9f1ca0a6930243c6f3ec8\transformed\paging-rxjava3-3.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-installations-interop:17.1.0] C:\Users\mrden\.gradle\caches\transforms-3\43ce79cd238702577068aea39f36a5ea\transformed\firebase-installations-interop-17.1.0\AndroidManifest.xml:18:5-20:41
 MERGED from [com.google.firebase:firebase-installations-interop:17.1.0] C:\Users\mrden\.gradle\caches\transforms-3\43ce79cd238702577068aea39f36a5ea\transformed\firebase-installations-interop-17.1.0\AndroidManifest.xml:18:5-20:41
 MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] C:\Users\mrden\.gradle\caches\transforms-3\4617928b7349356b446bc880ac85c2f4\transformed\firebase-iid-interop-17.1.0\AndroidManifest.xml:5:5-44
@@ -623,10 +617,10 @@ MERGED from [io.getstream:stream-chat-android-client:5.8.2] C:\Users\mrden\.grad
 MERGED from [io.getstream:stream-chat-android-client:5.8.2] C:\Users\mrden\.gradle\caches\transforms-3\55dfc534b84dc67cce7208934894abb6\transformed\stream-chat-android-client-5.8.2\AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-auth:21.1.0] C:\Users\mrden\.gradle\caches\transforms-3\872743e8841553fe7d9417e4441e5692\transformed\firebase-auth-21.1.0\AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-auth:21.1.0] C:\Users\mrden\.gradle\caches\transforms-3\872743e8841553fe7d9417e4441e5692\transformed\firebase-auth-21.1.0\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-storage:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8a5b11f5e3ab1a17b8b220e0b696bb59\transformed\firebase-storage-20.1.0\AndroidManifest.xml:25:5-79
 MERGED from [com.google.firebase:firebase-storage:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8a5b11f5e3ab1a17b8b220e0b696bb59\transformed\firebase-storage-20.1.0\AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-firestore:24.4.4] C:\Users\mrden\.gradle\caches\transforms-3\6f196664b71be88efede99b522548c5e\transformed\firebase-firestore-24.4.4\AndroidManifest.xml:12:5-79
 MERGED from [com.google.firebase:firebase-firestore:24.4.4] C:\Users\mrden\.gradle\caches\transforms-3\6f196664b71be88efede99b522548c5e\transformed\firebase-firestore-24.4.4\AndroidManifest.xml:12:5-79
 MERGED from [com.google.firebase:firebase-messaging:23.1.2] C:\Users\mrden\.gradle\caches\transforms-3\788a0c7b710912e12732b2820f2d0fcf\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:24:5-79
@@ -781,10 +775,10 @@ MERGED from [com.firebaseui:firebase-ui-firestore:8.0.2] C:\Users\mrden\.gradle\
 MERGED from [com.firebaseui:firebase-ui-firestore:8.0.2] C:\Users\mrden\.gradle\caches\transforms-3\f95e2c66abbde74d907bc1d8318ce355\transformed\firebase-ui-firestore-8.0.2\AndroidManifest.xml:9:5-67
 MERGED from [com.google.firebase:firebase-auth:21.1.0] C:\Users\mrden\.gradle\caches\transforms-3\872743e8841553fe7d9417e4441e5692\transformed\firebase-auth-21.1.0\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-auth:21.1.0] C:\Users\mrden\.gradle\caches\transforms-3\872743e8841553fe7d9417e4441e5692\transformed\firebase-auth-21.1.0\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:25:5-67
-MERGED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:25:5-67
 MERGED from [com.google.firebase:firebase-storage:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8a5b11f5e3ab1a17b8b220e0b696bb59\transformed\firebase-storage-20.1.0\AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-storage:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8a5b11f5e3ab1a17b8b220e0b696bb59\transformed\firebase-storage-20.1.0\AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:25:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.4.4] C:\Users\mrden\.gradle\caches\transforms-3\6f196664b71be88efede99b522548c5e\transformed\firebase-firestore-24.4.4\AndroidManifest.xml:13:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.4.4] C:\Users\mrden\.gradle\caches\transforms-3\6f196664b71be88efede99b522548c5e\transformed\firebase-firestore-24.4.4\AndroidManifest.xml:13:5-67
 MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\mrden\.gradle\caches\transforms-3\c1f61c1816c6b90ae27516e591c724dc\transformed\play-services-measurement-api-21.2.0\AndroidManifest.xml:22:5-67
@@ -1015,14 +1009,14 @@ MERGED from [com.google.firebase:firebase-auth:21.1.0] C:\Users\mrden\.gradle\ca
 MERGED from [com.google.firebase:firebase-auth:21.1.0] C:\Users\mrden\.gradle\caches\transforms-3\872743e8841553fe7d9417e4441e5692\transformed\firebase-auth-21.1.0\AndroidManifest.xml:64:9-70:19
 MERGED from [com.google.firebase:firebase-messaging-ktx:23.1.2] C:\Users\mrden\.gradle\caches\transforms-3\8339988d4fb87c1b3f1ab4277556fb9e\transformed\firebase-messaging-ktx-23.1.2\AndroidManifest.xml:25:9-31:19
 MERGED from [com.google.firebase:firebase-messaging-ktx:23.1.2] C:\Users\mrden\.gradle\caches\transforms-3\8339988d4fb87c1b3f1ab4277556fb9e\transformed\firebase-messaging-ktx-23.1.2\AndroidManifest.xml:25:9-31:19
-MERGED from [com.google.firebase:firebase-database-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8ad22e0c00b82ffd3b4e310608b71bd7\transformed\firebase-database-ktx-20.1.0\AndroidManifest.xml:11:9-17:19
-MERGED from [com.google.firebase:firebase-database-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8ad22e0c00b82ffd3b4e310608b71bd7\transformed\firebase-database-ktx-20.1.0\AndroidManifest.xml:11:9-17:19
-MERGED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:28:9-34:19
-MERGED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:28:9-34:19
 MERGED from [com.google.firebase:firebase-storage-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\1c58c145160cdaea5f7c43e642aa9350\transformed\firebase-storage-ktx-20.1.0\AndroidManifest.xml:11:9-17:19
 MERGED from [com.google.firebase:firebase-storage-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\1c58c145160cdaea5f7c43e642aa9350\transformed\firebase-storage-ktx-20.1.0\AndroidManifest.xml:11:9-17:19
 MERGED from [com.google.firebase:firebase-storage:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8a5b11f5e3ab1a17b8b220e0b696bb59\transformed\firebase-storage-20.1.0\AndroidManifest.xml:29:9-35:19
 MERGED from [com.google.firebase:firebase-storage:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8a5b11f5e3ab1a17b8b220e0b696bb59\transformed\firebase-storage-20.1.0\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-database-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8ad22e0c00b82ffd3b4e310608b71bd7\transformed\firebase-database-ktx-20.1.0\AndroidManifest.xml:11:9-17:19
+MERGED from [com.google.firebase:firebase-database-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8ad22e0c00b82ffd3b4e310608b71bd7\transformed\firebase-database-ktx-20.1.0\AndroidManifest.xml:11:9-17:19
+MERGED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:28:9-34:19
+MERGED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:28:9-34:19
 MERGED from [com.google.firebase:firebase-firestore:24.4.4] C:\Users\mrden\.gradle\caches\transforms-3\6f196664b71be88efede99b522548c5e\transformed\firebase-firestore-24.4.4\AndroidManifest.xml:16:9-22:19
 MERGED from [com.google.firebase:firebase-firestore:24.4.4] C:\Users\mrden\.gradle\caches\transforms-3\6f196664b71be88efede99b522548c5e\transformed\firebase-firestore-24.4.4\AndroidManifest.xml:16:9-22:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.0] C:\Users\mrden\.gradle\caches\transforms-3\ca2d0f961702c720012fb772e88b64f7\transformed\firebase-analytics-ktx-21.2.0\AndroidManifest.xml:8:9-14:19
@@ -1093,18 +1087,6 @@ ADDED from [com.google.firebase:firebase-messaging-ktx:23.1.2] C:\Users\mrden\.g
 		ADDED from [com.google.firebase:firebase-messaging-ktx:23.1.2] C:\Users\mrden\.gradle\caches\transforms-3\8339988d4fb87c1b3f1ab4277556fb9e\transformed\firebase-messaging-ktx-23.1.2\AndroidManifest.xml:30:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-messaging-ktx:23.1.2] C:\Users\mrden\.gradle\caches\transforms-3\8339988d4fb87c1b3f1ab4277556fb9e\transformed\firebase-messaging-ktx-23.1.2\AndroidManifest.xml:29:17-126
-meta-data#com.google.firebase.components:com.google.firebase.database.ktx.FirebaseDatabaseKtxRegistrar
-ADDED from [com.google.firebase:firebase-database-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8ad22e0c00b82ffd3b4e310608b71bd7\transformed\firebase-database-ktx-20.1.0\AndroidManifest.xml:14:13-16:85
-	android:value
-		ADDED from [com.google.firebase:firebase-database-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8ad22e0c00b82ffd3b4e310608b71bd7\transformed\firebase-database-ktx-20.1.0\AndroidManifest.xml:16:17-82
-	android:name
-		ADDED from [com.google.firebase:firebase-database-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8ad22e0c00b82ffd3b4e310608b71bd7\transformed\firebase-database-ktx-20.1.0\AndroidManifest.xml:15:17-124
-meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
-ADDED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:31:13-33:85
-	android:value
-		ADDED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:33:17-82
-	android:name
-		ADDED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:32:17-109
 meta-data#com.google.firebase.components:com.google.firebase.storage.ktx.FirebaseStorageKtxRegistrar
 ADDED from [com.google.firebase:firebase-storage-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\1c58c145160cdaea5f7c43e642aa9350\transformed\firebase-storage-ktx-20.1.0\AndroidManifest.xml:14:13-16:85
 	android:value
@@ -1117,6 +1099,18 @@ ADDED from [com.google.firebase:firebase-storage:20.1.0] C:\Users\mrden\.gradle\
 		ADDED from [com.google.firebase:firebase-storage:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8a5b11f5e3ab1a17b8b220e0b696bb59\transformed\firebase-storage-20.1.0\AndroidManifest.xml:34:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-storage:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8a5b11f5e3ab1a17b8b220e0b696bb59\transformed\firebase-storage-20.1.0\AndroidManifest.xml:33:17-107
+meta-data#com.google.firebase.components:com.google.firebase.database.ktx.FirebaseDatabaseKtxRegistrar
+ADDED from [com.google.firebase:firebase-database-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8ad22e0c00b82ffd3b4e310608b71bd7\transformed\firebase-database-ktx-20.1.0\AndroidManifest.xml:14:13-16:85
+	android:value
+		ADDED from [com.google.firebase:firebase-database-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8ad22e0c00b82ffd3b4e310608b71bd7\transformed\firebase-database-ktx-20.1.0\AndroidManifest.xml:16:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-database-ktx:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\8ad22e0c00b82ffd3b4e310608b71bd7\transformed\firebase-database-ktx-20.1.0\AndroidManifest.xml:15:17-124
+meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
+ADDED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:31:13-33:85
+	android:value
+		ADDED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:33:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mrden\.gradle\caches\transforms-3\163f5e2227d3c4e859f3e3ed880e277a\transformed\firebase-database-20.1.0\AndroidManifest.xml:32:17-109
 meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
 ADDED from [com.google.firebase:firebase-firestore:24.4.4] C:\Users\mrden\.gradle\caches\transforms-3\6f196664b71be88efede99b522548c5e\transformed\firebase-firestore-24.4.4\AndroidManifest.xml:19:13-21:85
 	android:value

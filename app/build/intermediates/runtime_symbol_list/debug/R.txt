@@ -5416,6 +5416,7 @@ int layout stream_ui_user_reactions_view 0x7f0d00e8
 int layout support_simple_spinner_dropdown_item 0x7f0d00e9
 int layout view_image_viewer 0x7f0d00ea
 int mipmap ic_launcher 0x7f0f0000
+int mipmap ic_launcher_foreground 0x7f0f0002
 int mipmap ic_launcher_round 0x7f0f0001
 int plurals fui_error_weak_password 0x7f100000
 int plurals mtrl_badge_content_description 0x7f100001
