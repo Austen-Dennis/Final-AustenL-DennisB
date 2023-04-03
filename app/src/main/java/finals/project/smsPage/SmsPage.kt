@@ -63,7 +63,7 @@ class SmsPage : AppCompatActivity() {
         }
     }
     private fun displayChatMessages() {
-        val listOfMessage = findViewById<View>(R.id.list_of_messages) as ListView
+        val listOfMessage = findViewById<View>(R.id.messageList) as ListView
         val query: Query = getInstance().reference.child("chats")
         val options = FirebaseListOptions.Builder<ChatMessage>()
             .setQuery(query, ChatMessage::class.java)
