@@ -37,6 +37,8 @@ id layout
 id list_of_messages
 id loading
 id login
+id messageList
+id messageText
 id message_text
 id message_time
 id message_user
@@ -48,6 +50,7 @@ id profileTitle
 id project
 id release
 id searchView
+id sendButton
 id sms
 id so
 id textInputLayout
@@ -62,6 +65,7 @@ layout homepage
 layout messages
 layout post
 layout smspage
+layout test
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round

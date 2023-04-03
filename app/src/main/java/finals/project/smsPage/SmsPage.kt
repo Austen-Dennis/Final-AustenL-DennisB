@@ -54,16 +54,22 @@ class SmsPage : AppCompatActivity() {
         val fab = findViewById<View>(R.id.fab) as FloatingActionButton
         fab.setOnClickListener {
             val input = findViewById<View>(R.id.input) as EditText
-            // Read the input field and push a new instance
-            // of ChatMessage to the Firebase database
-            getInstance().reference.push().setValue(ChatMessage(input.text.toString(),
-                FirebaseAuth.getInstance().currentUser?.displayName ?: userAgent))
-            // Clear the input
-            input.setText("")
+            input.setOnClickListener {
+                // Read the input field and push a new instance
+                // of ChatMessage to the Firebase database
+                getInstance().reference.push().setValue(
+                    ChatMessage(
+                        input.text.toString(),
+                        FirebaseAuth.getInstance().currentUser?.displayName ?: userAgent
+                    )
+                )
+                // Clear the input
+                input.setText("")
+            }
         }
     }
     private fun displayChatMessages() {
-        val listOfMessage = findViewById<View>(R.id.messageList) as ListView
+        val listOfMessage = findViewById<View>(R.id.list_of_messages) as ListView
         val query: Query = getInstance().reference.child("chats")
         val options = FirebaseListOptions.Builder<ChatMessage>()
             .setQuery(query, ChatMessage::class.java)

@@ -51,7 +51,8 @@
         android:tint="@android:color/white"
         app:fabSize="mini"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="TODO" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
@@ -60,14 +61,18 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="-550dp"
-        android:layout_toLeftOf="@id/fab"
+        android:layout_toStartOf="@id/fab"
         app:layout_constraintBottom_toTopOf="@+id/list_of_messages">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input" />
+            android:clickable="true"
+            android:hint="Input"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:cursorVisible="false" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ListView

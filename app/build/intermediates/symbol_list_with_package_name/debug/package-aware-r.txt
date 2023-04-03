@@ -4713,6 +4713,7 @@ id messageInputFieldView
 id messageInputView
 id messageItemView
 id messageLabel
+id messageList
 id messageListHeaderView
 id messageListView
 id messageOptionsContainer
@@ -5418,6 +5419,7 @@ layout stream_ui_suggestion_list_view
 layout stream_ui_typing_indicator_animation_view
 layout stream_ui_user_reactions_view
 layout support_simple_spinner_dropdown_item
+layout test
 layout view_image_viewer
 mipmap ic_launcher
 mipmap ic_launcher_foreground
