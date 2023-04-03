@@ -17,6 +17,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import finals.project.R
+import finals.project.data.DataActivity
 import finals.project.data.HomeActivity
 import finals.project.databinding.ActivityLoginBinding
 import java.lang.Exception
@@ -115,19 +116,21 @@ class LoginActivity : AppCompatActivity() {
                 } catch (e: Exception) {
                     e.printStackTrace()
                 }
-                FirebaseAuth.getInstance().currentUser?.sendEmailVerification()
                     val uid = uidGrab()
                     val displayName = nameGrab()
                     val name = displayName?.let { it1 -> emailTrim(it1) }
-                    if (uid != null) {
+
+                if (uid != null) {
                         if (FirebaseAuth.getInstance().currentUser?.isEmailVerified == true) {
                             Toast.makeText(
                                 applicationContext,
                                 "Successful Login for User: " + name,
                                 Toast.LENGTH_LONG
                             ).show()
+                            DataActivity.dataBase(uid,name,displayName)
                             startActivity(intent)
                         } else {
+                            FirebaseAuth.getInstance().currentUser?.sendEmailVerification()
                             Toast.makeText(
                                 applicationContext,
                                 "Email verification link sent to " + displayName,

@@ -12,6 +12,9 @@
         android:theme="@style/Theme.FInalProject"
         tools:targetApi="31">
         <activity
+            android:name=".DataActivity"
+            android:exported="false" />
+        <activity
             android:name=".data.FriendProfileActivity"
             android:exported="false" />
         <activity
