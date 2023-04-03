@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.auth.FirebaseAuth
@@ -20,7 +21,9 @@ import finals.project.R
 import finals.project.data.DataActivity
 import finals.project.data.HomeActivity
 import finals.project.databinding.ActivityLoginBinding
+import io.getstream.chat.android.ui.channel.ChannelListActivity
 import java.lang.Exception
+import com.sendbird.android.SendBird
 
 
 class LoginActivity : AppCompatActivity() {
@@ -31,8 +34,13 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val toolbar = findViewById<View>(io.getstream.chat.android.ui.R.id.toolbar)
         setSupportActionBar(toolbar as Toolbar?)
+        SendBird.init("APP_ID_HERE", this)
+        login.setOnClickListener {
+            connectToSendBird(edittext_login_user_id.text.toString(), edittext_login_nickname.text.toString())
 
-        //Verifies that app terminates previous users session
+
+
+            //Verifies that app terminates previous users session
         FirebaseAuth.getInstance().signOut()
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -190,3 +198,19 @@ fun EditText.afterTextChanged(afterTextChanged: (String) -> Unit) {
     })
 
 }
+private fun connectToSendBird(uid: String, displayName: String) {
+    	        SendBird.connect(uid) { uid, e ->
+        	            if (e != null) {
+        	                Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
+        	            } else {
+                        SendBird.updateCurrentUserInfo(displayName, null) { e ->
+            	                    if (e != null) {
+            	                        Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
+            	                    }
+            	                    val intent = Intent(this, ChannelListActivity::class.java)
+            	                    startActivity(intent)
+            	                    finish()
+            	                }
+        	            }
+        	        }
+    	    }
