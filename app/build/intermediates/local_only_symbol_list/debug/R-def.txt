@@ -23,6 +23,7 @@ id Camera
 id Gallery
 id accountInfo
 id container
+id copyID
 id displayInfo
 id email
 id fab
@@ -46,6 +47,7 @@ id profile
 id profileTitle
 id project
 id release
+id searchView
 id sms
 id so
 id textInputLayout
@@ -53,6 +55,7 @@ id update
 id user
 id username
 id verify
+layout activity_friend_profile
 layout activity_login
 layout activity_profile
 layout homepage

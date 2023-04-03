@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.SearchView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -26,13 +27,17 @@ public final class HomepageBinding implements ViewBinding {
   public final Button profile;
 
   @NonNull
+  public final SearchView searchView;
+
+  @NonNull
   public final Button sms;
 
   private HomepageBinding(@NonNull ConstraintLayout rootView, @NonNull Button post,
-      @NonNull Button profile, @NonNull Button sms) {
+      @NonNull Button profile, @NonNull SearchView searchView, @NonNull Button sms) {
     this.rootView = rootView;
     this.post = post;
     this.profile = profile;
+    this.searchView = searchView;
     this.sms = sms;
   }
 
@@ -75,13 +80,19 @@ public final class HomepageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.searchView;
+      SearchView searchView = ViewBindings.findChildViewById(rootView, id);
+      if (searchView == null) {
+        break missingId;
+      }
+
       id = R.id.sms;
       Button sms = ViewBindings.findChildViewById(rootView, id);
       if (sms == null) {
         break missingId;
       }
 
-      return new HomepageBinding((ConstraintLayout) rootView, post, profile, sms);
+      return new HomepageBinding((ConstraintLayout) rootView, post, profile, searchView, sms);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

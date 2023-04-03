@@ -1,6 +1,9 @@
 package finals.project.data
 
 import android.annotation.SuppressLint
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -28,6 +31,7 @@ class ProfileActivity : AppCompatActivity() {
         val intentPost = Intent(this, PostActivity::class.java)
         val intentSms = Intent(this, SmsPage::class.java)
         val intentReturn = Intent(this, HomeActivity::class.java)
+        val FRIENDPROFILE = Intent(this, FriendProfileActivity::class.java)
         val urlRelease = "https://github.com/bsu-cs222-spring23-dll/Final-AustenL-DennisB-BeethovenM-JulianR/releases"
         val releaseIntent = Intent(Intent.ACTION_VIEW)
         val urlProjectInfo = "https://github.com/bsu-cs222-spring23-dll/Final-AustenL-DennisB-BeethovenM-JulianR#get-together"
@@ -35,9 +39,11 @@ class ProfileActivity : AppCompatActivity() {
         val displayName = LoginActivity.nameGrab()
         val name = displayName?.let { LoginActivity.emailTrim(it) }
         val uid = LoginActivity.uidGrab()
+        val clip: ClipData = ClipData.newPlainText("simple text", uid)
         val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
         val hideInfoButton = findViewById<View>(finals.project.R.id.hideInfo)
         val showInfoButton = findViewById<View>(finals.project.R.id.displayInfo)
+        val copyIDButton = findViewById<View>(finals.project.R.id.copyID)
 
         profileTitle.text = "Welcome " + name + "!"
 
@@ -51,6 +57,8 @@ class ProfileActivity : AppCompatActivity() {
         email.visibility= View.GONE
         userID.visibility=View.GONE
         hideInfoButton.visibility=View.GONE
+        copyIDButton.visibility=View.GONE
+
 
 
         showInfoButton.setOnClickListener {
@@ -58,13 +66,24 @@ class ProfileActivity : AppCompatActivity() {
             userID.visibility=View.VISIBLE
             hideInfoButton.visibility=View.VISIBLE
             showInfoButton.visibility=View.GONE
+            copyIDButton.visibility=View.VISIBLE
         }
-
         hideInfoButton.setOnClickListener {
             email.visibility= View.GONE
             userID.visibility=View.GONE
             showInfoButton.visibility=View.VISIBLE
             hideInfoButton.visibility=View.GONE
+            copyIDButton.visibility=View.GONE
+        }
+        copyIDButton.setOnClickListener {
+            val clip: ClipData = ClipData.newPlainText("simple text", uid)
+            val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+            clipboard.setPrimaryClip(clip)
+            Toast.makeText(
+                applicationContext,
+                "Successfully Copied User ID",
+                Toast.LENGTH_LONG
+            ).show()
         }
         val updatePassButton = findViewById<View>(finals.project.R.id.update)
         updatePassButton.setOnClickListener {
@@ -84,8 +103,9 @@ class ProfileActivity : AppCompatActivity() {
         }
         val projectInfoButton = findViewById<View>(finals.project.R.id.project)
         projectInfoButton.setOnClickListener {
-            projectInfoIntent.data = Uri.parse(urlProjectInfo)
-            startActivity(projectInfoIntent)
+            /*projectInfoIntent.data = Uri.parse(urlProjectInfo)
+            startActivity(projectInfoIntent)*/
+            startActivity(FRIENDPROFILE)
         }
 
         val postButton = findViewById<View>(finals.project.R.id.post)

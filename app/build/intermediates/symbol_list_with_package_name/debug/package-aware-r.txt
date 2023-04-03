@@ -4425,6 +4425,7 @@ id contiguous
 id continuousVelocity
 id cooldownBadgeTextView
 id coordinator
+id copyID
 id cos
 id count_new_messages
 id counterclockwise
@@ -4877,6 +4878,7 @@ id searchInfoBar
 id searchInputView
 id searchListView
 id searchResultListView
+id searchView
 id search_badge
 id search_bar
 id search_bar_text_view
@@ -5209,6 +5211,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_friend_profile
 layout activity_login
 layout activity_profile
 layout browser_actions_context_menu_page

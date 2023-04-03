@@ -1,21 +1,20 @@
 package finals.project.data
 
+import android.R
 import android.annotation.SuppressLint
+import android.app.SearchManager
+import android.content.Context
 import android.content.Intent
-import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
+import androidx.appcompat.widget.SearchView.OnQueryTextListener
 import androidx.appcompat.widget.Toolbar
-import androidx.viewpager.widget.ViewPager
-import com.google.android.material.tabs.TabLayout
-import com.google.firebase.FirebaseApp
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
-import finals.project.R
 import finals.project.smsPage.SmsPage
-import finals.project.ui.login.LoginActivity
-import kotlin.system.exitProcess
+
 
 class HomeActivity : AppCompatActivity() {
 
@@ -23,23 +22,28 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.homepage) // sets the view using the homepage.xml
+        setContentView(finals.project.R.layout.homepage) // sets the view using the homepage.xml
         val toolbar = findViewById<View>(io.getstream.chat.android.ui.R.id.toolbar)
         setSupportActionBar(toolbar as Toolbar?)
-        // sets the intent I.E. calls to the class Smspage which displays a layout
+        /*val searchView = findViewById<View>(finals.project.R.id.searchView) as SearchView
+        val friendID = searchView.query.toString()
+        FriendProfileActivity.friendSearch(friendID)*/
+        //sets the intent I.E. calls to the class Smspage which displays a layout
         val intentSMS = Intent(this, SmsPage::class.java)
         val intentPOST = Intent(this, PostActivity::class.java)
         val intentPROFILE = Intent(this, ProfileActivity::class.java)
+        val intentFRIENDPROFILE = Intent(this, FriendProfileActivity::class.java)
         //starts the activity onclick
-        val profileButton = findViewById<View>(R.id.profile)
+
+        val profileButton = findViewById<View>(finals.project.R.id.profile)
         profileButton.setOnClickListener {
             startActivity(intentPROFILE)
         }
-        val smsButton = findViewById<View>(R.id.sms)
+        val smsButton = findViewById<View>(finals.project.R.id.sms)
         smsButton.setOnClickListener {
             startActivity(intentSMS)
         }
-        val postButton = findViewById<View>(R.id.post)
+        val postButton = findViewById<View>(finals.project.R.id.post)
         postButton.setOnClickListener {
             startActivity(intentPOST)
         }
