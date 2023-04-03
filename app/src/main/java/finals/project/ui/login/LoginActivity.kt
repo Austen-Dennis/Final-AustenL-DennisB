@@ -34,138 +34,130 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val toolbar = findViewById<View>(io.getstream.chat.android.ui.R.id.toolbar)
         setSupportActionBar(toolbar as Toolbar?)
-        SendBird.init("APP_ID_HERE", this)
-        login.setOnClickListener {
-            connectToSendBird(
-                edittext_login_user_id.text.toString(),
-                edittext_login_nickname.text.toString()
-            )
+
+        //Verifies that app terminates previous users session
+        FirebaseAuth.getInstance().signOut()
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        val username = binding.username
+        val password = binding.password
+        val login = binding.login
+        val loading = binding.loading
+        val intent = Intent(this, HomeActivity::class.java)
 
 
-            //Verifies that app terminates previous users session
-            FirebaseAuth.getInstance().signOut()
-            binding = ActivityLoginBinding.inflate(layoutInflater)
-            setContentView(binding.root)
+        val verifyButton = findViewById<View>(R.id.verify)
+        verifyButton.setOnClickListener {
+            verifyButton.visibility = View.INVISIBLE
+            username.visibility = View.VISIBLE
+            password.visibility = View.VISIBLE
+            login.visibility = View.VISIBLE
+        }
 
-            val username = binding.username
-            val password = binding.password
-            val login = binding.login
-            val loading = binding.loading
-            val intent = Intent(this, HomeActivity::class.java)
+        loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
+            .get(LoginViewModel::class.java)
 
+        loginViewModel.loginFormState.observe(this@LoginActivity, Observer {
+            val loginState = it ?: return@Observer
 
-            val verifyButton = findViewById<View>(R.id.verify)
-            verifyButton.setOnClickListener {
-                verifyButton.visibility = View.INVISIBLE
-                username.visibility = View.VISIBLE
-                password.visibility = View.VISIBLE
-                login.visibility = View.VISIBLE
+            // disable login button unless both username / password is valid
+            login.isEnabled = loginState.isDataValid
+
+            if (loginState.usernameError != null) {
+                username.error = getString(loginState.usernameError)
+            }
+            if (loginState.passwordError != null) {
+                password.error = getString(loginState.passwordError)
             }
 
+        })
 
-            loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
-                .get(LoginViewModel::class.java)
+        loginViewModel.loginResult.observe(this@LoginActivity, Observer {
+            val loginResult = it ?: return@Observer
+            loading.visibility = View.GONE
+            if (loginResult.error != null) {
+                showLoginFailed(loginResult.error)
+            }
+            if (loginResult.success != null) {
+                //updateUiWithUser(loginResult.success)
+            }
+        })
 
-            loginViewModel.loginFormState.observe(this@LoginActivity, Observer {
-                val loginState = it ?: return@Observer
+        username.afterTextChanged {
+            loginViewModel.loginDataChanged(
+                username.text.toString(),
+                password.text.toString()
+            )
+        }
 
-                // disable login button unless both username / password is valid
-                login.isEnabled = loginState.isDataValid
-
-                if (loginState.usernameError != null) {
-                    username.error = getString(loginState.usernameError)
-                }
-                if (loginState.passwordError != null) {
-                    password.error = getString(loginState.passwordError)
-                }
-
-            })
-
-            loginViewModel.loginResult.observe(this@LoginActivity, Observer {
-                val loginResult = it ?: return@Observer
-                loading.visibility = View.GONE
-                if (loginResult.error != null) {
-                    showLoginFailed(loginResult.error)
-                }
-                if (loginResult.success != null) {
-                    //updateUiWithUser(loginResult.success)
-                }
-            })
-
-            username.afterTextChanged {
+        password.apply {
+            afterTextChanged {
                 loginViewModel.loginDataChanged(
                     username.text.toString(),
                     password.text.toString()
                 )
             }
 
-            password.apply {
-                afterTextChanged {
-                    loginViewModel.loginDataChanged(
-                        username.text.toString(),
-                        password.text.toString()
-                    )
+            setOnEditorActionListener { _, actionId, _ ->
+                when (actionId) {
+                    EditorInfo.IME_ACTION_DONE ->
+                        loginViewModel.login(
+                            username.text.toString(),
+                            password.text.toString()
+                        )
                 }
+                false
+            }
 
-                setOnEditorActionListener { _, actionId, _ ->
-                    when (actionId) {
-                        EditorInfo.IME_ACTION_DONE ->
-                            loginViewModel.login(
-                                username.text.toString(),
-                                password.text.toString()
-                            )
-                    }
-                    false
+            login.setOnClickListener {
+                loginViewModel.login(username.text.toString(), password.text.toString())
+                try {
+                    Thread.sleep(1000);
+                    loading.visibility = View.VISIBLE
+                } catch (e: Exception) {
+                    e.printStackTrace()
                 }
+                val uid = uidGrab()
+                val displayName = nameGrab()
+                val name = displayName?.let { it1 -> emailTrim(it1) }
 
-                login.setOnClickListener {
-                    loginViewModel.login(username.text.toString(), password.text.toString())
-                    try {
-                        Thread.sleep(1000);
-                        loading.visibility = View.VISIBLE
-                    } catch (e: Exception) {
-                        e.printStackTrace()
-                    }
-                    val uid = uidGrab()
-                    val displayName = nameGrab()
-                    val name = displayName?.let { it1 -> emailTrim(it1) }
-
-                    if (uid != null) {
-                        if (FirebaseAuth.getInstance().currentUser?.isEmailVerified == true) {
-                            Toast.makeText(
-                                applicationContext,
-                                "Successful Login for User: " + name,
-                                Toast.LENGTH_LONG
-                            ).show()
-                            DataActivity.dataBase(uid, name, displayName)
-                            startActivity(intent)
-                        } else {
-                            FirebaseAuth.getInstance().currentUser?.sendEmailVerification()
-                            Toast.makeText(
-                                applicationContext,
-                                "Email verification link sent to " + displayName,
-                                Toast.LENGTH_LONG
-                            ).show()
-                        }
-                    } else {
-                        loading.visibility = View.INVISIBLE
+                if (uid != null) {
+                    if (FirebaseAuth.getInstance().currentUser?.isEmailVerified == true) {
                         Toast.makeText(
                             applicationContext,
-                            "Incorrect Password",
+                            "Successful Login for User: " + name,
+                            Toast.LENGTH_LONG
+                        ).show()
+                        DataActivity.dataBase(uid, name, displayName)
+                        startActivity(intent)
+                    } else {
+                        FirebaseAuth.getInstance().currentUser?.sendEmailVerification()
+                        Toast.makeText(
+                            applicationContext,
+                            "Email verification link sent to " + displayName,
                             Toast.LENGTH_LONG
                         ).show()
                     }
+                } else {
+                    loading.visibility = View.INVISIBLE
+                    Toast.makeText(
+                        applicationContext,
+                        "Incorrect Password",
+                        Toast.LENGTH_LONG
+                    ).show()
                 }
             }
         }
+    }
 
-        fun updateUiWithUser(model: LoggedInUserView) {
-            try {
-                Thread.sleep(1000);
-            } catch (e: java.lang.Exception) {
-                e.printStackTrace()
-            }
+    fun updateUiWithUser(model: LoggedInUserView) {
+        try {
+            Thread.sleep(1000);
+        } catch (e: java.lang.Exception) {
+            e.printStackTrace()
         }
+
     }
 
     private fun showLoginFailed(@StringRes errorString: Int) {
@@ -205,23 +197,6 @@ class LoginActivity : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
         })
 
-    }
-
-    private fun connectToSendBird(uid: String, displayName: String) {
-        SendBird.connect(uid) { uid, e ->
-            if (e != null) {
-                Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
-            } else {
-                SendBird.updateCurrentUserInfo(displayName, null) { e ->
-                    if (e != null) {
-                        Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
-                    }
-                    val intent = Intent(this, ChannelListActivity::class.java)
-                    startActivity(intent)
-                    finish()
-                }
-            }
-        }
     }
 }
 
