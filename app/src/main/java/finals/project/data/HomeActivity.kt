@@ -37,7 +37,7 @@ class HomeActivity : AppCompatActivity() {
 
         val profileButton = findViewById<View>(finals.project.R.id.profile)
         profileButton.setOnClickListener {
-            startActivity(intentPROFILE)
+            startActivity(intentFRIENDPROFILE)
         }
         val smsButton = findViewById<View>(finals.project.R.id.sms)
         smsButton.setOnClickListener {
