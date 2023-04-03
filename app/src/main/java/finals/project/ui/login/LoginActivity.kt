@@ -33,9 +33,13 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val toolbar = findViewById<View>(io.getstream.chat.android.ui.R.id.toolbar)
         setSupportActionBar(toolbar as Toolbar?)
-        SendBird.init("", this)
+        SendBird.init("APP_ID_HERE", this)
+        login.setOnClickListener {
+            connectToSendBird(edittext_login_user_id.text.toString(), edittext_login_nickname.text.toString())
 
-        //Verifies that app terminates previous users session
+
+
+            //Verifies that app terminates previous users session
         FirebaseAuth.getInstance().signOut()
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
