@@ -33,6 +33,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val toolbar = findViewById<View>(io.getstream.chat.android.ui.R.id.toolbar)
         setSupportActionBar(toolbar as Toolbar?)
+        SendBird.init("", this)
 
         //Verifies that app terminates previous users session
         FirebaseAuth.getInstance().signOut()
@@ -118,7 +119,6 @@ class LoginActivity : AppCompatActivity() {
                 } catch (e: Exception) {
                     e.printStackTrace()
                 }
-                SendBird.init("", this)
                 FirebaseAuth.getInstance().currentUser?.sendEmailVerification()
                     val uid = uidGrab()
                     val displayName = nameGrab()
