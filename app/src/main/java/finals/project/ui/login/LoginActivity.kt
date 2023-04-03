@@ -11,7 +11,6 @@ import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.auth.FirebaseAuth
@@ -21,9 +20,7 @@ import finals.project.R
 import finals.project.data.DataActivity
 import finals.project.data.HomeActivity
 import finals.project.databinding.ActivityLoginBinding
-import io.getstream.chat.android.ui.channel.ChannelListActivity
 import java.lang.Exception
-import com.sendbird.android.SendBird
 
 
 class LoginActivity : AppCompatActivity() {
