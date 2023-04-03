@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.auth.FirebaseAuth
@@ -19,7 +20,9 @@ import com.google.firebase.ktx.Firebase
 import finals.project.R
 import finals.project.data.HomeActivity
 import finals.project.databinding.ActivityLoginBinding
+import io.getstream.chat.android.ui.channel.ChannelListActivity
 import java.lang.Exception
+import com.sendbird.android.SendBird
 
 
 class LoginActivity : AppCompatActivity() {
@@ -115,6 +118,7 @@ class LoginActivity : AppCompatActivity() {
                 } catch (e: Exception) {
                     e.printStackTrace()
                 }
+                SendBird.init("", this)
                 FirebaseAuth.getInstance().currentUser?.sendEmailVerification()
                     val uid = uidGrab()
                     val displayName = nameGrab()
@@ -187,3 +191,19 @@ fun EditText.afterTextChanged(afterTextChanged: (String) -> Unit) {
     })
 
 }
+private fun connectToSendBird(uid: String, displayName: String) {
+    	        SendBird.connect(uid) { uid, e ->
+        	            if (e != null) {
+        	                Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
+        	            } else {
+                        SendBird.updateCurrentUserInfo(displayName, null) { e ->
+            	                    if (e != null) {
+            	                        Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
+            	                    }
+            	                    val intent = Intent(this, ChannelListActivity::class.java)
+            	                    startActivity(intent)
+            	                    finish()
+            	                }
+        	            }
+        	        }
+    	    }
