@@ -166,57 +166,63 @@ class LoginActivity : AppCompatActivity() {
                 e.printStackTrace()
             }
         }
-
-        private fun showLoginFailed(@StringRes errorString: Int) {
-            Toast.makeText(applicationContext, errorString, Toast.LENGTH_SHORT).show()
-        }
     }
+
+    private fun showLoginFailed(@StringRes errorString: Int) {
+        Toast.makeText(applicationContext, errorString, Toast.LENGTH_SHORT).show()
+    }
+
     companion object {
         fun iscreated(): Any {
             val created = true
             return created
         }
+
         fun emailTrim(email: String): String? {
             val name = email?.substring(0, email.indexOf("@"))
             name?.trim()
             return name
         }
+
         fun nameGrab(): String? {
             var displayName = Firebase.auth.currentUser?.email
             return displayName
         }
+
         fun uidGrab(): String? {
             var uid = Firebase.auth.currentUser?.uid
             return uid
         }
+    }
+
+    fun EditText.afterTextChanged(afterTextChanged: (String) -> Unit) {
+        this.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(editable: Editable?) {
+                afterTextChanged.invoke(editable.toString())
+            }
+
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
+        })
 
     }
 
-}
-fun EditText.afterTextChanged(afterTextChanged: (String) -> Unit) {
-    this.addTextChangedListener(object : TextWatcher {
-        override fun afterTextChanged(editable: Editable?) {
-            afterTextChanged.invoke(editable.toString())
-        }
-        override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
-        override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
-    })
-
-}
-private fun connectToSendBird(uid: String, displayName: String) {
-    SendBird.connect(uid) { uid, e ->
-        if (e != null) {
-            Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
-        } else {
-            SendBird.updateCurrentUserInfo(displayName, null) { e ->
-                if (e != null) {
-                    Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
+    private fun connectToSendBird(uid: String, displayName: String) {
+        SendBird.connect(uid) { uid, e ->
+            if (e != null) {
+                Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
+            } else {
+                SendBird.updateCurrentUserInfo(displayName, null) { e ->
+                    if (e != null) {
+                        Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
+                    }
+                    val intent = Intent(this, ChannelListActivity::class.java)
+                    startActivity(intent)
+                    finish()
                 }
-                val intent = Intent(this, ChannelListActivity::class.java)
-                startActivity(intent)
-                finish()
             }
         }
     }
 }
+
 
