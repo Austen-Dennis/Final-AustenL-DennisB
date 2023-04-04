@@ -28,6 +28,8 @@ class PostActivity : AppCompatActivity() {
         setSupportActionBar(toolbar as Toolbar?)
         val intentSMS = Intent(this, SmsPage::class.java)
         val intentHOME = Intent(this, HomeActivity::class.java)
+        val intentSEARCH = Intent(this, FriendSearchActivity::class.java)
+        val intentPROFILE = Intent(this, ProfileActivity::class.java)
         val intentCAMERA = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         val intentGALLERY = Intent(MediaStore.ACTION_PICK_IMAGES)
         val imgView = findViewById<View>(finals.project.R.id.imageview1)
@@ -46,9 +48,15 @@ class PostActivity : AppCompatActivity() {
         val galleryButton = findViewById<View>(finals.project.R.id.Gallery)
         galleryButton.setOnClickListener {
             startActivity(intentGALLERY)
-
         }
-
+        val searchButton = findViewById<View>(finals.project.R.id.search)
+        searchButton.setOnClickListener {
+            startActivity(intentSEARCH)
+        }
+        val profileButton = findViewById<View>(finals.project.R.id.profile)
+        profileButton.setOnClickListener {
+            startActivity(intentPROFILE)
+        }
 
         fun StoringImageToFirebase() {
             val calFordDate = Calendar.getInstance()

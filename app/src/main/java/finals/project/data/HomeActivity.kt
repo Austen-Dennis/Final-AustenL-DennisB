@@ -46,6 +46,7 @@ class HomeActivity : AppCompatActivity() {
         val intentSMS = Intent(this, LatestMessagesActivity::class.java)
         val intentPOST = Intent(this, PostActivity::class.java)
         val intentPROFILE = Intent(this, ProfileActivity::class.java)
+        val intentSEARCH = Intent(this, FriendSearchActivity::class.java)
 
 
         //starts the activity onclick
@@ -59,11 +60,13 @@ class HomeActivity : AppCompatActivity() {
         }
         val postButton = findViewById<View>(finals.project.R.id.post)
         postButton.setOnClickListener {
-            //val text = searchView.text
-            //.setImeActionLabel("Custom text", KeyEvent.KEYCODE_ENTER)
-            //System.out.println("DSIAJDIASJDISAJDAS " + text)
             startActivity(intentPOST)
         }
+        val searchButton = findViewById<View>(finals.project.R.id.search)
+        searchButton.setOnClickListener {
+            startActivity(intentSEARCH)
+        }
+
     }
 
 
