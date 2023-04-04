@@ -58,6 +58,7 @@
         android:layout_height="60dp"
         android:text="SMS"
         android:translationY="-60dp"
+        android:translationX="-6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/profile"
         app:layout_constraintTop_toTopOf="@id/profile" />

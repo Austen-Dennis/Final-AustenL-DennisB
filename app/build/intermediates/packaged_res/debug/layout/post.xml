@@ -44,33 +44,58 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/profile"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="240dp"
+        android:text="PROFILE"
+        android:translationY="-60dp"
+        app:layout_constraintLeft_toRightOf="@id/home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/home"
+        tools:ignore="MissingConstraints" />
+
+    <Button
         android:id="@+id/post"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="-397dp"
-        android:layout_marginBottom="14dp"
-        android:text="post"
+        android:layout_height="60dp"
+        android:text="POST"
+        android:translationY="620dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/home" />
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="680dp"
+        android:text="SEARCH"
+        android:translationY="-60dp"
+        app:layout_constraintEnd_toStartOf="@id/home"
+        app:layout_constraintStart_toEndOf="@id/post"
+        app:layout_constraintTop_toTopOf="@id/post"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/home"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginBottom="14dp"
-        android:text="Home"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@id/post" />
-
+        android:layout_height="60dp"
+        android:layout_marginTop="680dp"
+        android:text="HOME"
+        android:translationY="-60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/post" />
 
     <Button
         android:id="@+id/sms"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="58dp"
-        android:layout_marginBottom="16dp"
+        android:layout_height="60dp"
         android:text="SMS"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/home" />
+        android:translationY="-60dp"
+        android:translationX="-6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/profile"
+        app:layout_constraintTop_toTopOf="@id/profile" />
 </androidx.constraintlayout.widget.ConstraintLayout>

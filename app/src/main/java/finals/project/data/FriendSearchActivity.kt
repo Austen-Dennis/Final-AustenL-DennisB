@@ -37,7 +37,8 @@ class FriendSearchActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(finals.project.R.layout.activity_friend_search) // sets the view using the homepage.xml
+        setContentView(finals.project.R.layout.activity_friend_search)
+        // sets the view using the homepage.xml
         val toolbar = findViewById<View>(io.getstream.chat.android.ui.R.id.toolbar)
         setSupportActionBar(toolbar as Toolbar?)
         /*val searchView = findViewById<View>(finals.project.R.id.searchView) as SearchView
@@ -47,6 +48,7 @@ class FriendSearchActivity : AppCompatActivity() {
         val intentSMS = Intent(this, SmsPage::class.java)
         val intentPOST = Intent(this, PostActivity::class.java)
         val intentPROFILE = Intent(this, ProfileActivity::class.java)
+        val intentHOME = Intent(this, HomeActivity::class.java)
         val searchButton = findViewById<View>(finals.project.R.id.imageView2)
         val searchView = findViewById<View>(finals.project.R.id.searchView) as EditText
         val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
@@ -74,10 +76,11 @@ class FriendSearchActivity : AppCompatActivity() {
         }
         val postButton = findViewById<View>(finals.project.R.id.post)
         postButton.setOnClickListener {
-            //val text = searchView.text
-            //.setImeActionLabel("Custom text", KeyEvent.KEYCODE_ENTER)
-            //System.out.println("DSIAJDIASJDISAJDAS " + text)
             startActivity(intentPOST)
+        }
+        val homeButton = findViewById<View>(finals.project.R.id.home)
+        homeButton.setOnClickListener {
+            startActivity(intentHOME)
         }
     }
     private fun friendSearch(uid: String) {

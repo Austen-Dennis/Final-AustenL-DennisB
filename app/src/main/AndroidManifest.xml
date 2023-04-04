@@ -12,13 +12,10 @@
         android:theme="@style/Theme.FInalProject"
         tools:targetApi="31">
         <activity
-            android:name=".FriendSearchActivity"
+            android:name=".data.FriendSearchActivity"
             android:exported="false" />
         <activity
             android:name=".data.DataActivity"
-            android:exported="false" />
-        <activity
-            android:name=".data.FriendProfileActivity"
             android:exported="false" />
         <activity
             android:name=".data.ProfileActivity"

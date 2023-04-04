@@ -44,6 +44,7 @@ class HomeActivity : AppCompatActivity() {
         val intentSMS = Intent(this, SmsPage::class.java)
         val intentPOST = Intent(this, PostActivity::class.java)
         val intentPROFILE = Intent(this, ProfileActivity::class.java)
+        val intentSEARCH = Intent(this, FriendSearchActivity::class.java)
 
 
         //starts the activity onclick
@@ -58,6 +59,10 @@ class HomeActivity : AppCompatActivity() {
         val postButton = findViewById<View>(finals.project.R.id.post)
         postButton.setOnClickListener {
             startActivity(intentPOST)
+        }
+        val searchButton = findViewById<View>(finals.project.R.id.search)
+        searchButton.setOnClickListener {
+            startActivity(intentSEARCH)
         }
     }
 
