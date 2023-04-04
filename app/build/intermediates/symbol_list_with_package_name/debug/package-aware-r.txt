@@ -4875,6 +4875,7 @@ id scrollToBottomButton
 id scrollView
 id scroll_to_bottom
 id scrollable
+id search
 id searchIcon
 id searchInfoBar
 id searchInputView
@@ -5213,6 +5214,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_friend_search
 layout activity_login
 layout activity_profile
 layout browser_actions_context_menu_page

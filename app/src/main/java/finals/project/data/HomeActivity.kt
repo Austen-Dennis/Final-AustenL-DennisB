@@ -41,28 +41,12 @@ class HomeActivity : AppCompatActivity() {
         setContentView(finals.project.R.layout.homepage) // sets the view using the homepage.xml
         val toolbar = findViewById<View>(io.getstream.chat.android.ui.R.id.toolbar)
         setSupportActionBar(toolbar as Toolbar?)
-        /*val searchView = findViewById<View>(finals.project.R.id.searchView) as SearchView
-        val friendID = searchView.query.toString()
-        FriendProfileActivity.friendSearch(friendID)*/
         //sets the intent I.E. calls to the class Smspage which displays a layout
         val intentSMS = Intent(this, LatestMessagesActivity::class.java)
         val intentPOST = Intent(this, PostActivity::class.java)
         val intentPROFILE = Intent(this, ProfileActivity::class.java)
-        val searchButton = findViewById<View>(finals.project.R.id.imageView2)
-        val searchView = findViewById<View>(finals.project.R.id.searchView) as EditText
-        val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
-        val contactInfo = findViewById<View>(finals.project.R.id.layout)
-        contactInfo.visibility = View.GONE
-        profileTitle.visibility = View.GONE
-        searchButton.setOnClickListener {
-            val text = searchView.text
-            friendSearch(text.toString())
-            try {
-                Thread.sleep(200);
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-        }
+        val intentSEARCH = Intent(this, FriendSearchActivity::class.java)
+
 
         //starts the activity onclick
         val profileButton = findViewById<View>(finals.project.R.id.profile)
@@ -75,36 +59,13 @@ class HomeActivity : AppCompatActivity() {
         }
         val postButton = findViewById<View>(finals.project.R.id.post)
         postButton.setOnClickListener {
-            //val text = searchView.text
-            //.setImeActionLabel("Custom text", KeyEvent.KEYCODE_ENTER)
-            //System.out.println("DSIAJDIASJDISAJDAS " + text)
             startActivity(intentPOST)
         }
-    }
-        private fun friendSearch(uid: String) {
-            val database = FirebaseDatabase.getInstance()
-            val myRefEmail = database.getReference("users").child(uid).child("Name",)
-            myRefEmail.addValueEventListener(object : ValueEventListener {
-                override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    // This method is called once with the initial value and again
-                    // whenever data at this location is updated.
-                    val value = dataSnapshot.getValue<String>()
-                    val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
-                    val contactInfo = findViewById<View>(finals.project.R.id.layout)
-                    contactInfo.visibility = View.VISIBLE
-                    profileTitle.text = "Now Viewing " + value + "'s Account!"
-                    profileTitle.visibility = View.VISIBLE
-
-                    //Log.d(TAG, "Value is: $value")
-                }
-
-                override fun onCancelled(error: DatabaseError) {
-                    // Failed to read value
-                    Log.w(ContentValues.TAG, "Failed to read value.", error.toException())
-                }
-            })
-
+        val searchButton = findViewById<View>(finals.project.R.id.search)
+        searchButton.setOnClickListener {
+            startActivity(intentSEARCH)
         }
+    }
 
     //only for testing.
     companion object {
