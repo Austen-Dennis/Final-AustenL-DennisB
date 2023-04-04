@@ -13,11 +13,6 @@ public class ChatMessage {
         // Initialize to current time
         messageTime = new Date().getTime();
     }
-
-    public ChatMessage() {
-        //default constructor
-    }
-
     public String getMessageText() {
         return messageText;
     }
