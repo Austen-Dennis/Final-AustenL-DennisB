@@ -4874,7 +4874,6 @@ int id scrollToBottomButton 0x7f0a028f
 int id scrollView 0x7f0a0290
 int id scroll_to_bottom 0x7f0a0291
 int id scrollable 0x7f0a0292
-int id search 0x7f0a0373
 int id searchIcon 0x7f0a0293
 int id searchInfoBar 0x7f0a0294
 int id searchInputView 0x7f0a0295
@@ -5213,7 +5212,6 @@ int layout abc_search_dropdown_item_icons_2line 0x7f0d0018
 int layout abc_search_view 0x7f0d0019
 int layout abc_select_dialog_material 0x7f0d001a
 int layout abc_tooltip 0x7f0d001b
-int layout activity_friend_search 0x7f0d00ec
 int layout activity_login 0x7f0d001d
 int layout activity_profile 0x7f0d001e
 int layout browser_actions_context_menu_page 0x7f0d001f
