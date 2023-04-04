@@ -27,6 +27,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.getValue
+import finals.project.smsPage.LatestMessagesActivity
 import finals.project.smsPage.SmsPage
 import java.lang.Exception
 
@@ -44,7 +45,7 @@ class HomeActivity : AppCompatActivity() {
         val friendID = searchView.query.toString()
         FriendProfileActivity.friendSearch(friendID)*/
         //sets the intent I.E. calls to the class Smspage which displays a layout
-        val intentSMS = Intent(this, SmsPage::class.java)
+        val intentSMS = Intent(this, LatestMessagesActivity::class.java)
         val intentPOST = Intent(this, PostActivity::class.java)
         val intentPROFILE = Intent(this, ProfileActivity::class.java)
         val searchButton = findViewById<View>(finals.project.R.id.imageView2)
