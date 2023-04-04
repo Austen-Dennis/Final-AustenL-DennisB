@@ -41,13 +41,11 @@ class FriendSearchActivity : AppCompatActivity() {
         setContentView(finals.project.R.layout.activity_friend_search) // sets the view using the homepage.xml
         val toolbar = findViewById<View>(io.getstream.chat.android.ui.R.id.toolbar)
         setSupportActionBar(toolbar as Toolbar?)
-        /*val searchView = findViewById<View>(finals.project.R.id.searchView) as SearchView
-        val friendID = searchView.query.toString()
-        FriendProfileActivity.friendSearch(friendID)*/
         //sets the intent I.E. calls to the class Smspage which displays a layout
         val intentSMS = Intent(this, LatestMessagesActivity::class.java)
         val intentPOST = Intent(this, PostActivity::class.java)
         val intentPROFILE = Intent(this, ProfileActivity::class.java)
+        val intentHOME = Intent(this, HomeActivity::class.java)
         val searchButton = findViewById<View>(finals.project.R.id.imageView2)
         val searchView = findViewById<View>(finals.project.R.id.searchView) as EditText
         val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
@@ -76,6 +74,10 @@ class FriendSearchActivity : AppCompatActivity() {
         val postButton = findViewById<View>(finals.project.R.id.post)
         postButton.setOnClickListener {
             startActivity(intentPOST)
+        }
+        val homeButton = findViewById<View>(finals.project.R.id.home)
+        homeButton.setOnClickListener {
+            startActivity(intentHOME)
         }
     }
     private fun friendSearch(uid: String) {
