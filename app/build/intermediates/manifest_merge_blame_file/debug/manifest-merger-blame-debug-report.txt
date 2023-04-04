@@ -109,14 +109,14 @@
 57-->C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:12:9-50
 58        <activity
 58-->C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:14:9-16:40
-59            android:name="finals.project.data.FriendSearchActivity"
-59-->C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:15:13-54
+59            android:name="finals.project.data.DataActivity"
+59-->C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:15:13-46
 60            android:exported="false" />
 60-->C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:16:13-37
 61        <activity
 61-->C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:17:9-19:40
-62            android:name="finals.project.data.DataActivity"
-62-->C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:18:13-46
+62            android:name="finals.project.data.FriendProfileActivity"
+62-->C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:18:13-55
 63            android:exported="false" />
 63-->C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:19:13-37
 64        <activity

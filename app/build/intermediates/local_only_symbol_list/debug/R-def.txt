@@ -49,7 +49,6 @@ id profile
 id profileTitle
 id project
 id release
-id search
 id searchView
 id sms
 id so
@@ -58,7 +57,6 @@ id update
 id user
 id username
 id verify
-layout activity_friend_search
 layout activity_login
 layout activity_profile
 layout homepage

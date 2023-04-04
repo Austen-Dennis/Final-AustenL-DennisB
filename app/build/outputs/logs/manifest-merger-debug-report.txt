@@ -285,18 +285,18 @@ MERGED from [com.jakewharton.threetenabp:threetenabp:1.4.0] C:\Users\mrden\.grad
 		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:12:9-50
 	android:dataExtractionRules
 		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:7:9-65
-activity#finals.project.data.FriendSearchActivity
+activity#finals.project.data.DataActivity
 ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:14:9-16:40
 	android:exported
 		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:16:13-37
 	android:name
-		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:15:13-54
-activity#finals.project.data.DataActivity
+		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:15:13-46
+activity#finals.project.data.FriendProfileActivity
 ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:17:9-19:40
 	android:exported
 		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:19:13-37
 	android:name
-		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:18:13-46
+		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:18:13-55
 activity#finals.project.data.ProfileActivity
 ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:20:9-22:40
 	android:exported

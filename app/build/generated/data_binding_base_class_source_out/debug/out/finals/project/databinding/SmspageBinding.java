@@ -39,12 +39,6 @@ public final class SmspageBinding implements ViewBinding {
   public final Button post;
 
   @NonNull
-  public final Button profile;
-
-  @NonNull
-  public final Button search;
-
-  @NonNull
   public final Button sms;
 
   @NonNull
@@ -52,16 +46,13 @@ public final class SmspageBinding implements ViewBinding {
 
   private SmspageBinding(@NonNull ConstraintLayout rootView, @NonNull FloatingActionButton fab,
       @NonNull Button home, @NonNull EditText input, @NonNull ListView listOfMessages,
-      @NonNull Button post, @NonNull Button profile, @NonNull Button search, @NonNull Button sms,
-      @NonNull TextInputLayout textInputLayout) {
+      @NonNull Button post, @NonNull Button sms, @NonNull TextInputLayout textInputLayout) {
     this.rootView = rootView;
     this.fab = fab;
     this.home = home;
     this.input = input;
     this.listOfMessages = listOfMessages;
     this.post = post;
-    this.profile = profile;
-    this.search = search;
     this.sms = sms;
     this.textInputLayout = textInputLayout;
   }
@@ -123,18 +114,6 @@ public final class SmspageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.profile;
-      Button profile = ViewBindings.findChildViewById(rootView, id);
-      if (profile == null) {
-        break missingId;
-      }
-
-      id = R.id.search;
-      Button search = ViewBindings.findChildViewById(rootView, id);
-      if (search == null) {
-        break missingId;
-      }
-
       id = R.id.sms;
       Button sms = ViewBindings.findChildViewById(rootView, id);
       if (sms == null) {
@@ -148,7 +127,7 @@ public final class SmspageBinding implements ViewBinding {
       }
 
       return new SmspageBinding((ConstraintLayout) rootView, fab, home, input, listOfMessages, post,
-          profile, search, sms, textInputLayout);
+          sms, textInputLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
