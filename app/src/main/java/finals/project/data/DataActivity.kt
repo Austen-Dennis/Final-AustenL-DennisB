@@ -13,9 +13,9 @@ class DataActivity : AppCompatActivity() {
     companion object {
         fun dataBase(uid: String?, name: String?, email: String?) {
             val database = FirebaseDatabase.getInstance()
-            val myRef = database.getReference("users/" + name)
+            val myRef = database.getReference("users/" + uid)
             if (uid != null) {
-                myRef.child("UID").setValue(uid)
+                myRef.child("Name").setValue(name)
                 myRef.child("Email").setValue(email)
             }
         }

@@ -31,7 +31,6 @@ class ProfileActivity : AppCompatActivity() {
         val intentPost = Intent(this, PostActivity::class.java)
         val intentSms = Intent(this, SmsPage::class.java)
         val intentReturn = Intent(this, HomeActivity::class.java)
-        val FRIENDPROFILE = Intent(this, FriendProfileActivity::class.java)
         val urlRelease = "https://github.com/bsu-cs222-spring23-dll/Final-AustenL-DennisB-BeethovenM-JulianR/releases"
         val releaseIntent = Intent(Intent.ACTION_VIEW)
         val urlProjectInfo = "https://github.com/bsu-cs222-spring23-dll/Final-AustenL-DennisB-BeethovenM-JulianR#get-together"
@@ -103,9 +102,9 @@ class ProfileActivity : AppCompatActivity() {
         }
         val projectInfoButton = findViewById<View>(finals.project.R.id.project)
         projectInfoButton.setOnClickListener {
-            /*projectInfoIntent.data = Uri.parse(urlProjectInfo)
-            startActivity(projectInfoIntent)*/
-            startActivity(FRIENDPROFILE)
+            projectInfoIntent.data = Uri.parse(urlProjectInfo)
+            startActivity(projectInfoIntent)
+
         }
 
         val postButton = findViewById<View>(finals.project.R.id.post)

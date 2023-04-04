@@ -48,32 +48,101 @@
         app:srcCompat="@drawable/stream_ui_ic_search"
         tools:ignore="MissingConstraints"/>
 
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="735dp"
+        android:orientation="vertical"
+        android:translationY="50dp">
+
+        <TextView
+            android:id="@+id/profileTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/accountInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Contact Information"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            tools:visibility="gone" />
+
+        <TextView
+            android:id="@+id/help"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="User Interactions"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp" />
+        <Button
+            android:id="@+id/addFriend"
+            android:layout_width="194dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/rounded_box"
+            android:text="Add as Friend"
+            android:textAlignment="center"
+            android:translationY="-5dp"
+            tools:ignore="RtlCompat"
+            tools:visibility="gone" />
+
+    </LinearLayout>
     <Button
         android:id="@+id/post"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="-397dp"
         android:layout_marginBottom="14dp"
         android:text="post"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="parent" />
+
     <Button
         android:id="@+id/profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
+        android:layout_marginStart="150dp"
         android:layout_marginBottom="14dp"
         android:text="Profile"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/post" />
+        app:layout_constraintStart_toStartOf="@id/post" />
+
+
     <Button
         android:id="@+id/sms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginBottom="14dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginBottom="16dp"
         android:text="SMS"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/profile" />
+        app:layout_constraintStart_toEndOf="@id/profile" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

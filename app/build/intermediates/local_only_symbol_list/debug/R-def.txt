@@ -22,6 +22,7 @@ drawable the_get_together_dark_
 id Camera
 id Gallery
 id accountInfo
+id addFriend
 id container
 id copyID
 id displayInfo
@@ -56,7 +57,6 @@ id update
 id user
 id username
 id verify
-layout activity_friend_profile
 layout activity_login
 layout activity_profile
 layout homepage
