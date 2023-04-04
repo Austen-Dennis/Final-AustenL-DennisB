@@ -59,6 +59,9 @@
             android:name="finals.project.data.FriendSearchActivity"
             android:exported="false" />
         <activity
+            android:name="finals.project.smsPage.LatestMessagesActivity"
+            android:exported="false" />
+        <activity
             android:name="finals.project.data.DataActivity"
             android:exported="false" />
         <activity
