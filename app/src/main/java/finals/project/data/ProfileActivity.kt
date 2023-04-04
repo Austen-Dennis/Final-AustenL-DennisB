@@ -30,6 +30,7 @@ class ProfileActivity : AppCompatActivity() {
         val intentLogin = Intent(this, LoginActivity::class.java)
         val intentPost = Intent(this, PostActivity::class.java)
         val intentSms = Intent(this, SmsPage::class.java)
+        val intentSearch = Intent(this, FriendSearchActivity::class.java)
         val intentReturn = Intent(this, HomeActivity::class.java)
         val urlRelease = "https://github.com/bsu-cs222-spring23-dll/Final-AustenL-DennisB-BeethovenM-JulianR/releases"
         val releaseIntent = Intent(Intent.ACTION_VIEW)
@@ -126,6 +127,10 @@ class ProfileActivity : AppCompatActivity() {
         soButton.setOnClickListener {
             startActivity(intentLogin)
             FirebaseAuth.getInstance().signOut()
+        }
+        val searchButton = findViewById<View>(finals.project.R.id.search)
+        searchButton.setOnClickListener {
+            startActivity(intentSearch)
         }
     }
 }

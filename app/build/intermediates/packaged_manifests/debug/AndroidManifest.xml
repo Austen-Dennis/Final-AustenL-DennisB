@@ -56,13 +56,10 @@
         android:testOnly="true"
         android:theme="@style/Theme.FInalProject" >
         <activity
-            android:name="finals.project.FriendSearchActivity"
+            android:name="finals.project.data.FriendSearchActivity"
             android:exported="false" />
         <activity
             android:name="finals.project.data.DataActivity"
-            android:exported="false" />
-        <activity
-            android:name="finals.project.data.FriendProfileActivity"
             android:exported="false" />
         <activity
             android:name="finals.project.data.ProfileActivity"

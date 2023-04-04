@@ -12,16 +12,12 @@
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\drawable\\rounded_box.xml"
     },
     {
-        "merged": "finals.project.app-merged_res-64:/layout_activity_friend_search.xml.flat",
-        "source": "finals.project.app-main-66:/layout/activity_friend_search.xml"
-    },
-    {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "finals.project.app-merged_res-64:/layout_smspage.xml.flat",
-        "source": "finals.project.app-main-66:/layout/smspage.xml"
+        "merged": "finals.project.app-merged_res-64:/layout_activity_profile.xml.flat",
+        "source": "finals.project.app-main-66:/layout/activity_profile.xml"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
@@ -106,10 +102,6 @@
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\layout_post.xml.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-66:\\layout\\post.xml"
-    },
-    {
-        "merged": "finals.project.app-merged_res-64:/layout_post.xml.flat",
-        "source": "finals.project.app-main-66:/layout/post.xml"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-64:\\layout_activity_friend_profile.xml.flat",
