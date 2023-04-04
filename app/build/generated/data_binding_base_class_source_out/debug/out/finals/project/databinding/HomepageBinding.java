@@ -5,10 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -24,22 +20,7 @@ public final class HomepageBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView accountInfo;
-
-  @NonNull
-  public final Button addFriend;
-
-  @NonNull
-  public final TextView email;
-
-  @NonNull
-  public final TextView help;
-
-  @NonNull
-  public final ImageView imageView2;
-
-  @NonNull
-  public final LinearLayout layout;
+  public final Button home;
 
   @NonNull
   public final Button post;
@@ -48,30 +29,18 @@ public final class HomepageBinding implements ViewBinding {
   public final Button profile;
 
   @NonNull
-  public final TextView profileTitle;
-
-  @NonNull
-  public final EditText searchView;
+  public final Button search;
 
   @NonNull
   public final Button sms;
 
-  private HomepageBinding(@NonNull ConstraintLayout rootView, @NonNull TextView accountInfo,
-      @NonNull Button addFriend, @NonNull TextView email, @NonNull TextView help,
-      @NonNull ImageView imageView2, @NonNull LinearLayout layout, @NonNull Button post,
-      @NonNull Button profile, @NonNull TextView profileTitle, @NonNull EditText searchView,
-      @NonNull Button sms) {
+  private HomepageBinding(@NonNull ConstraintLayout rootView, @NonNull Button home,
+      @NonNull Button post, @NonNull Button profile, @NonNull Button search, @NonNull Button sms) {
     this.rootView = rootView;
-    this.accountInfo = accountInfo;
-    this.addFriend = addFriend;
-    this.email = email;
-    this.help = help;
-    this.imageView2 = imageView2;
-    this.layout = layout;
+    this.home = home;
     this.post = post;
     this.profile = profile;
-    this.profileTitle = profileTitle;
-    this.searchView = searchView;
+    this.search = search;
     this.sms = sms;
   }
 
@@ -102,39 +71,9 @@ public final class HomepageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.accountInfo;
-      TextView accountInfo = ViewBindings.findChildViewById(rootView, id);
-      if (accountInfo == null) {
-        break missingId;
-      }
-
-      id = R.id.addFriend;
-      Button addFriend = ViewBindings.findChildViewById(rootView, id);
-      if (addFriend == null) {
-        break missingId;
-      }
-
-      id = R.id.email;
-      TextView email = ViewBindings.findChildViewById(rootView, id);
-      if (email == null) {
-        break missingId;
-      }
-
-      id = R.id.help;
-      TextView help = ViewBindings.findChildViewById(rootView, id);
-      if (help == null) {
-        break missingId;
-      }
-
-      id = R.id.imageView2;
-      ImageView imageView2 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView2 == null) {
-        break missingId;
-      }
-
-      id = R.id.layout;
-      LinearLayout layout = ViewBindings.findChildViewById(rootView, id);
-      if (layout == null) {
+      id = R.id.home;
+      Button home = ViewBindings.findChildViewById(rootView, id);
+      if (home == null) {
         break missingId;
       }
 
@@ -150,15 +89,9 @@ public final class HomepageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.profileTitle;
-      TextView profileTitle = ViewBindings.findChildViewById(rootView, id);
-      if (profileTitle == null) {
-        break missingId;
-      }
-
-      id = R.id.searchView;
-      EditText searchView = ViewBindings.findChildViewById(rootView, id);
-      if (searchView == null) {
+      id = R.id.search;
+      Button search = ViewBindings.findChildViewById(rootView, id);
+      if (search == null) {
         break missingId;
       }
 
@@ -168,8 +101,7 @@ public final class HomepageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new HomepageBinding((ConstraintLayout) rootView, accountInfo, addFriend, email, help,
-          imageView2, layout, post, profile, profileTitle, searchView, sms);
+      return new HomepageBinding((ConstraintLayout) rootView, home, post, profile, search, sms);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
