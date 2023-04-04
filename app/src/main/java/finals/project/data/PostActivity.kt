@@ -75,7 +75,5 @@ class PostActivity : AppCompatActivity() {
             val created = true;
             return created
         }
-
     }
-
 }

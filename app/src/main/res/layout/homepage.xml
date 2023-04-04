@@ -15,21 +15,38 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="-4dp">
 
-        <SearchView
+        <EditText
             android:id="@+id/searchView"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="center_vertical|center_horizontal"
             android:background="@drawable/rounded_box"
             android:foregroundTint="#FFFFFF"
+            android:hint="  Search"
+            android:imeOptions="actionDone"
             android:icon="@android:drawable/ic_menu_search"
+            android:lineSpacingExtra="8sp"
             android:queryHint="Search"
             android:title="Search"
             app:actionViewClass="androidx.appcompat.widget.SearchView"
             app:backgroundTint="@color/stream_gray_dark"
             app:showAsAction="always|collapseActionView"
-            tools:layout_editor_absoluteX="16dp" />
+            tools:layout_editor_absoluteX="16dp"></EditText>
     </Toolbar>
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="#00FFFFFF"
+        android:translationY="10dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.825"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/stream_ui_ic_search"
+        tools:ignore="MissingConstraints"/>
 
     <Button
         android:id="@+id/post"

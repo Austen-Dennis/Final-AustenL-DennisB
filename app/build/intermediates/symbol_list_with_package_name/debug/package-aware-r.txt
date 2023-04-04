@@ -4603,6 +4603,7 @@ id imageAttachmentContent
 id imageAttachmentView
 id imageCountTextView
 id imageView
+id imageView2
 id imageView3
 id imagesPager
 id imageview1

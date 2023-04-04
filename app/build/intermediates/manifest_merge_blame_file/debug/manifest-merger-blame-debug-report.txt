@@ -109,8 +109,8 @@
 57-->C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:12:9-50
 58        <activity
 58-->C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:14:9-16:40
-59            android:name="finals.project.DataActivity"
-59-->C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:15:13-41
+59            android:name="finals.project.data.DataActivity"
+59-->C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:15:13-46
 60            android:exported="false" />
 60-->C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:16:13-37
 61        <activity

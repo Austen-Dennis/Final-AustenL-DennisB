@@ -56,7 +56,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.FInalProject" >
         <activity
-            android:name="finals.project.DataActivity"
+            android:name="finals.project.data.DataActivity"
             android:exported="false" />
         <activity
             android:name="finals.project.data.FriendProfileActivity"

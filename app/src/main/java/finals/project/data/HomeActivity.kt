@@ -6,9 +6,15 @@ import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.text.InputType
+import android.text.TextUtils
+import android.view.KeyEvent
+import android.view.KeyEvent.ACTION_DOWN
+import android.view.KeyEvent.KEYCODE_ENTER
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.SearchView.OnQueryTextListener
@@ -33,8 +39,14 @@ class HomeActivity : AppCompatActivity() {
         val intentPOST = Intent(this, PostActivity::class.java)
         val intentPROFILE = Intent(this, ProfileActivity::class.java)
         val intentFRIENDPROFILE = Intent(this, FriendProfileActivity::class.java)
-        //starts the activity onclick
+        val searchButton = findViewById<View>(finals.project.R.id.imageView2)
+        val searchView = findViewById<View>(finals.project.R.id.searchView) as EditText
 
+        searchButton.setOnClickListener {
+            val text = searchView.text
+            FriendProfileActivity.friendSearch(text.toString())
+        }
+        //starts the activity onclick
         val profileButton = findViewById<View>(finals.project.R.id.profile)
         profileButton.setOnClickListener {
             startActivity(intentPROFILE)
@@ -45,7 +57,10 @@ class HomeActivity : AppCompatActivity() {
         }
         val postButton = findViewById<View>(finals.project.R.id.post)
         postButton.setOnClickListener {
-            startActivity(intentPOST)
+            //val text = searchView.text
+            //.setImeActionLabel("Custom text", KeyEvent.KEYCODE_ENTER)
+            //System.out.println("DSIAJDIASJDISAJDAS " + text)
+        //startActivity(intentPOST)
         }
     }
 

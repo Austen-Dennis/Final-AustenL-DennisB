@@ -56,8 +56,8 @@ class SmsPage : AppCompatActivity() {
             val input = findViewById<View>(R.id.input) as EditText
             // Read the input field and push a new instance
             // of ChatMessage to the Firebase database
-            getInstance().reference.push().setValue(ChatMessage(input.text.toString(),
-                FirebaseAuth.getInstance().currentUser?.displayName ?: userAgent))
+            getInstance().reference.setValue(input.text.toString())
+                //FirebaseAuth.getInstance().currentUser?.displayName)
             // Clear the input
             input.setText("")
         }

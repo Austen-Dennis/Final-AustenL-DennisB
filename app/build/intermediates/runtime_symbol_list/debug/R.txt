@@ -4602,6 +4602,7 @@ int id imageAttachmentContent 0x7f0a0180
 int id imageAttachmentView 0x7f0a0181
 int id imageCountTextView 0x7f0a0182
 int id imageView 0x7f0a0183
+int id imageView2 0x7f0a0371
 int id imageView3 0x7f0a0184
 int id imagesPager 0x7f0a0185
 int id imageview1 0x7f0a0186

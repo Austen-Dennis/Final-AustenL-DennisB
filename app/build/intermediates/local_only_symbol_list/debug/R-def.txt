@@ -30,6 +30,7 @@ id fab
 id help
 id hideInfo
 id home
+id imageView2
 id imageView3
 id imageview1
 id input

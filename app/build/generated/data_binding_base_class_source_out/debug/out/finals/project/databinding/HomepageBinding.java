@@ -5,7 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.SearchView;
+import android.widget.EditText;
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -21,20 +22,25 @@ public final class HomepageBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final ImageView imageView2;
+
+  @NonNull
   public final Button post;
 
   @NonNull
   public final Button profile;
 
   @NonNull
-  public final SearchView searchView;
+  public final EditText searchView;
 
   @NonNull
   public final Button sms;
 
-  private HomepageBinding(@NonNull ConstraintLayout rootView, @NonNull Button post,
-      @NonNull Button profile, @NonNull SearchView searchView, @NonNull Button sms) {
+  private HomepageBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView imageView2,
+      @NonNull Button post, @NonNull Button profile, @NonNull EditText searchView,
+      @NonNull Button sms) {
     this.rootView = rootView;
+    this.imageView2 = imageView2;
     this.post = post;
     this.profile = profile;
     this.searchView = searchView;
@@ -68,6 +74,12 @@ public final class HomepageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.imageView2;
+      ImageView imageView2 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView2 == null) {
+        break missingId;
+      }
+
       id = R.id.post;
       Button post = ViewBindings.findChildViewById(rootView, id);
       if (post == null) {
@@ -81,7 +93,7 @@ public final class HomepageBinding implements ViewBinding {
       }
 
       id = R.id.searchView;
-      SearchView searchView = ViewBindings.findChildViewById(rootView, id);
+      EditText searchView = ViewBindings.findChildViewById(rootView, id);
       if (searchView == null) {
         break missingId;
       }
@@ -92,7 +104,8 @@ public final class HomepageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new HomepageBinding((ConstraintLayout) rootView, post, profile, searchView, sms);
+      return new HomepageBinding((ConstraintLayout) rootView, imageView2, post, profile, searchView,
+          sms);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
