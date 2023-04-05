@@ -4602,6 +4602,7 @@ id CTRL
 id Camera
 id FUNCTION
 id Gallery
+id GitHub
 id META
 id NO_DEBUG
 id SHIFT
@@ -4859,7 +4860,6 @@ id center_vertical
 id chain
 id chain2
 id chains
-id changeName
 id channelActionsContainer
 id channelItemView
 id channelListHeader
@@ -5330,7 +5330,7 @@ id recentFilesTextView
 id rectangles
 id recyclerView
 id recycler_view
-id recyclerview_newmessage
+id recyclerview
 id release
 id removeButton
 id reply
@@ -5472,6 +5472,7 @@ id stop
 id stretch
 id submenuarrow
 id submit
+id submitGit
 id submit_area
 id subtitleContainer
 id suggestionsCardView

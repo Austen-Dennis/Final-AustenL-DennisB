@@ -4601,6 +4601,7 @@ int id CTRL 0x7f0a0003
 int id Camera 0x7f0a0004
 int id FUNCTION 0x7f0a0005
 int id Gallery 0x7f0a0006
+int id GitHub 0x7f0a03ec
 int id META 0x7f0a0007
 int id NO_DEBUG 0x7f0a0008
 int id SHIFT 0x7f0a0009
@@ -4858,7 +4859,6 @@ int id center_vertical 0x7f0a0104
 int id chain 0x7f0a0105
 int id chain2 0x7f0a0106
 int id chains 0x7f0a0107
-int id changeName 0x7f0a0108
 int id channelActionsContainer 0x7f0a0109
 int id channelItemView 0x7f0a010a
 int id channelListHeader 0x7f0a010b
@@ -5329,7 +5329,7 @@ int id recentFilesTextView 0x7f0a02db
 int id rectangles 0x7f0a02dc
 int id recyclerView 0x7f0a02dd
 int id recycler_view 0x7f0a02de
-int id recyclerview_newmessage 0x7f0a02df
+int id recyclerview 0x7f0a02df
 int id release 0x7f0a02e0
 int id removeButton 0x7f0a02e1
 int id reply 0x7f0a02e2
@@ -5471,6 +5471,7 @@ int id stop 0x7f0a0369
 int id stretch 0x7f0a036a
 int id submenuarrow 0x7f0a036b
 int id submit 0x7f0a036c
+int id submitGit 0x7f0a03ed
 int id submit_area 0x7f0a036d
 int id subtitleContainer 0x7f0a036e
 int id suggestionsCardView 0x7f0a036f

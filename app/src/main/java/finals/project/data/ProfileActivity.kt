@@ -42,13 +42,14 @@ class ProfileActivity : AppCompatActivity() {
         val hideInfoButton = findViewById<View>(finals.project.R.id.hideInfo)
         val showInfoButton = findViewById<View>(finals.project.R.id.displayInfo)
         val copyIDButton = findViewById<View>(finals.project.R.id.copyID)
-        val changeName = findViewById<View>(finals.project.R.id.changeName)
         val nameText = findViewById<View>(finals.project.R.id.newName) as EditText
         val submit = findViewById<View>(finals.project.R.id.submit)
         val uid = FirebaseAuth.getInstance().uid
         val emailText = findViewById<View>(finals.project.R.id.email) as TextView
         val userID = findViewById<View>(finals.project.R.id.user) as TextView
         val myRef = FirebaseDatabase.getInstance().getReference("users")
+        val gitHubSub = findViewById<View>(finals.project.R.id.submitGit)
+        val gitHub = findViewById<View>(finals.project.R.id.GitHub) as EditText
 
         myRef.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -68,8 +69,6 @@ class ProfileActivity : AppCompatActivity() {
                     userID.visibility=View.GONE
                     hideInfoButton.visibility=View.GONE
                     copyIDButton.visibility=View.GONE
-                    nameText.visibility=View.GONE
-                    submit.visibility=View.GONE
 
 
 
@@ -80,7 +79,6 @@ class ProfileActivity : AppCompatActivity() {
                         showInfoButton.visibility=View.GONE
                         profilePicture.visibility = View.VISIBLE
                         copyIDButton.visibility=View.VISIBLE
-                        changeName.visibility=View.VISIBLE
                     }
                     hideInfoButton.setOnClickListener {
                         emailText.visibility= View.GONE
@@ -88,22 +86,25 @@ class ProfileActivity : AppCompatActivity() {
                         showInfoButton.visibility=View.VISIBLE
                         hideInfoButton.visibility=View.GONE
                         copyIDButton.visibility=View.GONE
-                        nameText.visibility=View.GONE
-                        submit.visibility=View.GONE
                     }
-                    changeName.setOnClickListener {
-                        nameText.visibility = View.VISIBLE
-                        submit.visibility=View.VISIBLE
 
-                    }
                     submit.setOnClickListener {
                         val newName = nameText.getText().toString()
-                        DataActivity.nameChange(uid, newName)
-                        Toast.makeText(
-                            applicationContext,
-                            "Name Changed Successfully!",
-                            Toast.LENGTH_LONG
-                        ).show()
+                        val validName = nameCheck(newName)
+                        if (validName == true) {
+                            DataActivity.nameChange(uid, newName)
+                            Toast.makeText(
+                                applicationContext,
+                                "Name Changed Successfully!",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        } else {
+                            Toast.makeText(
+                                applicationContext,
+                                "Name Must Be At Least 3 Characters",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
                         val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
                         imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0)
                         emailText.visibility= View.GONE
@@ -111,8 +112,31 @@ class ProfileActivity : AppCompatActivity() {
                         showInfoButton.visibility=View.VISIBLE
                         hideInfoButton.visibility=View.GONE
                         copyIDButton.visibility=View.GONE
-                        nameText.visibility=View.GONE
-                        submit.visibility=View.GONE
+                    }
+                    gitHubSub.setOnClickListener {
+                        val newLink = gitHub.getText().toString()
+                        val validLink = linkCheck(newLink)
+                        if (validLink == true) {
+                            DataActivity.gitHubLink(uid, newLink)
+                            Toast.makeText(
+                                applicationContext,
+                                "Link Added Succesfully!",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        } else {
+                            Toast.makeText(
+                                applicationContext,
+                                "Not a Valid GitHub Link",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
+                        val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+                        imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0)
+                        emailText.visibility= View.GONE
+                        userID.visibility=View.GONE
+                        showInfoButton.visibility=View.VISIBLE
+                        hideInfoButton.visibility=View.GONE
+                        copyIDButton.visibility=View.GONE
                     }
                     copyIDButton.setOnClickListener {
                         val clip: ClipData = ClipData.newPlainText("simple text", uid)
@@ -147,6 +171,21 @@ class ProfileActivity : AppCompatActivity() {
 
                     }
                 }
+            }
+
+            private fun linkCheck(newLink: String): Any {
+                if (newLink.contains("github")) {
+                    return true
+                }
+                    return false
+
+            }
+
+            private fun nameCheck(newName: String): Any {
+                if (newName.length >= 3) {
+                    return true
+                }
+                return false
             }
 
             override fun onCancelled(error: DatabaseError) {

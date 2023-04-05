@@ -1,38 +1,38 @@
 [
     {
-        "merged": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\activity_new_message.xml",
-        "source": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_new_message.xml"
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\activity_new_message.xml",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_new_message.xml"
     },
     {
-        "merged": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\homepage.xml",
-        "source": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\homepage.xml"
+        "merged": "finals.project.app-mergeDebugResources-65:/layout/activity_profile.xml",
+        "source": "finals.project.app-main-68:/layout/activity_profile.xml"
     },
     {
-        "merged": "finals.project.app-mergeDebugResources-65:/layout/activity_new_message.xml",
-        "source": "finals.project.app-main-68:/layout/activity_new_message.xml"
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\activity_login.xml",
-        "source": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_login.xml"
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\activity_latest_messages.xml",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_latest_messages.xml"
     },
     {
-        "merged": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\text_color_layout.xml",
-        "source": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\text_color_layout.xml"
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\activity_profile.xml",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_profile.xml"
     },
     {
-        "merged": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\activity_latest_messages.xml",
-        "source": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_latest_messages.xml"
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\post.xml",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\post.xml"
     },
     {
-        "merged": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\post.xml",
-        "source": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\post.xml"
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\text_color_layout.xml",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\text_color_layout.xml"
     },
     {
-        "merged": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\activity_friend_search.xml",
-        "source": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_friend_search.xml"
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\activity_friend_search.xml",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_friend_search.xml"
     },
     {
-        "merged": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\activity_profile.xml",
-        "source": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_profile.xml"
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\homepage.xml",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\homepage.xml"
     }
 ]

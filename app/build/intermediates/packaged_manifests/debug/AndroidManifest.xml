@@ -57,9 +57,10 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/Theme.FInalProject" >
         <activity
-            android:name="finals.project.smsPage.newMessage"
+            android:name="finals.project.smsPage.NewMessageActivity"
             android:exported="false" />
 
         <meta-data

@@ -46,6 +46,14 @@ class DataActivity : AppCompatActivity() {
             }
         }
 
+        fun gitHubLink(uid: String?, newLink: String) {
+            val database = FirebaseDatabase.getInstance()
+            val myRef = database.getReference("users/" + uid)
+            if (uid != null) {
+                myRef.child("GitHub Link").setValue(newLink)
+            }
+        }
+
     }
 }
 

@@ -39,6 +39,62 @@
                 android:textColor="#FFFFFF"
                 android:textSize="26sp" />
 
+            <EditText
+                android:id="@+id/GitHub"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:hint="GitHub Link"
+                android:background="@drawable/rounded_box"
+                android:backgroundTint="@color/white"
+                android:padding="5dp"
+                android:translationY="30dp"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="#393939"
+                android:textSize="20sp"
+                tools:visibility="gone" />
+            <Button
+                android:id="@+id/submitGit"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/rounded_box"
+                android:text="Submit"
+                android:textAlignment="center"
+                android:translationY="-10dp"
+                tools:ignore="RtlCompat"
+                tools:visibility="gone" />
+
+            <EditText
+                android:id="@+id/newName"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/rounded_box"
+                android:backgroundTint="@color/white"
+                android:padding="5dp"
+                android:hint="Change Username"
+                android:translationY="20dp"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="#393939"
+                android:textSize="20sp"
+                tools:visibility="gone" />
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/rounded_box"
+                android:text="Submit"
+                android:textAlignment="center"
+                android:translationY="-17dp"
+                tools:ignore="RtlCompat"
+                tools:visibility="gone" />
+
             <Button
                 android:id="@+id/displayInfo"
                 android:layout_width="194dp"
@@ -157,45 +213,6 @@
                 android:textAlignment="center"
                 android:translationY="20dp"
                 tools:ignore="RtlCompat" />
-            <Button
-                android:id="@+id/changeName"
-                android:layout_width="194dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/rounded_box"
-                android:text="Change Name?"
-                android:textAlignment="center"
-                android:translationY="25dp"
-                tools:ignore="RtlCompat"
-                tools:visibility="gone" />
-
-            <EditText
-                android:id="@+id/newName"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:background="@drawable/rounded_box"
-                android:backgroundTint="@color/white"
-                android:padding="5dp"
-                android:translationY="30dp"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textColor="#393939"
-                android:textSize="20sp"
-                tools:visibility="gone" />
-            <Button
-                android:id="@+id/submit"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical|right"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/rounded_box"
-                android:text="Submit"
-                android:textAlignment="center"
-                android:translationY="-10dp"
-                tools:ignore="RtlCompat"
-                tools:visibility="gone" />
 
             <TextView
                 android:id="@+id/navigation"
