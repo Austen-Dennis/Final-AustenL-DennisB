@@ -54,6 +54,22 @@ class DataActivity : AppCompatActivity() {
             }
         }
 
+        fun bioAdd(uid: String?, newBio: String) {
+            val database = FirebaseDatabase.getInstance()
+            val myRef = database.getReference("users/" + uid)
+            if (uid != null) {
+                myRef.child("Bio").setValue(newBio)
+            }
+        }
+
+        fun collegeEmail(uid: String?, collegeEmail: String) {
+            val database = FirebaseDatabase.getInstance()
+            val myRef = database.getReference("users/" + uid)
+            if (uid != null) {
+                myRef.child("College Email").setValue(collegeEmail)
+            }
+        }
+
     }
 }
 

@@ -24,6 +24,8 @@ id Gallery
 id GitHub
 id accountInfo
 id addFriend
+id bio
+id collegeEmail
 id container
 id copyID
 id displayInfo
@@ -53,7 +55,9 @@ id searchView
 id sign_out
 id sms
 id so
+id subBio
 id submit
+id submitEmail
 id submitGit
 id update
 id user

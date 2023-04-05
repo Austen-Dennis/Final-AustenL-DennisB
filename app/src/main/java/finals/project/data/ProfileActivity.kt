@@ -50,6 +50,10 @@ class ProfileActivity : AppCompatActivity() {
         val myRef = FirebaseDatabase.getInstance().getReference("users")
         val gitHubSub = findViewById<View>(finals.project.R.id.submitGit)
         val gitHub = findViewById<View>(finals.project.R.id.GitHub) as EditText
+        val bioSub = findViewById<View>(finals.project.R.id.subBio)
+        val bio = findViewById<View>(finals.project.R.id.bio) as EditText
+        val emailSub = findViewById<View>(finals.project.R.id.submitEmail)
+        val collegeEmail = findViewById<View>(finals.project.R.id.collegeEmail) as EditText
 
         myRef.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -87,7 +91,6 @@ class ProfileActivity : AppCompatActivity() {
                         hideInfoButton.visibility=View.GONE
                         copyIDButton.visibility=View.GONE
                     }
-
                     submit.setOnClickListener {
                         val newName = nameText.getText().toString()
                         val validName = nameCheck(newName)
@@ -127,6 +130,56 @@ class ProfileActivity : AppCompatActivity() {
                             Toast.makeText(
                                 applicationContext,
                                 "Not a Valid GitHub Link",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
+                        val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+                        imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0)
+                        emailText.visibility= View.GONE
+                        userID.visibility=View.GONE
+                        showInfoButton.visibility=View.VISIBLE
+                        hideInfoButton.visibility=View.GONE
+                        copyIDButton.visibility=View.GONE
+                    }
+                    bioSub.setOnClickListener {
+                        val newBio = bio.getText().toString()
+                        val validBio = bioCheck(newBio)
+                        if (validBio == true) {
+                            DataActivity.bioAdd(uid, newBio)
+                            Toast.makeText(
+                                applicationContext,
+                                "New Bio Added!",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        } else {
+                            Toast.makeText(
+                                applicationContext,
+                                "Bio Cannot Be Empty!",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
+                        val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+                        imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0)
+                        emailText.visibility= View.GONE
+                        userID.visibility=View.GONE
+                        showInfoButton.visibility=View.VISIBLE
+                        hideInfoButton.visibility=View.GONE
+                        copyIDButton.visibility=View.GONE
+                    }
+                    emailSub.setOnClickListener {
+                        val collegeEmail = collegeEmail.getText().toString()
+                        val validEmail = emailCheck(collegeEmail)
+                        if (validEmail == true) {
+                            DataActivity.collegeEmail(uid, collegeEmail)
+                            Toast.makeText(
+                                applicationContext,
+                                "Email Added Successfully!",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        } else {
+                            Toast.makeText(
+                                applicationContext,
+                                "Not a Valid College Email",
                                 Toast.LENGTH_LONG
                             ).show()
                         }
@@ -183,6 +236,18 @@ class ProfileActivity : AppCompatActivity() {
 
             private fun nameCheck(newName: String): Any {
                 if (newName.length >= 3) {
+                    return true
+                }
+                return false
+            }
+            private fun emailCheck(email: String): Any {
+                if (email.contains(".edu") and email.contains("@")) {
+                    return true
+                }
+                return false
+            }
+            private fun bioCheck(bio: String): Any {
+                if (bio.isNotBlank()) {
                     return true
                 }
                 return false

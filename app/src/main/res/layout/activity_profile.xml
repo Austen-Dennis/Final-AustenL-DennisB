@@ -94,6 +94,60 @@
                 android:translationY="-17dp"
                 tools:ignore="RtlCompat"
                 tools:visibility="gone" />
+            <EditText
+                android:id="@+id/bio"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/rounded_box"
+                android:backgroundTint="@color/white"
+                android:padding="5dp"
+                android:hint="Add Bio"
+                android:translationY="20dp"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="#393939"
+                android:textSize="20sp"
+                tools:visibility="gone" />
+            <Button
+                android:id="@+id/subBio"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/rounded_box"
+                android:text="Submit"
+                android:textAlignment="center"
+                android:translationY="-17dp"
+                tools:ignore="RtlCompat"
+                tools:visibility="gone" />
+            <EditText
+                android:id="@+id/collegeEmail"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/rounded_box"
+                android:backgroundTint="@color/white"
+                android:padding="5dp"
+                android:hint="College Email (if applicable)"
+                android:translationY="20dp"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="#393939"
+                android:textSize="20sp"
+                tools:visibility="gone" />
+            <Button
+                android:id="@+id/submitEmail"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/rounded_box"
+                android:text="Submit"
+                android:textAlignment="center"
+                android:translationY="-17dp"
+                tools:ignore="RtlCompat"
+                tools:visibility="gone" />
 
             <Button
                 android:id="@+id/displayInfo"
