@@ -17,12 +17,14 @@ MERGED from [io.getstream:stream-chat-android-state:5.8.2] C:\Users\mrden\.gradl
 MERGED from [io.getstream:stream-chat-android-client:5.8.2] C:\Users\mrden\.gradle\caches\transforms-3\55dfc534b84dc67cce7208934894abb6\transformed\stream-chat-android-client-5.8.2\AndroidManifest.xml:17:1-39:12
 MERGED from [io.getstream:stream-logger-android:5.8.2] C:\Users\mrden\.gradle\caches\transforms-3\0538b64834d36668fd5b90093ab21259\transformed\stream-logger-android-5.8.2\AndroidManifest.xml:17:1-26:12
 MERGED from [com.google.android.material:material:1.9.0-alpha02] C:\Users\mrden\.gradle\caches\transforms-3\741af181144e095970940b94bf37c603\transformed\material-1.9.0-alpha02\AndroidManifest.xml:17:1-26:12
+MERGED from [com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mrden\.gradle\caches\transforms-3\e4325b876026b4f35a6e6d1db222670f\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:17:1-48:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\mrden\.gradle\caches\transforms-3\2521e9c2270cfbf6ce6b2f170512acab\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [io.coil-kt:coil:2.2.2] C:\Users\mrden\.gradle\caches\transforms-3\b4693bb438b6d0f8e634233798af26a5\transformed\coil-2.2.2\AndroidManifest.xml:2:1-9:12
 MERGED from [io.coil-kt:coil-gif:2.1.0] C:\Users\mrden\.gradle\caches\transforms-3\b50a6489c81178239926ce1ab7a85c42\transformed\coil-gif-2.1.0\AndroidManifest.xml:2:1-9:12
 MERGED from [io.coil-kt:coil-video:2.1.0] C:\Users\mrden\.gradle\caches\transforms-3\3301903de8ee3e9de8f4638763b9128e\transformed\coil-video-2.1.0\AndroidManifest.xml:2:1-9:12
 MERGED from [io.coil-kt:coil-base:2.2.2] C:\Users\mrden\.gradle\caches\transforms-3\9544747e2e2d8f9ee38398f980b09558\transformed\coil-base-2.2.2\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\mrden\.gradle\caches\transforms-3\c27c9ad70049e7e3f26f97d28a8f0827\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.preference:preference:1.1.1] C:\Users\mrden\.gradle\caches\transforms-3\317d9e366161380e79f5806eccbf4ecc\transformed\preference-1.1.1\AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.stfalcon-studio:StfalconImageViewer:1.0.1] C:\Users\mrden\.gradle\caches\transforms-3\8d63930b1e758e7c6a70ec0e92f6feeb\transformed\StfalconImageViewer-1.0.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.github.chrisbanes:PhotoView:2.3.0] C:\Users\mrden\.gradle\caches\transforms-3\cd8f810393ad53f56d4840143c44bf38\transformed\PhotoView-2.3.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\mrden\.gradle\caches\transforms-3\0b54b55d348e4c70549189db61e4c194\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
@@ -175,6 +177,8 @@ MERGED from [io.getstream:stream-logger-android:5.8.2] C:\Users\mrden\.gradle\ca
 MERGED from [io.getstream:stream-logger-android:5.8.2] C:\Users\mrden\.gradle\caches\transforms-3\0538b64834d36668fd5b90093ab21259\transformed\stream-logger-android-5.8.2\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.9.0-alpha02] C:\Users\mrden\.gradle\caches\transforms-3\741af181144e095970940b94bf37c603\transformed\material-1.9.0-alpha02\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.9.0-alpha02] C:\Users\mrden\.gradle\caches\transforms-3\741af181144e095970940b94bf37c603\transformed\material-1.9.0-alpha02\AndroidManifest.xml:24:5-20
+MERGED from [com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mrden\.gradle\caches\transforms-3\e4325b876026b4f35a6e6d1db222670f\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:33:5-46:19
+MERGED from [com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mrden\.gradle\caches\transforms-3\e4325b876026b4f35a6e6d1db222670f\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:33:5-46:19
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\mrden\.gradle\caches\transforms-3\2521e9c2270cfbf6ce6b2f170512acab\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\mrden\.gradle\caches\transforms-3\2521e9c2270cfbf6ce6b2f170512acab\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-auth-ktx:21.1.0] C:\Users\mrden\.gradle\caches\transforms-3\5f7604cf3c6db4ff47b62aabda90ffa3\transformed\firebase-auth-ktx-21.1.0\AndroidManifest.xml:7:5-15:19
@@ -375,6 +379,8 @@ MERGED from [io.getstream:stream-logger-android:5.8.2] C:\Users\mrden\.gradle\ca
 MERGED from [io.getstream:stream-logger-android:5.8.2] C:\Users\mrden\.gradle\caches\transforms-3\0538b64834d36668fd5b90093ab21259\transformed\stream-logger-android-5.8.2\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.9.0-alpha02] C:\Users\mrden\.gradle\caches\transforms-3\741af181144e095970940b94bf37c603\transformed\material-1.9.0-alpha02\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.9.0-alpha02] C:\Users\mrden\.gradle\caches\transforms-3\741af181144e095970940b94bf37c603\transformed\material-1.9.0-alpha02\AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mrden\.gradle\caches\transforms-3\e4325b876026b4f35a6e6d1db222670f\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:24:5-44
+MERGED from [com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mrden\.gradle\caches\transforms-3\e4325b876026b4f35a6e6d1db222670f\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:24:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\mrden\.gradle\caches\transforms-3\2521e9c2270cfbf6ce6b2f170512acab\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\mrden\.gradle\caches\transforms-3\2521e9c2270cfbf6ce6b2f170512acab\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
 MERGED from [io.coil-kt:coil:2.2.2] C:\Users\mrden\.gradle\caches\transforms-3\b4693bb438b6d0f8e634233798af26a5\transformed\coil-2.2.2\AndroidManifest.xml:5:5-7:41
@@ -387,6 +393,8 @@ MERGED from [io.coil-kt:coil-base:2.2.2] C:\Users\mrden\.gradle\caches\transform
 MERGED from [io.coil-kt:coil-base:2.2.2] C:\Users\mrden\.gradle\caches\transforms-3\9544747e2e2d8f9ee38398f980b09558\transformed\coil-base-2.2.2\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\mrden\.gradle\caches\transforms-3\c27c9ad70049e7e3f26f97d28a8f0827\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\mrden\.gradle\caches\transforms-3\c27c9ad70049e7e3f26f97d28a8f0827\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.preference:preference:1.1.1] C:\Users\mrden\.gradle\caches\transforms-3\317d9e366161380e79f5806eccbf4ecc\transformed\preference-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.preference:preference:1.1.1] C:\Users\mrden\.gradle\caches\transforms-3\317d9e366161380e79f5806eccbf4ecc\transformed\preference-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [com.github.stfalcon-studio:StfalconImageViewer:1.0.1] C:\Users\mrden\.gradle\caches\transforms-3\8d63930b1e758e7c6a70ec0e92f6feeb\transformed\StfalconImageViewer-1.0.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.stfalcon-studio:StfalconImageViewer:1.0.1] C:\Users\mrden\.gradle\caches\transforms-3\8d63930b1e758e7c6a70ec0e92f6feeb\transformed\StfalconImageViewer-1.0.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.chrisbanes:PhotoView:2.3.0] C:\Users\mrden\.gradle\caches\transforms-3\cd8f810393ad53f56d4840143c44bf38\transformed\PhotoView-2.3.0\AndroidManifest.xml:7:5-9:41
@@ -741,6 +749,8 @@ queries
 ADDED from [io.getstream:stream-chat-android-ui-common:5.8.2] C:\Users\mrden\.gradle\caches\transforms-3\6978db0f784d1ec69fbe8fb795bfe90a\transformed\stream-chat-android-ui-common-5.8.2\AndroidManifest.xml:25:5-32:15
 MERGED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\mrden\.gradle\caches\transforms-3\ef6cc873c851a17b2d1631c967d91ef0\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:15:5-23:15
 MERGED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\mrden\.gradle\caches\transforms-3\ef6cc873c851a17b2d1631c967d91ef0\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:15:5-23:15
+MERGED from [com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mrden\.gradle\caches\transforms-3\e4325b876026b4f35a6e6d1db222670f\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:26:5-31:15
+MERGED from [com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mrden\.gradle\caches\transforms-3\e4325b876026b4f35a6e6d1db222670f\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:26:5-31:15
 intent#action:name:android.media.action.VIDEO_CAPTURE
 ADDED from [io.getstream:stream-chat-android-ui-common:5.8.2] C:\Users\mrden\.gradle\caches\transforms-3\6978db0f784d1ec69fbe8fb795bfe90a\transformed\stream-chat-android-ui-common-5.8.2\AndroidManifest.xml:26:9-28:18
 action#android.media.action.VIDEO_CAPTURE
@@ -1021,6 +1031,38 @@ action#com.getstream.sdk.chat.REPLY
 ADDED from [io.getstream:stream-chat-android-client:5.8.2] C:\Users\mrden\.gradle\caches\transforms-3\55dfc534b84dc67cce7208934894abb6\transformed\stream-chat-android-client-5.8.2\AndroidManifest.xml:34:17-71
 	android:name
 		ADDED from [io.getstream:stream-chat-android-client:5.8.2] C:\Users\mrden\.gradle\caches\transforms-3\55dfc534b84dc67cce7208934894abb6\transformed\stream-chat-android-client-5.8.2\AndroidManifest.xml:34:25-68
+provider#com.android.car.ui.plugin.PluginNameProvider
+ADDED from [com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mrden\.gradle\caches\transforms-3\e4325b876026b4f35a6e6d1db222670f\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:27:9-30:67
+	android:authorities
+		ADDED from [com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mrden\.gradle\caches\transforms-3\e4325b876026b4f35a6e6d1db222670f\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:29:13-60
+	tools:ignore
+		ADDED from [com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mrden\.gradle\caches\transforms-3\e4325b876026b4f35a6e6d1db222670f\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:30:13-64
+	android:name
+		ADDED from [com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mrden\.gradle\caches\transforms-3\e4325b876026b4f35a6e6d1db222670f\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:28:13-72
+provider#com.android.car.ui.core.CarUiInstaller
+ADDED from [com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mrden\.gradle\caches\transforms-3\e4325b876026b4f35a6e6d1db222670f\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:34:9-39:71
+	android:process
+		ADDED from [com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mrden\.gradle\caches\transforms-3\e4325b876026b4f35a6e6d1db222670f\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:39:13-68
+	android:authorities
+		ADDED from [com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mrden\.gradle\caches\transforms-3\e4325b876026b4f35a6e6d1db222670f\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:36:13-66
+	android:exported
+		ADDED from [com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mrden\.gradle\caches\transforms-3\e4325b876026b4f35a6e6d1db222670f\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:38:13-37
+	android:directBootAware
+		ADDED from [com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mrden\.gradle\caches\transforms-3\e4325b876026b4f35a6e6d1db222670f\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:37:13-43
+	android:name
+		ADDED from [com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mrden\.gradle\caches\transforms-3\e4325b876026b4f35a6e6d1db222670f\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:35:13-66
+provider#com.android.car.ui.core.SearchResultsProvider
+ADDED from [com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mrden\.gradle\caches\transforms-3\e4325b876026b4f35a6e6d1db222670f\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:40:9-45:79
+	android:readPermission
+		ADDED from [com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mrden\.gradle\caches\transforms-3\e4325b876026b4f35a6e6d1db222670f\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:45:13-76
+	android:process
+		ADDED from [com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mrden\.gradle\caches\transforms-3\e4325b876026b4f35a6e6d1db222670f\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:44:13-68
+	android:authorities
+		ADDED from [com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mrden\.gradle\caches\transforms-3\e4325b876026b4f35a6e6d1db222670f\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:42:13-73
+	android:exported
+		ADDED from [com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mrden\.gradle\caches\transforms-3\e4325b876026b4f35a6e6d1db222670f\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:43:13-36
+	android:name
+		ADDED from [com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mrden\.gradle\caches\transforms-3\e4325b876026b4f35a6e6d1db222670f\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:41:13-73
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [com.google.firebase:firebase-auth-ktx:21.1.0] C:\Users\mrden\.gradle\caches\transforms-3\5f7604cf3c6db4ff47b62aabda90ffa3\transformed\firebase-auth-ktx-21.1.0\AndroidManifest.xml:8:9-14:19
 MERGED from [com.google.firebase:firebase-auth:21.1.0] C:\Users\mrden\.gradle\caches\transforms-3\872743e8841553fe7d9417e4441e5692\transformed\firebase-auth-21.1.0\AndroidManifest.xml:64:9-70:19

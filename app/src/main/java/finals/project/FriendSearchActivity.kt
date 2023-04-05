@@ -16,10 +16,8 @@ import android.view.KeyEvent.KEYCODE_ENTER
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.EditText
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.SearchView.OnQueryTextListener
 import androidx.appcompat.widget.Toolbar
 import com.google.firebase.database.DataSnapshot
@@ -33,7 +31,10 @@ import java.lang.Exception
 
 
 class FriendSearchActivity : AppCompatActivity() {
-
+    lateinit var searchView: SearchView
+    lateinit var listView: ListView
+    lateinit var list: ArrayList<String>
+    lateinit var adapter: ArrayAdapter<*>
     @SuppressLint("SuspiciousIndentation", "MissingInflatedId")
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,22 +47,41 @@ class FriendSearchActivity : AppCompatActivity() {
         val intentPOST = Intent(this, PostActivity::class.java)
         val intentPROFILE = Intent(this, ProfileActivity::class.java)
         val intentHOME = Intent(this, HomeActivity::class.java)
-        val searchButton = findViewById<View>(finals.project.R.id.imageView2)
-        val searchView = findViewById<View>(finals.project.R.id.searchView) as EditText
+        val searchView = findViewById<View>(finals.project.R.id.searchView) as SearchView
         val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
         val contactInfo = findViewById<View>(finals.project.R.id.layout)
         contactInfo.visibility = View.GONE
         profileTitle.visibility = View.GONE
-        searchButton.setOnClickListener {
-            val text = searchView.text
-            friendSearch(text.toString())
-            try {
-                Thread.sleep(200);
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-        }
+        listView = findViewById(finals.project.R.id.listView)
+        list = ArrayList()
+        list.add("Apple")
+        list.add("Banana")
+        list.add("Pineapple")
+        list.add("Orange")
+        list.add("Mango")
+        list.add("Grapes")
+        list.add("Lemon")
+        list.add("Melon")
+        list.add("Watermelon")
+        list.add("Papaya")
 
+
+        adapter = ArrayAdapter<String>(applicationContext, finals.project.R.layout.text_color_layout, list)
+        listView.adapter = adapter
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String): Boolean {
+                if (list.contains(query)) {
+                    adapter.filter.filter(query)
+                } else {
+                    Toast.makeText(this@FriendSearchActivity, "No Match found", Toast.LENGTH_LONG).show()
+                }
+                return false
+            }
+            override fun onQueryTextChange(newText: String): Boolean {
+                adapter.filter.filter(newText)
+                return false
+            }
+        })
         //starts the activity onclick
         val profileButton = findViewById<View>(finals.project.R.id.profile)
         profileButton.setOnClickListener {
@@ -93,8 +113,6 @@ class FriendSearchActivity : AppCompatActivity() {
                 contactInfo.visibility = View.VISIBLE
                 profileTitle.text = "Now Viewing " + value + "'s Account!"
                 profileTitle.visibility = View.VISIBLE
-
-                //Log.d(TAG, "Value is: $value")
             }
 
             override fun onCancelled(error: DatabaseError) {

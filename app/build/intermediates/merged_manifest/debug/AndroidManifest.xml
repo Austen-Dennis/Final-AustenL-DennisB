@@ -26,6 +26,10 @@
 
             <data android:scheme="http" />
         </intent>
+
+        <provider
+            android:name="com.android.car.ui.plugin.PluginNameProvider"
+            android:authorities="com.android.car.ui.plugin" />
     </queries>
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -247,6 +251,19 @@
                 <action android:name="com.getstream.sdk.chat.REPLY" />
             </intent-filter>
         </receiver>
+
+        <provider
+            android:name="com.android.car.ui.core.CarUiInstaller"
+            android:authorities="finals.project.CarUiInstaller"
+            android:directBootAware="true"
+            android:exported="false"
+            android:process="@string/car_ui_installer_process_name" />
+        <provider
+            android:name="com.android.car.ui.core.SearchResultsProvider"
+            android:authorities="finals.project.SearchResultsProvider"
+            android:exported="true"
+            android:process="@string/car_ui_installer_process_name"
+            android:readPermission="com.android.car.ui.READ_SEARCH_RESULTS" />
 
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"

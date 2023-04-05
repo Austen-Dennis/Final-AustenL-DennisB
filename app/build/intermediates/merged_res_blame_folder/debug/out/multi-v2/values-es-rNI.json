@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "finals.project.app-mergeDebugResources-62:/values-es-rNI/values-es-rNI.xml",
+            "outputFile": "finals.project.app-mergeDebugResources-64:/values-es-rNI/values-es-rNI.xml",
             "map": [
                 {
                     "source": "C:\\Users\\mrden\\.gradle\\caches\\transforms-3\\ef6cc873c851a17b2d1631c967d91ef0\\transformed\\firebase-ui-auth-8.0.2\\res\\values-es-rNI\\values-es-rNI.xml",
