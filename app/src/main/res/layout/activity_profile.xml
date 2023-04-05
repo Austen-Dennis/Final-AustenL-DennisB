@@ -84,62 +84,12 @@
                 android:translationY="-5dp"
                 tools:ignore="RtlCompat"
                 tools:visibility="gone" />
-            <Button
-                android:id="@+id/changeName"
-                android:layout_width="194dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/rounded_box"
-                android:text="Change Name?"
-                android:textAlignment="center"
-                android:translationY="-2dp"
-                tools:ignore="RtlCompat"
-                tools:visibility="gone" />
-
-            <EditText
-                android:id="@+id/newName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:background="@drawable/rounded_box"
-                android:backgroundTint="@color/white"
-                android:padding="5dp"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textColor="#393939"
-                android:textSize="20sp"
-                tools:visibility="gone" />
-            <Button
-                android:id="@+id/submit"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/rounded_box"
-                android:text="Submit"
-                android:textAlignment="center"
-                android:translationY="10dp"
-                tools:ignore="RtlCompat"
-                tools:visibility="gone" />
-            <Button
-                android:id="@+id/profilePic"
-                android:layout_width="194dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/rounded_box"
-                android:text="Upload Profile Pic"
-                android:textAlignment="center"
-                android:translationY="5dp"
-                tools:ignore="RtlCompat"
-                tools:visibility="gone" />
 
             <Button
                 android:id="@+id/hideInfo"
                 android:layout_width="194dp"
                 android:layout_height="40dp"
-                android:translationY="5dp"
+                android:translationY="0dp"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:layout_marginTop="0dp"
                 android:background="@drawable/rounded_box"
@@ -158,25 +108,6 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="#FFFFFF"
                 android:textSize="26sp" />
-
-            <Button
-                android:id="@+id/update"
-                android:layout_width="194dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:background="@drawable/rounded_box"
-                android:padding="5dp"
-                android:paddingStart="5dp"
-                android:paddingLeft="5dp"
-                android:paddingTop="5dp"
-                android:paddingEnd="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="5dp"
-                android:text="Update Password"
-                android:textAlignment="center"
-                android:translationY="1dp"
-                tools:ignore="RtlCompat" />
-
             <Button
                 android:id="@+id/release"
                 android:layout_width="194dp"
@@ -196,6 +127,75 @@
                 android:text="About the Project"
                 android:translationY="10dp"
                 app:layout_constraintBottom_toBottomOf="parent" />
+            <Button
+                android:id="@+id/profilePic"
+                android:layout_width="194dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/rounded_box"
+                android:text="Upload Profile Pic"
+                android:textAlignment="center"
+                android:translationY="15dp"
+                tools:ignore="RtlCompat"
+                tools:visibility="gone" />
+
+            <Button
+                android:id="@+id/update"
+                android:layout_width="194dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@drawable/rounded_box"
+                android:padding="5dp"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:text="Update Password"
+                android:textAlignment="center"
+                android:translationY="20dp"
+                tools:ignore="RtlCompat" />
+            <Button
+                android:id="@+id/changeName"
+                android:layout_width="194dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/rounded_box"
+                android:text="Change Name?"
+                android:textAlignment="center"
+                android:translationY="25dp"
+                tools:ignore="RtlCompat"
+                tools:visibility="gone" />
+
+            <EditText
+                android:id="@+id/newName"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/rounded_box"
+                android:backgroundTint="@color/white"
+                android:padding="5dp"
+                android:translationY="30dp"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="#393939"
+                android:textSize="20sp"
+                tools:visibility="gone" />
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/rounded_box"
+                android:text="Submit"
+                android:textAlignment="center"
+                android:translationY="-10dp"
+                tools:ignore="RtlCompat"
+                tools:visibility="gone" />
 
             <TextView
                 android:id="@+id/navigation"
@@ -207,7 +207,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="#FFFFFF"
                 android:textSize="26sp"
-                android:translationY="10dp" />
+                android:translationY="22dp" />
             <Button
                 android:id="@+id/so"
                 android:layout_width="194dp"
@@ -215,7 +215,7 @@
                 android:layout_gravity="bottom|center"
                 android:background="@drawable/rounded_box"
                 android:text="Sign Out"
-                android:translationY="25dp"
+                android:translationY="22dp"
                 app:layout_constraintBottom_toBottomOf="parent" />
 
         </LinearLayout>

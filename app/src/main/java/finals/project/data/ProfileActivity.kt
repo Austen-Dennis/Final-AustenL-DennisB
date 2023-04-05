@@ -64,12 +64,10 @@ class ProfileActivity : AppCompatActivity() {
 
                     emailText.text = "Email: \n" + email
                     userID.text = "User ID: \n" + uid
-                    profilePicture.visibility = View.GONE
                     emailText.visibility= View.GONE
                     userID.visibility=View.GONE
                     hideInfoButton.visibility=View.GONE
                     copyIDButton.visibility=View.GONE
-                    changeName.visibility=View.GONE
                     nameText.visibility=View.GONE
                     submit.visibility=View.GONE
 
@@ -90,8 +88,6 @@ class ProfileActivity : AppCompatActivity() {
                         showInfoButton.visibility=View.VISIBLE
                         hideInfoButton.visibility=View.GONE
                         copyIDButton.visibility=View.GONE
-                        profilePicture.visibility = View.GONE
-                        changeName.visibility=View.GONE
                         nameText.visibility=View.GONE
                         submit.visibility=View.GONE
                     }
@@ -115,8 +111,6 @@ class ProfileActivity : AppCompatActivity() {
                         showInfoButton.visibility=View.VISIBLE
                         hideInfoButton.visibility=View.GONE
                         copyIDButton.visibility=View.GONE
-                        profilePicture.visibility = View.GONE
-                        changeName.visibility=View.GONE
                         nameText.visibility=View.GONE
                         submit.visibility=View.GONE
                     }
