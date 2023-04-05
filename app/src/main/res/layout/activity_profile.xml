@@ -119,7 +119,7 @@
                 android:background="@drawable/rounded_box"
                 android:text="Submit"
                 android:textAlignment="center"
-                android:translationY="-2dp"
+                android:translationY="10dp"
                 tools:ignore="RtlCompat"
                 tools:visibility="gone" />
             <Button
@@ -131,7 +131,7 @@
                 android:background="@drawable/rounded_box"
                 android:text="Upload Profile Pic"
                 android:textAlignment="center"
-                android:translationY="-2dp"
+                android:translationY="5dp"
                 tools:ignore="RtlCompat"
                 tools:visibility="gone" />
 
@@ -139,6 +139,7 @@
                 android:id="@+id/hideInfo"
                 android:layout_width="194dp"
                 android:layout_height="40dp"
+                android:translationY="5dp"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:layout_marginTop="0dp"
                 android:background="@drawable/rounded_box"

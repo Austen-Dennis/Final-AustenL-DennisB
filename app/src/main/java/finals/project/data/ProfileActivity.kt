@@ -56,7 +56,12 @@ class ProfileActivity : AppCompatActivity() {
                     val email = dataSnapshot.child(uid.toString()).child("Email").getValue().toString()
                     val name = dataSnapshot.child(uid.toString()).child("Name").getValue().toString()
                     val clip: ClipData = ClipData.newPlainText("simple text", uid)
-                    profileTitle.text = "Welcome " + name + "!"
+                    if (dataSnapshot.child(uid.toString()).child("Name").exists()) {
+                        profileTitle.text = "Welcome " + name + "!"
+                    } else {
+                        profileTitle.text = "Welcome!"
+                    }
+
                     emailText.text = "Email: \n" + email
                     userID.text = "User ID: \n" + uid
                     profilePicture.visibility = View.GONE
