@@ -5501,7 +5501,6 @@ int id textSpacerNoButtons 0x7f0a0387
 int id textSpacerNoTitle 0x7f0a0388
 int id textStart 0x7f0a0389
 int id textTop 0x7f0a038a
-int id textView 0x7f0a038b
 int id text_input_end_icon 0x7f0a038c
 int id text_input_error_icon 0x7f0a038d
 int id text_input_start_icon 0x7f0a038e

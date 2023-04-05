@@ -57,7 +57,6 @@ id sign_out
 id sms
 id so
 id textInputLayout
-id textView
 id update
 id user
 id username

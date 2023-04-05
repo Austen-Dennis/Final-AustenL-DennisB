@@ -1,33 +1,20 @@
 package finals.project.data
 
-import android.R
 import android.annotation.SuppressLint
-import android.app.SearchManager
 import android.content.ContentValues
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.text.InputType
-import android.text.TextUtils
 import android.util.Log
-import android.view.KeyEvent
-import android.view.KeyEvent.ACTION_DOWN
-import android.view.KeyEvent.KEYCODE_ENTER
-import android.view.Menu
-import android.view.MenuItem
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.SearchView.OnQueryTextListener
 import androidx.appcompat.widget.Toolbar
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.google.firebase.database.ktx.getValue
 import finals.project.smsPage.LatestMessagesActivity
-import finals.project.smsPage.SmsPage
-import java.lang.Exception
 
 
 class FriendSearchActivity : AppCompatActivity() {
@@ -52,8 +39,48 @@ class FriendSearchActivity : AppCompatActivity() {
         val contactInfo = findViewById<View>(finals.project.R.id.layout)
         contactInfo.visibility = View.GONE
         profileTitle.visibility = View.GONE
+
+        val mAuth = FirebaseAuth.getInstance()
+        val currentUserId = mAuth.currentUser?.uid
+        val profileUserRef = FirebaseDatabase.getInstance().getReference()
+        System.out.println("DISJDIOJASOIJDOASD" + profileUserRef)
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+// do something on text submit
+                val query = searchView.getQuery()
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+// do something when text changes
+                val query = searchView.getQuery()
+                profileUserRef.addValueEventListener(object: ValueEventListener {
+                    override fun onDataChange(dataSnapshot: DataSnapshot) {
+                        if (dataSnapshot.exists()) {
+                            val email = dataSnapshot.child("Email").child(query.toString()).getValue().toString()
+                            System.out.println("DSIAJDIOASJOIDJIASJDISAJD " + email)
+                            val name = dataSnapshot.child("Name").getValue().toString()
+                            //list.add(name)
+                        }
+                    }
+
+                    override fun onCancelled(error: DatabaseError) {
+                        Log.w(ContentValues.TAG, "Failed to read value.", error.toException())
+                    }
+                })
+                return false
+            }
+        })
+
         listView = findViewById(finals.project.R.id.listView)
+        listView.visibility = View.VISIBLE
+
+
+        val database = FirebaseDatabase.getInstance()
+        val myRefEmail = database.getReference("users/")
+
         list = ArrayList()
+
         list.add("Apple")
         list.add("Banana")
         list.add("Pineapple")
@@ -70,11 +97,20 @@ class FriendSearchActivity : AppCompatActivity() {
         listView.adapter = adapter
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
-                if (list.contains(query)) {
-                    adapter.filter.filter(query)
-                } else {
-                    Toast.makeText(this@FriendSearchActivity, "No Match found", Toast.LENGTH_LONG).show()
-                }
+                myRefEmail.addValueEventListener(object: ValueEventListener {
+                    override fun onDataChange(dataSnapshot: DataSnapshot) {
+                        if (dataSnapshot.exists()) {
+                            val email = dataSnapshot.child(query).child("Email").getValue().toString()
+                            System.out.println("DSIAJDIOASJOIDJIASJDISAJD " + email)
+                            val name = dataSnapshot.child("Name").getValue().toString()
+                            //list.add(name)
+                        }
+                    }
+
+                    override fun onCancelled(error: DatabaseError) {
+                        Log.w(ContentValues.TAG, "Failed to read value.", error.toException())
+                    }
+                })
                 return false
             }
             override fun onQueryTextChange(newText: String): Boolean {
@@ -99,27 +135,6 @@ class FriendSearchActivity : AppCompatActivity() {
         homeButton.setOnClickListener {
             startActivity(intentHOME)
         }
-    }
-    private fun friendSearch(uid: String) {
-        val database = FirebaseDatabase.getInstance()
-        val myRefEmail = database.getReference("users").child(uid).child("Name",)
-        myRefEmail.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                val value = dataSnapshot.getValue<String>()
-                val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
-                val contactInfo = findViewById<View>(finals.project.R.id.layout)
-                contactInfo.visibility = View.VISIBLE
-                profileTitle.text = "Now Viewing " + value + "'s Account!"
-                profileTitle.visibility = View.VISIBLE
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                // Failed to read value
-                Log.w(ContentValues.TAG, "Failed to read value.", error.toException())
-            }
-        })
 
     }
 
