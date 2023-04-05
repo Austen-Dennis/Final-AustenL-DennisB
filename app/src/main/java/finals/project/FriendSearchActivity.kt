@@ -19,7 +19,6 @@ import finals.project.smsPage.LatestMessagesActivity
 
 class FriendSearchActivity : AppCompatActivity() {
     lateinit var searchView: SearchView
-    lateinit var listView: ListView
     lateinit var list: ArrayList<String>
     lateinit var adapter: ArrayAdapter<*>
     @SuppressLint("SuspiciousIndentation", "MissingInflatedId")
@@ -36,74 +35,32 @@ class FriendSearchActivity : AppCompatActivity() {
         val intentHOME = Intent(this, HomeActivity::class.java)
         val searchView = findViewById<View>(finals.project.R.id.searchView) as SearchView
         val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
-        val contactInfo = findViewById<View>(finals.project.R.id.layout)
-        contactInfo.visibility = View.GONE
-        profileTitle.visibility = View.GONE
+        val contact = findViewById<View>(finals.project.R.id.email) as TextView
+        val layout = findViewById<View>(finals.project.R.id.layout)
+        layout.visibility = View.INVISIBLE
 
         val mAuth = FirebaseAuth.getInstance()
         val currentUserId = mAuth.currentUser?.uid
         val profileUserRef = FirebaseDatabase.getInstance().getReference()
-        System.out.println("DISJDIOJASOIJDOASD" + profileUserRef)
-        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String?): Boolean {
-// do something on text submit
-                val query = searchView.getQuery()
-                return false
-            }
-
-            override fun onQueryTextChange(newText: String?): Boolean {
-// do something when text changes
-                val query = searchView.getQuery()
-                profileUserRef.addValueEventListener(object: ValueEventListener {
-                    override fun onDataChange(dataSnapshot: DataSnapshot) {
-                        if (dataSnapshot.exists()) {
-                            val email = dataSnapshot.child("Email").child(query.toString()).getValue().toString()
-                            System.out.println("DSIAJDIOASJOIDJIASJDISAJD " + email)
-                            val name = dataSnapshot.child("Name").getValue().toString()
-                            //list.add(name)
-                        }
-                    }
-
-                    override fun onCancelled(error: DatabaseError) {
-                        Log.w(ContentValues.TAG, "Failed to read value.", error.toException())
-                    }
-                })
-                return false
-            }
-        })
-
-        listView = findViewById(finals.project.R.id.listView)
-        listView.visibility = View.VISIBLE
-
 
         val database = FirebaseDatabase.getInstance()
         val myRefEmail = database.getReference("users/")
 
-        list = ArrayList()
-
-        list.add("Apple")
-        list.add("Banana")
-        list.add("Pineapple")
-        list.add("Orange")
-        list.add("Mango")
-        list.add("Grapes")
-        list.add("Lemon")
-        list.add("Melon")
-        list.add("Watermelon")
-        list.add("Papaya")
-
-
-        adapter = ArrayAdapter<String>(applicationContext, finals.project.R.layout.text_color_layout, list)
-        listView.adapter = adapter
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
                 myRefEmail.addValueEventListener(object: ValueEventListener {
                     override fun onDataChange(dataSnapshot: DataSnapshot) {
                         if (dataSnapshot.exists()) {
                             val email = dataSnapshot.child(query).child("Email").getValue().toString()
-                            System.out.println("DSIAJDIOASJOIDJIASJDISAJD " + email)
-                            val name = dataSnapshot.child("Name").getValue().toString()
-                            //list.add(name)
+                            val name = dataSnapshot.child(query).child("Name").getValue().toString()
+                            Toast.makeText(
+                                applicationContext,
+                                "Now Viewing " + name + "'s Profile",
+                                Toast.LENGTH_LONG
+                            ).show()
+                            profileTitle.text = name
+                            contact.text = "Email Address: " + email
+                            layout.visibility = View.VISIBLE
                         }
                     }
 
@@ -114,7 +71,6 @@ class FriendSearchActivity : AppCompatActivity() {
                 return false
             }
             override fun onQueryTextChange(newText: String): Boolean {
-                adapter.filter.filter(newText)
                 return false
             }
         })

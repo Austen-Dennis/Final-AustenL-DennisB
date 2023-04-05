@@ -32,19 +32,6 @@
             tools:layout_editor_absoluteX="16dp"></SearchView>
     </Toolbar>
 
-    <ListView
-        android:id="@+id/listView"
-        style="@android:style/Widget.DeviceDefault.ExpandableListView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/searchView"
-        android:background="#131111"
-        android:layout_gravity="bottom|center"
-        android:textColor="@android:color/holo_orange_dark"
-        android:textSize="24sp"
-        android:translationY="50dp"
-        tools:ignore="NotSibling"
-        tools:layout_editor_absoluteY="50dp" />
     <LinearLayout
         android:id="@+id/layout"
         android:layout_width="match_parent"

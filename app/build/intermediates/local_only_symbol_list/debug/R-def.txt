@@ -36,7 +36,6 @@ id imageview1
 id input
 id item_text
 id layout
-id listView
 id list_of_messages
 id loading
 id login
