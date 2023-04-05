@@ -4859,6 +4859,7 @@ id center_vertical
 id chain
 id chain2
 id chains
+id changeName
 id channelActionsContainer
 id channelItemView
 id channelListHeader
@@ -5266,6 +5267,7 @@ id nested_recycler_view_layout
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
+id newName
 id new_message
 id noScroll
 id noState
@@ -5474,6 +5476,7 @@ id status_bar_latest_event_content
 id stop
 id stretch
 id submenuarrow
+id submit
 id submit_area
 id subtitleContainer
 id suggestionsCardView

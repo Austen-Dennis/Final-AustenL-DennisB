@@ -20,5 +20,20 @@ class DataActivity : AppCompatActivity() {
             }
         }
 
+        fun nameChange(uid: String?, name: String?) {
+            val database = FirebaseDatabase.getInstance()
+            val myRef = database.getReference("users/" + uid)
+            if (uid != null) {
+                myRef.child("Name").setValue(name)
+            }
+        }
+
+        fun profilePic(uid: String?) {
+            val database = FirebaseDatabase.getInstance()
+            val myRef = database.getReference("users/" + uid)
+            if (uid != null) {
+
+            }
+        }
     }
 }

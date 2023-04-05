@@ -23,6 +23,7 @@ id Camera
 id Gallery
 id accountInfo
 id addFriend
+id changeName
 id container
 id copyID
 id displayInfo
@@ -43,6 +44,7 @@ id message_text
 id message_time
 id message_user
 id navigation
+id newName
 id new_message
 id password
 id post
@@ -56,6 +58,7 @@ id searchView
 id sign_out
 id sms
 id so
+id submit
 id textInputLayout
 id update
 id user

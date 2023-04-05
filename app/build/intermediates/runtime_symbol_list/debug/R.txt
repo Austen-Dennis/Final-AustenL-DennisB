@@ -4858,6 +4858,7 @@ int id center_vertical 0x7f0a0104
 int id chain 0x7f0a0105
 int id chain2 0x7f0a0106
 int id chains 0x7f0a0107
+int id changeName 0x7f0a03f0
 int id channelActionsContainer 0x7f0a0108
 int id channelItemView 0x7f0a0109
 int id channelListHeader 0x7f0a010a
@@ -5265,6 +5266,7 @@ int id nested_recycler_view_layout 0x7f0a029b
 int id never 0x7f0a029c
 int id neverCompleteToEnd 0x7f0a029d
 int id neverCompleteToStart 0x7f0a029e
+int id newName 0x7f0a03f1
 int id new_message 0x7f0a029f
 int id noScroll 0x7f0a02a0
 int id noState 0x7f0a02a1
@@ -5473,6 +5475,7 @@ int id status_bar_latest_event_content 0x7f0a036a
 int id stop 0x7f0a036b
 int id stretch 0x7f0a036c
 int id submenuarrow 0x7f0a036d
+int id submit 0x7f0a03f2
 int id submit_area 0x7f0a036e
 int id subtitleContainer 0x7f0a036f
 int id suggestionsCardView 0x7f0a0370

@@ -7,18 +7,16 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.storage.ktx.storage
 import finals.project.smsPage.SmsPage
 import finals.project.ui.login.LoginActivity
-import java.util.logging.Level.parse
 
 class ProfileActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -45,7 +43,9 @@ class ProfileActivity : AppCompatActivity() {
         val hideInfoButton = findViewById<View>(finals.project.R.id.hideInfo)
         val showInfoButton = findViewById<View>(finals.project.R.id.displayInfo)
         val copyIDButton = findViewById<View>(finals.project.R.id.copyID)
-
+        val changeName = findViewById<View>(finals.project.R.id.changeName)
+        val nameText = findViewById<View>(finals.project.R.id.newName) as EditText
+        val submit = findViewById<View>(finals.project.R.id.submit)
         profileTitle.text = "Welcome " + name + "!"
 
         val email = findViewById<View>(finals.project.R.id.email) as TextView
@@ -60,6 +60,9 @@ class ProfileActivity : AppCompatActivity() {
         userID.visibility=View.GONE
         hideInfoButton.visibility=View.GONE
         copyIDButton.visibility=View.GONE
+        changeName.visibility=View.GONE
+        nameText.visibility=View.GONE
+        submit.visibility=View.GONE
 
 
 
@@ -70,6 +73,7 @@ class ProfileActivity : AppCompatActivity() {
             showInfoButton.visibility=View.GONE
             profilePicture.visibility = View.VISIBLE
             copyIDButton.visibility=View.VISIBLE
+            changeName.visibility=View.VISIBLE
         }
         hideInfoButton.setOnClickListener {
             email.visibility= View.GONE
@@ -78,6 +82,16 @@ class ProfileActivity : AppCompatActivity() {
             hideInfoButton.visibility=View.GONE
             copyIDButton.visibility=View.GONE
             profilePicture.visibility = View.GONE
+            changeName.visibility=View.GONE
+            submit.visibility=View.GONE
+        }
+        changeName.setOnClickListener {
+            nameText.visibility = View.VISIBLE
+            submit.visibility=View.VISIBLE
+        }
+        submit.setOnClickListener {
+            val newName = nameText.getText().toString()
+            DataActivity.nameChange(uid, newName)
         }
         copyIDButton.setOnClickListener {
             val clip: ClipData = ClipData.newPlainText("simple text", uid)

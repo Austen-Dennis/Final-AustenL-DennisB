@@ -85,6 +85,44 @@
                 tools:ignore="RtlCompat"
                 tools:visibility="gone" />
             <Button
+                android:id="@+id/changeName"
+                android:layout_width="194dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/rounded_box"
+                android:text="Change Name?"
+                android:textAlignment="center"
+                android:translationY="-2dp"
+                tools:ignore="RtlCompat"
+                tools:visibility="gone" />
+
+            <EditText
+                android:id="@+id/newName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/rounded_box"
+                android:backgroundTint="@color/white"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="#393939"
+                android:textSize="20sp"
+                tools:visibility="gone" />
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/rounded_box"
+                android:text="Submit"
+                android:textAlignment="center"
+                android:translationY="-2dp"
+                tools:ignore="RtlCompat"
+                tools:visibility="gone" />
+            <Button
                 android:id="@+id/profilePic"
                 android:layout_width="194dp"
                 android:layout_height="40dp"
