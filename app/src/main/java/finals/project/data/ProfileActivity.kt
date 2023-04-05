@@ -1,20 +1,23 @@
 package finals.project.data
 
 import android.annotation.SuppressLint
-import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
-import android.content.Intent
+import android.content.*
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.ktx.Firebase
 import finals.project.smsPage.SmsPage
 import finals.project.ui.login.LoginActivity
 
@@ -34,10 +37,6 @@ class ProfileActivity : AppCompatActivity() {
         val releaseIntent = Intent(Intent.ACTION_VIEW)
         val urlProjectInfo = "https://github.com/bsu-cs222-spring23-dll/Final-AustenL-DennisB-BeethovenM-JulianR#get-together"
         val projectInfoIntent = Intent(Intent.ACTION_VIEW)
-        val displayName = LoginActivity.nameGrab()
-        val name = displayName?.let { LoginActivity.emailTrim(it) }
-        val uid = LoginActivity.uidGrab()
-        val clip: ClipData = ClipData.newPlainText("simple text", uid)
         val profilePicture = findViewById<View>(finals.project.R.id.profilePic)
         val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
         val hideInfoButton = findViewById<View>(finals.project.R.id.hideInfo)
@@ -46,85 +45,114 @@ class ProfileActivity : AppCompatActivity() {
         val changeName = findViewById<View>(finals.project.R.id.changeName)
         val nameText = findViewById<View>(finals.project.R.id.newName) as EditText
         val submit = findViewById<View>(finals.project.R.id.submit)
-        profileTitle.text = "Welcome " + name + "!"
-
-        val email = findViewById<View>(finals.project.R.id.email) as TextView
-        email.text = "Email: \n" + displayName
-
-        //this will be a way to add people as friends
+        val uid = FirebaseAuth.getInstance().uid
+        val emailText = findViewById<View>(finals.project.R.id.email) as TextView
         val userID = findViewById<View>(finals.project.R.id.user) as TextView
-        userID.text = "User ID: \n" + uid
+        val myRef = FirebaseDatabase.getInstance().getReference("users")
 
-        profilePicture.visibility = View.GONE
-        email.visibility= View.GONE
-        userID.visibility=View.GONE
-        hideInfoButton.visibility=View.GONE
-        copyIDButton.visibility=View.GONE
-        changeName.visibility=View.GONE
-        nameText.visibility=View.GONE
-        submit.visibility=View.GONE
+        myRef.addValueEventListener(object: ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    val email = dataSnapshot.child(uid.toString()).child("Email").getValue().toString()
+                    val name = dataSnapshot.child(uid.toString()).child("Name").getValue().toString()
+                    val clip: ClipData = ClipData.newPlainText("simple text", uid)
+                    profileTitle.text = "Welcome " + name + "!"
+                    emailText.text = "Email: \n" + email
+                    userID.text = "User ID: \n" + uid
+                    profilePicture.visibility = View.GONE
+                    emailText.visibility= View.GONE
+                    userID.visibility=View.GONE
+                    hideInfoButton.visibility=View.GONE
+                    copyIDButton.visibility=View.GONE
+                    changeName.visibility=View.GONE
+                    nameText.visibility=View.GONE
+                    submit.visibility=View.GONE
 
 
 
-        showInfoButton.setOnClickListener {
-            email.visibility= View.VISIBLE
-            userID.visibility=View.VISIBLE
-            hideInfoButton.visibility=View.VISIBLE
-            showInfoButton.visibility=View.GONE
-            profilePicture.visibility = View.VISIBLE
-            copyIDButton.visibility=View.VISIBLE
-            changeName.visibility=View.VISIBLE
-        }
-        hideInfoButton.setOnClickListener {
-            email.visibility= View.GONE
-            userID.visibility=View.GONE
-            showInfoButton.visibility=View.VISIBLE
-            hideInfoButton.visibility=View.GONE
-            copyIDButton.visibility=View.GONE
-            profilePicture.visibility = View.GONE
-            changeName.visibility=View.GONE
-            submit.visibility=View.GONE
-        }
-        changeName.setOnClickListener {
-            nameText.visibility = View.VISIBLE
-            submit.visibility=View.VISIBLE
-        }
-        submit.setOnClickListener {
-            val newName = nameText.getText().toString()
-            DataActivity.nameChange(uid, newName)
-        }
-        copyIDButton.setOnClickListener {
-            val clip: ClipData = ClipData.newPlainText("simple text", uid)
-            val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-            clipboard.setPrimaryClip(clip)
-            Toast.makeText(
-                applicationContext,
-                "Successfully Copied User ID",
-                Toast.LENGTH_LONG
-            ).show()
-        }
-        val updatePassButton = findViewById<View>(finals.project.R.id.update)
-        updatePassButton.setOnClickListener {
-            if (displayName != null) {
-                FirebaseAuth.getInstance().sendPasswordResetEmail(displayName)
-                Toast.makeText(
-                    applicationContext,
-                    "Email sent to " + displayName,
-                    Toast.LENGTH_LONG
-                ).show()
+                    showInfoButton.setOnClickListener {
+                        emailText.visibility= View.VISIBLE
+                        userID.visibility=View.VISIBLE
+                        hideInfoButton.visibility=View.VISIBLE
+                        showInfoButton.visibility=View.GONE
+                        profilePicture.visibility = View.VISIBLE
+                        copyIDButton.visibility=View.VISIBLE
+                        changeName.visibility=View.VISIBLE
+                    }
+                    hideInfoButton.setOnClickListener {
+                        emailText.visibility= View.GONE
+                        userID.visibility=View.GONE
+                        showInfoButton.visibility=View.VISIBLE
+                        hideInfoButton.visibility=View.GONE
+                        copyIDButton.visibility=View.GONE
+                        profilePicture.visibility = View.GONE
+                        changeName.visibility=View.GONE
+                        nameText.visibility=View.GONE
+                        submit.visibility=View.GONE
+                    }
+                    changeName.setOnClickListener {
+                        nameText.visibility = View.VISIBLE
+                        submit.visibility=View.VISIBLE
+
+                    }
+                    submit.setOnClickListener {
+                        val newName = nameText.getText().toString()
+                        DataActivity.nameChange(uid, newName)
+                        Toast.makeText(
+                            applicationContext,
+                            "Name Changed Successfully!",
+                            Toast.LENGTH_LONG
+                        ).show()
+                        emailText.visibility= View.GONE
+                        userID.visibility=View.GONE
+                        showInfoButton.visibility=View.VISIBLE
+                        hideInfoButton.visibility=View.GONE
+                        copyIDButton.visibility=View.GONE
+                        profilePicture.visibility = View.GONE
+                        changeName.visibility=View.GONE
+                        nameText.visibility=View.GONE
+                        submit.visibility=View.GONE
+                    }
+                    copyIDButton.setOnClickListener {
+                        val clip: ClipData = ClipData.newPlainText("simple text", uid)
+                        val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+                        clipboard.setPrimaryClip(clip)
+                        Toast.makeText(
+                            applicationContext,
+                            "Successfully Copied User ID",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+                    val updatePassButton = findViewById<View>(finals.project.R.id.update)
+                    updatePassButton.setOnClickListener {
+                        if (name != null) {
+                            FirebaseAuth.getInstance().sendPasswordResetEmail(name)
+                            Toast.makeText(
+                                applicationContext,
+                                "Email sent to " + name,
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
+                    }
+                    val releaseButton = findViewById<View>(finals.project.R.id.release)
+                    releaseButton.setOnClickListener {
+                        releaseIntent.data = Uri.parse(urlRelease)
+                        startActivity(releaseIntent)
+                    }
+                    val projectInfoButton = findViewById<View>(finals.project.R.id.project)
+                    projectInfoButton.setOnClickListener {
+                        projectInfoIntent.data = Uri.parse(urlProjectInfo)
+                        startActivity(projectInfoIntent)
+
+                    }
+                }
             }
-        }
-        val releaseButton = findViewById<View>(finals.project.R.id.release)
-        releaseButton.setOnClickListener {
-            releaseIntent.data = Uri.parse(urlRelease)
-            startActivity(releaseIntent)
-        }
-        val projectInfoButton = findViewById<View>(finals.project.R.id.project)
-        projectInfoButton.setOnClickListener {
-            projectInfoIntent.data = Uri.parse(urlProjectInfo)
-            startActivity(projectInfoIntent)
 
-        }
+            override fun onCancelled(error: DatabaseError) {
+                Log.w(ContentValues.TAG, "Failed to read value.", error.toException())
+            }
+        })
+
 
         val postButton = findViewById<View>(finals.project.R.id.post)
         postButton.setOnClickListener {
