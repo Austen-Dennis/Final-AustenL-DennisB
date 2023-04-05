@@ -40,6 +40,7 @@ class ProfileActivity : AppCompatActivity() {
         val name = displayName?.let { LoginActivity.emailTrim(it) }
         val uid = LoginActivity.uidGrab()
         val clip: ClipData = ClipData.newPlainText("simple text", uid)
+        val profilePicture = findViewById<View>(finals.project.R.id.profilePic)
         val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
         val hideInfoButton = findViewById<View>(finals.project.R.id.hideInfo)
         val showInfoButton = findViewById<View>(finals.project.R.id.displayInfo)
@@ -54,6 +55,7 @@ class ProfileActivity : AppCompatActivity() {
         val userID = findViewById<View>(finals.project.R.id.user) as TextView
         userID.text = "User ID: \n" + uid
 
+        profilePicture.visibility = View.GONE
         email.visibility= View.GONE
         userID.visibility=View.GONE
         hideInfoButton.visibility=View.GONE
@@ -66,6 +68,7 @@ class ProfileActivity : AppCompatActivity() {
             userID.visibility=View.VISIBLE
             hideInfoButton.visibility=View.VISIBLE
             showInfoButton.visibility=View.GONE
+            profilePicture.visibility = View.VISIBLE
             copyIDButton.visibility=View.VISIBLE
         }
         hideInfoButton.setOnClickListener {
@@ -74,6 +77,7 @@ class ProfileActivity : AppCompatActivity() {
             showInfoButton.visibility=View.VISIBLE
             hideInfoButton.visibility=View.GONE
             copyIDButton.visibility=View.GONE
+            profilePicture.visibility = View.GONE
         }
         copyIDButton.setOnClickListener {
             val clip: ClipData = ClipData.newPlainText("simple text", uid)

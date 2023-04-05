@@ -47,6 +47,7 @@ id new_message
 id password
 id post
 id profile
+id profilePic
 id profileTitle
 id project
 id release

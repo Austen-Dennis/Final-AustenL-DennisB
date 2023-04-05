@@ -36,8 +36,16 @@
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\placeholder.jpg"
     },
     {
+        "merged": "finals.project.app-merged_res-66:/layout_activity_profile.xml.flat",
+        "source": "finals.project.app-main-68:/layout/activity_profile.xml"
+    },
+    {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_activity_profile.xml.flat",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_profile.xml"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -46,10 +54,6 @@
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout-w936dp_activity_login.xml.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout-w936dp\\activity_login.xml"
-    },
-    {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_activity_profile.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_profile.xml"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout-w1240dp_activity_login.xml.flat",
@@ -102,10 +106,6 @@
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_post.xml.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\post.xml"
-    },
-    {
-        "merged": "finals.project.app-merged_res-66:/layout_activity_friend_search.xml.flat",
-        "source": "finals.project.app-main-68:/layout/activity_friend_search.xml"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable_rounded_box.xml.flat",
