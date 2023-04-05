@@ -17,9 +17,9 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.google.firebase.ktx.Firebase
 import finals.project.smsPage.SmsPage
 import finals.project.ui.login.LoginActivity
+
 
 class ProfileActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -103,6 +103,8 @@ class ProfileActivity : AppCompatActivity() {
                             "Name Changed Successfully!",
                             Toast.LENGTH_LONG
                         ).show()
+                        val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+                        imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0)
                         emailText.visibility= View.GONE
                         userID.visibility=View.GONE
                         showInfoButton.visibility=View.VISIBLE
