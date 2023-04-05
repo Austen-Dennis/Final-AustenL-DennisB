@@ -29,10 +29,11 @@ class LatestMessagesActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
         when(item?.itemId) {
             R.id.new_message ->{
-                FirebaseAuth.getInstance().signOut()
-
+                val intent = Intent(this, NewMessageActivity::class.java)
+                startActivity(intent)
             }
             R.id.sign_out->{ val intent = Intent(this, LoginActivity::class.java)
+                FirebaseAuth.getInstance().signOut()
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
                 startActivity(intent)
             }
