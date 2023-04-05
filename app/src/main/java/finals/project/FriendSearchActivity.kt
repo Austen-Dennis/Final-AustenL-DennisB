@@ -14,6 +14,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.google.firebase.ktx.Firebase
 import finals.project.smsPage.LatestMessagesActivity
 
 
@@ -37,6 +38,7 @@ class FriendSearchActivity : AppCompatActivity() {
         val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
         val contact = findViewById<View>(finals.project.R.id.email) as TextView
         val layout = findViewById<View>(finals.project.R.id.layout)
+        val addFriend = findViewById<View>(finals.project.R.id.addFriend)
         layout.visibility = View.INVISIBLE
 
         val mAuth = FirebaseAuth.getInstance()
@@ -45,6 +47,7 @@ class FriendSearchActivity : AppCompatActivity() {
 
         val database = FirebaseDatabase.getInstance()
         val myRefEmail = database.getReference("users/")
+        val myEmail = FirebaseAuth.getInstance().currentUser?.email
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
@@ -53,14 +56,17 @@ class FriendSearchActivity : AppCompatActivity() {
                         if (dataSnapshot.exists()) {
                             val email = dataSnapshot.child(query).child("Email").getValue().toString()
                             val name = dataSnapshot.child(query).child("Name").getValue().toString()
-                            Toast.makeText(
-                                applicationContext,
-                                "Now Viewing " + name + "'s Profile",
-                                Toast.LENGTH_LONG
-                            ).show()
                             profileTitle.text = name
                             contact.text = "Email Address: " + email
                             layout.visibility = View.VISIBLE
+                            addFriend.setOnClickListener {
+                                myRefEmail.child(query).child("Pending Friend Request").push().setValue(myEmail)
+                                Toast.makeText(
+                                    applicationContext,
+                                    "Friend Request Sent!",
+                                    Toast.LENGTH_LONG
+                                ).show()
+                            }
                         }
                     }
 
