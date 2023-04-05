@@ -46,6 +46,10 @@ class ProfileActivity : AppCompatActivity() {
         val submit = findViewById<View>(finals.project.R.id.submit)
         val uid = FirebaseAuth.getInstance().uid
         val emailText = findViewById<View>(finals.project.R.id.email) as TextView
+        val emailValue = findViewById<View>(finals.project.R.id.emailValue) as TextView
+        val bioValue = findViewById<View>(finals.project.R.id.bioValue) as TextView
+        val nameValue = findViewById<View>(finals.project.R.id.nameValue) as TextView
+        val gitValue = findViewById<View>(finals.project.R.id.gitValue) as TextView
         val userID = findViewById<View>(finals.project.R.id.user) as TextView
         val myRef = FirebaseDatabase.getInstance().getReference("users")
         val gitHubSub = findViewById<View>(finals.project.R.id.submitGit)
@@ -60,13 +64,36 @@ class ProfileActivity : AppCompatActivity() {
                 if (dataSnapshot.exists()) {
                     val email = dataSnapshot.child(uid.toString()).child("Email").getValue().toString()
                     val name = dataSnapshot.child(uid.toString()).child("Name").getValue().toString()
+                    val bioSnap = dataSnapshot.child(uid.toString()).child("Bio").getValue().toString()
+                    val gitLink = dataSnapshot.child(uid.toString()).child("GitHub Link").getValue().toString()
+                    val collegeEmailSnap = dataSnapshot.child(uid.toString()).child("College Email").getValue().toString()
                     val clip: ClipData = ClipData.newPlainText("simple text", uid)
                     if (dataSnapshot.child(uid.toString()).child("Name").exists()) {
                         profileTitle.text = "Welcome " + name + "!"
                     } else {
                         profileTitle.text = "Welcome!"
                     }
+                    if (dataSnapshot.child(uid.toString()).child("Bio").exists()) {
+                        bioValue.text = bioSnap
+                    } else {
+                        bioValue.text = "No Bio Yet"
+                    }
+                    if (dataSnapshot.child(uid.toString()).child("GitHub Link").exists()) {
+                        gitValue.text = "GitHub Link: " + gitLink
+                    } else {
+                        gitValue.text = ""
+                    }
+                    if (dataSnapshot.child(uid.toString()).child("College Email").exists()) {
+                        emailValue.text = "Contact: " + collegeEmailSnap
+                    } else {
+                        emailValue.text = "Contact: " + email
+                    }
 
+
+                    profileTitle.visibility=View.VISIBLE
+                    bioValue.visibility=View.VISIBLE
+                    gitValue.visibility=View.VISIBLE
+                    emailValue.visibility=View.VISIBLE
                     emailText.text = "Email: \n" + email
                     userID.text = "User ID: \n" + uid
                     emailText.visibility= View.GONE

@@ -4726,6 +4726,7 @@ id beginOnFirstDraw
 id beginning
 id bestChoice
 id bio
+id bioValue
 id blocking
 id blurLayer
 id bold
@@ -4984,6 +4985,7 @@ id edit_phone_number
 id edit_query
 id elastic
 id email
+id emailValue
 id email_button
 id email_footer_tos_and_pp_text
 id email_layout
@@ -5050,6 +5052,7 @@ id giphyLabel
 id giphyLabelTextView
 id giphyPreview
 id giphyQueryTextView
+id gitValue
 id glide_custom_view_target_tag
 id gone
 id grantPermissionsContainer
@@ -5250,6 +5253,7 @@ id mtrl_view_tag_bottom_padding
 id multiply
 id muteIcon
 id name
+id nameValue
 id name_layout
 id navigation
 id navigation_bar_item_active_indicator_view

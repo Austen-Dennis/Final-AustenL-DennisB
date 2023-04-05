@@ -4725,6 +4725,7 @@ int id beginOnFirstDraw 0x7f0a007f
 int id beginning 0x7f0a0080
 int id bestChoice 0x7f0a0081
 int id bio 0x7f0a0082
+int id bioValue 0x7f0a03f1
 int id blocking 0x7f0a0083
 int id blurLayer 0x7f0a0084
 int id bold 0x7f0a0085
@@ -4983,6 +4984,7 @@ int id edit_phone_number 0x7f0a0181
 int id edit_query 0x7f0a0182
 int id elastic 0x7f0a0183
 int id email 0x7f0a0184
+int id emailValue 0x7f0a03f2
 int id email_button 0x7f0a0185
 int id email_footer_tos_and_pp_text 0x7f0a0186
 int id email_layout 0x7f0a0187
@@ -5049,6 +5051,7 @@ int id giphyLabel 0x7f0a01c3
 int id giphyLabelTextView 0x7f0a01c4
 int id giphyPreview 0x7f0a01c5
 int id giphyQueryTextView 0x7f0a01c6
+int id gitValue 0x7f0a03f3
 int id glide_custom_view_target_tag 0x7f0a01c7
 int id gone 0x7f0a01c8
 int id grantPermissionsContainer 0x7f0a01c9
@@ -5249,6 +5252,7 @@ int id mtrl_view_tag_bottom_padding 0x7f0a028b
 int id multiply 0x7f0a028c
 int id muteIcon 0x7f0a028d
 int id name 0x7f0a028e
+int id nameValue 0x7f0a03f4
 int id name_layout 0x7f0a028f
 int id navigation 0x7f0a0290
 int id navigation_bar_item_active_indicator_view 0x7f0a0291

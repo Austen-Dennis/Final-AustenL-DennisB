@@ -25,11 +25,14 @@ id GitHub
 id accountInfo
 id addFriend
 id bio
+id bioValue
 id collegeEmail
 id container
 id copyID
 id displayInfo
 id email
+id emailValue
+id gitValue
 id help
 id hideInfo
 id home
@@ -39,6 +42,7 @@ id item_text
 id layout
 id loading
 id login
+id nameValue
 id navigation
 id newName
 id new_message
