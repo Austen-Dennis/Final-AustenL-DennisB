@@ -28,7 +28,6 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.getValue
 import finals.project.smsPage.LatestMessagesActivity
-import finals.project.smsPage.SmsPage
 import java.lang.Exception
 
 

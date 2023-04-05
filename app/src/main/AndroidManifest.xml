@@ -27,9 +27,6 @@
             android:name=".data.PostActivity"
             android:exported="false" />
         <activity
-            android:name=".smsPage.SmsPage"
-            android:exported="false" />
-        <activity
             android:name=".data.HomeActivity"
             android:exported="false" />
         <activity

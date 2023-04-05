@@ -17,7 +17,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import finals.project.smsPage.SmsPage
+import finals.project.smsPage.LatestMessagesActivity
 import finals.project.ui.login.LoginActivity
 
 
@@ -30,7 +30,7 @@ class ProfileActivity : AppCompatActivity() {
         setSupportActionBar(toolbar as Toolbar?)
         val intentLogin = Intent(this, LoginActivity::class.java)
         val intentPost = Intent(this, PostActivity::class.java)
-        val intentSms = Intent(this, SmsPage::class.java)
+        val intentSms = Intent(this, LatestMessagesActivity::class.java)
         val intentSearch = Intent(this, FriendSearchActivity::class.java)
         val intentReturn = Intent(this, HomeActivity::class.java)
         val urlRelease = "https://github.com/bsu-cs222-spring23-dll/Final-AustenL-DennisB-BeethovenM-JulianR/releases"

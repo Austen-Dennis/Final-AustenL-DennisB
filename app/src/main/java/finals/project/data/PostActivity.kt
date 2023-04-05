@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
-import finals.project.smsPage.SmsPage
+import finals.project.smsPage.LatestMessagesActivity
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -26,7 +26,7 @@ class PostActivity : AppCompatActivity() {
         setContentView(finals.project.R.layout.post)
         val toolbar = findViewById<View>(io.getstream.chat.android.ui.R.id.toolbar)
         setSupportActionBar(toolbar as Toolbar?)
-        val intentSMS = Intent(this, SmsPage::class.java)
+        val intentSMS = Intent(this, LatestMessagesActivity::class.java)
         val intentHOME = Intent(this, HomeActivity::class.java)
         val intentSEARCH = Intent(this, FriendSearchActivity::class.java)
         val intentPROFILE = Intent(this, ProfileActivity::class.java)
