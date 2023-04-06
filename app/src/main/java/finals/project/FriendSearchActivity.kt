@@ -60,7 +60,7 @@ class FriendSearchActivity : AppCompatActivity() {
                 myRefEmail.addValueEventListener(object: ValueEventListener {
                     override fun onDataChange(dataSnapshot: DataSnapshot) {
                         if (dataSnapshot.exists()) {
-                            if (dataSnapshot.child(query).exists()) {
+                            if (dataSnapshot.child(query).exists() && query != currentUserId) {
                                 layout.visibility = View.VISIBLE
                                 val email =
                                     dataSnapshot.child(query).child("Email").getValue().toString()
