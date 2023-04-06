@@ -100,8 +100,7 @@ class FriendSearchActivity : AppCompatActivity() {
                                     emailValue.text = "Contact: " + email
                                 }
                                 addFriend.setOnClickListener {
-                                    myRefEmail.child(query).child("Pending Friend Request").push()
-                                        .setValue(myEmail)
+                                    myRefEmail.child(query).child("Pending Friend Request").child(uid.toString()).setValue("Recieved")
                                     Toast.makeText(
                                         applicationContext,
                                         "Friend Request Sent!",

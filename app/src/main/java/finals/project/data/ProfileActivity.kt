@@ -58,6 +58,7 @@ class ProfileActivity : AppCompatActivity() {
         val bio = findViewById<View>(finals.project.R.id.bio) as EditText
         val emailSub = findViewById<View>(finals.project.R.id.submitEmail)
         val collegeEmail = findViewById<View>(finals.project.R.id.collegeEmail) as EditText
+        val friendButton = findViewById<View>(finals.project.R.id.addFriend)
 
         myRef.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -67,6 +68,7 @@ class ProfileActivity : AppCompatActivity() {
                     val bioSnap = dataSnapshot.child(uid.toString()).child("Bio").getValue().toString()
                     val gitLink = dataSnapshot.child(uid.toString()).child("GitHub Link").getValue().toString()
                     val collegeEmailSnap = dataSnapshot.child(uid.toString()).child("College Email").getValue().toString()
+                    val pendingRequest = dataSnapshot.child(uid.toString()).child("Pending Friend Request").getValue().toString()
                     val clip: ClipData = ClipData.newPlainText("simple text", uid)
                     profileTitle.text = "Your Profile"
                     if (dataSnapshot.child(uid.toString()).child("Name").exists()) {
