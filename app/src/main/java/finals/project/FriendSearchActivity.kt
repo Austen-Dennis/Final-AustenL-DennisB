@@ -26,10 +26,12 @@ class FriendSearchActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(finals.project.R.layout.activity_friend_search) // sets the view using the homepage.xml
+        setContentView(finals.project.R.layout.activity_friend_search) // sets the view using the activity_friend_search
+
         val toolbar = findViewById<View>(io.getstream.chat.android.ui.R.id.toolbar)
         setSupportActionBar(toolbar as Toolbar?)
-        //sets the intent I.E. calls to the class Smspage which displays a layout
+
+        //sets the intent I.E. calls to the class LatestMessages which displays a layout
         val intentSMS = Intent(this, LatestMessagesActivity::class.java)
         val intentPOST = Intent(this, PostActivity::class.java)
         val intentPROFILE = Intent(this, ProfileActivity::class.java)
@@ -44,37 +46,36 @@ class FriendSearchActivity : AppCompatActivity() {
         val nameValue = findViewById<View>(finals.project.R.id.nameValue) as TextView
         val gitValue = findViewById<View>(finals.project.R.id.gitValue) as TextView
         val myRef = FirebaseDatabase.getInstance().getReference("users")
+
         layout.visibility=View.GONE
 
 
         val mAuth = FirebaseAuth.getInstance()
         val currentUserId = mAuth.currentUser?.uid
         val profileUserRef = FirebaseDatabase.getInstance().getReference()
-
         val database = FirebaseDatabase.getInstance()
         val myRefEmail = database.getReference("users/")
         val myEmail = FirebaseAuth.getInstance().currentUser?.email
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+
             override fun onQueryTextSubmit(query: String): Boolean {
                 myRefEmail.addValueEventListener(object: ValueEventListener {
+
                     override fun onDataChange(dataSnapshot: DataSnapshot) {
+
                         if (dataSnapshot.exists()) {
                             if (dataSnapshot.child(query).exists() && query != currentUserId) {
                                 layout.visibility = View.VISIBLE
-                                val email =
-                                    dataSnapshot.child(query).child("Email").getValue().toString()
-                                val name =
-                                    dataSnapshot.child(query).child("Name").getValue().toString()
-                                val bioSnap =
-                                    dataSnapshot.child(query).child("Bio").getValue().toString()
-                                val gitLink =
-                                    dataSnapshot.child(query).child("GitHub Link").getValue()
-                                        .toString()
+                                val email = dataSnapshot.child(query).child("Email").getValue().toString()
+                                val name = dataSnapshot.child(query).child("Name").getValue().toString()
+                                val bioSnap = dataSnapshot.child(query).child("Bio").getValue().toString()
+                                val gitLink = dataSnapshot.child(query).child("GitHub Link").getValue().toString()
                                 val collegeEmailSnap =
-                                    dataSnapshot.child(query).child("College Email").getValue()
-                                        .toString()
+                                    dataSnapshot.child(query).child("College Email").getValue().toString()
+
                                 profileTitle.text = "Profile Search"
+
                                 if (dataSnapshot.child(query.toString()).child("Name").exists()) {
                                     nameValue.text = name
                                 } else {
@@ -99,6 +100,7 @@ class FriendSearchActivity : AppCompatActivity() {
                                 } else {
                                     emailValue.text = "Contact: " + email
                                 }
+
                                 addFriend.setOnClickListener {
                                     myRefEmail.child(query).child("Pending Friend Request").child(uid.toString()).setValue("Recieved")
                                     Toast.makeText(
