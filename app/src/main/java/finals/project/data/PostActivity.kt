@@ -24,6 +24,8 @@ class PostActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(finals.project.R.layout.post)
+
+        //initial variables for setting intents.
         val toolbar = findViewById<View>(io.getstream.chat.android.ui.R.id.toolbar)
         setSupportActionBar(toolbar as Toolbar?)
         val intentSMS = Intent(this, LatestMessagesActivity::class.java)
@@ -34,6 +36,7 @@ class PostActivity : AppCompatActivity() {
         val intentGALLERY = Intent(MediaStore.ACTION_PICK_IMAGES)
         val imgView = findViewById<View>(finals.project.R.id.imageview1)
         val smsButton = findViewById<View>(finals.project.R.id.sms)
+
         smsButton.setOnClickListener {
             startActivity(intentSMS)
         }
@@ -58,6 +61,7 @@ class PostActivity : AppCompatActivity() {
             startActivity(intentPROFILE)
         }
 
+        //Stores images in the firebase database
         fun StoringImageToFirebase() {
             val calFordDate = Calendar.getInstance()
             val currentDate = SimpleDateFormat("dd-mmmm-yyyy")
