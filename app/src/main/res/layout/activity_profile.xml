@@ -26,47 +26,52 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="#FFFFFF"
-                android:textSize="34sp" />
+                android:textSize="34sp"/>
             <TextView
                 android:id="@+id/nameValue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:padding="5dp"
+                android:textSize="26sp"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
                 tools:visibility="gone" />
+
             <TextView
                 android:id="@+id/bioValue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:padding="5dp"
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 tools:visibility="gone" />
+
             <TextView
                 android:id="@+id/emailValue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:padding="5dp"
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 tools:visibility="gone" />
+
             <TextView
                 android:id="@+id/gitValue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:padding="5dp"
-                android:textAlignment="center"
+                android:autoLink="web"
+                android:inputType="textWebEditText"
+                android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
@@ -92,7 +97,7 @@
                 android:background="@drawable/rounded_box"
                 android:backgroundTint="@color/white"
                 android:padding="5dp"
-                android:translationY="30dp"
+                android:translationY="10dp"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="#393939"
@@ -103,11 +108,11 @@
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical|right"
-                android:layout_marginTop="0dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/rounded_box"
                 android:text="Submit"
                 android:textAlignment="center"
-                android:translationY="-10dp"
+                android:translationY="-47dp"
                 tools:ignore="RtlCompat"
                 tools:visibility="gone" />
 
@@ -120,7 +125,7 @@
                 android:backgroundTint="@color/white"
                 android:padding="5dp"
                 android:hint="Change Username"
-                android:translationY="20dp"
+                android:translationY="-40dp"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="#393939"
@@ -135,7 +140,7 @@
                 android:background="@drawable/rounded_box"
                 android:text="Submit"
                 android:textAlignment="center"
-                android:translationY="-17dp"
+                android:translationY="-77dp"
                 tools:ignore="RtlCompat"
                 tools:visibility="gone" />
             <EditText
@@ -147,7 +152,7 @@
                 android:backgroundTint="@color/white"
                 android:padding="5dp"
                 android:hint="Add Bio"
-                android:translationY="20dp"
+                android:translationY="-70dp"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="#393939"
@@ -162,7 +167,7 @@
                 android:background="@drawable/rounded_box"
                 android:text="Submit"
                 android:textAlignment="center"
-                android:translationY="-17dp"
+                android:translationY="-107dp"
                 tools:ignore="RtlCompat"
                 tools:visibility="gone" />
             <EditText
@@ -174,7 +179,7 @@
                 android:backgroundTint="@color/white"
                 android:padding="5dp"
                 android:hint="College Email (if applicable)"
-                android:translationY="20dp"
+                android:translationY="-100dp"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="#393939"
@@ -189,7 +194,7 @@
                 android:background="@drawable/rounded_box"
                 android:text="Submit"
                 android:textAlignment="center"
-                android:translationY="-17dp"
+                android:translationY="-137dp"
                 tools:ignore="RtlCompat"
                 tools:visibility="gone" />
 
@@ -197,6 +202,7 @@
                 android:id="@+id/displayInfo"
                 android:layout_width="194dp"
                 android:layout_height="40dp"
+                android:translationY="-130dp"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:background="@drawable/rounded_box"
                 android:text="Display Your Info"
@@ -209,6 +215,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:padding="5dp"
+                android:translationY="-130dp"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="#FFFFFF"
@@ -221,6 +228,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:padding="5dp"
+                android:translationY="-130dp"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="#FFFFFF"
@@ -232,10 +240,10 @@
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:layout_marginTop="0dp"
+                android:translationY="-130dp"
                 android:background="@drawable/rounded_box"
                 android:text="Copy to Clipboard"
                 android:textAlignment="center"
-                android:translationY="-5dp"
                 tools:ignore="RtlCompat"
                 tools:visibility="gone" />
 
@@ -243,9 +251,9 @@
                 android:id="@+id/hideInfo"
                 android:layout_width="194dp"
                 android:layout_height="40dp"
-                android:translationY="0dp"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:layout_marginTop="0dp"
+                android:translationY="-122dp"
                 android:background="@drawable/rounded_box"
                 android:text="Hide Your Info"
                 android:textAlignment="center"
@@ -259,6 +267,7 @@
                 android:layout_marginStart="5dp"
                 android:text="Help and Information"
                 android:textAlignment="center"
+                android:translationY="-120dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="#FFFFFF"
                 android:textSize="26sp" />
@@ -269,7 +278,7 @@
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:background="@drawable/rounded_box"
                 android:text="Latest Release"
-                android:translationY="5dp"
+                android:translationY="-115dp"
                 app:layout_constraintBottom_toBottomOf="parent" />
 
             <Button
@@ -279,7 +288,7 @@
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:background="@drawable/rounded_box"
                 android:text="About the Project"
-                android:translationY="10dp"
+                android:translationY="-110dp"
                 app:layout_constraintBottom_toBottomOf="parent" />
             <Button
                 android:id="@+id/profilePic"
@@ -290,7 +299,7 @@
                 android:background="@drawable/rounded_box"
                 android:text="Upload Profile Pic"
                 android:textAlignment="center"
-                android:translationY="15dp"
+                android:translationY="-105dp"
                 tools:ignore="RtlCompat"
                 tools:visibility="gone" />
 
@@ -309,7 +318,7 @@
                 android:paddingBottom="5dp"
                 android:text="Update Password"
                 android:textAlignment="center"
-                android:translationY="20dp"
+                android:translationY="-100dp"
                 tools:ignore="RtlCompat" />
 
             <TextView
@@ -319,10 +328,10 @@
                 android:layout_marginStart="5dp"
                 android:text="Sign Out"
                 android:textAlignment="center"
+                android:translationY="-95dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="#FFFFFF"
-                android:textSize="26sp"
-                android:translationY="22dp" />
+                android:textSize="26sp"/>
             <Button
                 android:id="@+id/so"
                 android:layout_width="194dp"
@@ -330,7 +339,7 @@
                 android:layout_gravity="bottom|center"
                 android:background="@drawable/rounded_box"
                 android:text="Sign Out"
-                android:translationY="22dp"
+                android:translationY="-92dp"
                 app:layout_constraintBottom_toBottomOf="parent" />
 
         </LinearLayout>

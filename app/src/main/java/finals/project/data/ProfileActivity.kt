@@ -68,10 +68,11 @@ class ProfileActivity : AppCompatActivity() {
                     val gitLink = dataSnapshot.child(uid.toString()).child("GitHub Link").getValue().toString()
                     val collegeEmailSnap = dataSnapshot.child(uid.toString()).child("College Email").getValue().toString()
                     val clip: ClipData = ClipData.newPlainText("simple text", uid)
+                    profileTitle.text = "Your Profile"
                     if (dataSnapshot.child(uid.toString()).child("Name").exists()) {
-                        profileTitle.text = "Welcome " + name + "!"
+                        nameValue.text = name
                     } else {
-                        profileTitle.text = "Welcome!"
+                        nameValue.text = email
                     }
                     if (dataSnapshot.child(uid.toString()).child("Bio").exists()) {
                         bioValue.text = bioSnap
@@ -81,13 +82,14 @@ class ProfileActivity : AppCompatActivity() {
                     if (dataSnapshot.child(uid.toString()).child("GitHub Link").exists()) {
                         gitValue.text = "GitHub Link: " + gitLink
                     } else {
-                        gitValue.text = ""
+                        gitValue.text = "No GitHub Link Yet"
                     }
                     if (dataSnapshot.child(uid.toString()).child("College Email").exists()) {
                         emailValue.text = "Contact: " + collegeEmailSnap
                     } else {
                         emailValue.text = "Contact: " + email
                     }
+
 
 
                     profileTitle.visibility=View.VISIBLE
