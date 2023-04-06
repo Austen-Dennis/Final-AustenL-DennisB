@@ -20,6 +20,6 @@ class LoginDataSource {
     }
 
     fun logout() {
-        // TODO: revoke authentication
+        FirebaseAuth.getInstance().signOut()
     }
 }
