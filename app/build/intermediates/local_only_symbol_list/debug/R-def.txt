@@ -26,6 +26,7 @@ id accountInfo
 id addFriend
 id bio
 id bioValue
+id button2
 id collegeEmail
 id container
 id copyID
@@ -64,6 +65,7 @@ id subBio
 id submit
 id submitEmail
 id submitGit
+id textView
 id update
 id user
 id username
@@ -76,6 +78,7 @@ layout activity_profile
 layout homepage
 layout post
 layout text_color_layout
+layout user_row
 menu nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_foreground

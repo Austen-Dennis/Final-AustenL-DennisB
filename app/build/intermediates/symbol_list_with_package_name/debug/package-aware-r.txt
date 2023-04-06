@@ -4748,6 +4748,7 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id btnClose
 id btn_holder
+id button2
 id buttonBar
 id buttonPanel
 id button_continue
@@ -5510,6 +5511,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -6005,6 +6007,7 @@ layout stream_ui_typing_indicator_animation_view
 layout stream_ui_user_reactions_view
 layout support_simple_spinner_dropdown_item
 layout text_color_layout
+layout user_row
 layout view_image_viewer
 menu nav_menu
 mipmap ic_launcher
