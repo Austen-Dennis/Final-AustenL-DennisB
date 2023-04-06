@@ -24,7 +24,8 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
             _loginResult.value =
                 LoginResult(success = LoggedInUserView(displayName = result.data.displayName))
 
-        } else {
+        }
+        else {
             _loginResult.value = LoginResult(error = R.string.login_failed)
         }
     }
@@ -44,12 +45,9 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
         fun isUserNameValid(username: String): Boolean {
             return username.contains('@')
         }
-
         fun isPasswordValid(password: String): Boolean {
             return password.length > 5
         }
-
-
     }
 }
 
