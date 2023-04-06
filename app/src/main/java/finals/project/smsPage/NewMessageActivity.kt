@@ -2,6 +2,10 @@ package finals.project.smsPage
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.recyclerview.widget.RecyclerView
+import com.xwray.groupie.GroupAdapter
+import com.xwray.groupie.Item
 import finals.project.R
 
 class NewMessageActivity : AppCompatActivity() {
@@ -11,6 +15,18 @@ class NewMessageActivity : AppCompatActivity() {
 
 
         supportActionBar?.title = "Select User"
-       // recyclerview.adatper =
+        //val adapter = GroupAdapter<RecyclerView.ViewHolder>()
+        //adapter.add(UserItem())
+        //recyclerview.adapter = adapter
     }
 }
+
+/*class UserItem: Item<RecyclerView.ViewHolder>() {
+    override fun bind(viewHolder: RecyclerView.ViewHolder, position: Int) {
+        //list for each user later on.
+    }
+
+    override fun getLayout(): Int {
+        return R.layout.user_row
+    }
+}*/
