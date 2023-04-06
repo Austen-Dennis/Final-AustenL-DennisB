@@ -11,7 +11,6 @@ class NewMessageActivity : AppCompatActivity() {
 
 
         supportActionBar?.title = "Select User"
-
-
+       // recyclerview.adatper =
     }
 }
