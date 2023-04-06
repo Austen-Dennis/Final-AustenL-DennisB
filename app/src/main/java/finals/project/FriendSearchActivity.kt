@@ -60,41 +60,63 @@ class FriendSearchActivity : AppCompatActivity() {
                 myRefEmail.addValueEventListener(object: ValueEventListener {
                     override fun onDataChange(dataSnapshot: DataSnapshot) {
                         if (dataSnapshot.exists()) {
-                            layout.visibility=View.VISIBLE
-                            val email = dataSnapshot.child(query).child("Email").getValue().toString()
-                            val name = dataSnapshot.child(query).child("Name").getValue().toString()
-                            val bioSnap = dataSnapshot.child(query).child("Bio").getValue().toString()
-                            val gitLink = dataSnapshot.child(query).child("GitHub Link").getValue().toString()
-                            val collegeEmailSnap = dataSnapshot.child(query).child("College Email").getValue().toString()
-                            profileTitle.text = "Profile Search"
-                            if (dataSnapshot.child(query.toString()).child("Name").exists()) {
-                                nameValue.text = name
-                            } else {
-                                nameValue.text = email
+                            if (dataSnapshot.child(query).exists()) {
+                                layout.visibility = View.VISIBLE
+                                val email =
+                                    dataSnapshot.child(query).child("Email").getValue().toString()
+                                val name =
+                                    dataSnapshot.child(query).child("Name").getValue().toString()
+                                val bioSnap =
+                                    dataSnapshot.child(query).child("Bio").getValue().toString()
+                                val gitLink =
+                                    dataSnapshot.child(query).child("GitHub Link").getValue()
+                                        .toString()
+                                val collegeEmailSnap =
+                                    dataSnapshot.child(query).child("College Email").getValue()
+                                        .toString()
+                                profileTitle.text = "Profile Search"
+                                if (dataSnapshot.child(query.toString()).child("Name").exists()) {
+                                    nameValue.text = name
+                                } else {
+                                    nameValue.text = email
+                                }
+                                if (dataSnapshot.child(query.toString()).child("Bio").exists()) {
+                                    bioValue.text = bioSnap
+                                } else {
+                                    bioValue.text = "No Bio Yet"
+                                }
+                                if (dataSnapshot.child(query.toString()).child("GitHub Link")
+                                        .exists()
+                                ) {
+                                    gitValue.text = "GitHub Link: " + gitLink
+                                } else {
+                                    gitValue.text = "No GitHub Link Yet"
+                                }
+                                if (dataSnapshot.child(query.toString()).child("College Email")
+                                        .exists()
+                                ) {
+                                    emailValue.text = "Contact: " + collegeEmailSnap
+                                } else {
+                                    emailValue.text = "Contact: " + email
+                                }
+                                addFriend.setOnClickListener {
+                                    myRefEmail.child(query).child("Pending Friend Request").push()
+                                        .setValue(myEmail)
+                                    Toast.makeText(
+                                        applicationContext,
+                                        "Friend Request Sent!",
+                                        Toast.LENGTH_LONG
+                                    ).show()
+                                }
                             }
-                            if (dataSnapshot.child(query.toString()).child("Bio").exists()) {
-                                bioValue.text = bioSnap
-                            } else {
-                                bioValue.text = "No Bio Yet"
-                            }
-                            if (dataSnapshot.child(query.toString()).child("GitHub Link").exists()) {
-                                gitValue.text = "GitHub Link: " + gitLink
-                            } else {
-                                gitValue.text = "No GitHub Link Yet"
-                            }
-                            if (dataSnapshot.child(query.toString()).child("College Email").exists()) {
-                                emailValue.text = "Contact: " + collegeEmailSnap
-                            } else {
-                                emailValue.text = "Contact: " + email
-                            }
-                            addFriend.setOnClickListener {
-                                myRefEmail.child(query).child("Pending Friend Request").push().setValue(myEmail)
+                            else {
+                                layout.visibility=View.GONE
                                 Toast.makeText(
                                     applicationContext,
-                                    "Friend Request Sent!",
+                                    "No User Found",
                                     Toast.LENGTH_LONG
                                 ).show()
-                            }
+                        }
                         }
                     }
 
