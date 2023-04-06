@@ -4,10 +4,6 @@
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_new_message.xml"
     },
     {
-        "merged": "finals.project.app-mergeDebugResources-65:/layout/activity_profile.xml",
-        "source": "finals.project.app-main-68:/layout/activity_profile.xml"
-    },
-    {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\activity_login.xml",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_login.xml"
     },
@@ -22,6 +18,10 @@
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\post.xml",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\post.xml"
+    },
+    {
+        "merged": "finals.project.app-mergeDebugResources-65:/layout/activity_friend_search.xml",
+        "source": "finals.project.app-main-68:/layout/activity_friend_search.xml"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\text_color_layout.xml",

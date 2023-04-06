@@ -36,10 +36,16 @@ class FriendSearchActivity : AppCompatActivity() {
         val intentHOME = Intent(this, HomeActivity::class.java)
         val searchView = findViewById<View>(finals.project.R.id.searchView) as SearchView
         val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
-        val contact = findViewById<View>(finals.project.R.id.email) as TextView
         val layout = findViewById<View>(finals.project.R.id.layout)
         val addFriend = findViewById<View>(finals.project.R.id.addFriend)
-        layout.visibility = View.INVISIBLE
+        val uid = FirebaseAuth.getInstance().uid
+        val emailValue = findViewById<View>(finals.project.R.id.emailValue) as TextView
+        val bioValue = findViewById<View>(finals.project.R.id.bioValue) as TextView
+        val nameValue = findViewById<View>(finals.project.R.id.nameValue) as TextView
+        val gitValue = findViewById<View>(finals.project.R.id.gitValue) as TextView
+        val myRef = FirebaseDatabase.getInstance().getReference("users")
+        layout.visibility=View.GONE
+
 
         val mAuth = FirebaseAuth.getInstance()
         val currentUserId = mAuth.currentUser?.uid
@@ -54,11 +60,33 @@ class FriendSearchActivity : AppCompatActivity() {
                 myRefEmail.addValueEventListener(object: ValueEventListener {
                     override fun onDataChange(dataSnapshot: DataSnapshot) {
                         if (dataSnapshot.exists()) {
+                            layout.visibility=View.VISIBLE
                             val email = dataSnapshot.child(query).child("Email").getValue().toString()
                             val name = dataSnapshot.child(query).child("Name").getValue().toString()
-                            profileTitle.text = name
-                            contact.text = "Email Address: " + email
-                            layout.visibility = View.VISIBLE
+                            val bioSnap = dataSnapshot.child(query).child("Bio").getValue().toString()
+                            val gitLink = dataSnapshot.child(query).child("GitHub Link").getValue().toString()
+                            val collegeEmailSnap = dataSnapshot.child(query).child("College Email").getValue().toString()
+                            profileTitle.text = "Profile Search"
+                            if (dataSnapshot.child(query.toString()).child("Name").exists()) {
+                                nameValue.text = name
+                            } else {
+                                nameValue.text = email
+                            }
+                            if (dataSnapshot.child(query.toString()).child("Bio").exists()) {
+                                bioValue.text = bioSnap
+                            } else {
+                                bioValue.text = "No Bio Yet"
+                            }
+                            if (dataSnapshot.child(query.toString()).child("GitHub Link").exists()) {
+                                gitValue.text = "GitHub Link: " + gitLink
+                            } else {
+                                gitValue.text = "No GitHub Link Yet"
+                            }
+                            if (dataSnapshot.child(query.toString()).child("College Email").exists()) {
+                                emailValue.text = "Contact: " + collegeEmailSnap
+                            } else {
+                                emailValue.text = "Contact: " + email
+                            }
                             addFriend.setOnClickListener {
                                 myRefEmail.child(query).child("Pending Friend Request").push().setValue(myEmail)
                                 Toast.makeText(
