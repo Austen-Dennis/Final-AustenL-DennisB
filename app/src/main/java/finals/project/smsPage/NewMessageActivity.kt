@@ -20,7 +20,6 @@ class NewMessageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_message)
 
-
         supportActionBar?.title = "Select User"
         //val adapter = GroupAdapter<ViewHolder>()
         //adapter.add(UserItem())
@@ -32,11 +31,14 @@ class NewMessageActivity : AppCompatActivity() {
         val ref = FirebaseDatabase.getInstance().getReference("/users")
         ref.addListenerForSingleValueEvent(object: ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
+                //val adpater = GroupAdapter<ViewHolder>()
 
                 snapshot.children.forEach {
                     Log.d("NewMessage", it.toString())
                     val user = it.getValue(User::class.java)
+                    //adpater.add(UserItem())
                 }
+                //recyclerview.adapter=adapter
             }
 
             override fun onCancelled(error: DatabaseError) {
