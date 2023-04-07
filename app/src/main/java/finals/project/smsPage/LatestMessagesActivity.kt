@@ -3,8 +3,7 @@ package finals.project.smsPage
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
+import android.view.View
 import com.google.firebase.auth.FirebaseAuth
 import finals.project.R
 import finals.project.ui.login.LoginActivity
@@ -15,8 +14,28 @@ class LatestMessagesActivity : AppCompatActivity() {
         setContentView(R.layout.activity_latest_messages)
 
         verifyLogin()
-        }
-    private fun verifyLogin(){
+
+    /*    val messageButton = findViewById<View>(R.id.new_message)
+        messageButton.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                val intent = Intent()
+                startActivity(intent)
+            }
+        })*/
+
+
+      /*  val signOut = findViewById<View>(R.id.sign_out)
+        signOut.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                FirebaseAuth.getInstance().signOut()
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+                val intent = Intent()
+                startActivity(intent)
+            }
+        })*/
+    }
+
+    private fun verifyLogin() {
         val uid = FirebaseAuth.getInstance().uid
         if (uid == null) {
             val intent = Intent(this, LoginActivity::class.java)
@@ -24,24 +43,6 @@ class LatestMessagesActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return super.onOptionsItemSelected(item)
-        when(item?.itemId) {
-            R.id.new_message ->{
-                val intent = Intent(this, NewMessageActivity::class.java)
-                startActivity(intent)
-            }
-            R.id.sign_out->{ val intent = Intent(this, LoginActivity::class.java)
-                FirebaseAuth.getInstance().signOut()
-                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
-                startActivity(intent)
-            }
-        }
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.nav_menu, menu)
-        return super.onCreateOptionsMenu(menu)
-    }
 }
+
+

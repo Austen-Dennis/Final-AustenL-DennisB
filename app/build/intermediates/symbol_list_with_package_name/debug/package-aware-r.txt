@@ -5538,6 +5538,7 @@ id titleTextView
 id title_template
 id toggle
 id toolbar
+id toolbar2
 id top
 id topLeft
 id topPanel

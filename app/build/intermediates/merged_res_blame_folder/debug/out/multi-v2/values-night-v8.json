@@ -4,7 +4,36 @@
             "outputFile": "finals.project.app-mergeDebugResources-64:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\mrden\\.gradle\\caches\\transforms-3\\741af181144e095970940b94bf37c603\\transformed\\material-1.9.0-alpha02\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\auste\\.gradle\\caches\\transforms-3\\8d4cce2df582ed05d1e136b0d3ba6481\\transformed\\stream-chat-android-ui-components-5.8.2\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,123,193,253,303,358,413,464,532,594,643,702,759,813,867,926,976,1032",
+                        "endColumns": "67,69,59,49,54,54,50,67,61,48,58,56,53,53,58,49,55,54",
+                        "endOffsets": "118,188,248,298,353,408,459,527,589,638,697,754,808,862,921,971,1027,1082"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\auste\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "102",
+                        "endLines": "14",
+                        "endColumns": "12",
+                        "endOffsets": "815"
+                    },
+                    "to": {
+                        "startLines": "27",
+                        "startColumns": "4",
+                        "startOffsets": "1719",
+                        "endLines": "39",
+                        "endColumns": "12",
+                        "endOffsets": "2299"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\auste\\.gradle\\caches\\transforms-3\\741af181144e095970940b94bf37c603\\transformed\\material-1.9.0-alpha02\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,17 +50,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\mrden\\.gradle\\caches\\transforms-3\\8d4cce2df582ed05d1e136b0d3ba6481\\transformed\\stream-chat-android-ui-components-5.8.2\\res\\values-night-v8\\values-night-v8.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,123,193,253,303,358,413,464,532,594,643,702,759,813,867,926,976,1032",
-                        "endColumns": "67,69,59,49,54,54,50,67,61,48,58,56,53,53,58,49,55,54",
-                        "endOffsets": "118,188,248,298,353,408,459,527,589,638,697,754,808,862,921,971,1027,1082"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\mrden\\.gradle\\caches\\transforms-3\\0b54b55d348e4c70549189db61e4c194\\transformed\\appcompat-1.6.1\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\auste\\.gradle\\caches\\transforms-3\\0b54b55d348e4c70549189db61e4c194\\transformed\\appcompat-1.6.1\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -45,25 +64,6 @@
                         "startOffsets": "1087,1157,1241,1325,1421,1523,1625,5065",
                         "endColumns": "69,83,83,95,101,101,93,88",
                         "endOffsets": "1152,1236,1320,1416,1518,1620,1714,5149"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\mrden\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\src\\main\\res\\values-night\\themes.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "102",
-                        "endLines": "14",
-                        "endColumns": "12",
-                        "endOffsets": "815"
-                    },
-                    "to": {
-                        "startLines": "27",
-                        "startColumns": "4",
-                        "startOffsets": "1719",
-                        "endLines": "39",
-                        "endColumns": "12",
-                        "endOffsets": "2299"
                     }
                 }
             ]

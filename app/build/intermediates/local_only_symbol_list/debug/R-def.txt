@@ -66,6 +66,7 @@ id submit
 id submitEmail
 id submitGit
 id textView
+id toolbar2
 id update
 id user
 id username
