@@ -196,5 +196,8 @@ class LoginActivity : AppCompatActivity() {
 
     }
 }
+class User(uid: String, name: String){
+    constructor() : this("","")
+}
 
 

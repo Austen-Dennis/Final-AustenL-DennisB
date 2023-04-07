@@ -3,7 +3,6 @@ package finals.project.smsPage
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import com.google.firebase.auth.FirebaseAuth
 import finals.project.R
 import finals.project.ui.login.LoginActivity
@@ -15,7 +14,7 @@ class LatestMessagesActivity : AppCompatActivity() {
 
         verifyLogin()
 
-    /*    val messageButton = findViewById<View>(R.id.new_message)
+        /*    val messageButton = findViewById<View>(R.id.new_message)
         messageButton.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
                 val intent = Intent()
@@ -24,7 +23,7 @@ class LatestMessagesActivity : AppCompatActivity() {
         })*/
 
 
-      /*  val signOut = findViewById<View>(R.id.sign_out)
+        /*  val signOut = findViewById<View>(R.id.sign_out)
         signOut.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
                 FirebaseAuth.getInstance().signOut()
@@ -44,5 +43,6 @@ class LatestMessagesActivity : AppCompatActivity() {
         }
     }
 }
+
 
 

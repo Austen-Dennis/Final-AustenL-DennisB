@@ -4,20 +4,37 @@ package finals.project.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import finals.project.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivityLatestMessagesBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
 
-  private ActivityLatestMessagesBinding(@NonNull ConstraintLayout rootView) {
+  @NonNull
+  public final Button newMessage;
+
+  @NonNull
+  public final Button signOut;
+
+  @NonNull
+  public final Toolbar toolbar2;
+
+  private ActivityLatestMessagesBinding(@NonNull ConstraintLayout rootView,
+      @NonNull Button newMessage, @NonNull Button signOut, @NonNull Toolbar toolbar2) {
     this.rootView = rootView;
+    this.newMessage = newMessage;
+    this.signOut = signOut;
+    this.toolbar2 = toolbar2;
   }
 
   @Override
@@ -43,10 +60,32 @@ public final class ActivityLatestMessagesBinding implements ViewBinding {
 
   @NonNull
   public static ActivityLatestMessagesBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.new_message;
+      Button newMessage = ViewBindings.findChildViewById(rootView, id);
+      if (newMessage == null) {
+        break missingId;
+      }
 
-    return new ActivityLatestMessagesBinding((ConstraintLayout) rootView);
+      id = R.id.sign_out;
+      Button signOut = ViewBindings.findChildViewById(rootView, id);
+      if (signOut == null) {
+        break missingId;
+      }
+
+      id = R.id.toolbar2;
+      Toolbar toolbar2 = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar2 == null) {
+        break missingId;
+      }
+
+      return new ActivityLatestMessagesBinding((ConstraintLayout) rootView, newMessage, signOut,
+          toolbar2);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }
