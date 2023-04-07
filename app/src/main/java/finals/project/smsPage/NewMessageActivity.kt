@@ -36,7 +36,9 @@ class NewMessageActivity : AppCompatActivity() {
                 snapshot.children.forEach {
                     Log.d("NewMessage", it.toString())
                     val user = it.getValue(User::class.java)
-                    //adpater.add(UserItem())
+                    if (user != null) {
+                        //adpater.add(UserItem(user))
+                    }
                 }
                 //recyclerview.adapter=adapter
             }
@@ -52,9 +54,9 @@ class NewMessageActivity : AppCompatActivity() {
 
 
 
-/*class UserItem: Item<ViewHolder>() {
+/*class UserItem(val user: User): Item<ViewHolder>() {
     override fun bind(viewHolder: ViewHolder, position: Int) {
-        //list for each user later on.
+           viewHolder.itemView.username_textview.text = user.username
     }
 
     override fun getLayout(): Int {
