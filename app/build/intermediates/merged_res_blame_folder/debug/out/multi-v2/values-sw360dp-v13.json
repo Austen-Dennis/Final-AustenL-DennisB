@@ -4,17 +4,7 @@
             "outputFile": "finals.project.app-mergeDebugResources-64:/values-sw360dp-v13/values-sw360dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\auste\\.gradle\\caches\\transforms-3\\317d9e366161380e79f5806eccbf4ecc\\transformed\\preference-1.1.1\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "71",
-                        "endOffsets": "122"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\auste\\.gradle\\caches\\transforms-3\\ef6cc873c851a17b2d1631c967d91ef0\\transformed\\firebase-ui-auth-8.0.2\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+                    "source": "C:\\Users\\Austen Lowder\\.gradle\\caches\\transforms-3\\ef6cc873c851a17b2d1631c967d91ef0\\transformed\\firebase-ui-auth-8.0.2\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",
@@ -28,6 +18,16 @@
                         "startOffsets": "127,197,258,319,374,428,486",
                         "endColumns": "69,60,60,54,53,57,56",
                         "endOffsets": "192,253,314,369,423,481,538"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Austen Lowder\\.gradle\\caches\\transforms-3\\317d9e366161380e79f5806eccbf4ecc\\transformed\\preference-1.1.1\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "71",
+                        "endOffsets": "122"
                     }
                 }
             ]

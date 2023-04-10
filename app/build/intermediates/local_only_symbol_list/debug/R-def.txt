@@ -26,7 +26,6 @@ id accountInfo
 id addFriend
 id bio
 id bioValue
-id button2
 id collegeEmail
 id container
 id copyID
@@ -37,6 +36,7 @@ id gitValue
 id help
 id hideInfo
 id home
+id imageView2
 id imageView3
 id imageview1
 id item_text
@@ -65,11 +65,12 @@ id subBio
 id submit
 id submitEmail
 id submitGit
-id textView
 id toolbar2
+id toolbar3
 id update
 id user
 id username
+id username_text
 id verify
 layout activity_friend_search
 layout activity_latest_messages

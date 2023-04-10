@@ -4,7 +4,7 @@
             "outputFile": "finals.project.app-mergeDebugResources-64:/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\auste\\.gradle\\caches\\transforms-3\\e4325b876026b4f35a6e6d1db222670f\\transformed\\car-ui-lib-2.0.0\\res\\values-port\\values.xml",
+                    "source": "C:\\Users\\Austen Lowder\\.gradle\\caches\\transforms-3\\e4325b876026b4f35a6e6d1db222670f\\transformed\\car-ui-lib-2.0.0\\res\\values-port\\values.xml",
                     "from": {
                         "startLines": "4,7,8",
                         "startColumns": "0,0,0",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\auste\\.gradle\\caches\\transforms-3\\0b54b55d348e4c70549189db61e4c194\\transformed\\appcompat-1.6.1\\res\\values-port\\values-port.xml",
+                    "source": "C:\\Users\\Austen Lowder\\.gradle\\caches\\transforms-3\\0b54b55d348e4c70549189db61e4c194\\transformed\\appcompat-1.6.1\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
