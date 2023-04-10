@@ -4748,7 +4748,6 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id btnClose
 id btn_holder
-id button2
 id buttonBar
 id buttonPanel
 id button_continue
@@ -5094,6 +5093,7 @@ id imageAttachmentContent
 id imageAttachmentView
 id imageCountTextView
 id imageView
+id imageView2
 id imageView3
 id imagesPager
 id imageview1
@@ -5511,7 +5511,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -5539,6 +5538,8 @@ id title_template
 id toggle
 id toolbar
 id toolbar2
+id toolbar3
+id toolbar4
 id top
 id topLeft
 id topPanel
@@ -5581,6 +5582,7 @@ id userReactionsView
 id userTextView
 id username
 id usernameTextView
+id username_text
 id verify
 id verticalDivider1
 id verticalDivider2

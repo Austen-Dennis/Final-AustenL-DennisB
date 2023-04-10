@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.constraintlayout.widget.Group
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.auth.FirebaseAuth
@@ -24,6 +25,9 @@ import java.lang.Exception
 
 
 class LoginActivity : AppCompatActivity() {
+    class User(uid: String, username: String){
+        constructor() : this("","")
+    }
 
     private lateinit var loginViewModel: LoginViewModel
     private lateinit var binding: ActivityLoginBinding
@@ -195,9 +199,6 @@ class LoginActivity : AppCompatActivity() {
         })
 
     }
-}
-class User(uid: String, name: String){
-    constructor() : this("","")
 }
 
 
