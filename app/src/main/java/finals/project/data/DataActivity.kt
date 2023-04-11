@@ -68,18 +68,6 @@ class DataActivity : AppCompatActivity() {
         }
 
     }
-    class User(uid: String?, myRef: String?) {
-        constructor() : this("", "")
-        val database = FirebaseDatabase.getInstance()
-        val uid = database.getReference("users/")
-        val name = null
-        fun setterUidReference(): DatabaseReference {
-            val name = database.getReference("users/uid")
-            return name
-        }
-
-
-    }
 }
 
 
