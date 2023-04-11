@@ -1,20 +1,24 @@
 package finals.project.smsPage
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ArrayAdapter
+import android.widget.ListView
 import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.xwray.groupie.GroupAdapter
+import com.google.firebase.database.ktx.getValue
+import com.google.firebase.firestore.auth.User
 import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Item
 import finals.project.R
 import finals.project.data.DataActivity
+
 
 
 
@@ -30,22 +34,22 @@ class NewMessageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_message)
         supportActionBar?.title = "Select User"
-        val adapter = GroupAdapter<GroupieViewHolder>()
-        val recyclerView = findViewById<View>(R.id.recyclerview) as RecyclerView
-        recyclerView.adapter=adapter
-
-
-        fetchUsers()
+        lateinit var listView: ListView
+        lateinit var list: ArrayList<String>
+        lateinit var adapter: ArrayAdapter<*>
+        list = ArrayList()
+        adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list)
+        fetchUsers(list, adapter)
     }
-    private fun fetchUsers(){
+
+    private fun fetchUsers(list: ArrayList<String>, adapter: ArrayAdapter<String>) {
+
         val ref = FirebaseDatabase.getInstance().getReference("users/")
         System.out.println(ref)
         ref.addListenerForSingleValueEvent(object: ValueEventListener{
 
+            @SuppressLint("RestrictedApi")
             override fun onDataChange(snapshot: DataSnapshot) {
-                val adapter = GroupAdapter<GroupieViewHolder>()
-                val recyclerView = findViewById<View>(R.id.recyclerview) as RecyclerView
-                recyclerView.adapter=adapter
                 snapshot.children.forEach {
 
                     Log.d("NewMessage", snapshot.toString())
@@ -53,7 +57,9 @@ class NewMessageActivity : AppCompatActivity() {
                     val user = snapshot.getValue(DataActivity.User::class.java)
                     System.out.println(user)
                     if (user!=null) {
-                        adapter.add(UserItem(user))
+                        val listView = findViewById(R.id.recyclerview) as ListView
+                        list.add(user.toString())
+                        listView.adapter = adapter
                     }
                 }
             }
@@ -66,11 +72,11 @@ class NewMessageActivity : AppCompatActivity() {
     }
 }
 
-class UserItem(val user: DataActivity.User?) : Item<GroupieViewHolder>() {
+class UserItem(val user: String) : Item<GroupieViewHolder>() {
 
     override fun bind(viewHolder: GroupieViewHolder, position: Int) {
        // val user = DataActivity.User(user.toString())
-        //viewHolder.itemView.username_text.text = user.uid + "FUCK FUCK"
+        viewHolder.itemView.username_text.text = user
     }
 
 
