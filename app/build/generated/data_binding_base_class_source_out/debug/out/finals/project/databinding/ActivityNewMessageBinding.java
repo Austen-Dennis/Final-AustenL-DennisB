@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
@@ -22,10 +23,14 @@ public final class ActivityNewMessageBinding implements ViewBinding {
   @NonNull
   public final RecyclerView recyclerview;
 
+  @NonNull
+  public final Toolbar toolbar4;
+
   private ActivityNewMessageBinding(@NonNull ConstraintLayout rootView,
-      @NonNull RecyclerView recyclerview) {
+      @NonNull RecyclerView recyclerview, @NonNull Toolbar toolbar4) {
     this.rootView = rootView;
     this.recyclerview = recyclerview;
+    this.toolbar4 = toolbar4;
   }
 
   @Override
@@ -61,7 +66,13 @@ public final class ActivityNewMessageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityNewMessageBinding((ConstraintLayout) rootView, recyclerview);
+      id = R.id.toolbar4;
+      Toolbar toolbar4 = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar4 == null) {
+        break missingId;
+      }
+
+      return new ActivityNewMessageBinding((ConstraintLayout) rootView, recyclerview, toolbar4);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

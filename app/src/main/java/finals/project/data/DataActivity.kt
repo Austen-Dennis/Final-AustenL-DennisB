@@ -7,10 +7,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.*
 import java.lang.reflect.Array.set
 
 class DataActivity : AppCompatActivity() {
@@ -69,6 +66,18 @@ class DataActivity : AppCompatActivity() {
                 myRef.child("College Email").setValue(collegeEmail)
             }
         }
+
+    }
+    class User(uid: String?, myRef: String?) {
+        constructor() : this("", "")
+        val database = FirebaseDatabase.getInstance()
+        val uid = database.getReference("users/")
+        val name = null
+        fun setterUidReference(): DatabaseReference {
+            val name = database.getReference("users/uid")
+            return name
+        }
+
 
     }
 }

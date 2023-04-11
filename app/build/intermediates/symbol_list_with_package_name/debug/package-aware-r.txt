@@ -4600,6 +4600,7 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id Camera
+id Enter_message
 id FUNCTION
 id Gallery
 id GitHub
@@ -4870,6 +4871,7 @@ id channelListView
 id channelMembersTextView
 id channelNameLabel
 id chatMessagesRV
+id chat_log
 id checkbox
 id checked
 id checkedTextView
@@ -5540,6 +5542,7 @@ id toolbar
 id toolbar2
 id toolbar3
 id toolbar4
+id toolbar5
 id top
 id topLeft
 id topPanel
@@ -5566,6 +5569,7 @@ id tvFileTitle
 id typingIndicatorView
 id unchecked
 id uniform
+id unknown
 id unlabeled
 id unreadCountBadge
 id unreadCountTextView
@@ -5737,6 +5741,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_chat_log
 layout activity_friend_search
 layout activity_latest_messages
 layout activity_login

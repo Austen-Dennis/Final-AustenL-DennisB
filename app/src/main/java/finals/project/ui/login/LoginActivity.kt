@@ -1,9 +1,11 @@
 package finals.project.ui.login
 
+import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
@@ -16,6 +18,10 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.ktx.Firebase
 import finals.project.R
 import finals.project.data.DataActivity
@@ -23,15 +29,10 @@ import finals.project.data.HomeActivity
 import finals.project.databinding.ActivityLoginBinding
 import java.lang.Exception
 
-
 class LoginActivity : AppCompatActivity() {
-    class User(uid: String, username: String){
-        constructor() : this("","")
-    }
-
     private lateinit var loginViewModel: LoginViewModel
     private lateinit var binding: ActivityLoginBinding
-    override fun onCreate(savedInstanceState: Bundle?) {
+    public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val toolbar = findViewById<View>(io.getstream.chat.android.ui.R.id.toolbar)
         setSupportActionBar(toolbar as Toolbar?)
@@ -122,7 +123,7 @@ class LoginActivity : AppCompatActivity() {
                 val uid = uidGrab()
                 val displayName = nameGrab()
                 val name = displayName?.let { it1 -> emailTrim(it1) }
-
+                val user = displayName?.let { it1 -> uid }
                 if (uid != null) {
                     if (FirebaseAuth.getInstance().currentUser?.isEmailVerified == true) {
                         Toast.makeText(
@@ -200,5 +201,6 @@ class LoginActivity : AppCompatActivity() {
 
     }
 }
+
 
 
