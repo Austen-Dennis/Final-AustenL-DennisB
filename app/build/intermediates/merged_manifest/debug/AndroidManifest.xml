@@ -60,7 +60,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.FInalProject" >
         <activity
-            android:name="finals.project.ChatLogActivity"
+            android:name="finals.project.smsPage.ChatLogActivity"
             android:exported="false" />
         <activity
             android:name="finals.project.smsPage.NewMessageActivity"

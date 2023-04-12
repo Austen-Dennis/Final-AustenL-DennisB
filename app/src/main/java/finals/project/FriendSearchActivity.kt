@@ -15,6 +15,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.ktx.Firebase
+import finals.project.smsPage.ChatLogActivity
 import finals.project.smsPage.LatestMessagesActivity
 
 
@@ -45,7 +46,7 @@ class FriendSearchActivity : AppCompatActivity() {
         val bioValue = findViewById<View>(finals.project.R.id.bioValue) as TextView
         val nameValue = findViewById<View>(finals.project.R.id.nameValue) as TextView
         val gitValue = findViewById<View>(finals.project.R.id.gitValue) as TextView
-
+        val messageButton = findViewById<View>(finals.project.R.id.messageFriend)
         val myRef = FirebaseDatabase.getInstance().getReference("users")
 
         layout.visibility=View.GONE
@@ -57,6 +58,7 @@ class FriendSearchActivity : AppCompatActivity() {
         val database = FirebaseDatabase.getInstance()
         val myRefEmail = database.getReference("users/")
         val myEmail = FirebaseAuth.getInstance().currentUser?.email
+        val chatIntent = Intent(this, ChatLogActivity::class.java)
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
 
@@ -66,14 +68,22 @@ class FriendSearchActivity : AppCompatActivity() {
                     override fun onDataChange(dataSnapshot: DataSnapshot) {
 
                         if (dataSnapshot.exists()) {
+
                             if (dataSnapshot.child(query).exists() && query != currentUserId) {
                                 layout.visibility = View.VISIBLE
-                                val email = dataSnapshot.child(query).child("Email").getValue().toString()
-                                val name = dataSnapshot.child(query).child("Name").getValue().toString()
-                                val bioSnap = dataSnapshot.child(query).child("Bio").getValue().toString()
-                                val gitLink = dataSnapshot.child(query).child("GitHub Link").getValue().toString()
+
+                                val email =
+                                    dataSnapshot.child(query).child("Email").getValue().toString()
+                                val name =
+                                    dataSnapshot.child(query).child("Name").getValue().toString()
+                                val bioSnap =
+                                    dataSnapshot.child(query).child("Bio").getValue().toString()
+                                val gitLink =
+                                    dataSnapshot.child(query).child("GitHub Link").getValue()
+                                        .toString()
                                 val collegeEmailSnap =
-                                    dataSnapshot.child(query).child("College Email").getValue().toString()
+                                    dataSnapshot.child(query).child("College Email").getValue()
+                                        .toString()
 
                                 profileTitle.text = "Profile Search"
 
@@ -103,12 +113,17 @@ class FriendSearchActivity : AppCompatActivity() {
                                 }
 
                                 addFriend.setOnClickListener {
-                                    myRefEmail.child(query).child("Pending Friend Request").child(uid.toString()).setValue("Recieved")
+                                    myRefEmail.child(query).child("Pending Friend Request")
+                                        .child(uid.toString()).setValue("Recieved")
                                     Toast.makeText(
                                         applicationContext,
                                         "Friend Request Sent!",
                                         Toast.LENGTH_LONG
                                     ).show()
+                                }
+
+                                messageButton.setOnClickListener {
+                                  startActivity(chatIntent)
                                 }
                             }
                             else {
