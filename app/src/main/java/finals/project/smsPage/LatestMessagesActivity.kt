@@ -25,7 +25,7 @@ class LatestMessagesActivity : AppCompatActivity() {
 
     }
 
-   private fun verifyLogin() {
+    private fun verifyLogin() {
         val uid = FirebaseAuth.getInstance().uid
         if (uid == null) {
             val intent = Intent(this, LoginActivity::class.java)
@@ -35,7 +35,7 @@ class LatestMessagesActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId) {
+        when (item.itemId) {
             R.id.new_message -> {
                 val intent = Intent(this, NewMessageActivity::class.java)
                 startActivity(intent)
@@ -50,6 +50,7 @@ class LatestMessagesActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.nav_menu, menu)
         return super.onCreateOptionsMenu(menu)
