@@ -3,6 +3,7 @@ package finals.project.data
 import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Intent
+import android.os.Build.ID
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -17,6 +18,8 @@ import com.google.firebase.database.ValueEventListener
 import com.google.firebase.ktx.Firebase
 import finals.project.smsPage.ChatLogActivity
 import finals.project.smsPage.LatestMessagesActivity
+import io.grpc.InternalConfigSelector.KEY
+import java.net.IDN
 
 
 class FriendSearchActivity : AppCompatActivity() {
@@ -24,11 +27,14 @@ class FriendSearchActivity : AppCompatActivity() {
     lateinit var list: ArrayList<String>
     lateinit var adapter: ArrayAdapter<*>
     @SuppressLint("SuspiciousIndentation", "MissingInflatedId")
-
+ companion object {
+     val USER_KEY = "USER_KEY"
+        val ID = "ID"
+ }
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(finals.project.R.layout.activity_friend_search) // sets the view using the activity_friend_search
-
         val toolbar = findViewById<View>(io.getstream.chat.android.ui.R.id.toolbar)
         setSupportActionBar(toolbar as Toolbar?)
 
@@ -123,6 +129,8 @@ class FriendSearchActivity : AppCompatActivity() {
                                 }
 
                                 messageButton.setOnClickListener {
+                                    chatIntent.putExtra(ID, query)
+                                    chatIntent.putExtra(USER_KEY, name)
                                   startActivity(chatIntent)
                                 }
                             }
@@ -167,11 +175,4 @@ class FriendSearchActivity : AppCompatActivity() {
 
     }
 
-    //only for testing.
-    companion object {
-        fun iscreated(): Any {
-            val created = true;
-            return created
-        }
-    }
 }
