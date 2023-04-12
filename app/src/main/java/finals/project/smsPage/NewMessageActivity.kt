@@ -64,12 +64,12 @@ class NewMessageActivity : AppCompatActivity() {
             }
 
             fun nameGet(value: String, numOfLoops: Int): String? {
-                var i = 1
+                var i = 0
                 var name = ""
-                while (i <= numOfLoops) {
+                while (i < numOfLoops) {
                     //var name = value?.substringAfter("Name=")?.substringBefore("}")
                     //value.indexOf("Name=", value.indexOf("Name=") + i)
-                    var number = value.indexOf("Name=", value.indexOf("Name=") + i)
+                    var number = value.indexOf("Name=", value.indexOf("}") + i)
                     var name = value?.substring(number)?.substringBefore("}")
                     name?.trim()
                     i++

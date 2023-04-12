@@ -45,6 +45,7 @@ class FriendSearchActivity : AppCompatActivity() {
         val bioValue = findViewById<View>(finals.project.R.id.bioValue) as TextView
         val nameValue = findViewById<View>(finals.project.R.id.nameValue) as TextView
         val gitValue = findViewById<View>(finals.project.R.id.gitValue) as TextView
+
         val myRef = FirebaseDatabase.getInstance().getReference("users")
 
         layout.visibility=View.GONE

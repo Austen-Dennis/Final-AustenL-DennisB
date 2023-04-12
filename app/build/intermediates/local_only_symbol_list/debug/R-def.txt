@@ -45,6 +45,7 @@ id item_text
 id layout
 id loading
 id login
+id messageFriend
 id nameValue
 id navigation
 id newName
