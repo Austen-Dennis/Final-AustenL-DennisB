@@ -4,6 +4,7 @@ package finals.project.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
@@ -21,14 +22,18 @@ public final class ActivityNewMessageBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button back;
+
+  @NonNull
   public final RecyclerView recyclerview;
 
   @NonNull
   public final Toolbar toolbar4;
 
-  private ActivityNewMessageBinding(@NonNull ConstraintLayout rootView,
+  private ActivityNewMessageBinding(@NonNull ConstraintLayout rootView, @NonNull Button back,
       @NonNull RecyclerView recyclerview, @NonNull Toolbar toolbar4) {
     this.rootView = rootView;
+    this.back = back;
     this.recyclerview = recyclerview;
     this.toolbar4 = toolbar4;
   }
@@ -60,6 +65,12 @@ public final class ActivityNewMessageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.back;
+      Button back = ViewBindings.findChildViewById(rootView, id);
+      if (back == null) {
+        break missingId;
+      }
+
       id = R.id.recyclerview;
       RecyclerView recyclerview = ViewBindings.findChildViewById(rootView, id);
       if (recyclerview == null) {
@@ -72,7 +83,8 @@ public final class ActivityNewMessageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityNewMessageBinding((ConstraintLayout) rootView, recyclerview, toolbar4);
+      return new ActivityNewMessageBinding((ConstraintLayout) rootView, back, recyclerview,
+          toolbar4);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

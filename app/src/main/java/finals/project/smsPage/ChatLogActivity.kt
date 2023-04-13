@@ -49,6 +49,8 @@ class ChatLogActivity : AppCompatActivity() {
             startActivity(intentBack)
         }
     }
+
+    //grabs database info and passes it back into database with message attached
     private fun sendMessage() {
         val message = findViewById<View>(R.id.Enter_message) as EditText
         val text = message.text.toString()
@@ -70,6 +72,8 @@ class ChatLogActivity : AppCompatActivity() {
             }
         toRef.setValue(chatMessage)
     }
+
+    //updates view everytime a message is added to database
     private fun listenForMessages() {
         val fromId = FirebaseAuth.getInstance().uid
         val toId = toUser?.uid
@@ -98,7 +102,6 @@ class ChatLogActivity : AppCompatActivity() {
             override fun onChildRemoved(snapshot: DataSnapshot) {
                 TODO("Not yet implemented")
             }
-
             override fun onChildMoved(snapshot: DataSnapshot, previousChildName: String?) {
 
             }

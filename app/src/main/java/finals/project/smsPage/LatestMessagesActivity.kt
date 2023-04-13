@@ -27,6 +27,7 @@ companion object{
         startActivity(newMessage)
     }
 
+    //grabs and displays all existing users
     private fun fetchUser(){
         val uid = FirebaseAuth.getInstance().uid
         val ref = FirebaseDatabase.getInstance().getReference("/users/$uid")
@@ -42,6 +43,8 @@ companion object{
 
         })
     }
+
+    //launches into message with clicked user
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.new_message -> {

@@ -33,6 +33,7 @@ class NewMessageActivity : AppCompatActivity() {
         val USER_KEY = "USER_KEY"
     }
 
+    //grabs users information and displays it
     private fun fetchUsers() {
         val ref = FirebaseDatabase.getInstance().getReference("users")
         ref.addListenerForSingleValueEvent(object: ValueEventListener {
