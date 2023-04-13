@@ -41,7 +41,7 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
     }
 
 
-    // A placeholder username validation check
+    //Username and Password validation check
     companion object {
         fun isUserNameValid(username: String): Boolean {
             return username.contains('@')

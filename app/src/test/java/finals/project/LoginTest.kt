@@ -41,7 +41,7 @@ class LoginTest {
 
     @Test
     fun TestIsCreated() {
-        val returnValue = LoginActivity.iscreated()
+        val returnValue = LoginActivity.isReachable()
         TestCase.assertTrue(returnValue as Boolean)
     }
 

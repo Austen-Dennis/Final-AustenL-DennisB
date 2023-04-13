@@ -34,6 +34,10 @@ class DataActivity : AppCompatActivity() {
                 myRef.child("Email").setValue(email)
             }
         }
+        fun isReachable(): Boolean {
+            val reachable = true
+            return reachable
+        }
 
         fun nameChange(uid: String?, name: String?) {
             val database = FirebaseDatabase.getInstance()
@@ -82,6 +86,7 @@ class DataActivity : AppCompatActivity() {
 
 
     }
+
 }
 
 
