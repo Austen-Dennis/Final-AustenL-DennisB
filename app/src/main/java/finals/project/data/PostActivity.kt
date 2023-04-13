@@ -85,7 +85,7 @@ class PostActivity : AppCompatActivity() {
     }
 
     companion object {
-        fun iscreated(): Any {
+        fun isReachable(): Any {
             val created = true;
             return created
         }

@@ -71,9 +71,9 @@ class HomeActivity : AppCompatActivity() {
 
     //only for testing.
     companion object {
-        fun iscreated(): Any {
-            val created = true;
-            return created
+        fun isReachable(): Any {
+            val reachable = true;
+            return reachable
         }
     }
 }

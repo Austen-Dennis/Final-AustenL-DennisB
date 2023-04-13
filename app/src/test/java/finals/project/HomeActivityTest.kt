@@ -6,8 +6,8 @@ import org.junit.Test
 
 class HomeActivityTest {
     @Test
-    fun isCreatedTest(){
-        val returnValue = HomeActivity.iscreated()
+    fun isReachableTest(){
+        val returnValue = HomeActivity.isReachable()
         assertTrue(returnValue as Boolean)
     }
 }

@@ -48,7 +48,6 @@ class LoginActivity : AppCompatActivity() {
         val loading = binding.loading
         val intent = Intent(this, HomeActivity::class.java)
 
-
         val verifyButton = findViewById<View>(R.id.verify)
         verifyButton.setOnClickListener {
             verifyButton.visibility = View.INVISIBLE
@@ -80,9 +79,6 @@ class LoginActivity : AppCompatActivity() {
             loading.visibility = View.GONE
             if (loginResult.error != null) {
                 showLoginFailed(loginResult.error)
-            }
-            if (loginResult.success != null) {
-                //updateUiWithUser(loginResult.success)
             }
         })
 
@@ -123,7 +119,6 @@ class LoginActivity : AppCompatActivity() {
                 val uid = uidGrab()
                 val displayName = nameGrab()
                 val name = displayName?.let { it1 -> emailTrim(it1) }
-                val user = displayName?.let { it1 -> uid }
                 if (uid != null) {
                     if (FirebaseAuth.getInstance().currentUser?.isEmailVerified == true) {
                         Toast.makeText(
@@ -153,23 +148,14 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    fun updateUiWithUser(model: LoggedInUserView) {
-        try {
-            Thread.sleep(1000);
-        } catch (e: java.lang.Exception) {
-            e.printStackTrace()
-        }
-
-    }
-
     private fun showLoginFailed(@StringRes errorString: Int) {
         Toast.makeText(applicationContext, errorString, Toast.LENGTH_SHORT).show()
     }
 
     companion object {
-        fun iscreated(): Any {
-            val created = true
-            return created
+        fun isReachable(): Any {
+            val reachable = true
+            return reachable
         }
 
         fun emailTrim(email: String): String? {

@@ -26,11 +26,19 @@ class FriendSearchActivity : AppCompatActivity() {
     lateinit var searchView: SearchView
     lateinit var list: ArrayList<String>
     lateinit var adapter: ArrayAdapter<*>
+
     @SuppressLint("SuspiciousIndentation", "MissingInflatedId")
- companion object {
-     val USER_KEY = "USER_KEY"
+    companion object {
+        val USER_KEY = "USER_KEY"
         val ID = "ID"
- }
+
+            fun isReachable(): Any {
+                val reachable = true
+                return reachable
+            }
+
+    }
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,7 +63,7 @@ class FriendSearchActivity : AppCompatActivity() {
         val messageButton = findViewById<View>(finals.project.R.id.messageFriend)
         val myRef = FirebaseDatabase.getInstance().getReference("users")
 
-        layout.visibility=View.GONE
+        layout.visibility = View.GONE
 
 
         val mAuth = FirebaseAuth.getInstance()
@@ -69,7 +77,7 @@ class FriendSearchActivity : AppCompatActivity() {
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
 
             override fun onQueryTextSubmit(query: String): Boolean {
-                myRefEmail.addValueEventListener(object: ValueEventListener {
+                myRefEmail.addValueEventListener(object : ValueEventListener {
 
                     override fun onDataChange(dataSnapshot: DataSnapshot) {
 
@@ -131,17 +139,16 @@ class FriendSearchActivity : AppCompatActivity() {
                                 messageButton.setOnClickListener {
                                     chatIntent.putExtra(ID, query)
                                     chatIntent.putExtra(USER_KEY, name)
-                                  startActivity(chatIntent)
+                                    startActivity(chatIntent)
                                 }
-                            }
-                            else {
-                                layout.visibility=View.GONE
+                            } else {
+                                layout.visibility = View.GONE
                                 Toast.makeText(
                                     applicationContext,
                                     "No User Found",
                                     Toast.LENGTH_LONG
                                 ).show()
-                        }
+                            }
                         }
                     }
 
@@ -151,6 +158,7 @@ class FriendSearchActivity : AppCompatActivity() {
                 })
                 return false
             }
+
             override fun onQueryTextChange(newText: String): Boolean {
                 return false
             }
@@ -175,4 +183,6 @@ class FriendSearchActivity : AppCompatActivity() {
 
     }
 
+
 }
+
