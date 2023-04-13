@@ -30,34 +30,35 @@ class NewMessageActivity : AppCompatActivity() {
         supportActionBar?.title = "Select User"
         fetchUsers()
     }
-    companion object{
+
+    companion object {
         val USER_KEY = "USER_KEY"
     }
 
     private fun fetchUsers() {
         val ref = FirebaseDatabase.getInstance().getReference("users")
-        ref.addListenerForSingleValueEvent(object: ValueEventListener {
+        ref.addListenerForSingleValueEvent(object : ValueEventListener {
 
             override fun onDataChange(snapshot: DataSnapshot) {
                 val adapter = GroupAdapter<GroupieViewHolder>()
                 val recyclerview_newmessage = findViewById<View>(R.id.recyclerview) as RecyclerView
                 snapshot.children.forEach {
                     Log.d("NewMessage", it.toString())
-                        val user = it.getValue(User::class.java)
-                        if (user != null) {
-                            adapter.add(UserItem(user))
-                        }
-                    recyclerview_newmessage.adapter = adapter
+                    val user = it.getValue(User::class.java)
+                    if (user != null) {
+                        adapter.add(UserItem(user))
                     }
+                    recyclerview_newmessage.adapter = adapter
+                }
 
-                adapter.setOnItemClickListener{item, view ->
+                adapter.setOnItemClickListener { item, view ->
                     val userItem = item as UserItem
                     val intent = Intent(view.context, ChatLogActivity::class.java)
                     intent.putExtra(USER_KEY, userItem.user)
                     startActivity(intent)
                     finish()
                 }
-                }
+            }
 
             override fun onCancelled(snapshot: DatabaseError) {
                 TODO("Not yet implemented")
