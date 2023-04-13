@@ -26,6 +26,7 @@ class ProfileActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(finals.project.R.layout.activity_profile)
         val urlProjectInfo = "https://github.com/bsu-cs222-spring23-dll/Final-AustenL-DennisB-BeethovenM-JulianR#get-together"
         val urlRelease = "https://github.com/bsu-cs222-spring23-dll/Final-AustenL-DennisB-BeethovenM-JulianR/releases"
         val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
@@ -55,7 +56,6 @@ class ProfileActivity : AppCompatActivity() {
         val copyIDButton = findViewById<View>(finals.project.R.id.copyID)
         val submit = findViewById<View>(finals.project.R.id.submit)
         val bioSub = findViewById<View>(finals.project.R.id.subBio)
-        setContentView(finals.project.R.layout.activity_profile)
         val projectInfoIntent = Intent(Intent.ACTION_VIEW)
         val releaseIntent = Intent(Intent.ACTION_VIEW)
         val uid = FirebaseAuth.getInstance().uid

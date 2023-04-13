@@ -1,35 +1,12 @@
 package finals.project.data
 
-import android.R
-import android.annotation.SuppressLint
-import android.app.SearchManager
-import android.content.ContentValues
-import android.content.Context
-import android.content.Intent
-import android.os.Bundle
-import android.text.InputType
-import android.text.TextUtils
-import android.util.Log
-import android.view.KeyEvent
-import android.view.KeyEvent.ACTION_DOWN
-import android.view.KeyEvent.KEYCODE_ENTER
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
-import android.widget.EditText
-import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.SearchView
-import androidx.appcompat.widget.SearchView.OnQueryTextListener
-import androidx.appcompat.widget.Toolbar
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
-import com.google.firebase.database.ktx.getValue
 import finals.project.smsPage.LatestMessagesActivity
-import java.lang.Exception
-
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import android.annotation.SuppressLint
+import android.content.Intent
+import android.view.View
+import android.os.Bundle
 
 class HomeActivity : AppCompatActivity() {
 

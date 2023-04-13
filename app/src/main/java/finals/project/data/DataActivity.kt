@@ -1,17 +1,9 @@
 package finals.project.data
 
-import android.content.ContentValues
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.util.Log
-import android.view.View
-import android.widget.Toast
-import com.google.android.datatransport.runtime.TransportRuntime.initialize
 import com.google.firebase.FirebaseApp
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
-import java.lang.reflect.Array.set
+import android.os.Bundle
 
 
 class DataActivity : AppCompatActivity() {
