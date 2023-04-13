@@ -70,7 +70,8 @@ id subBio
 id submit
 id submitEmail
 id submitGit
-id textView
+id text_from_row
+id text_to_row
 id toolbar4
 id toolbar5
 id unknown

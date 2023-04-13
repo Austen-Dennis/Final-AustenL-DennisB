@@ -15,8 +15,6 @@ import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Item
 import finals.project.R
-import finals.project.data.FriendSearchActivity.Companion.USER_KEY
-import io.grpc.InternalConfigSelector.KEY
 
 
 private val View.username_text: TextView
@@ -55,12 +53,10 @@ class NewMessageActivity : AppCompatActivity() {
                 adapter.setOnItemClickListener{item, view ->
                     val userItem = item as UserItem
                     val intent = Intent(view.context, ChatLogActivity::class.java)
-                    intent.putExtra(USER_KEY, item.user.Name)
+                    intent.putExtra(USER_KEY, userItem.user)
                     startActivity(intent)
                     finish()
                 }
-
-
                 }
 
             override fun onCancelled(snapshot: DatabaseError) {
@@ -81,10 +77,6 @@ class UserItem(val user: User) : Item<GroupieViewHolder>() {
     override fun getLayout(): Int {
         return R.layout.user_row
     }
-}
-
-class User(val uid: String, val Name: String, val CollegeEmail: String, val Email: String, val Bio: String, val GitHub: String){
-    constructor(): this("","","","","","")
 }
 
 

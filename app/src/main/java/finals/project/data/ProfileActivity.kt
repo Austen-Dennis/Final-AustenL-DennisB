@@ -21,6 +21,7 @@ import finals.project.smsPage.LatestMessagesActivity
 import finals.project.ui.login.LoginActivity
 
 
+@Suppress("DEPRECATION")
 class ProfileActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
