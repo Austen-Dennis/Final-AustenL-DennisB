@@ -1,5 +1,6 @@
 package finals.project.smsPage
 
+import android.annotation.SuppressLint
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.DatabaseError
@@ -13,13 +14,20 @@ import android.view.View
 import android.os.Bundle
 import android.util.Log
 import finals.project.R
+import finals.project.data.HomeActivity
 
 class NewMessageActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_message)
         supportActionBar?.title = "Select User"
+        val backButton = findViewById<View>(R.id.back)
         fetchUsers()
+        backButton.setOnClickListener {
+            val intentBack = Intent(this, HomeActivity::class.java)
+            startActivity(intentBack)
+        }
     }
     companion object{
         val USER_KEY = "USER_KEY"

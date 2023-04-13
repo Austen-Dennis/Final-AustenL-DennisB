@@ -4717,6 +4717,7 @@ id autoCompleteToEnd
 id autoCompleteToStart
 id avatarMineView
 id avatarView
+id back
 id backButton
 id backButtonBadge
 id backButtonContainer

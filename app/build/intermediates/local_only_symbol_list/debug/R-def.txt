@@ -25,6 +25,7 @@ id Gallery
 id GitHub
 id accountInfo
 id addFriend
+id back
 id bio
 id bioValue
 id chat_log

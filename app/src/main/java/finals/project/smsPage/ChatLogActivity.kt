@@ -1,5 +1,6 @@
 package finals.project.smsPage
 
+import android.content.Intent
 import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.DatabaseError
@@ -14,6 +15,7 @@ import android.view.View
 import android.os.Bundle
 import android.util.Log
 import finals.project.R
+import finals.project.data.HomeActivity
 
 @Suppress("DEPRECATION")
 class ChatLogActivity : AppCompatActivity() {
@@ -23,10 +25,12 @@ class ChatLogActivity : AppCompatActivity() {
 
     val adapter = GroupAdapter<GroupieViewHolder>()
     var toUser: User? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat_log)
-
+        val backButton = findViewById<View>(R.id.back)
+        val intentBack = Intent(this, LatestMessagesActivity::class.java)
         toUser = intent.getParcelableExtra<User>(NewMessageActivity.USER_KEY)
 
         val chat_log = findViewById<View>(R.id.chat_log) as RecyclerView
@@ -40,6 +44,9 @@ class ChatLogActivity : AppCompatActivity() {
         SendButton.setOnClickListener {
             Log.d(TAG,"Attempt to send message")
             sendMessage()
+        }
+        backButton.setOnClickListener {
+            startActivity(intentBack)
         }
     }
     private fun sendMessage() {
