@@ -21,6 +21,10 @@ import finals.project.data.HomeActivity
 class ChatLogActivity : AppCompatActivity() {
     companion object {
         val TAG = "ChatLog"
+        fun isReachable(): Any {
+            val reachable = true;
+            return reachable
+        }
     }
 
     val adapter = GroupAdapter<GroupieViewHolder>()

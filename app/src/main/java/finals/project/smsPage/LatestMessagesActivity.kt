@@ -18,6 +18,10 @@ import finals.project.R
 class LatestMessagesActivity : AppCompatActivity() {
 companion object{
     var currentUser: User? = null
+    fun isReachable(): Any {
+        val reachable = true;
+        return reachable
+    }
 }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

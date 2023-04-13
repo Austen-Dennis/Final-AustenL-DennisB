@@ -31,6 +31,10 @@ class NewMessageActivity : AppCompatActivity() {
     }
     companion object{
         val USER_KEY = "USER_KEY"
+        fun isReachable(): Any {
+            val reachable = true;
+            return reachable
+        }
     }
 
     //grabs users information and displays it
