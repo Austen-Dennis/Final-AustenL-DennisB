@@ -1,7 +1,6 @@
 package finals.project
 
 import finals.project.data.FriendSearchActivity
-import finals.project.data.HomeActivity
 import junit.framework.TestCase
 import org.junit.Test
 

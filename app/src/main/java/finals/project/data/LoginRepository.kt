@@ -1,11 +1,7 @@
 package finals.project.data
 
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.ktx.app
 import finals.project.data.model.LoggedInUser
+import com.google.firebase.auth.FirebaseAuth
 
 /**
  * Class that requests authentication and user information from the remote data source and

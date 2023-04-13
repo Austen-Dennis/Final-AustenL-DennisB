@@ -1,8 +1,7 @@
 package finals.project.data
 
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import finals.project.data.model.LoggedInUser
+import com.google.firebase.auth.FirebaseAuth
 import java.io.IOException
 
 /**

@@ -1,9 +1,9 @@
 package finals.project.smsPage
 
-import android.view.View
-import android.widget.TextView
 import com.xwray.groupie.GroupieViewHolder
+import android.widget.TextView
 import com.xwray.groupie.Item
+import android.view.View
 import finals.project.R
 
 private val View.text_to_row: TextView

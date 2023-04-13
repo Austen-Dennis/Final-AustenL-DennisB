@@ -1,13 +1,13 @@
 package finals.project.smsPage
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import finals.project.ui.login.LoginActivity
+import android.content.Intent
+import android.view.MenuItem
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuItem
-import com.google.firebase.auth.FirebaseAuth
 import finals.project.R
-import finals.project.ui.login.LoginActivity
 
 class LatestMessagesActivity : AppCompatActivity() {
 

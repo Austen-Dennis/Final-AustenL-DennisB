@@ -1,7 +1,7 @@
 package finals.project
 
-import finals.project.ui.login.LoginActivity
 import finals.project.ui.login.LoginViewModel
+import finals.project.ui.login.LoginActivity
 import junit.framework.TestCase
 import org.junit.Test
 

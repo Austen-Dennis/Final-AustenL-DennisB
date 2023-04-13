@@ -1,20 +1,19 @@
 package finals.project.smsPage
 
+import com.google.firebase.database.ChildEventListener
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.DatabaseError
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.DataSnapshot
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.xwray.groupie.GroupieViewHolder
+import com.xwray.groupie.GroupAdapter
+import android.widget.EditText
+import android.view.View
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.EditText
-import androidx.recyclerview.widget.RecyclerView
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.ChildEventListener
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.xwray.groupie.GroupAdapter
-import com.xwray.groupie.GroupieViewHolder
 import finals.project.R
-
 
 @Suppress("DEPRECATION")
 class ChatLogActivity : AppCompatActivity() {

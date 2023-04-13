@@ -1,33 +1,26 @@
 package finals.project.ui.login
 
-import android.content.ContentValues
-import android.content.Intent
-import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import android.util.Log
-import android.view.View
-import android.view.inputmethod.EditorInfo
-import android.widget.EditText
-import android.widget.Toast
-import androidx.annotation.StringRes
+import finals.project.databinding.ActivityLoginBinding
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-import androidx.constraintlayout.widget.Group
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.auth.FirebaseAuth
+import androidx.lifecycle.ViewModelProvider
+import android.view.inputmethod.EditorInfo
+import androidx.appcompat.widget.Toolbar
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
-import com.google.firebase.ktx.Firebase
-import finals.project.R
 import finals.project.data.DataActivity
 import finals.project.data.HomeActivity
-import finals.project.databinding.ActivityLoginBinding
+import com.google.firebase.ktx.Firebase
+import androidx.annotation.StringRes
+import androidx.lifecycle.Observer
+import android.text.TextWatcher
+import android.widget.EditText
+import android.content.Intent
+import android.text.Editable
+import android.widget.Toast
 import java.lang.Exception
+import android.os.Bundle
+import android.view.View
+import finals.project.R
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var loginViewModel: LoginViewModel

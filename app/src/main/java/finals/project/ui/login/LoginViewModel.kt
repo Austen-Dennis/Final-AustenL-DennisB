@@ -1,11 +1,9 @@
 package finals.project.ui.login
 
-import androidx.lifecycle.LiveData
+import finals.project.data.LoginRepository
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import android.util.Patterns
-import android.view.View
-import finals.project.data.LoginRepository
+import androidx.lifecycle.LiveData
 import finals.project.data.Result
 
 import finals.project.R

@@ -1,25 +1,24 @@
 package finals.project.data
 
-import android.annotation.SuppressLint
-import android.content.*
-import android.net.Uri
-import android.os.Bundle
-import android.util.Log
-import android.view.View
+import com.google.firebase.database.ValueEventListener
+import finals.project.smsPage.LatestMessagesActivity
+import com.google.firebase.database.FirebaseDatabase
 import android.view.inputmethod.InputMethodManager
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DataSnapshot
+import androidx.appcompat.app.AppCompatActivity
+import finals.project.ui.login.LoginActivity
+import com.google.firebase.auth.FirebaseAuth
+import androidx.appcompat.widget.Toolbar
+import android.annotation.SuppressLint
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
-import finals.project.smsPage.LatestMessagesActivity
-import finals.project.ui.login.LoginActivity
-
+import android.os.Bundle
+import android.content.*
+import android.view.View
+import android.util.Log
+import android.net.Uri
 
 @Suppress("DEPRECATION")
 class ProfileActivity : AppCompatActivity() {
@@ -61,7 +60,6 @@ class ProfileActivity : AppCompatActivity() {
         val uid = FirebaseAuth.getInstance().uid
         setSupportActionBar(toolbar as Toolbar?)
 
-
         myRef.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.exists()) {
@@ -94,8 +92,6 @@ class ProfileActivity : AppCompatActivity() {
                         emailValue.text = "Contact: " + email
                     }
 
-
-
                     profileTitle.visibility=View.VISIBLE
                     bioValue.visibility=View.VISIBLE
                     gitValue.visibility=View.VISIBLE
@@ -106,8 +102,6 @@ class ProfileActivity : AppCompatActivity() {
                     userID.visibility=View.GONE
                     hideInfoButton.visibility=View.GONE
                     copyIDButton.visibility=View.GONE
-
-
 
                     showInfoButton.setOnClickListener {
                         emailText.visibility= View.VISIBLE
@@ -259,14 +253,10 @@ class ProfileActivity : AppCompatActivity() {
                 }
             }
 
-
-
-
             override fun onCancelled(error: DatabaseError) {
                 Log.w(ContentValues.TAG, "Failed to read value.", error.toException())
             }
         })
-
 
         val postButton = findViewById<View>(finals.project.R.id.post)
         postButton.setOnClickListener {
@@ -318,7 +308,6 @@ class ProfileActivity : AppCompatActivity() {
                 return true
             }
             return false
-
         }
 
     }

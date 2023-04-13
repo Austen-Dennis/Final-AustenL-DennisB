@@ -1,20 +1,17 @@
 package finals.project.data
 
-
-import android.annotation.SuppressLint
-import android.app.Activity
-import android.content.Intent
-import android.net.Uri
-import android.os.Bundle
-import android.provider.MediaStore
-import android.view.View
-import android.widget.ImageView
+import com.google.firebase.database.FirebaseDatabase
+import finals.project.smsPage.LatestMessagesActivity
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.storage.FirebaseStorage
-import finals.project.smsPage.LatestMessagesActivity
+import android.annotation.SuppressLint
+import android.provider.MediaStore
 import java.text.SimpleDateFormat
+import android.content.Intent
+import android.app.Activity
+import android.view.View
+import android.os.Bundle
+import android.net.Uri
 import java.util.*
 
 

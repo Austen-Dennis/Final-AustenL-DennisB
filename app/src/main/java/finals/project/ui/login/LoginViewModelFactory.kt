@@ -1,9 +1,9 @@
 package finals.project.ui.login
 
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import finals.project.data.LoginDataSource
 import finals.project.data.LoginRepository
+import androidx.lifecycle.ViewModel
 
 /**
  * ViewModel provider factory to instantiate LoginViewModel.

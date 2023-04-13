@@ -1,26 +1,21 @@
 package finals.project.data
 
+import com.google.firebase.database.ValueEventListener
+import finals.project.smsPage.LatestMessagesActivity
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DataSnapshot
+import androidx.appcompat.app.AppCompatActivity
+import finals.project.smsPage.ChatLogActivity
+import com.google.firebase.auth.FirebaseAuth
+import androidx.appcompat.widget.Toolbar
 import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Intent
-import android.os.Build.ID
+import android.view.View
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.*
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
-import com.google.firebase.ktx.Firebase
-import finals.project.smsPage.ChatLogActivity
-import finals.project.smsPage.LatestMessagesActivity
-import io.grpc.InternalConfigSelector.KEY
-import java.net.IDN
-
 
 class FriendSearchActivity : AppCompatActivity() {
     lateinit var searchView: SearchView
