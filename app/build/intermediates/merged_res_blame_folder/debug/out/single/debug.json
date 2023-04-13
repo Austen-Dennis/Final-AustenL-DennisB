@@ -88,12 +88,12 @@
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\the_get_together.jpg"
     },
     {
-        "merged": "finals.project.app-merged_res-66:/layout_user_row.xml.flat",
-        "source": "finals.project.app-main-68:/layout/user_row.xml"
-    },
-    {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "finals.project.app-merged_res-66:/layout_chat_from_row.xml.flat",
+        "source": "finals.project.app-main-68:/layout/chat_from_row.xml"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-mdpi_ic_launcher.png.flat",

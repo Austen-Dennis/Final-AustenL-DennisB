@@ -2,10 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/unknown"
-    android:layout_width="match_parent"
+    tools:context=".smsPage.ChatLogActivity"
     android:layout_height="match_parent"
-    tools:context=".smsPage.ChatLogActivity">
+    android:textColor="@android:color/white"
+    android:layout_width="match_parent"
+    android:id="@+id/unknown">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar5"
@@ -17,7 +18,7 @@
         app:layout_constraintBottom_toTopOf="@+id/chat_log"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <EditText
         android:id="@+id/Enter_message"
