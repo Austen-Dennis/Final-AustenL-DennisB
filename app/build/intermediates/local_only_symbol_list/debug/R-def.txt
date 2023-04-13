@@ -34,13 +34,13 @@ id copyID
 id displayInfo
 id email
 id emailValue
+id from_image
 id gitValue
 id help
 id hideInfo
 id home
 id imageView2
 id imageView3
-id imageView4
 id imageview1
 id item_text
 id layout
@@ -72,6 +72,7 @@ id submitEmail
 id submitGit
 id text_from_row
 id text_to_row
+id to_image
 id toolbar4
 id toolbar5
 id unknown

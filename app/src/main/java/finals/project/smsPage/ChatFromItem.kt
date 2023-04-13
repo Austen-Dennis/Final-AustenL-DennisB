@@ -12,9 +12,13 @@ private val View.text_from_row: TextView
         return text_from_row
     }
 
-class ChatFromItem(val text: String): Item<GroupieViewHolder>(){
+class ChatFromItem(val text: String, val user: User): Item<GroupieViewHolder>(){
     override fun bind(viewHolder: GroupieViewHolder, position: Int) {
         viewHolder.itemView.text_from_row.text = text
+        //TODO
+        //val uri=user.profileImageUrl
+        //val targetImage = viewHolder.itemView.from_image
+        //Picasso.get().load(uri).into(targetImage)
     }
 
     override fun getLayout(): Int {

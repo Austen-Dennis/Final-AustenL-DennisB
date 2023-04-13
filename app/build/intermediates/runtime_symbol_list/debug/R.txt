@@ -5040,6 +5040,7 @@ int id forever 0x7f0a01ba
 int id fragment_container_view_tag 0x7f0a01bb
 int id fragment_phone 0x7f0a01bc
 int id fragment_register_email 0x7f0a01bd
+int id from_image 0x7f0a0401
 int id frost 0x7f0a01be
 int id fullscreen_header 0x7f0a01bf
 int id galleryContainer 0x7f0a01c0
@@ -5096,7 +5097,6 @@ int id imageCountTextView 0x7f0a01f2
 int id imageView 0x7f0a01f3
 int id imageView2 0x7f0a01f4
 int id imageView3 0x7f0a01f5
-int id imageView4 0x7f0a01f6
 int id imagesPager 0x7f0a01f7
 int id imageview1 0x7f0a01f8
 int id immediateStop 0x7f0a01f9
@@ -5540,6 +5540,7 @@ int id title 0x7f0a03ae
 int id titleDividerNoCustom 0x7f0a03af
 int id titleTextView 0x7f0a03b0
 int id title_template 0x7f0a03b1
+int id to_image 0x7f0a0402
 int id toggle 0x7f0a03b2
 int id toolbar 0x7f0a03b3
 int id toolbar4 0x7f0a03b4
