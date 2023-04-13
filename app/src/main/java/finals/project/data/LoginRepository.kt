@@ -21,6 +21,7 @@ class LoginRepository(val dataSource: LoginDataSource) {
         dataSource.logout()
     }
 
+    //creates user/signs in to user if one already exists for provided email
     fun login(username: String, password: String): Result<LoggedInUser> {
         val result = dataSource.login(username, password)
         if (result is Result.Success) {
@@ -30,6 +31,7 @@ class LoginRepository(val dataSource: LoginDataSource) {
         }
         return result
     }
+
     fun setLoggedInUser(loggedInUser: LoggedInUser){
         this.user = loggedInUser
     }

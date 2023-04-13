@@ -10,11 +10,9 @@ class DataActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         FirebaseApp.initializeApp(this)
-        fun initialize() {
-
-        }
     }
 
+    //companion object contains all functions for passing data into the realtime database via firebase
     companion object {
         fun dataBase(uid: String?, name: String?, email: String?) {
             val database = FirebaseDatabase.getInstance()
@@ -28,6 +26,8 @@ class DataActivity : AppCompatActivity() {
                 myRef.child("uid").setValue(uid)
             }
         }
+
+        //verifies that companion object can be reached
         fun isReachable(): Boolean {
             val reachable = true
             return reachable
@@ -41,11 +41,11 @@ class DataActivity : AppCompatActivity() {
             }
         }
 
+        //TODO: Add implementation of profile pic
         fun profilePic(uid: String?) {
             val database = FirebaseDatabase.getInstance()
             val myRef = database.getReference("users/" + uid)
             if (uid != null) {
-
             }
         }
 
@@ -72,15 +72,7 @@ class DataActivity : AppCompatActivity() {
                 myRef.child("College Email").setValue(collegeEmail)
             }
         }
-        fun userGrab(uid: String?): String {
-            val database = FirebaseDatabase.getInstance()
-            val myRef = database.getReference("users/").child(uid.toString())
-            return ""
-        }
-
-
     }
-
 }
 
 

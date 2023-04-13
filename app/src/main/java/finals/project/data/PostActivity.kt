@@ -22,18 +22,18 @@ class PostActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(finals.project.R.layout.post)
 
-        //initial variables for setting intents.
-        val toolbar = findViewById<View>(io.getstream.chat.android.ui.R.id.toolbar)
-        setSupportActionBar(toolbar as Toolbar?)
-        val intentSMS = Intent(this, LatestMessagesActivity::class.java)
-        val intentHOME = Intent(this, HomeActivity::class.java)
+        //initial variables for setting intents
         val intentSEARCH = Intent(this, FriendSearchActivity::class.java)
+        val intentSMS = Intent(this, LatestMessagesActivity::class.java)
+        val toolbar = findViewById<View>(io.getstream.chat.android.ui.R.id.toolbar)
         val intentPROFILE = Intent(this, ProfileActivity::class.java)
+        val intentHOME = Intent(this, HomeActivity::class.java)
+        val smsButton = findViewById<View>(finals.project.R.id.sms)
         val intentCAMERA = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         val intentGALLERY = Intent(MediaStore.ACTION_PICK_IMAGES)
-        val imgView = findViewById<View>(finals.project.R.id.imageview1)
-        val smsButton = findViewById<View>(finals.project.R.id.sms)
+        setSupportActionBar(toolbar as Toolbar?)
 
+        //launches activities on click
         smsButton.setOnClickListener {
             startActivity(intentSMS)
         }

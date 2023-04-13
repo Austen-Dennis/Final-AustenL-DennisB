@@ -14,18 +14,19 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(finals.project.R.layout.homepage) // sets the view using the homepage.xml
+
+        //sets view as homepage.xml
+        setContentView(finals.project.R.layout.homepage)
+
+        //sets intents and toolbar values
+        val intentSEARCH = Intent(this, FriendSearchActivity::class.java)
+        val intentSMS = Intent(this, LatestMessagesActivity::class.java)
         val toolbar = findViewById<View>(io.getstream.chat.android.ui.R.id.toolbar)
+        val intentPROFILE = Intent(this, ProfileActivity::class.java)
+        val intentPOST = Intent(this, PostActivity::class.java)
         setSupportActionBar(toolbar as Toolbar?)
 
-        //sets the intent I.E. calls to the class Smspage which displays a layout
-        val intentSMS = Intent(this, LatestMessagesActivity::class.java)
-        val intentPOST = Intent(this, PostActivity::class.java)
-        val intentPROFILE = Intent(this, ProfileActivity::class.java)
-        val intentSEARCH = Intent(this, FriendSearchActivity::class.java)
-
-
-        //starts the activity onclick
+        //starts the activities onclick
         val profileButton = findViewById<View>(finals.project.R.id.profile)
         profileButton.setOnClickListener {
             startActivity(intentPROFILE)
@@ -42,11 +43,10 @@ class HomeActivity : AppCompatActivity() {
         searchButton.setOnClickListener {
             startActivity(intentSEARCH)
         }
-
     }
 
 
-    //only for testing.
+    //verifies that companion object can be reached
     companion object {
         fun isReachable(): Any {
             val reachable = true;

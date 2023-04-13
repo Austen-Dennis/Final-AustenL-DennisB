@@ -63,14 +63,18 @@ class ProfileActivity : AppCompatActivity() {
         myRef.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.exists()) {
+                    val collegeEmailSnap = dataSnapshot.child(uid.toString()).child("College Email").getValue().toString()
+                    val gitLink = dataSnapshot.child(uid.toString()).child("GitHub Link").getValue().toString()
+                    val bioSnap = dataSnapshot.child(uid.toString()).child("Bio").getValue().toString()
                     val email = dataSnapshot.child(uid.toString()).child("Email").getValue().toString()
                     val name = dataSnapshot.child(uid.toString()).child("Name").getValue().toString()
-                    val bioSnap = dataSnapshot.child(uid.toString()).child("Bio").getValue().toString()
-                    val gitLink = dataSnapshot.child(uid.toString()).child("GitHub Link").getValue().toString()
-                    val collegeEmailSnap = dataSnapshot.child(uid.toString()).child("College Email").getValue().toString()
-                    val pendingRequest = dataSnapshot.child(uid.toString()).child("Pending Friend Request").getValue().toString()
                     val clip: ClipData = ClipData.newPlainText("simple text", uid)
+
+                    //TODO: add implementation for friend requests to be added to list
+                    val pendingRequest = dataSnapshot.child(uid.toString()).child("Pending Friend Request").getValue().toString()
                     profileTitle.text = "Your Profile"
+
+                    //checks if the data value can be found in database, and displays it
                     if (dataSnapshot.child(uid.toString()).child("Name").exists()) {
                         nameValue.text = name
                     } else {
@@ -118,6 +122,8 @@ class ProfileActivity : AppCompatActivity() {
                         hideInfoButton.visibility=View.GONE
                         copyIDButton.visibility=View.GONE
                     }
+
+                    //submission onclicks verify that provided info is valid, and passed to database
                     submit.setOnClickListener {
                         val newName = nameText.getText().toString()
                         val validName = nameCheck(newName)
@@ -239,6 +245,8 @@ class ProfileActivity : AppCompatActivity() {
                             ).show()
                         }
                     }
+
+                    //launches links as activity
                     val releaseButton = findViewById<View>(finals.project.R.id.release)
                     releaseButton.setOnClickListener {
                         releaseIntent.data = Uri.parse(urlRelease)
@@ -248,7 +256,6 @@ class ProfileActivity : AppCompatActivity() {
                     projectInfoButton.setOnClickListener {
                         projectInfoIntent.data = Uri.parse(urlProjectInfo)
                         startActivity(projectInfoIntent)
-
                     }
                 }
             }
@@ -258,6 +265,7 @@ class ProfileActivity : AppCompatActivity() {
             }
         })
 
+        //starts activities onclick
         val postButton = findViewById<View>(finals.project.R.id.post)
         postButton.setOnClickListener {
             startActivity(intentPost)
@@ -284,6 +292,7 @@ class ProfileActivity : AppCompatActivity() {
         }
     }
 
+    //companion object holds all verification for data from user input
     companion object {
         fun bioCheck(bio: String): Boolean {
             if (bio.trim().isNotBlank()) {
@@ -291,24 +300,26 @@ class ProfileActivity : AppCompatActivity() {
             }
             return false
         }
+
         fun emailCheck(email: String): Any {
             if (email.contains(".edu") and email.contains("@")) {
                 return true
             }
             return false
         }
+
         fun nameCheck(newName: String): Any {
             if (newName.length >= 3) {
                 return true
             }
             return false
         }
+
         fun linkCheck(newLink: String): Any {
             if (newLink.contains("github")) {
                 return true
             }
             return false
         }
-
     }
 }
