@@ -1,18 +1,26 @@
 package finals.project.data
 
 import android.content.ContentValues
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import com.google.android.datatransport.runtime.TransportRuntime.initialize
+import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import java.lang.reflect.Array.set
 
+
 class DataActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        FirebaseApp.initializeApp(this)
+        fun initialize() {
+
+        }
     }
 
     companion object {
@@ -66,6 +74,12 @@ class DataActivity : AppCompatActivity() {
                 myRef.child("College Email").setValue(collegeEmail)
             }
         }
+        fun userGrab(uid: String?): String {
+            val database = FirebaseDatabase.getInstance()
+            val myRef = database.getReference("users/").child(uid.toString())
+            return ""
+        }
+
 
     }
 }

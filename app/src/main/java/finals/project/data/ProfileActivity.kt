@@ -257,32 +257,8 @@ class ProfileActivity : AppCompatActivity() {
                 }
             }
 
-            private fun linkCheck(newLink: String): Any {
-                if (newLink.contains("github")) {
-                    return true
-                }
-                    return false
 
-            }
 
-            private fun nameCheck(newName: String): Any {
-                if (newName.length >= 3) {
-                    return true
-                }
-                return false
-            }
-            private fun emailCheck(email: String): Any {
-                if (email.contains(".edu") and email.contains("@")) {
-                    return true
-                }
-                return false
-            }
-            private fun bioCheck(bio: String): Any {
-                if (bio.isNotBlank()) {
-                    return true
-                }
-                return false
-            }
 
             override fun onCancelled(error: DatabaseError) {
                 Log.w(ContentValues.TAG, "Failed to read value.", error.toException())
@@ -314,5 +290,34 @@ class ProfileActivity : AppCompatActivity() {
         searchButton.setOnClickListener {
             startActivity(intentSearch)
         }
+    }
+
+    companion object {
+        fun bioCheck(bio: String): Boolean {
+            if (bio.trim().isNotBlank()) {
+                return true
+            }
+            return false
+        }
+        fun emailCheck(email: String): Any {
+            if (email.contains(".edu") and email.contains("@")) {
+                return true
+            }
+            return false
+        }
+        fun nameCheck(newName: String): Any {
+            if (newName.length >= 3) {
+                return true
+            }
+            return false
+        }
+        fun linkCheck(newLink: String): Any {
+            if (newLink.contains("github")) {
+                return true
+            }
+            return false
+
+        }
+
     }
 }
