@@ -30,8 +30,10 @@ class DataActivity : AppCompatActivity() {
             if (uid != null && myRef.child("Name")==null) {
                 myRef.child("Name").setValue(name)
                 myRef.child("Email").setValue(email)
+                myRef.child("uid").setValue(uid)
             } else if (uid!=null) {
                 myRef.child("Email").setValue(email)
+                myRef.child("uid").setValue(uid)
             }
         }
         fun isReachable(): Boolean {

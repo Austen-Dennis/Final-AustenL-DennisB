@@ -47,16 +47,15 @@ class NewMessageActivity : AppCompatActivity() {
                         if (user != null) {
                             adapter.add(UserItem(user))
                         }
-                    recyclerview_newmessage.adapter = adapter
                     }
-
-                adapter.setOnItemClickListener{item, view ->
+                    adapter.setOnItemClickListener{item, view ->
                     val userItem = item as UserItem
                     val intent = Intent(view.context, ChatLogActivity::class.java)
                     intent.putExtra(USER_KEY, userItem.user)
                     startActivity(intent)
                     finish()
                 }
+                recyclerview_newmessage.adapter = adapter
                 }
 
             override fun onCancelled(snapshot: DatabaseError) {

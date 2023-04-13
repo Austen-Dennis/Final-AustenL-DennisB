@@ -36,7 +36,6 @@ class ChatLogActivity : AppCompatActivity() {
         val SendButton = findViewById<View>(R.id.sendButton)
         val chat_log = findViewById<View>(R.id.chat_log) as RecyclerView
         val adapter = GroupAdapter<GroupieViewHolder>()
-
         chat_log.adapter = adapter
 
         SendButton.setOnClickListener {
@@ -55,7 +54,7 @@ class ChatLogActivity : AppCompatActivity() {
         if (fromId == null) return
 
         val ref = FirebaseDatabase.getInstance().getReference("/messages").push()
-        val chatMessage = ChatMessage(ref.key!!, text, fromId, toId, System.currentTimeMillis() / 1000)
+        val chatMessage = ChatMessage(ref.key!!, text, fromId, toId.toString(), System.currentTimeMillis() / 1000)
         ref.setValue(chatMessage)
             .addOnSuccessListener {
                 Log.d(TAG,"Message saved")
