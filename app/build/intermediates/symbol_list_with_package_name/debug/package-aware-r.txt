@@ -5542,8 +5542,6 @@ id titleTextView
 id title_template
 id toggle
 id toolbar
-id toolbar2
-id toolbar3
 id toolbar4
 id toolbar5
 id top

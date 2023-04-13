@@ -1,146 +1,154 @@
 [
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_activity_friend_search.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_friend_search.xml"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_text_color_layout.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\text_color_layout.xml"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_text_color_layout.xml.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\text_color_layout.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-xhdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable__522516.png.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\_522516.png"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable_placeholder.jpg.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\placeholder.jpg"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-xhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "finals.project.app-merged_res-66:/layout_activity_latest_messages.xml.flat",
-        "source": "finals.project.app-main-68:/layout/activity_latest_messages.xml"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout-w936dp_activity_login.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout-w936dp\\activity_login.xml"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_activity_profile.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_profile.xml"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout-w1240dp_activity_login.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout-w1240dp\\activity_login.xml"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_chat_to_row.xml.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\chat_to_row.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\menu_nav_menu.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\menu\\nav_menu.xml"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_activity_chat_log.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_chat_log.xml"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_chat_from_row.xml.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\chat_from_row.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable__522516.png.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\_522516.png"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_activity_friend_search.xml.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_friend_search.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_activity_login.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_login.xml"
+        "merged": "finals.project.app-merged_res-66:/layout_user_row.xml.flat",
+        "source": "finals.project.app-main-68:/layout/user_row.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-mdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-mdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_activity_profile.xml.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_profile.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable_the_get_together_dark_.jpg.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\the_get_together_dark_.jpg"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable_the_get_together.jpg.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\the_get_together.jpg"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_homepage.xml.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\homepage.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_activity_latest_messages.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_latest_messages.xml"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\menu_nav_menu.xml.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\menu\\nav_menu.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout-w1240dp_activity_login.xml.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout-w1240dp\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_activity_new_message.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_new_message.xml"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_user_row.xml.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\user_row.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_post.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\post.xml"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_activity_new_message.xml.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_new_message.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_user_row.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\user_row.xml"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable_rounded_box.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\rounded_box.xml"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_activity_latest_messages.xml.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_latest_messages.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\xml\\backup_rules.xml"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable_screenshot__9_.png.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\screenshot__9_.png"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable_rounded_box.xml.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\rounded_box.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable_screenshot__9_.png.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\screenshot__9_.png"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout-w936dp_activity_login.xml.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout-w936dp\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_homepage.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\homepage.xml"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_activity_chat_log.xml.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_chat_log.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\xml\\data_extraction_rules.xml"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable_the_get_together.jpg.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\the_get_together.jpg"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable_the_get_together_dark_.jpg.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\the_get_together_dark_.jpg"
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_post.xml.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\post.xml"
+    },
+    {
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable_placeholder.jpg.flat",
+        "source": "C:\\Users\\Austen Lowder\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\placeholder.jpg"
     }
 ]
