@@ -32,10 +32,6 @@
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "finals.project.app-merged_res-66:/layout_chat_to_row.xml.flat",
-        "source": "finals.project.app-main-68:/layout/chat_to_row.xml"
-    },
-    {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
@@ -92,12 +88,12 @@
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\the_get_together.jpg"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "finals.project.app-merged_res-66:/layout_user_row.xml.flat",
+        "source": "finals.project.app-main-68:/layout/user_row.xml"
     },
     {
-        "merged": "finals.project.app-merged_res-66:/layout_chat_from_row.xml.flat",
-        "source": "finals.project.app-main-68:/layout/chat_from_row.xml"
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-mdpi_ic_launcher.png.flat",

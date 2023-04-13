@@ -26,40 +26,41 @@ class ProfileActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(finals.project.R.layout.activity_profile)
-        val toolbar = findViewById<View>(io.getstream.chat.android.ui.R.id.toolbar)
-        setSupportActionBar(toolbar as Toolbar?)
-        val intentLogin = Intent(this, LoginActivity::class.java)
-        val intentPost = Intent(this, PostActivity::class.java)
-        val intentSms = Intent(this, LatestMessagesActivity::class.java)
-        val intentSearch = Intent(this, FriendSearchActivity::class.java)
-        val intentReturn = Intent(this, HomeActivity::class.java)
-        val urlRelease = "https://github.com/bsu-cs222-spring23-dll/Final-AustenL-DennisB-BeethovenM-JulianR/releases"
-        val releaseIntent = Intent(Intent.ACTION_VIEW)
         val urlProjectInfo = "https://github.com/bsu-cs222-spring23-dll/Final-AustenL-DennisB-BeethovenM-JulianR#get-together"
-        val projectInfoIntent = Intent(Intent.ACTION_VIEW)
-        val profilePicture = findViewById<View>(finals.project.R.id.profilePic)
+        val urlRelease = "https://github.com/bsu-cs222-spring23-dll/Final-AustenL-DennisB-BeethovenM-JulianR/releases"
         val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
-        val hideInfoButton = findViewById<View>(finals.project.R.id.hideInfo)
-        val showInfoButton = findViewById<View>(finals.project.R.id.displayInfo)
-        val copyIDButton = findViewById<View>(finals.project.R.id.copyID)
-        val nameText = findViewById<View>(finals.project.R.id.newName) as EditText
-        val submit = findViewById<View>(finals.project.R.id.submit)
-        val uid = FirebaseAuth.getInstance().uid
-        val emailText = findViewById<View>(finals.project.R.id.email) as TextView
-        val emailValue = findViewById<View>(finals.project.R.id.emailValue) as TextView
-        val bioValue = findViewById<View>(finals.project.R.id.bioValue) as TextView
-        val nameValue = findViewById<View>(finals.project.R.id.nameValue) as TextView
-        val gitValue = findViewById<View>(finals.project.R.id.gitValue) as TextView
-        val userID = findViewById<View>(finals.project.R.id.user) as TextView
-        val myRef = FirebaseDatabase.getInstance().getReference("users")
-        val gitHubSub = findViewById<View>(finals.project.R.id.submitGit)
-        val gitHub = findViewById<View>(finals.project.R.id.GitHub) as EditText
-        val bioSub = findViewById<View>(finals.project.R.id.subBio)
-        val bio = findViewById<View>(finals.project.R.id.bio) as EditText
-        val emailSub = findViewById<View>(finals.project.R.id.submitEmail)
         val collegeEmail = findViewById<View>(finals.project.R.id.collegeEmail) as EditText
+        val emailValue = findViewById<View>(finals.project.R.id.emailValue) as TextView
+        val intentSearch = Intent(this, FriendSearchActivity::class.java)
+        val nameValue = findViewById<View>(finals.project.R.id.nameValue) as TextView
+        val intentSms = Intent(this, LatestMessagesActivity::class.java)
+        val bioValue = findViewById<View>(finals.project.R.id.bioValue) as TextView
+        val gitValue = findViewById<View>(finals.project.R.id.gitValue) as TextView
+        val toolbar = findViewById<View>(io.getstream.chat.android.ui.R.id.toolbar)
+        val nameText = findViewById<View>(finals.project.R.id.newName) as EditText
+        val emailText = findViewById<View>(finals.project.R.id.email) as TextView
+        val showInfoButton = findViewById<View>(finals.project.R.id.displayInfo)
+        val gitHub = findViewById<View>(finals.project.R.id.GitHub) as EditText
+        val profilePicture = findViewById<View>(finals.project.R.id.profilePic)
+        val intentReturn = Intent(this, HomeActivity::class.java)
+        val intentLogin = Intent(this, LoginActivity::class.java)
+        val userID = findViewById<View>(finals.project.R.id.user) as TextView
+        val hideInfoButton = findViewById<View>(finals.project.R.id.hideInfo)
+        val myRef = FirebaseDatabase.getInstance().getReference("users")
         val friendButton = findViewById<View>(finals.project.R.id.addFriend)
+        val intentPost = Intent(this, PostActivity::class.java)
+        val emailSub = findViewById<View>(finals.project.R.id.submitEmail)
+        val bio = findViewById<View>(finals.project.R.id.bio) as EditText
+        val gitHubSub = findViewById<View>(finals.project.R.id.submitGit)
+        val copyIDButton = findViewById<View>(finals.project.R.id.copyID)
+        val submit = findViewById<View>(finals.project.R.id.submit)
+        val bioSub = findViewById<View>(finals.project.R.id.subBio)
+        setContentView(finals.project.R.layout.activity_profile)
+        val projectInfoIntent = Intent(Intent.ACTION_VIEW)
+        val releaseIntent = Intent(Intent.ACTION_VIEW)
+        val uid = FirebaseAuth.getInstance().uid
+        setSupportActionBar(toolbar as Toolbar?)
+
 
         myRef.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {

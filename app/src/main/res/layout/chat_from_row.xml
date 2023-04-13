@@ -18,7 +18,7 @@
         android:padding="16dp"
         android:text="This is my message"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar4" />
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -27,7 +27,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar4"
-        app:srcCompat="@drawable/stream_ui_ic_single_user" />
+        app:srcCompat="@drawable/stream_ui_ic_single_user"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
