@@ -40,6 +40,7 @@ id hideInfo
 id home
 id imageView2
 id imageView3
+id imageView4
 id imageview1
 id item_text
 id layout
@@ -69,6 +70,7 @@ id subBio
 id submit
 id submitEmail
 id submitGit
+id textView
 id toolbar2
 id toolbar3
 id toolbar4
@@ -85,6 +87,8 @@ layout activity_latest_messages
 layout activity_login
 layout activity_new_message
 layout activity_profile
+layout chat_from_row
+layout chat_to_row
 layout homepage
 layout post
 layout text_color_layout

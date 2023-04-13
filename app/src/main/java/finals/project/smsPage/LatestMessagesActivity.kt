@@ -16,14 +16,14 @@ class LatestMessagesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_latest_messages)
-        //verifyLogin()
+
         val newMessage = Intent(this, NewMessageActivity::class.java)
-        val messageButton = findViewById<View>(R.id.new_message)
-        messageButton.setOnClickListener {
+        /*val messageButton = findViewById<View>(R.id.new_message)
+        messageButton.setOnClickListener {*/
             startActivity(newMessage)
         }
 
-    }
+    //}
 
     private fun verifyLogin() {
         val uid = FirebaseAuth.getInstance().uid
