@@ -1,6 +1,6 @@
 package finals.project.data
 
-import android.R
+
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
@@ -71,17 +71,19 @@ class PostActivity : AppCompatActivity() {
             val currentTime = SimpleDateFormat("hh-mm")
             val saveCurrentTime = currentTime.format(calFordTime.time)
 
-            val postRandomName = saveCurrentDate+saveCurrentTime
+            val postRandomName = saveCurrentDate + saveCurrentTime
             val storageReference = FirebaseDatabase.getInstance()
         }
 
     }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode != Activity.RESULT_OK) {
             val selectedImage: Uri? = data!!.getData()
         }
     }
+
     companion object {
         fun iscreated(): Any {
             val created = true;

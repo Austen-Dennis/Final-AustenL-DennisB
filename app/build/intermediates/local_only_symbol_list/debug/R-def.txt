@@ -20,12 +20,14 @@ drawable screenshot__9_
 drawable the_get_together
 drawable the_get_together_dark_
 id Camera
+id Enter_message
 id Gallery
 id GitHub
 id accountInfo
 id addFriend
 id bio
 id bioValue
+id chat_log
 id collegeEmail
 id container
 id copyID
@@ -43,6 +45,7 @@ id item_text
 id layout
 id loading
 id login
+id messageFriend
 id nameValue
 id navigation
 id newName
@@ -58,6 +61,7 @@ id release
 id request
 id search
 id searchView
+id sendButton
 id sign_out
 id sms
 id so
@@ -67,11 +71,15 @@ id submitEmail
 id submitGit
 id toolbar2
 id toolbar3
+id toolbar4
+id toolbar5
+id unknown
 id update
 id user
 id username
 id username_text
 id verify
+layout activity_chat_log
 layout activity_friend_search
 layout activity_latest_messages
 layout activity_login

@@ -59,6 +59,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FInalProject" >
         <activity
+            android:name="finals.project.smsPage.ChatLogActivity"
+            android:exported="false" />
+        <activity
             android:name="finals.project.smsPage.NewMessageActivity"
             android:exported="false" />
 
