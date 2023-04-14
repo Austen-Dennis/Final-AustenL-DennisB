@@ -19,6 +19,7 @@ Julian Rodriguez
 
 ![image](https://user-images.githubusercontent.com/112116586/232137208-aef1079a-ca62-46d7-aa34-347d3dffca21.png)
 ![image (1)](https://user-images.githubusercontent.com/112116586/232137229-d400d01f-adee-4740-9e31-21365d17bfee.png)
+
 *In order to run app, add an android app under the configuration settings, and ensure that it runs under the main module, then the app should be ready to run!\
 *When closing application, make sure to sign out to avoid potential errors with account data storage.\
 *When creating an account, please use a Google email to ensure proper email address validation.\
