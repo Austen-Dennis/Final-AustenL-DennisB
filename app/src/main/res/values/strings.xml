@@ -11,6 +11,14 @@
     <string name="login_failed">"Login failed"</string>
     <string name="back_button">"BACK"</string>
     <string name="enter_message">"Enter Message"</string>
+    <string name="message">"MESSAGE"</string>
     <string name="send_button">"SEND"</string>
+    <string name="search_button">"SEARCH"</string>
+    <string name="search_hint">"  Search"</string>
+    <string name="add_button">"ADD FRIEND"</string>
+    <string name="profile_button">"PROFILE"</string>
+    <string name="post_button">"POST"</string>
+    <string name="home_button">"HOME"</string>
+    <string name="SMS_button">"SMS"</string>
 
 </resources>

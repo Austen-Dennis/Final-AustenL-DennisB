@@ -6038,6 +6038,7 @@ plurals stream_ui_message_list_thread_separator
 plurals stream_ui_search_results_count
 raw car_ui_keep
 raw firebase_common_keep
+string SMS_button
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -6067,9 +6068,11 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string action_sign_in
 string action_sign_in_short
+string add_button
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
+string back_button
 string bottom_sheet_behavior
 string bottomsheet_action_collapse
 string bottomsheet_action_expand
@@ -6120,6 +6123,7 @@ string common_signin_button_text_long
 string copy
 string copy_toast_msg
 string default_web_client_id
+string enter_message
 string error_a11y_label
 string error_icon_content_description
 string expand_button_title
@@ -6232,6 +6236,7 @@ string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
+string home_button
 string icon_content_description
 string invalid_password
 string invalid_username
@@ -6275,6 +6280,7 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string message
 string mtrl_badge_numberless_content_description
 string mtrl_checkbox_button_icon_path_checked
 string mtrl_checkbox_button_icon_path_group_name
@@ -6343,14 +6349,19 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string post_button
 string preference_copied
+string profile_button
 string project_id
 string prompt_email
 string prompt_password
+string search_button
+string search_hint
 string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
 string searchview_navigation_content_description
+string send_button
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string status_bar_notification_info_overflow

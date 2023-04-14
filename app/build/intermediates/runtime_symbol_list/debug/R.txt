@@ -6037,6 +6037,7 @@ int plurals stream_ui_message_list_thread_separator 0x7f110007
 int plurals stream_ui_search_results_count 0x7f110008
 int raw car_ui_keep 0x7f120000
 int raw firebase_common_keep 0x7f120001
+int string SMS_button 0x7f1301e0
 int string abc_action_bar_home_description 0x7f130000
 int string abc_action_bar_up_description 0x7f130001
 int string abc_action_menu_overflow_description 0x7f130002
@@ -6066,9 +6067,11 @@ int string abc_shareactionprovider_share_with_application 0x7f130019
 int string abc_toolbar_collapse_description 0x7f13001a
 int string action_sign_in 0x7f13001b
 int string action_sign_in_short 0x7f13001c
+int string add_button 0x7f1301e1
 int string androidx_startup 0x7f13001d
 int string app_name 0x7f13001e
 int string appbar_scrolling_view_behavior 0x7f13001f
+int string back_button 0x7f1301e2
 int string bottom_sheet_behavior 0x7f130020
 int string bottomsheet_action_collapse 0x7f130021
 int string bottomsheet_action_expand 0x7f130022
@@ -6119,6 +6122,7 @@ int string common_signin_button_text_long 0x7f13004e
 int string copy 0x7f13004f
 int string copy_toast_msg 0x7f130050
 int string default_web_client_id 0x7f130051
+int string enter_message 0x7f1301e3
 int string error_a11y_label 0x7f130052
 int string error_icon_content_description 0x7f130053
 int string expand_button_title 0x7f130054
@@ -6231,6 +6235,7 @@ int string google_app_id 0x7f1300be
 int string google_crash_reporting_api_key 0x7f1300bf
 int string google_storage_bucket 0x7f1300c0
 int string hide_bottom_view_on_scroll_behavior 0x7f1300c1
+int string home_button 0x7f1301e4
 int string icon_content_description 0x7f1300c2
 int string invalid_password 0x7f1300c3
 int string invalid_username 0x7f1300c4
@@ -6274,6 +6279,7 @@ int string material_timepicker_minute 0x7f1300e9
 int string material_timepicker_pm 0x7f1300ea
 int string material_timepicker_select_time 0x7f1300eb
 int string material_timepicker_text_input_mode_description 0x7f1300ec
+int string message 0x7f1301e5
 int string mtrl_badge_numberless_content_description 0x7f1300ed
 int string mtrl_checkbox_button_icon_path_checked 0x7f1300ee
 int string mtrl_checkbox_button_icon_path_group_name 0x7f1300ef
@@ -6342,14 +6348,19 @@ int string path_password_eye 0x7f13012d
 int string path_password_eye_mask_strike_through 0x7f13012e
 int string path_password_eye_mask_visible 0x7f13012f
 int string path_password_strike_through 0x7f130130
+int string post_button 0x7f1301e6
 int string preference_copied 0x7f130131
+int string profile_button 0x7f1301e7
 int string project_id 0x7f130132
 int string prompt_email 0x7f130133
 int string prompt_password 0x7f130134
+int string search_button 0x7f1301e8
+int string search_hint 0x7f1301e9
 int string search_menu_title 0x7f130135
 int string searchbar_scrolling_view_behavior 0x7f130136
 int string searchview_clear_text_content_description 0x7f130137
 int string searchview_navigation_content_description 0x7f130138
+int string send_button 0x7f1301ea
 int string side_sheet_accessibility_pane_title 0x7f130139
 int string side_sheet_behavior 0x7f13013a
 int string status_bar_notification_info_overflow 0x7f13013b
