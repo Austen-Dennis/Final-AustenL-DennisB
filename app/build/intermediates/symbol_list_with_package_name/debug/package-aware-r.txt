@@ -6066,6 +6066,8 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string about
+string account_info
 string action_sign_in
 string action_sign_in_short
 string add_button
@@ -6073,6 +6075,7 @@ string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
 string back_button
+string bio
 string bottom_sheet_behavior
 string bottomsheet_action_collapse
 string bottomsheet_action_expand
@@ -6098,10 +6101,12 @@ string car_ui_toolbar_menu_item_overflow_title
 string car_ui_toolbar_menu_item_search_title
 string car_ui_toolbar_menu_item_settings_title
 string car_ui_toolbar_nav_icon_content_description
+string change_user
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string clear_text_end_icon_content_description
+string college_email
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
 string common_google_play_services_enable_title
@@ -6123,6 +6128,7 @@ string common_signin_button_text_long
 string copy
 string copy_toast_msg
 string default_web_client_id
+string display
 string enter_message
 string error_a11y_label
 string error_icon_content_description
@@ -6137,6 +6143,7 @@ string fallback_menu_item_open_in_browser
 string fallback_menu_item_share_link
 string fcm_fallback_notification_channel_label
 string firebase_web_host
+string friend_requests
 string fui_accessibility_logo
 string fui_auto_verified
 string fui_button_text_save
@@ -6231,16 +6238,21 @@ string fui_welcome_back_idp_header
 string fui_welcome_back_idp_prompt
 string fui_welcome_back_password_prompt_body
 string gcm_defaultSenderId
+string generic_message
+string github_link
 string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string help_and_info
+string hide
 string hide_bottom_view_on_scroll_behavior
 string home_button
 string icon_content_description
 string invalid_password
 string invalid_username
 string item_view_role_description
+string latest
 string library_name
 string login_failed
 string m3_ref_typeface_brand_medium
@@ -6352,6 +6364,7 @@ string path_password_strike_through
 string post_button
 string preference_copied
 string profile_button
+string profile_pic
 string project_id
 string prompt_email
 string prompt_password
@@ -6364,6 +6377,7 @@ string searchview_navigation_content_description
 string send_button
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
+string sign_out
 string status_bar_notification_info_overflow
 string stream_chat_error_notification_group_summary_content_text
 string stream_chat_error_notification_group_summary_title
@@ -6525,7 +6539,9 @@ string stream_ui_user_status_last_seen
 string stream_ui_user_status_last_seen_just_now
 string stream_ui_user_status_online
 string stream_ui_yesterday
+string submit
 string summary_collapsed_preference_list
+string update_pass
 string v7_preference_off
 string v7_preference_on
 string welcome

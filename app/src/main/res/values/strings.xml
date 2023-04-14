@@ -20,5 +20,23 @@
     <string name="post_button">"POST"</string>
     <string name="home_button">"HOME"</string>
     <string name="SMS_button">"SMS"</string>
+    <string name="generic_message">"This is my message"</string>
+    <string name="account_info">"Account Information"</string>
+    <string name="github_link">"Github Link"</string>
+    <string name="submit">"SUBMIT"</string>
+    <string name="college_email">"College Email (if applicable)"</string>
+    <string name="bio">"Add Bio"</string>
+    <string name="friend_requests">"Friend Requests"</string>
+    <string name="display">"Display Your Info"</string>
+    <string name="hide">"Hide Your Info"</string>
+    <string name="copy">"Copy To Clipboard"</string>
+    <string name="sign_out">"Sign Out"</string>
+    <string name="update_pass">"Update Password"</string>
+    <string name="about">"About the Project"</string>
+    <string name="latest">"Latest Release"</string>
+    <string name="help_and_info">"Help and Information"</string>
+    <string name="change_user">"Change Username"</string>
+    <string name="profile_pic">"Upload Profile Pic"</string>
+
 
 </resources>

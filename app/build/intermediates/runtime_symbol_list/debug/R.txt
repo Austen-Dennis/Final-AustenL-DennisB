@@ -6065,6 +6065,8 @@ int string abc_searchview_description_voice 0x7f130017
 int string abc_shareactionprovider_share_with 0x7f130018
 int string abc_shareactionprovider_share_with_application 0x7f130019
 int string abc_toolbar_collapse_description 0x7f13001a
+int string about 0x7f1301eb
+int string account_info 0x7f1301ec
 int string action_sign_in 0x7f13001b
 int string action_sign_in_short 0x7f13001c
 int string add_button 0x7f1301e1
@@ -6072,6 +6074,7 @@ int string androidx_startup 0x7f13001d
 int string app_name 0x7f13001e
 int string appbar_scrolling_view_behavior 0x7f13001f
 int string back_button 0x7f1301e2
+int string bio 0x7f1301ed
 int string bottom_sheet_behavior 0x7f130020
 int string bottomsheet_action_collapse 0x7f130021
 int string bottomsheet_action_expand 0x7f130022
@@ -6097,10 +6100,12 @@ int string car_ui_toolbar_menu_item_overflow_title 0x7f130035
 int string car_ui_toolbar_menu_item_search_title 0x7f130036
 int string car_ui_toolbar_menu_item_settings_title 0x7f130037
 int string car_ui_toolbar_nav_icon_content_description 0x7f130038
+int string change_user 0x7f1301ee
 int string character_counter_content_description 0x7f130039
 int string character_counter_overflowed_content_description 0x7f13003a
 int string character_counter_pattern 0x7f13003b
 int string clear_text_end_icon_content_description 0x7f13003c
+int string college_email 0x7f1301ef
 int string common_google_play_services_enable_button 0x7f13003d
 int string common_google_play_services_enable_text 0x7f13003e
 int string common_google_play_services_enable_title 0x7f13003f
@@ -6122,6 +6127,7 @@ int string common_signin_button_text_long 0x7f13004e
 int string copy 0x7f13004f
 int string copy_toast_msg 0x7f130050
 int string default_web_client_id 0x7f130051
+int string display 0x7f1301f0
 int string enter_message 0x7f1301e3
 int string error_a11y_label 0x7f130052
 int string error_icon_content_description 0x7f130053
@@ -6136,6 +6142,7 @@ int string fallback_menu_item_open_in_browser 0x7f13005b
 int string fallback_menu_item_share_link 0x7f13005c
 int string fcm_fallback_notification_channel_label 0x7f13005d
 int string firebase_web_host 0x7f13005e
+int string friend_requests 0x7f1301f1
 int string fui_accessibility_logo 0x7f13005f
 int string fui_auto_verified 0x7f130060
 int string fui_button_text_save 0x7f130061
@@ -6230,16 +6237,21 @@ int string fui_welcome_back_idp_header 0x7f1300b9
 int string fui_welcome_back_idp_prompt 0x7f1300ba
 int string fui_welcome_back_password_prompt_body 0x7f1300bb
 int string gcm_defaultSenderId 0x7f1300bc
+int string generic_message 0x7f1301f2
+int string github_link 0x7f1301f3
 int string google_api_key 0x7f1300bd
 int string google_app_id 0x7f1300be
 int string google_crash_reporting_api_key 0x7f1300bf
 int string google_storage_bucket 0x7f1300c0
+int string help_and_info 0x7f1301f4
+int string hide 0x7f1301f5
 int string hide_bottom_view_on_scroll_behavior 0x7f1300c1
 int string home_button 0x7f1301e4
 int string icon_content_description 0x7f1300c2
 int string invalid_password 0x7f1300c3
 int string invalid_username 0x7f1300c4
 int string item_view_role_description 0x7f1300c5
+int string latest 0x7f1301f6
 int string library_name 0x7f1300c6
 int string login_failed 0x7f1300c7
 int string m3_ref_typeface_brand_medium 0x7f1300c8
@@ -6351,6 +6363,7 @@ int string path_password_strike_through 0x7f130130
 int string post_button 0x7f1301e6
 int string preference_copied 0x7f130131
 int string profile_button 0x7f1301e7
+int string profile_pic 0x7f1301f7
 int string project_id 0x7f130132
 int string prompt_email 0x7f130133
 int string prompt_password 0x7f130134
@@ -6363,6 +6376,7 @@ int string searchview_navigation_content_description 0x7f130138
 int string send_button 0x7f1301ea
 int string side_sheet_accessibility_pane_title 0x7f130139
 int string side_sheet_behavior 0x7f13013a
+int string sign_out 0x7f1301f8
 int string status_bar_notification_info_overflow 0x7f13013b
 int string stream_chat_error_notification_group_summary_content_text 0x7f13013c
 int string stream_chat_error_notification_group_summary_title 0x7f13013d
@@ -6524,7 +6538,9 @@ int string stream_ui_user_status_last_seen 0x7f1301d8
 int string stream_ui_user_status_last_seen_just_now 0x7f1301d9
 int string stream_ui_user_status_online 0x7f1301da
 int string stream_ui_yesterday 0x7f1301db
+int string submit 0x7f1301f9
 int string summary_collapsed_preference_list 0x7f1301dc
+int string update_pass 0x7f1301fa
 int string v7_preference_off 0x7f1301dd
 int string v7_preference_on 0x7f1301de
 int string welcome 0x7f1301df
