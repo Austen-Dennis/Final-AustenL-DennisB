@@ -25,7 +25,7 @@
             android:layout_height="40dp"
             android:layout_marginTop="0dp"
             android:background="@drawable/rounded_box"
-            android:text="BACK"
+            android:text="@string/back_button"
             android:textAlignment="center"
             tools:ignore="RtlCompat" />
     </androidx.appcompat.widget.Toolbar>
@@ -38,10 +38,11 @@
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:textColor="@android:color/black"
-        android:hint="Enter Message"
+        android:hint="@string/enter_message"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="Autofill" />
 
     <Button
         android:id="@+id/sendButton"
@@ -51,7 +52,7 @@
         android:layout_marginBottom="16dp"
         android:textColor="@android:color/white"
         android:background="#131111"
-        android:text="Send"
+        android:text="@string/send_button"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

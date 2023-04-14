@@ -9,4 +9,8 @@
     <string name="invalid_username">Enter a valid email</string>
     <string name="invalid_password">Password must be longer than 5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="back_button">"BACK"</string>
+    <string name="enter_message">"Enter Message"</string>
+    <string name="send_button">"SEND"</string>
+
 </resources>
