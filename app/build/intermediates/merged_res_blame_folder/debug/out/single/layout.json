@@ -1,13 +1,5 @@
 [
     {
-        "merged": "finals.project.app-mergeDebugResources-65:/layout/activity_new_message.xml",
-        "source": "finals.project.app-main-68:/layout/activity_new_message.xml"
-    },
-    {
-        "merged": "finals.project.app-mergeDebugResources-65:/layout/activity_profile.xml",
-        "source": "finals.project.app-main-68:/layout/activity_profile.xml"
-    },
-    {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\user_row.xml",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\user_row.xml"
     },
@@ -16,8 +8,28 @@
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_profile.xml"
     },
     {
+        "merged": "finals.project.app-mergeDebugResources-65:/layout/chat_to_row.xml",
+        "source": "finals.project.app-main-68:/layout/chat_to_row.xml"
+    },
+    {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\text_color_layout.xml",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\text_color_layout.xml"
+    },
+    {
+        "merged": "finals.project.app-mergeDebugResources-65:/layout/text_color_layout.xml",
+        "source": "finals.project.app-main-68:/layout/text_color_layout.xml"
+    },
+    {
+        "merged": "finals.project.app-mergeDebugResources-65:/layout/homepage.xml",
+        "source": "finals.project.app-main-68:/layout/homepage.xml"
+    },
+    {
+        "merged": "finals.project.app-mergeDebugResources-65:/layout/user_row.xml",
+        "source": "finals.project.app-main-68:/layout/user_row.xml"
+    },
+    {
+        "merged": "finals.project.app-mergeDebugResources-65:/layout/post.xml",
+        "source": "finals.project.app-main-68:/layout/post.xml"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\homepage.xml",
@@ -46,6 +58,10 @@
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\chat_to_row.xml",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\chat_to_row.xml"
+    },
+    {
+        "merged": "finals.project.app-mergeDebugResources-65:/layout/chat_from_row.xml",
+        "source": "finals.project.app-main-68:/layout/chat_from_row.xml"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\activity_friend_search.xml",

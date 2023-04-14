@@ -75,14 +75,15 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
-                tools:visibility="gone" />
+                tools:visibility="gone"
+                tools:ignore="TextViewEdits" />
 
             <TextView
                 android:id="@+id/accountInfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:text="Account Information"
+                android:text="@string/account_info"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="#FFFFFF"
@@ -93,7 +94,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:hint="GitHub Link"
+                android:hint="@string/github_link"
                 android:background="@drawable/rounded_box"
                 android:backgroundTint="@color/white"
                 android:padding="5dp"
@@ -110,10 +111,10 @@
                 android:layout_gravity="center_vertical|right"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/rounded_box"
-                android:text="Submit"
+                android:text="@string/submit"
                 android:textAlignment="center"
                 android:translationY="-47dp"
-                tools:ignore="RtlCompat"
+                tools:ignore="RtlCompat,RtlHardcoded"
                 tools:visibility="gone" />
 
             <EditText
@@ -124,7 +125,7 @@
                 android:background="@drawable/rounded_box"
                 android:backgroundTint="@color/white"
                 android:padding="5dp"
-                android:hint="Change Username"
+                android:hint="@string/change_user"
                 android:translationY="-40dp"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -138,10 +139,10 @@
                 android:layout_gravity="center_vertical|right"
                 android:layout_marginTop="0dp"
                 android:background="@drawable/rounded_box"
-                android:text="Submit"
+                android:text="@string/submit"
                 android:textAlignment="center"
                 android:translationY="-77dp"
-                tools:ignore="RtlCompat"
+                tools:ignore="RtlCompat,RtlHardcoded"
                 tools:visibility="gone" />
             <EditText
                 android:id="@+id/bio"
@@ -151,7 +152,7 @@
                 android:background="@drawable/rounded_box"
                 android:backgroundTint="@color/white"
                 android:padding="5dp"
-                android:hint="Add Bio"
+                android:hint="@string/bio"
                 android:translationY="-70dp"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -165,10 +166,10 @@
                 android:layout_gravity="center_vertical|right"
                 android:layout_marginTop="0dp"
                 android:background="@drawable/rounded_box"
-                android:text="Submit"
+                android:text="@string/submit"
                 android:textAlignment="center"
                 android:translationY="-107dp"
-                tools:ignore="RtlCompat"
+                tools:ignore="RtlCompat,RtlHardcoded"
                 tools:visibility="gone" />
             <EditText
                 android:id="@+id/collegeEmail"
@@ -178,7 +179,7 @@
                 android:background="@drawable/rounded_box"
                 android:backgroundTint="@color/white"
                 android:padding="5dp"
-                android:hint="College Email (if applicable)"
+                android:hint="@string/college_email"
                 android:translationY="-100dp"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -192,10 +193,10 @@
                 android:layout_gravity="center_vertical|right"
                 android:layout_marginTop="0dp"
                 android:background="@drawable/rounded_box"
-                android:text="Submit"
+                android:text="@string/submit"
                 android:textAlignment="center"
                 android:translationY="-137dp"
-                tools:ignore="RtlCompat"
+                tools:ignore="RtlCompat,RtlHardcoded"
                 tools:visibility="gone" />
             <Button
                 android:id="@+id/request"
@@ -204,7 +205,7 @@
                 android:translationY="-130dp"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:background="@drawable/rounded_box"
-                android:text="Friend Requests"
+                android:text="@string/friend_requests"
                 android:textAlignment="center"
                 tools:ignore="RtlCompat" />
 
@@ -215,7 +216,7 @@
                 android:translationY="-120dp"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:background="@drawable/rounded_box"
-                android:text="Display Your Info"
+                android:text="@string/display"
                 android:textAlignment="center"
                 tools:ignore="RtlCompat" />
 
@@ -252,7 +253,7 @@
                 android:layout_marginTop="0dp"
                 android:translationY="-130dp"
                 android:background="@drawable/rounded_box"
-                android:text="Copy to Clipboard"
+                android:text="@string/copy"
                 android:textAlignment="center"
                 tools:ignore="RtlCompat"
                 tools:visibility="gone" />
@@ -265,7 +266,7 @@
                 android:layout_marginTop="0dp"
                 android:translationY="-122dp"
                 android:background="@drawable/rounded_box"
-                android:text="Hide Your Info"
+                android:text="@string/hide"
                 android:textAlignment="center"
                 tools:ignore="RtlCompat"
                 tools:visibility="gone" />
@@ -275,7 +276,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:text="Help and Information"
+                android:text="@string/help_and_info"
                 android:textAlignment="center"
                 android:translationY="-120dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -287,7 +288,7 @@
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:background="@drawable/rounded_box"
-                android:text="Latest Release"
+                android:text="@string/latest"
                 android:translationY="-115dp"
                 app:layout_constraintBottom_toBottomOf="parent" />
 
@@ -297,7 +298,7 @@
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:background="@drawable/rounded_box"
-                android:text="About the Project"
+                android:text="@string/about"
                 android:translationY="-110dp"
                 app:layout_constraintBottom_toBottomOf="parent" />
             <Button
@@ -307,7 +308,7 @@
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:layout_marginTop="0dp"
                 android:background="@drawable/rounded_box"
-                android:text="Upload Profile Pic"
+                android:text="@string/profile_pic"
                 android:textAlignment="center"
                 android:translationY="-105dp"
                 tools:ignore="RtlCompat"
@@ -326,7 +327,7 @@
                 android:paddingEnd="5dp"
                 android:paddingRight="5dp"
                 android:paddingBottom="5dp"
-                android:text="Update Password"
+                android:text="@string/update_pass"
                 android:textAlignment="center"
                 android:translationY="-100dp"
                 tools:ignore="RtlCompat" />
@@ -336,7 +337,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:text="Sign Out"
+                android:text="@string/sign_out"
                 android:textAlignment="center"
                 android:translationY="-95dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -348,7 +349,7 @@
                 android:layout_height="40dp"
                 android:layout_gravity="bottom|center"
                 android:background="@drawable/rounded_box"
-                android:text="Sign Out"
+                android:text="@string/sign_out"
                 android:translationY="-92dp"
                 app:layout_constraintBottom_toBottomOf="parent" />
 
@@ -360,7 +361,7 @@
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:layout_marginStart="240dp"
-        android:text="PROFILE"
+        android:text="@string/profile_button"
         android:translationY="-60dp"
         app:layout_constraintLeft_toRightOf="@id/home"
         app:layout_constraintStart_toStartOf="parent"
@@ -371,7 +372,7 @@
         android:id="@+id/post"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:text="POST"
+        android:text="@string/post_button"
         android:translationY="620dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="@id/home" />
@@ -381,7 +382,7 @@
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:layout_marginTop="680dp"
-        android:text="SEARCH"
+        android:text="@string/search_button"
         android:translationY="-60dp"
         app:layout_constraintEnd_toStartOf="@id/home"
         app:layout_constraintStart_toEndOf="@id/post"
@@ -393,7 +394,7 @@
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:layout_marginTop="680dp"
-        android:text="HOME"
+        android:text="@string/home_button"
         android:translationY="-60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -404,7 +405,7 @@
         android:id="@+id/sms"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:text="SMS"
+        android:text="@string/SMS_button"
         android:translationX="-6dp"
         android:translationY="-60dp"
         app:layout_constraintEnd_toEndOf="parent"

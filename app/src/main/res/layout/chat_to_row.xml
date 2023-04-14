@@ -16,7 +16,7 @@
         android:background="@drawable/rounded_box"
         android:maxWidth="240dp"
         android:padding="16dp"
-        android:text="This is my message"
+        android:text="@string/generic_message"
         app:layout_constraintEnd_toStartOf="@+id/to_image" />
 
     <ImageView

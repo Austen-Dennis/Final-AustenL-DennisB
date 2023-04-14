@@ -42,7 +42,10 @@
     <string name="latest">"Latest Release"</string>
     <string name="login_failed">"Login failed"</string>
     <string name="message">"MESSAGE"</string>
+    <string name="open_camera">"Open Camera"</string>
+    <string name="placeholder">"PLACEHOLDER"</string>
     <string name="post_button">"POST"</string>
+    <string name="post_from_camera">"Post From Camera Roll"</string>
     <string name="profile_button">"PROFILE"</string>
     <string name="profile_pic">"Upload Profile Pic"</string>
     <string name="project_id" translatable="false">get-together-efaf7</string>
@@ -54,6 +57,7 @@
     <string name="sign_out">"Sign Out"</string>
     <string name="submit">"SUBMIT"</string>
     <string name="update_pass">"Update Password"</string>
+    <string name="username">"username"</string>
     <string name="welcome">"Welcome !"</string>
     <style name="Theme.FInalProject" parent="Theme.MaterialComponents.Light.NoActionBar">
         

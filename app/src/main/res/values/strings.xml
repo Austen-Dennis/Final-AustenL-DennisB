@@ -37,6 +37,9 @@
     <string name="help_and_info">"Help and Information"</string>
     <string name="change_user">"Change Username"</string>
     <string name="profile_pic">"Upload Profile Pic"</string>
-
+    <string name="open_camera">"Open Camera"</string>
+    <string name="post_from_camera">"Post From Camera Roll"</string>
+    <string name="username">"username"</string>
+    <string name="placeholder">"PLACEHOLDER"</string>
 
 </resources>

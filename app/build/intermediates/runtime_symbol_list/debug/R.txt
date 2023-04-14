@@ -6355,12 +6355,15 @@ int string mtrl_switch_track_path 0x7f130128
 int string mtrl_timepicker_cancel 0x7f130129
 int string mtrl_timepicker_confirm 0x7f13012a
 int string not_set 0x7f13012b
+int string open_camera 0x7f1301fb
 int string password_toggle_content_description 0x7f13012c
 int string path_password_eye 0x7f13012d
 int string path_password_eye_mask_strike_through 0x7f13012e
 int string path_password_eye_mask_visible 0x7f13012f
 int string path_password_strike_through 0x7f130130
+int string placeholder 0x7f1301fc
 int string post_button 0x7f1301e6
+int string post_from_camera 0x7f1301fd
 int string preference_copied 0x7f130131
 int string profile_button 0x7f1301e7
 int string profile_pic 0x7f1301f7
@@ -6541,6 +6544,7 @@ int string stream_ui_yesterday 0x7f1301db
 int string submit 0x7f1301f9
 int string summary_collapsed_preference_list 0x7f1301dc
 int string update_pass 0x7f1301fa
+int string username 0x7f1301fe
 int string v7_preference_off 0x7f1301dd
 int string v7_preference_on 0x7f1301de
 int string welcome 0x7f1301df

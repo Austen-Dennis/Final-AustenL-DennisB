@@ -129,7 +129,10 @@ string invalid_username
 string latest
 string login_failed
 string message
+string open_camera
+string placeholder
 string post_button
+string post_from_camera
 string profile_button
 string profile_pic
 string project_id
@@ -141,6 +144,7 @@ string send_button
 string sign_out
 string submit
 string update_pass
+string username
 string welcome
 style Theme.FInalProject
 xml backup_rules
