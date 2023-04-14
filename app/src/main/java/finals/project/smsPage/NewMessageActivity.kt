@@ -13,6 +13,7 @@ import android.content.Intent
 import android.view.View
 import android.os.Bundle
 import android.util.Log
+import com.google.firebase.auth.FirebaseAuth
 import finals.project.R
 import finals.project.data.HomeActivity
 
@@ -48,7 +49,7 @@ class NewMessageActivity : AppCompatActivity() {
                 snapshot.children.forEach {
                     Log.d("NewMessage", it.toString())
                         val user = it.getValue(User::class.java)
-                        if (user != null) {
+                        if (user != null && user.uid != FirebaseAuth.getInstance().currentUser?.uid) {
                             adapter.add(UserItem(user))
                         }
                     }
