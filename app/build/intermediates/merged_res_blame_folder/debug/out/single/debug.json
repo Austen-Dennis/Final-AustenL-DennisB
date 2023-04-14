@@ -68,6 +68,10 @@
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
+        "merged": "finals.project.app-merged_res-66:/layout_activity_chat_log.xml.flat",
+        "source": "finals.project.app-main-68:/layout/activity_chat_log.xml"
+    },
+    {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_chat_from_row.xml.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\chat_from_row.xml"
     },
