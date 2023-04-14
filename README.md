@@ -15,6 +15,8 @@ Julian Rodriguez
 *Use gradle 7.5 for proper run experience\
 *Verify that the compile SDK version is 33 (Android 13.0 - Tiramisu)\
 *Before running app insure that you have invalidated caches and restarted the IDE ex. Images
+
+
 ![image](https://user-images.githubusercontent.com/112116586/232137208-aef1079a-ca62-46d7-aa34-347d3dffca21.png)
 ![image (1)](https://user-images.githubusercontent.com/112116586/232137229-d400d01f-adee-4740-9e31-21365d17bfee.png)
 *In order to run app, add an android app under the configuration settings, and ensure that it runs under the main module, then the app should be ready to run!\
