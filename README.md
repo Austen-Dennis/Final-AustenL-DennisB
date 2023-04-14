@@ -11,7 +11,7 @@ Julian Rodriguez
 
 # Build Instructions
 *Runs on the latest edition of Android Studio\
-*Tutorial we used to help us through the project https://www.youtube.com/playlist?list=PL0dzCUj1L5JE-jiBHjxlmXEkQkum_M3R-
+*Tutorial we used to help us through the project https://www.youtube.com/playlist?list=PL0dzCUj1L5JE-jiBHjxlmXEkQkum_M3R-\
 *Use gradle 7.5 for proper run experience\
 *Verify that the compile SDK version is 33 (Android 13.0 - Tiramisu)\
 *In order to run app, add an android app under the configuration settings, and ensure that it runs under the main module, then the app should be ready to run!\
