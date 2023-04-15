@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import finals.project.R;
@@ -21,10 +22,10 @@ public final class ActivityLatestMessagesBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button back;
+  public final Button home;
 
   @NonNull
-  public final Button home;
+  public final RecyclerView latestMessages;
 
   @NonNull
   public final Button newMessage;
@@ -35,12 +36,12 @@ public final class ActivityLatestMessagesBinding implements ViewBinding {
   @NonNull
   public final Toolbar toolbar5;
 
-  private ActivityLatestMessagesBinding(@NonNull ConstraintLayout rootView, @NonNull Button back,
-      @NonNull Button home, @NonNull Button newMessage, @NonNull Button profile,
+  private ActivityLatestMessagesBinding(@NonNull ConstraintLayout rootView, @NonNull Button home,
+      @NonNull RecyclerView latestMessages, @NonNull Button newMessage, @NonNull Button profile,
       @NonNull Toolbar toolbar5) {
     this.rootView = rootView;
-    this.back = back;
     this.home = home;
+    this.latestMessages = latestMessages;
     this.newMessage = newMessage;
     this.profile = profile;
     this.toolbar5 = toolbar5;
@@ -73,15 +74,15 @@ public final class ActivityLatestMessagesBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.back;
-      Button back = ViewBindings.findChildViewById(rootView, id);
-      if (back == null) {
-        break missingId;
-      }
-
       id = R.id.home;
       Button home = ViewBindings.findChildViewById(rootView, id);
       if (home == null) {
+        break missingId;
+      }
+
+      id = R.id.latest_messages;
+      RecyclerView latestMessages = ViewBindings.findChildViewById(rootView, id);
+      if (latestMessages == null) {
         break missingId;
       }
 
@@ -103,8 +104,8 @@ public final class ActivityLatestMessagesBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityLatestMessagesBinding((ConstraintLayout) rootView, back, home, newMessage,
-          profile, toolbar5);
+      return new ActivityLatestMessagesBinding((ConstraintLayout) rootView, home, latestMessages,
+          newMessage, profile, toolbar5);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

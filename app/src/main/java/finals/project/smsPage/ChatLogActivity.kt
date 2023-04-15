@@ -74,6 +74,11 @@ class ChatLogActivity : AppCompatActivity() {
                 chat_log.scrollToPosition(adapter.itemCount - 1)
             }
         toRef.setValue(chatMessage)
+
+        val LatestMessageFromRef = FirebaseDatabase.getInstance().getReference("/latest-message/$fromId/$toId")
+        val LatestMessageToRef = FirebaseDatabase.getInstance().getReference("/latest-message/$toId/$fromId")
+        LatestMessageFromRef.setValue(chatMessage)
+        LatestMessageToRef.setValue(chatMessage)
     }
 
     //updates view everytime a message is added to database

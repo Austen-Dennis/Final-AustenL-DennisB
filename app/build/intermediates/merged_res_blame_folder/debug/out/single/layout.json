@@ -24,6 +24,18 @@
         "source": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\chat_from_row.xml"
     },
     {
+        "merged": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\activity_profile.xml",
+        "source": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\latest_messages.xml",
+        "source": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\latest_messages.xml"
+    },
+    {
+        "merged": "finals.project.app-mergeDebugResources-65:/layout/activity_latest_messages.xml",
+        "source": "finals.project.app-main-68:/layout/activity_latest_messages.xml"
+    },
+    {
         "merged": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\user_row.xml",
         "source": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\user_row.xml"
     },
@@ -34,13 +46,5 @@
     {
         "merged": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\activity_chat_log.xml",
         "source": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_chat_log.xml"
-    },
-    {
-        "merged": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-mergeDebugResources-65:\\layout\\activity_profile.xml",
-        "source": "C:\\Users\\auste\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\activity_profile.xml"
-    },
-    {
-        "merged": "finals.project.app-mergeDebugResources-65:/layout/activity_latest_messages.xml",
-        "source": "finals.project.app-main-68:/layout/activity_latest_messages.xml"
     }
 ]

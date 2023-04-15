@@ -5097,6 +5097,7 @@ id imageCountTextView
 id imageView
 id imageView2
 id imageView3
+id imageView4
 id imagesPager
 id immediateStop
 id included
@@ -5129,6 +5130,7 @@ id labeled
 id large
 id lastMessageLabel
 id lastMessageTimeLabel
+id latest_messages
 id layout
 id layout1
 id layout2
@@ -5448,7 +5450,6 @@ id showInChat
 id showTitle
 id shuffleButton
 id sign_in_email_sent_text
-id sign_out
 id sin
 id skipCollapsed
 id skipped
@@ -5516,6 +5517,8 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
+id textView2
 id text_from_row
 id text_input_end_icon
 id text_input_error_icon
@@ -5846,6 +5849,7 @@ layout fui_welcome_back_email_link_prompt_layout
 layout fui_welcome_back_idp_prompt_layout
 layout fui_welcome_back_password_prompt_layout
 layout image_frame
+layout latest_messages
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -6021,7 +6025,6 @@ layout support_simple_spinner_dropdown_item
 layout text_color_layout
 layout user_row
 layout view_image_viewer
-menu nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round

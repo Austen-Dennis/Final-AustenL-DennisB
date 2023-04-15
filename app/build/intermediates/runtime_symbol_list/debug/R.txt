@@ -5096,6 +5096,7 @@ int id imageCountTextView 0x7f0a01f3
 int id imageView 0x7f0a01f4
 int id imageView2 0x7f0a01f5
 int id imageView3 0x7f0a01f6
+int id imageView4 0x7f0a0404
 int id imagesPager 0x7f0a01f7
 int id immediateStop 0x7f0a01f8
 int id included 0x7f0a01f9
@@ -5128,6 +5129,7 @@ int id labeled 0x7f0a0213
 int id large 0x7f0a0214
 int id lastMessageLabel 0x7f0a0215
 int id lastMessageTimeLabel 0x7f0a0216
+int id latest_messages 0x7f0a0405
 int id layout 0x7f0a0217
 int id layout1 0x7f0a0218
 int id layout2 0x7f0a0219
@@ -5447,7 +5449,6 @@ int id showInChat 0x7f0a0352
 int id showTitle 0x7f0a0353
 int id shuffleButton 0x7f0a0354
 int id sign_in_email_sent_text 0x7f0a0355
-int id sign_out 0x7f0a0356
 int id sin 0x7f0a0357
 int id skipCollapsed 0x7f0a0358
 int id skipped 0x7f0a0359
@@ -5515,6 +5516,8 @@ int id textSpacerNoButtons 0x7f0a0396
 int id textSpacerNoTitle 0x7f0a0397
 int id textStart 0x7f0a0398
 int id textTop 0x7f0a0399
+int id textView 0x7f0a0406
+int id textView2 0x7f0a0407
 int id text_from_row 0x7f0a039a
 int id text_input_end_icon 0x7f0a039b
 int id text_input_error_icon 0x7f0a039c
@@ -5845,6 +5848,7 @@ int layout fui_welcome_back_email_link_prompt_layout 0x7f0d007d
 int layout fui_welcome_back_idp_prompt_layout 0x7f0d007e
 int layout fui_welcome_back_password_prompt_layout 0x7f0d007f
 int layout image_frame 0x7f0d0080
+int layout latest_messages 0x7f0d0130
 int layout m3_alert_dialog 0x7f0d0081
 int layout m3_alert_dialog_actions 0x7f0d0082
 int layout m3_alert_dialog_title 0x7f0d0083
@@ -6020,7 +6024,6 @@ int layout support_simple_spinner_dropdown_item 0x7f0d012c
 int layout text_color_layout 0x7f0d012d
 int layout user_row 0x7f0d012e
 int layout view_image_viewer 0x7f0d012f
-int menu nav_menu 0x7f0f0000
 int mipmap ic_launcher 0x7f100000
 int mipmap ic_launcher_foreground 0x7f100001
 int mipmap ic_launcher_round 0x7f100002

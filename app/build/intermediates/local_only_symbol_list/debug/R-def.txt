@@ -40,7 +40,9 @@ id hideInfo
 id home
 id imageView2
 id imageView3
+id imageView4
 id item_text
+id latest_messages
 id layout
 id layout1
 id layout2
@@ -63,13 +65,14 @@ id scroll1
 id scroll2
 id searchView
 id sendButton
-id sign_out
 id sms
 id so
 id subBio
 id submit
 id submitEmail
 id submitGit
+id textView
+id textView2
 id text_from_row
 id text_to_row
 id to_image
@@ -89,9 +92,9 @@ layout activity_new_message
 layout activity_profile
 layout chat_from_row
 layout chat_to_row
+layout latest_messages
 layout text_color_layout
 layout user_row
-menu nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
