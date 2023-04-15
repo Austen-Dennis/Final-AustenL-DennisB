@@ -47,16 +47,10 @@ public final class ActivityFriendSearchBinding implements ViewBinding {
   public final TextView nameValue;
 
   @NonNull
-  public final Button post;
-
-  @NonNull
   public final Button profile;
 
   @NonNull
   public final TextView profileTitle;
-
-  @NonNull
-  public final Button search;
 
   @NonNull
   public final SearchView searchView;
@@ -67,9 +61,8 @@ public final class ActivityFriendSearchBinding implements ViewBinding {
   private ActivityFriendSearchBinding(@NonNull ConstraintLayout rootView, @NonNull Button addFriend,
       @NonNull TextView bioValue, @NonNull TextView emailValue, @NonNull TextView gitValue,
       @NonNull Button home, @NonNull LinearLayout layout, @NonNull Button messageFriend,
-      @NonNull TextView nameValue, @NonNull Button post, @NonNull Button profile,
-      @NonNull TextView profileTitle, @NonNull Button search, @NonNull SearchView searchView,
-      @NonNull Button sms) {
+      @NonNull TextView nameValue, @NonNull Button profile, @NonNull TextView profileTitle,
+      @NonNull SearchView searchView, @NonNull Button sms) {
     this.rootView = rootView;
     this.addFriend = addFriend;
     this.bioValue = bioValue;
@@ -79,10 +72,8 @@ public final class ActivityFriendSearchBinding implements ViewBinding {
     this.layout = layout;
     this.messageFriend = messageFriend;
     this.nameValue = nameValue;
-    this.post = post;
     this.profile = profile;
     this.profileTitle = profileTitle;
-    this.search = search;
     this.searchView = searchView;
     this.sms = sms;
   }
@@ -162,12 +153,6 @@ public final class ActivityFriendSearchBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.post;
-      Button post = ViewBindings.findChildViewById(rootView, id);
-      if (post == null) {
-        break missingId;
-      }
-
       id = R.id.profile;
       Button profile = ViewBindings.findChildViewById(rootView, id);
       if (profile == null) {
@@ -177,12 +162,6 @@ public final class ActivityFriendSearchBinding implements ViewBinding {
       id = R.id.profileTitle;
       TextView profileTitle = ViewBindings.findChildViewById(rootView, id);
       if (profileTitle == null) {
-        break missingId;
-      }
-
-      id = R.id.search;
-      Button search = ViewBindings.findChildViewById(rootView, id);
-      if (search == null) {
         break missingId;
       }
 
@@ -199,8 +178,8 @@ public final class ActivityFriendSearchBinding implements ViewBinding {
       }
 
       return new ActivityFriendSearchBinding((ConstraintLayout) rootView, addFriend, bioValue,
-          emailValue, gitValue, home, layout, messageFriend, nameValue, post, profile, profileTitle,
-          search, searchView, sms);
+          emailValue, gitValue, home, layout, messageFriend, nameValue, profile, profileTitle,
+          searchView, sms);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

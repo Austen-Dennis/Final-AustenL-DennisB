@@ -74,9 +74,6 @@ public final class ActivityProfileBinding implements ViewBinding {
   public final EditText newName;
 
   @NonNull
-  public final Button post;
-
-  @NonNull
   public final Button profile;
 
   @NonNull
@@ -93,9 +90,6 @@ public final class ActivityProfileBinding implements ViewBinding {
 
   @NonNull
   public final Button request;
-
-  @NonNull
-  public final Button search;
 
   @NonNull
   public final Button sms;
@@ -127,12 +121,11 @@ public final class ActivityProfileBinding implements ViewBinding {
       @NonNull TextView email, @NonNull TextView emailValue, @NonNull TextView gitValue,
       @NonNull TextView help, @NonNull Button hideInfo, @NonNull Button home,
       @NonNull LinearLayout layout, @NonNull TextView nameValue, @NonNull TextView navigation,
-      @NonNull EditText newName, @NonNull Button post, @NonNull Button profile,
-      @NonNull Button profilePic, @NonNull TextView profileTitle, @NonNull Button project,
-      @NonNull Button release, @NonNull Button request, @NonNull Button search, @NonNull Button sms,
-      @NonNull Button so, @NonNull Button subBio, @NonNull Button submit,
-      @NonNull Button submitEmail, @NonNull Button submitGit, @NonNull Button update,
-      @NonNull TextView user) {
+      @NonNull EditText newName, @NonNull Button profile, @NonNull Button profilePic,
+      @NonNull TextView profileTitle, @NonNull Button project, @NonNull Button release,
+      @NonNull Button request, @NonNull Button sms, @NonNull Button so, @NonNull Button subBio,
+      @NonNull Button submit, @NonNull Button submitEmail, @NonNull Button submitGit,
+      @NonNull Button update, @NonNull TextView user) {
     this.rootView = rootView;
     this.GitHub = GitHub;
     this.accountInfo = accountInfo;
@@ -151,14 +144,12 @@ public final class ActivityProfileBinding implements ViewBinding {
     this.nameValue = nameValue;
     this.navigation = navigation;
     this.newName = newName;
-    this.post = post;
     this.profile = profile;
     this.profilePic = profilePic;
     this.profileTitle = profileTitle;
     this.project = project;
     this.release = release;
     this.request = request;
-    this.search = search;
     this.sms = sms;
     this.so = so;
     this.subBio = subBio;
@@ -298,12 +289,6 @@ public final class ActivityProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.post;
-      Button post = ViewBindings.findChildViewById(rootView, id);
-      if (post == null) {
-        break missingId;
-      }
-
       id = R.id.profile;
       Button profile = ViewBindings.findChildViewById(rootView, id);
       if (profile == null) {
@@ -337,12 +322,6 @@ public final class ActivityProfileBinding implements ViewBinding {
       id = R.id.request;
       Button request = ViewBindings.findChildViewById(rootView, id);
       if (request == null) {
-        break missingId;
-      }
-
-      id = R.id.search;
-      Button search = ViewBindings.findChildViewById(rootView, id);
-      if (search == null) {
         break missingId;
       }
 
@@ -396,9 +375,8 @@ public final class ActivityProfileBinding implements ViewBinding {
 
       return new ActivityProfileBinding((ConstraintLayout) rootView, GitHub, accountInfo, bio,
           bioValue, collegeEmail, copyID, displayInfo, email, emailValue, gitValue, help, hideInfo,
-          home, layout, nameValue, navigation, newName, post, profile, profilePic, profileTitle,
-          project, release, request, search, sms, so, subBio, submit, submitEmail, submitGit,
-          update, user);
+          home, layout, nameValue, navigation, newName, profile, profilePic, profileTitle, project,
+          release, request, sms, so, subBio, submit, submitEmail, submitGit, update, user);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

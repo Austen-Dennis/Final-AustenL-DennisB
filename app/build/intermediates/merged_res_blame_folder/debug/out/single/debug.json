@@ -24,12 +24,12 @@
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable_placeholder.jpg.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\placeholder.jpg"
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable_rounded_box2.xml.flat",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\rounded_box2.xml"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "finals.project.app-merged_res-66:/layout_activity_profile.xml.flat",
+        "source": "finals.project.app-main-68:/layout/activity_profile.xml"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_activity_profile.xml.flat",
@@ -56,6 +56,10 @@
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\menu\\nav_menu.xml"
     },
     {
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable_rounded_box4.xml.flat",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\rounded_box4.xml"
+    },
+    {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable__522516.png.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\_522516.png"
     },
@@ -68,12 +72,12 @@
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "finals.project.app-merged_res-66:/layout_activity_chat_log.xml.flat",
-        "source": "finals.project.app-main-68:/layout/activity_chat_log.xml"
-    },
-    {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_chat_from_row.xml.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\layout\\chat_from_row.xml"
+    },
+    {
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable_rounded_box3.xml.flat",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\rounded_box3.xml"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
@@ -82,10 +86,6 @@
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-xxxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable_the_get_together.jpg.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\the_get_together.jpg"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\layout_activity_latest_messages.xml.flat",
@@ -146,9 +146,5 @@
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
-    },
-    {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-merged_res-66:\\drawable_the_get_together_dark_.jpg.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\7.5\\finals.project.app-main-68:\\drawable\\the_get_together_dark_.jpg"
     }
 ]

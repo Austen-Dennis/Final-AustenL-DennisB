@@ -31,7 +31,7 @@ class ProfileActivity : AppCompatActivity() {
         val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
         val collegeEmail = findViewById<View>(finals.project.R.id.collegeEmail) as EditText
         val emailValue = findViewById<View>(finals.project.R.id.emailValue) as TextView
-        val intentSearch = Intent(this, FriendSearchActivity::class.java)
+        val intentSearch = Intent(this, HomeActivity::class.java)
         val nameValue = findViewById<View>(finals.project.R.id.nameValue) as TextView
         val intentSms = Intent(this, LatestMessagesActivity::class.java)
         val bioValue = findViewById<View>(finals.project.R.id.bioValue) as TextView
@@ -48,7 +48,6 @@ class ProfileActivity : AppCompatActivity() {
         val hideInfoButton = findViewById<View>(finals.project.R.id.hideInfo)
         val myRef = FirebaseDatabase.getInstance().getReference("users")
         val friendButton = findViewById<View>(finals.project.R.id.addFriend)
-        val intentPost = Intent(this, PostActivity::class.java)
         val emailSub = findViewById<View>(finals.project.R.id.submitEmail)
         val bio = findViewById<View>(finals.project.R.id.bio) as EditText
         val gitHubSub = findViewById<View>(finals.project.R.id.submitGit)
@@ -266,11 +265,6 @@ class ProfileActivity : AppCompatActivity() {
         })
 
         //starts activities onclick
-        val postButton = findViewById<View>(finals.project.R.id.post)
-        postButton.setOnClickListener {
-            startActivity(intentPost)
-        }
-
         val smsButton = findViewById<View>(finals.project.R.id.sms)
         smsButton.setOnClickListener {
             startActivity(intentSms)
@@ -285,10 +279,6 @@ class ProfileActivity : AppCompatActivity() {
         soButton.setOnClickListener {
             startActivity(intentLogin)
             FirebaseAuth.getInstance().signOut()
-        }
-        val searchButton = findViewById<View>(finals.project.R.id.search)
-        searchButton.setOnClickListener {
-            startActivity(intentSearch)
         }
     }
 

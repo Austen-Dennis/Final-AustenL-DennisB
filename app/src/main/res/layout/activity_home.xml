@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#131111"
+    tools:context=".data.HomeActivity">
+    <Toolbar
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="52dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="-4dp">
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:background="@drawable/rounded_box"
+            android:foregroundTint="#FFFFFF"
+            android:hint="@string/search_hint"
+            android:imeOptions="actionDone"
+            android:icon="@android:drawable/ic_menu_search"
+            android:lineSpacingExtra="8sp"
+            android:queryHint="Search"
+            android:title="@string/search_button"
+            app:actionViewClass="androidx.appcompat.widget.SearchView"
+            app:backgroundTint="@color/stream_gray_dark"
+            app:showAsAction="always|collapseActionView"
+            tools:layout_editor_absoluteX="16dp"/>
+    </Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:translationY="50dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="735dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/profileTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#FFFFFF"
+                android:textSize="34sp" />
+
+            <TextView
+                android:id="@+id/nameValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp"
+                tools:visibility="gone" />
+
+            <TextView
+                android:id="@+id/bioValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:padding="5dp"
+                android:textAlignment="textStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                tools:visibility="gone" />
+
+            <TextView
+                android:id="@+id/emailValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:padding="5dp"
+                android:textAlignment="textStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                tools:visibility="gone" />
+
+            <TextView
+                android:id="@+id/gitValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:autoLink="web"
+                android:inputType="textWebEditText"
+                android:padding="5dp"
+                android:textAlignment="textStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                tools:visibility="gone"
+                tools:ignore="TextViewEdits" />
+
+            <Button
+                android:id="@+id/addFriend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/add_button"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp"
+                android:translationY="0dp" />
+            <Button
+                android:id="@+id/messageFriend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/message"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp"
+                android:translationY="0dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <Button
+        android:id="@+id/profile"
+        android:layout_width="137dp"
+        android:layout_height="55dp"
+        android:text="@string/profile_button"
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/rounded_box3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/home"
+        android:layout_width="137dp"
+        android:background="@drawable/rounded_box4"
+        android:layout_height="55dp"
+        android:text="@string/home_button"
+        android:layout_gravity="center_vertical|center_horizontal"
+        app:layout_constraintLeft_toRightOf="@id/profile"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/sms"
+        android:layout_width="137dp"
+        android:layout_height="55dp"
+        android:background="@drawable/rounded_box2"
+        android:text="@string/SMS_button"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

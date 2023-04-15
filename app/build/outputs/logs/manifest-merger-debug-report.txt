@@ -316,12 +316,12 @@ ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-Juli
 		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:23:13-60
 	android:name
 		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:22:13-59
-activity#finals.project.data.FriendSearchActivity
+activity#finals.project.data.HomeActivity
 ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:25:9-27:40
 	android:exported
 		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:26:13-54
+		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:26:13-46
 activity#finals.project.smsPage.LatestMessagesActivity
 ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:28:9-30:40
 	android:exported
@@ -346,12 +346,6 @@ ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-Juli
 		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:39:13-37
 	android:name
 		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:38:13-46
-activity#finals.project.data.HomeActivity
-ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:40:9-42:40
-	android:exported
-		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:42:13-37
-	android:name
-		ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:41:13-46
 activity#finals.project.ui.login.LoginActivity
 ADDED from C:\Users\mrden\Documents\GitHub\Final-AustenL-DennisB-BeethovenM-JulianR\app\src\main\AndroidManifest.xml:43:9-52:20
 	android:label

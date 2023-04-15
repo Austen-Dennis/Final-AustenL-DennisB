@@ -71,7 +71,7 @@
             android:value=".smsPage.LatestMessagesActivity" />
 
         <activity
-            android:name="finals.project.data.FriendSearchActivity"
+            android:name="finals.project.data.HomeActivity"
             android:exported="false" />
         <activity
             android:name="finals.project.smsPage.LatestMessagesActivity"

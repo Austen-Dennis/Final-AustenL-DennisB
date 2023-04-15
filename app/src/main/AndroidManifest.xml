@@ -23,7 +23,7 @@
             android:value=".smsPage.LatestMessagesActivity" />
 
         <activity
-            android:name=".data.FriendSearchActivity"
+            android:name=".data.HomeActivity"
             android:exported="false" />
         <activity
             android:name=".smsPage.LatestMessagesActivity"
@@ -33,12 +33,6 @@
             android:exported="false" />
         <activity
             android:name=".data.ProfileActivity"
-            android:exported="false" />
-        <activity
-            android:name=".data.PostActivity"
-            android:exported="false" />
-        <activity
-            android:name=".data.HomeActivity"
             android:exported="false" />
         <activity
             android:name=".ui.login.LoginActivity"

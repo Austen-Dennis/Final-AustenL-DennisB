@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#131111"
-    tools:context=".data.FriendSearchActivity">
+    tools:context=".data.HomeActivity">
     <Toolbar
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -127,64 +127,37 @@
                 android:textColor="#FFFFFF"
                 android:textSize="26sp"
                 android:translationY="0dp"/>
+
         </LinearLayout>
 
     </ScrollView>
-        <Button
-            android:id="@+id/profile"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_marginStart="240dp"
-            android:text="@string/profile_button"
-            android:translationY="-60dp"
-            app:layout_constraintLeft_toRightOf="@id/home"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/home"
-            tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/profile"
+        android:layout_width="137dp"
+        android:layout_height="55dp"
+        android:text="@string/profile_button"
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/rounded_box3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <Button
-        android:id="@+id/post"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:text="@string/post_button"
-        android:translationY="620dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/home" />
+        android:id="@+id/home"
+        android:layout_width="137dp"
+        android:background="@drawable/rounded_box4"
+        android:layout_height="55dp"
+        android:text="@string/home_button"
+        android:layout_gravity="center_vertical|center_horizontal"
+        app:layout_constraintLeft_toRightOf="@id/profile"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
-        <Button
-            android:id="@+id/search"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_marginTop="680dp"
-            android:text="@string/search_button"
-            android:translationY="-60dp"
-            app:layout_constraintEnd_toStartOf="@id/home"
-            app:layout_constraintStart_toEndOf="@id/post"
-            app:layout_constraintTop_toTopOf="@id/post"
-            tools:ignore="MissingConstraints" />
-
-        <Button
-            android:id="@+id/home"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_marginTop="680dp"
-            android:text="@string/home_button"
-            android:translationY="-60dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/post" />
-
-        <Button
-            android:id="@+id/sms"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:text="@string/SMS_button"
-            android:translationX="-6dp"
-            android:translationY="-60dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/profile"
-            app:layout_constraintTop_toTopOf="@id/profile" />
+    <Button
+        android:id="@+id/sms"
+        android:layout_width="137dp"
+        android:layout_height="55dp"
+        android:background="@drawable/rounded_box2"
+        android:text="@string/SMS_button"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

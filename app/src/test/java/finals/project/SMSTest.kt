@@ -1,6 +1,5 @@
 package finals.project
 
-import finals.project.data.PostActivity
 import finals.project.smsPage.ChatLogActivity
 import finals.project.smsPage.LatestMessagesActivity
 import finals.project.smsPage.NewMessageActivity

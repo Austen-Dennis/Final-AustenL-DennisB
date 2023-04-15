@@ -2,6 +2,7 @@ package finals.project.ui.login
 
 import finals.project.databinding.ActivityLoginBinding
 import androidx.appcompat.app.AppCompatActivity
+
 import com.google.firebase.auth.FirebaseAuth
 import androidx.lifecycle.ViewModelProvider
 import android.view.inputmethod.EditorInfo
