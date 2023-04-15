@@ -5038,6 +5038,7 @@ int id forever 0x7f0a01bb
 int id fragment_container_view_tag 0x7f0a01bc
 int id fragment_phone 0x7f0a01bd
 int id fragment_register_email 0x7f0a01be
+int id friend 0x7f0a0403
 int id from_image 0x7f0a01bf
 int id frost 0x7f0a01c0
 int id fullscreen_header 0x7f0a01c1
@@ -5128,6 +5129,8 @@ int id large 0x7f0a0216
 int id lastMessageLabel 0x7f0a0217
 int id lastMessageTimeLabel 0x7f0a0218
 int id layout 0x7f0a0219
+int id layout1 0x7f0a0404
+int id layout2 0x7f0a0405
 int id leadingContent 0x7f0a021a
 int id leaveGroupButton 0x7f0a021b
 int id left 0x7f0a021c
@@ -5364,6 +5367,8 @@ int id sawtooth 0x7f0a0303
 int id scale 0x7f0a0304
 int id screen 0x7f0a0305
 int id scroll 0x7f0a0306
+int id scroll1 0x7f0a0406
+int id scroll2 0x7f0a0407
 int id scrollActionButton 0x7f0a0307
 int id scrollIndicatorDown 0x7f0a0308
 int id scrollIndicatorUp 0x7f0a0309
@@ -5740,7 +5745,7 @@ int layout abc_search_view 0x7f0d0019
 int layout abc_select_dialog_material 0x7f0d001a
 int layout abc_tooltip 0x7f0d001b
 int layout activity_chat_log 0x7f0d001c
-int layout activity_friend_search 0x7f0d001d
+int layout activity_home 0x7f0d0132
 int layout activity_latest_messages 0x7f0d001e
 int layout activity_login 0x7f0d001f
 int layout activity_new_message 0x7f0d0020

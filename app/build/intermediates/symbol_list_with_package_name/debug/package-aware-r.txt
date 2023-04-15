@@ -5039,6 +5039,7 @@ id forever
 id fragment_container_view_tag
 id fragment_phone
 id fragment_register_email
+id friend
 id from_image
 id frost
 id fullscreen_header
@@ -5129,6 +5130,8 @@ id large
 id lastMessageLabel
 id lastMessageTimeLabel
 id layout
+id layout1
+id layout2
 id leadingContent
 id leaveGroupButton
 id left
@@ -5365,6 +5368,8 @@ id sawtooth
 id scale
 id screen
 id scroll
+id scroll1
+id scroll2
 id scrollActionButton
 id scrollIndicatorDown
 id scrollIndicatorUp
@@ -5741,7 +5746,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_chat_log
-layout activity_friend_search
+layout activity_home
 layout activity_latest_messages
 layout activity_login
 layout activity_new_message

@@ -31,15 +31,41 @@
             app:showAsAction="always|collapseActionView"
             tools:layout_editor_absoluteX="16dp"/>
     </Toolbar>
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:translationY="50dp"
+    android:id="@+id/scroll1"
+    tools:layout_editor_absoluteY="0dp">
 
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="735dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/friend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FFFFFF"
+            android:text="Friend Requests"
+            android:textSize="34sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:translationY="50dp"
+        android:id="@+id/scroll2"
         tools:layout_editor_absoluteY="0dp">
 
         <LinearLayout
-            android:id="@+id/layout"
+            android:id="@+id/layout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="735dp"

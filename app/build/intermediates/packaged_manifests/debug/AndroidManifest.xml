@@ -83,12 +83,6 @@
             android:name="finals.project.data.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name="finals.project.data.PostActivity"
-            android:exported="false" />
-        <activity
-            android:name="finals.project.data.HomeActivity"
-            android:exported="false" />
-        <activity
             android:name="finals.project.ui.login.LoginActivity"
             android:exported="true"
             android:label="@string/app_name" >

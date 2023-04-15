@@ -46,7 +46,8 @@ class HomeActivity : AppCompatActivity() {
         val intentPROFILE = Intent(this, ProfileActivity::class.java)
         val searchView = findViewById<View>(finals.project.R.id.searchView) as SearchView
         val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
-        val layout = findViewById<View>(finals.project.R.id.layout)
+        val layout = findViewById<View>(finals.project.R.id.layout1)
+        val layout2 = findViewById<View>(finals.project.R.id.layout2)
         val addFriend = findViewById<View>(finals.project.R.id.addFriend)
         val uid = FirebaseAuth.getInstance().uid
         val emailValue = findViewById<View>(finals.project.R.id.emailValue) as TextView
@@ -56,7 +57,8 @@ class HomeActivity : AppCompatActivity() {
         val messageButton = findViewById<View>(finals.project.R.id.messageFriend)
         val myRef = FirebaseDatabase.getInstance().getReference("users")
 
-        layout.visibility = View.GONE
+        layout.visibility = View.VISIBLE
+        layout2.visibility = View.GONE
 
 
         val mAuth = FirebaseAuth.getInstance()
@@ -77,7 +79,8 @@ class HomeActivity : AppCompatActivity() {
                         if (dataSnapshot.exists()) {
 
                             if (dataSnapshot.child(query).exists() && query != currentUserId) {
-                                layout.visibility = View.VISIBLE
+                                layout2.visibility = View.VISIBLE
+                                layout.visibility = View.GONE
 
                                 val email =
                                     dataSnapshot.child(query).child("Email").getValue().toString()
