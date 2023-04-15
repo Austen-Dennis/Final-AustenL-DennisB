@@ -14,6 +14,7 @@ Julian Rodriguez
 *Tutorial we used to help us through the project https://www.youtube.com/playlist?list=PL0dzCUj1L5JE-jiBHjxlmXEkQkum_M3R- \
 *Use gradle 7.5 for proper run experience\
 *This app was created using Firebase as our back end, we have basic security rules in place that only allow authorized users to access our read and write permissions.
+
 *Verify that the compile SDK version is 33 (Android 13.0 - Tiramisu)\
 *Before running app insure that you have invalidated caches and restarted the IDE ex. Images
 
