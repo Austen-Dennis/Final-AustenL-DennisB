@@ -6353,6 +6353,7 @@ string mtrl_switch_track_decoration_path
 string mtrl_switch_track_path
 string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
+string new_message
 string not_set
 string open_camera
 string password_toggle_content_description

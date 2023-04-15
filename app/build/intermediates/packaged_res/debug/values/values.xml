@@ -42,6 +42,7 @@
     <string name="latest">"Latest Release"</string>
     <string name="login_failed">"Login failed"</string>
     <string name="message">"MESSAGE"</string>
+    <string name="new_message">New Message</string>
     <string name="open_camera">"Open Camera"</string>
     <string name="placeholder">"PLACEHOLDER"</string>
     <string name="post_button">"POST"</string>

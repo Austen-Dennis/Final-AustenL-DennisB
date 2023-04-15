@@ -4,6 +4,6 @@ import kotlinx.android.parcel.Parcelize
 import android.os.Parcelable
 
 @Parcelize
-class User(val uid: String, val Name: String, val CollegeEmail: String, val Email: String, val Bio: String, val GitHub: String): Parcelable{
-    constructor(): this("","","","","","")
+class User(val uid: String, val Name: String, val CollegeEmail: String, val Email: String, val Bio: String, val GitHub: String, val firendrequest: Boolean): Parcelable{
+    constructor(): this("","","","","","", true)
 }

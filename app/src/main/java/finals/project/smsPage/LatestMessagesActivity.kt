@@ -8,6 +8,7 @@ import android.view.MenuItem
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
+import android.view.View
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -24,11 +25,16 @@ companion object{
     }
 }
     override fun onCreate(savedInstanceState: Bundle?) {
+        val intentMessage = Intent(this, NewMessageActivity::class.java)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_latest_messages)
         fetchUser()
-        val newMessage = Intent(this, NewMessageActivity::class.java)
-        startActivity(newMessage)
+        
+        val newMessageButton = findViewById<View>(R.id.new_message)
+        newMessageButton.setOnClickListener {
+            startActivity(intentMessage)
+
+        }
     }
 
     //grabs and displays all existing users
@@ -46,28 +52,5 @@ companion object{
             }
 
         })
-    }
-
-    //launches into message with clicked user
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.new_message -> {
-                val intent = Intent(this, NewMessageActivity::class.java)
-                startActivity(intent)
-            }
-            R.id.sign_out -> {
-                FirebaseAuth.getInstance().signOut()
-                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
-                val intent = Intent(this, LoginActivity::class.java)
-                startActivity(intent)
-
-            }
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.nav_menu, menu)
-        return super.onCreateOptionsMenu(menu)
     }
 }
