@@ -2,6 +2,8 @@
 
 # Get Together
 A social messaging app designed for easy and streamlined communication through several forms of media. Get together and stay together through an in-app messaging system and image posts!
+This app was created using Firebase as our back end, we have basic security rules in place that only allow authorized users to access our read and write permissions.
+
 
 # Authors
 Austen Lowder\
@@ -13,7 +15,6 @@ Julian Rodriguez
 *Runs on the latest edition of Android Studio\
 *Tutorial we used to help us through the project https://www.youtube.com/playlist?list=PL0dzCUj1L5JE-jiBHjxlmXEkQkum_M3R- \
 *Use gradle 7.5 for proper run experience\
-*This app was created using Firebase as our back end, we have basic security rules in place that only allow authorized users to access our read and write permissions.
 
 *Verify that the compile SDK version is 33 (Android 13.0 - Tiramisu)\
 *Before running app insure that you have invalidated caches and restarted the IDE ex. Images
