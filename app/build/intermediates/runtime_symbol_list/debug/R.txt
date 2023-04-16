@@ -5039,6 +5039,7 @@ int id fragment_container_view_tag 0x7f0a01ba
 int id fragment_phone 0x7f0a01bb
 int id fragment_register_email 0x7f0a01bc
 int id friend 0x7f0a01bd
+int id friendRequests 0x7f0a0407
 int id from_image 0x7f0a01be
 int id frost 0x7f0a01bf
 int id fullscreen_header 0x7f0a01c0
@@ -5342,6 +5343,7 @@ int id rectangles 0x7f0a02e9
 int id recyclerView 0x7f0a02ea
 int id recycler_view 0x7f0a02eb
 int id recyclerview 0x7f0a02ec
+int id recyclerview2 0x7f0a0408
 int id release 0x7f0a02ed
 int id removeButton 0x7f0a02ee
 int id reply 0x7f0a02ef
@@ -6144,6 +6146,7 @@ int string fallback_menu_item_share_link 0x7f120066
 int string fcm_fallback_notification_channel_label 0x7f120067
 int string firebase_web_host 0x7f120068
 int string friend_requests 0x7f120069
+int string friends_list 0x7f120200
 int string fui_accessibility_logo 0x7f12006a
 int string fui_auto_verified 0x7f12006b
 int string fui_button_text_save 0x7f12006c

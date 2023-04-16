@@ -33,6 +33,7 @@ id displayInfo
 id email
 id emailValue
 id friend
+id friendRequests
 id from_image
 id gitValue
 id help
@@ -59,6 +60,7 @@ id profilePic
 id profileTitle
 id project
 id recyclerview
+id recyclerview2
 id release
 id request
 id scroll1
@@ -114,6 +116,7 @@ string default_web_client_id
 string display
 string enter_message
 string friend_requests
+string friends_list
 string gcm_defaultSenderId
 string generic_message
 string github_link

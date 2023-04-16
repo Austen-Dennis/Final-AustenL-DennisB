@@ -5040,6 +5040,7 @@ id fragment_container_view_tag
 id fragment_phone
 id fragment_register_email
 id friend
+id friendRequests
 id from_image
 id frost
 id fullscreen_header
@@ -5343,6 +5344,7 @@ id rectangles
 id recyclerView
 id recycler_view
 id recyclerview
+id recyclerview2
 id release
 id removeButton
 id reply
@@ -6145,6 +6147,7 @@ string fallback_menu_item_share_link
 string fcm_fallback_notification_channel_label
 string firebase_web_host
 string friend_requests
+string friends_list
 string fui_accessibility_logo
 string fui_auto_verified
 string fui_button_text_save
