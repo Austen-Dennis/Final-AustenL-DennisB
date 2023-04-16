@@ -19,6 +19,8 @@ import com.google.firebase.ktx.Firebase
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
 import finals.project.R
+import finals.project.data.HomeActivity
+import finals.project.data.ProfileActivity
 
 class LatestMessagesActivity : AppCompatActivity() {
 companion object{
@@ -31,6 +33,8 @@ companion object{
 }
     override fun onCreate(savedInstanceState: Bundle?) {
         val intentMessage = Intent(this, NewMessageActivity::class.java)
+        val intentHome = Intent(this, HomeActivity::class.java)
+        val intentProfile = Intent(this, ProfileActivity::class.java)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_latest_messages)
 
@@ -40,7 +44,14 @@ companion object{
         val newMessageButton = findViewById<View>(R.id.new_message)
         newMessageButton.setOnClickListener {
             startActivity(intentMessage)
-
+        }
+        val homeButton = findViewById<View>(R.id.home)
+        homeButton.setOnClickListener {
+            startActivity(intentHome)
+        }
+        val profileButton = findViewById<View>(R.id.profile)
+        profileButton.setOnClickListener {
+            startActivity(intentProfile)
         }
     }
  private fun listenForNewestMessage(){
