@@ -1,12 +1,6 @@
 package finals.project.data
 
-import com.google.firebase.database.ValueEventListener
-import finals.project.smsPage.LatestMessagesActivity
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.DataSnapshot
 import androidx.appcompat.app.AppCompatActivity
-import finals.project.smsPage.ChatLogActivity
 import com.google.firebase.auth.FirebaseAuth
 import androidx.appcompat.widget.Toolbar
 import android.annotation.SuppressLint
@@ -16,6 +10,12 @@ import android.view.View
 import android.os.Bundle
 import android.util.Log
 import android.widget.*
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.*
+import com.xwray.groupie.GroupAdapter
+import com.xwray.groupie.GroupieViewHolder
+import finals.project.R
+import finals.project.smsPage.*
 
 class HomeActivity : AppCompatActivity() {
     lateinit var searchView: SearchView
@@ -33,7 +33,6 @@ class HomeActivity : AppCompatActivity() {
             }
 
     }
-
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,6 +59,7 @@ class HomeActivity : AppCompatActivity() {
         layout.visibility = View.VISIBLE
         layout2.visibility = View.GONE
 
+        fetchUsers()
 
         val mAuth = FirebaseAuth.getInstance()
         val currentUserId = mAuth.currentUser?.uid
@@ -169,7 +169,29 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intentSMS)
         }
     }
+    private fun fetchUsers() {
+        val ref = FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().currentUser?.uid.toString()).child("Pending Friend Request")
+        ref.addListenerForSingleValueEvent(object: ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val adapter = GroupAdapter<GroupieViewHolder>()
+                val recyclerview_newmessage = findViewById<View>(R.id.recyclerview2) as RecyclerView
+                snapshot.children.forEach {
+                    val value = it.getValue()
+                    val key = it.key
+                    if (value!!.equals("Recieved")) {
+                        adapter.add(Friends(key))
+                        recyclerview_newmessage.adapter = adapter
+                    }
+                }
 
+            }
+
+            override fun onCancelled(snapshot: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+
+        })
+    }
 
 }
 

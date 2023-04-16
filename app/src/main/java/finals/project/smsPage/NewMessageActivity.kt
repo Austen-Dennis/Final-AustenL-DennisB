@@ -42,12 +42,10 @@ class NewMessageActivity : AppCompatActivity() {
     private fun fetchUsers() {
         val ref = FirebaseDatabase.getInstance().getReference("users")
         ref.addListenerForSingleValueEvent(object: ValueEventListener {
-
             override fun onDataChange(snapshot: DataSnapshot) {
                 val adapter = GroupAdapter<GroupieViewHolder>()
                 val recyclerview_newmessage = findViewById<View>(R.id.recyclerview) as RecyclerView
                 snapshot.children.forEach {
-                    Log.d("NewMessage", it.toString())
                         val user = it.getValue(User::class.java)
                         if (user != null && user.uid != FirebaseAuth.getInstance().currentUser?.uid) {
                             adapter.add(UserItem(user))
