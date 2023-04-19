@@ -30,7 +30,7 @@ class NewMessageActivity : AppCompatActivity() {
             startActivity(intentBack)
         }
     }
-    companion object{
+    companion object {
         val USER_KEY = "USER_KEY"
         fun isReachable(): Any {
             val reachable = true;

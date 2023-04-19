@@ -59,8 +59,8 @@ companion object{
      val ref = FirebaseDatabase.getInstance().getReference("/latest-message/$fromId")
      ref.addChildEventListener(object: ChildEventListener{
          override fun onChildAdded(snapshot: DataSnapshot, previousChildName: String?) {
-             val chatMessage = snapshot.getValue(ChatMessage::class.java)
-             adapter.add(LatestMessage())
+             //val chatMessage = snapshot.getValue(ChatMessage::class.java)
+             //adapter.add(LatestMessage())
          }
 
          override fun onChildChanged(snapshot: DataSnapshot, previousChildName: String?) {

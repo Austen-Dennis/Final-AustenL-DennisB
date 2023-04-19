@@ -41,7 +41,7 @@ class HomeActivity : AppCompatActivity() {
         setSupportActionBar(toolbar as Toolbar?)
 
         //sets the intent I.E. calls to the class LatestMessages which displays a layout
-        val intentSMS = Intent(this, LatestMessagesActivity::class.java)
+        val intentSMS = Intent(this, NewMessageActivity::class.java)
         val intentPROFILE = Intent(this, ProfileActivity::class.java)
         val searchView = findViewById<View>(finals.project.R.id.searchView) as SearchView
         val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
@@ -124,7 +124,9 @@ class HomeActivity : AppCompatActivity() {
 
                                 addFriend.setOnClickListener {
                                     myRefEmail.child(query).child("Pending Friend Request")
-                                        .child(uid.toString()).setValue("Recieved")
+                                        .child(uid.toString()).child("Status").setValue("Received")
+                                    myRefEmail.child(query).child("Pending Friend Request")
+                                        .child(uid.toString()).child("UID").setValue(uid.toString())
                                     Toast.makeText(
                                         applicationContext,
                                         "Friend Request Sent!",
@@ -176,14 +178,15 @@ class HomeActivity : AppCompatActivity() {
                 val adapter = GroupAdapter<GroupieViewHolder>()
                 val recyclerview_newmessage = findViewById<View>(R.id.recyclerview2) as RecyclerView
                 snapshot.children.forEach {
-                    val value = it.getValue()
-                    val key = it.key
-                    if (value!!.equals("Recieved")) {
-                        adapter.add(Friends(key))
-                        recyclerview_newmessage.adapter = adapter
-                    }
-                }
 
+                    val value = it.child("UID").getValue(User::class.java)
+                    val key = it.child("Status").getValue()
+                    System.out.println("DJISAJIDJASD " + value + " " + key)
+                    /*if (key!!.equals("Received")) {
+                        adapter.add(UserItem(value as User))
+                        recyclerview_newmessage.adapter = adapter
+                    }*/
+                }
             }
 
             override fun onCancelled(snapshot: DatabaseError) {
@@ -191,7 +194,20 @@ class HomeActivity : AppCompatActivity() {
             }
 
         })
-    }
 
+
+    }
+    private fun fetchName(key: String?) {
+        val ref = FirebaseDatabase.getInstance().getReference("users").child(key.toString()).child("Name")
+        ref.addListenerForSingleValueEvent(object: ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val name = snapshot.getValue()
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+        })
+            }
 }
 

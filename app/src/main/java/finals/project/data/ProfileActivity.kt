@@ -60,6 +60,7 @@ class ProfileActivity : AppCompatActivity() {
         setSupportActionBar(toolbar as Toolbar?)
 
         myRef.addValueEventListener(object: ValueEventListener {
+            @SuppressLint("SetTextI18n")
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.exists()) {
                     val collegeEmailSnap = dataSnapshot.child(uid.toString()).child("College Email").getValue().toString()
@@ -122,7 +123,7 @@ class ProfileActivity : AppCompatActivity() {
                         copyIDButton.visibility=View.GONE
                     }
 
-                    //submission onclicks verify that provided info is valid, and passed to database
+                    //submission onclick verify that provided info is valid, and passed to database
                     submit.setOnClickListener {
                         val newName = nameText.getText().toString()
                         val validName = nameCheck(newName)
