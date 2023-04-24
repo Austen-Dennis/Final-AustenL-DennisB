@@ -4,13 +4,11 @@ import com.xwray.groupie.GroupieViewHolder
 import android.widget.TextView
 import com.xwray.groupie.Item
 import android.view.View
-import com.squareup.picasso.Picasso
 import finals.project.R
 
 private val View.text_to_row: TextView
     get() {
-        val text_to_row = findViewById<View>(R.id.text_to_row) as TextView
-        return text_to_row
+        return findViewById<View>(R.id.text_to_row) as TextView
     }
 
 //sets view of messages from other users

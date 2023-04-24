@@ -8,8 +8,7 @@ import finals.project.R
 
 private val View.username_text: TextView
     get() {
-        val username_text = findViewById<View>(R.id.username_text) as TextView
-        return username_text
+        return findViewById<View>(R.id.username_text) as TextView
     }
 
 class UserItem(val user: User) : Item<GroupieViewHolder>() {

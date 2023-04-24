@@ -8,8 +8,7 @@ import finals.project.R
 
 private val View.text_from_row: TextView
     get() {
-        val text_from_row = findViewById<View>(R.id.text_from_row) as TextView
-        return text_from_row
+        return findViewById<View>(R.id.text_from_row) as TextView
     }
 
 //sets view of messages from other users

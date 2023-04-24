@@ -1,6 +1,5 @@
 package finals.project.smsPage
 
-import androidx.recyclerview.widget.RecyclerView
 import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Item
 import finals.project.R

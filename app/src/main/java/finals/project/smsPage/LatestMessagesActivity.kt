@@ -22,8 +22,7 @@ companion object{
     var currentUser: User? = null
     val adapter = GroupAdapter<GroupieViewHolder>()
     fun isReachable(): Any {
-        val reachable = true;
-        return reachable
+        return true
     }
 }
     override fun onCreate(savedInstanceState: Bundle?) {

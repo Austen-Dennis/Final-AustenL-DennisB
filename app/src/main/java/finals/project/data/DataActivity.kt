@@ -16,7 +16,7 @@ class DataActivity : AppCompatActivity() {
     companion object {
         fun dataBase(uid: String?, name: String?, email: String?) {
             val database = FirebaseDatabase.getInstance()
-            val myRef = database.getReference("users/" + uid)
+            val myRef = database.getReference("users/$uid")
             if (uid != null && myRef.child("Name")==null) {
                 myRef.child("Name").setValue(name)
                 myRef.child("Email").setValue(email)
@@ -29,29 +29,20 @@ class DataActivity : AppCompatActivity() {
 
         //verifies that companion object can be reached
         fun isReachable(): Boolean {
-            val reachable = true
-            return reachable
+            return true
         }
 
         fun nameChange(uid: String?, name: String?) {
             val database = FirebaseDatabase.getInstance()
-            val myRef = database.getReference("users/" + uid)
+            val myRef = database.getReference("users/$uid")
             if (uid != null) {
                 myRef.child("Name").setValue(name)
             }
         }
 
-        //TODO: Add implementation of profile pic
-        fun profilePic(uid: String?) {
-            val database = FirebaseDatabase.getInstance()
-            val myRef = database.getReference("users/" + uid)
-            if (uid != null) {
-            }
-        }
-
         fun gitHubLink(uid: String?, newLink: String) {
             val database = FirebaseDatabase.getInstance()
-            val myRef = database.getReference("users/" + uid)
+            val myRef = database.getReference("users/$uid")
             if (uid != null) {
                 myRef.child("GitHub Link").setValue(newLink)
             }
@@ -59,7 +50,7 @@ class DataActivity : AppCompatActivity() {
 
         fun bioAdd(uid: String?, newBio: String) {
             val database = FirebaseDatabase.getInstance()
-            val myRef = database.getReference("users/" + uid)
+            val myRef = database.getReference("users/$uid")
             if (uid != null) {
                 myRef.child("Bio").setValue(newBio)
             }
@@ -67,7 +58,7 @@ class DataActivity : AppCompatActivity() {
 
         fun collegeEmail(uid: String?, collegeEmail: String) {
             val database = FirebaseDatabase.getInstance()
-            val myRef = database.getReference("users/" + uid)
+            val myRef = database.getReference("users/$uid")
             if (uid != null) {
                 myRef.child("College Email").setValue(collegeEmail)
             }

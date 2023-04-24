@@ -23,7 +23,7 @@ class LoginRepository(val dataSource: LoginDataSource) {
 
     //creates user/signs in to user if one already exists for provided email
     fun login(username: String, password: String): Result<LoggedInUser> {
-        val result = dataSource.login(username, password)
+        val result = dataSource.login(username)
         if (result is Result.Success) {
             setLoggedInUser(result.data)
             FirebaseAuth.getInstance().createUserWithEmailAndPassword(username, password)

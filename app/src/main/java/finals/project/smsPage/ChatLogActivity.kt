@@ -19,10 +19,9 @@ import finals.project.R
 @Suppress("DEPRECATION")
 class ChatLogActivity : AppCompatActivity() {
     companion object {
-        val TAG = "ChatLog"
+        const val TAG = "ChatLog"
         fun isReachable(): Any {
-            val reachable = true;
-            return reachable
+            return true
         }
     }
 
@@ -34,17 +33,17 @@ class ChatLogActivity : AppCompatActivity() {
         setContentView(R.layout.activity_chat_log)
         val backButton = findViewById<View>(R.id.back)
         val intentBack = Intent(this, LatestMessagesActivity::class.java)
-        toUser = intent.getParcelableExtra<User>(NewMessageActivity.USER_KEY)
+        toUser = intent.getParcelableExtra(NewMessageActivity.USER_KEY)
 
-        val chat_log = findViewById<View>(R.id.chat_log) as RecyclerView
+        val chatLog = findViewById<View>(R.id.chat_log) as RecyclerView
         supportActionBar?.title = toUser?.Name
 
         listenForMessages()
-        val SendButton = findViewById<View>(R.id.sendButton)
+        val sendButton = findViewById<View>(R.id.sendButton)
 
-        chat_log.adapter = adapter
+        chatLog.adapter = adapter
 
-        SendButton.setOnClickListener {
+        sendButton.setOnClickListener {
             Log.d(TAG,"Attempt to send message")
             sendMessage()
         }
@@ -63,7 +62,7 @@ class ChatLogActivity : AppCompatActivity() {
         val toId = user!!.uid
 
         if (fromId == null) return
-        val chat_log = findViewById<View>(R.id.chat_log) as RecyclerView
+        val chatLog = findViewById<View>(R.id.chat_log) as RecyclerView
         val ref = FirebaseDatabase.getInstance().getReference("/user-messages/$fromId/$toId").push()
         val toRef = FirebaseDatabase.getInstance().getReference("/user-messages/$toId/$fromId").push()
         val chatMessage = ChatMessage(ref.key!!, text, fromId, toId, System.currentTimeMillis() / 1000)
@@ -71,14 +70,14 @@ class ChatLogActivity : AppCompatActivity() {
             .addOnSuccessListener {
                 Log.d(TAG,"Message saved")
                 message.text.clear()
-                chat_log.scrollToPosition(adapter.itemCount - 1)
+                chatLog.scrollToPosition(adapter.itemCount - 1)
             }
         toRef.setValue(chatMessage)
 
-        val LatestMessageFromRef = FirebaseDatabase.getInstance().getReference("/latest-message/$fromId/$toId")
-        val LatestMessageToRef = FirebaseDatabase.getInstance().getReference("/latest-message/$toId/$fromId")
-        LatestMessageFromRef.setValue(chatMessage)
-        LatestMessageToRef.setValue(chatMessage)
+        val latestMessageFromRef = FirebaseDatabase.getInstance().getReference("/latest-message/$fromId/$toId")
+        val latestMessageToRef = FirebaseDatabase.getInstance().getReference("/latest-message/$toId/$fromId")
+        latestMessageFromRef.setValue(chatMessage)
+        latestMessageToRef.setValue(chatMessage)
     }
 
     //updates view everytime a message is added to database
