@@ -40,13 +40,13 @@ class LoginTest {
     }
 
     @Test
-    fun TestIsCreated() {
+    fun testIsCreated() {
         val returnValue = LoginActivity.isReachable()
         TestCase.assertTrue(returnValue as Boolean)
     }
 
     @Test
-    fun NameIsTrimmed() {
+    fun nameIsTrimmed() {
         val email = "womper@gmail.com"
         val name = LoginActivity.emailTrim(email)
         assertEquals(name, "womper")

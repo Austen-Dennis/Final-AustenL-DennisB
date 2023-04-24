@@ -8,17 +8,17 @@ import org.junit.Test
 
 class SMSTest {
     @Test
-    fun ChatLogIsReachable(){
+    fun chatLogIsReachable(){
         val returnValue = ChatLogActivity.isReachable()
         TestCase.assertTrue(returnValue as Boolean)
     }
     @Test
-    fun LatestMessageIsReachableTest(){
+    fun latestMessageIsReachableTest(){
         val returnValue = LatestMessagesActivity.isReachable()
         TestCase.assertTrue(returnValue as Boolean)
     }
     @Test
-    fun NewMessageisReachableTest(){
+    fun newMessageisReachableTest(){
         val returnValue = NewMessageActivity.isReachable()
         TestCase.assertTrue(returnValue as Boolean)
     }
