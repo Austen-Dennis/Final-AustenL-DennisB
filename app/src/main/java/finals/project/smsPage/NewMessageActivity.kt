@@ -12,7 +12,6 @@ import com.xwray.groupie.GroupAdapter
 import android.content.Intent
 import android.view.View
 import android.os.Bundle
-import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import finals.project.R
 import finals.project.data.HomeActivity
@@ -31,10 +30,9 @@ class NewMessageActivity : AppCompatActivity() {
         }
     }
     companion object {
-        val USER_KEY = "USER_KEY"
+        const val USER_KEY = "USER_KEY"
         fun isReachable(): Any {
-            val reachable = true;
-            return reachable
+            return true
         }
     }
 
@@ -44,7 +42,7 @@ class NewMessageActivity : AppCompatActivity() {
         ref.addListenerForSingleValueEvent(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val adapter = GroupAdapter<GroupieViewHolder>()
-                val recyclerview_newmessage = findViewById<View>(R.id.recyclerview) as RecyclerView
+                val recyclerviewMessage = findViewById<View>(R.id.recyclerview) as RecyclerView
                 snapshot.children.forEach {
                         val user = it.getValue(User::class.java)
                         if (user != null && user.uid != FirebaseAuth.getInstance().currentUser?.uid) {
@@ -58,7 +56,7 @@ class NewMessageActivity : AppCompatActivity() {
                     startActivity(intent)
                     finish()
                 }
-                recyclerview_newmessage.adapter = adapter
+                recyclerviewMessage.adapter = adapter
                 }
 
             override fun onCancelled(snapshot: DatabaseError) {

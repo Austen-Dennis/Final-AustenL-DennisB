@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "finals.project.app-mergeDebugResources-64:/values-sw360dp-v13/values-sw360dp-v13.xml",
+            "outputFile": "finals.project.app-mergeDebugResources-63:/values-sw360dp-v13/values-sw360dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\mrden\\.gradle\\caches\\transforms-3\\ef6cc873c851a17b2d1631c967d91ef0\\transformed\\firebase-ui-auth-8.0.2\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+                    "source": "C:\\Users\\Austen Lowder\\.gradle\\caches\\transforms-3\\181088e9fa32a5a1a41d1ce1101ece9d\\transformed\\firebase-ui-auth-8.0.2\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\mrden\\.gradle\\caches\\transforms-3\\317d9e366161380e79f5806eccbf4ecc\\transformed\\preference-1.1.1\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+                    "source": "C:\\Users\\Austen Lowder\\.gradle\\caches\\transforms-3\\94eaf3275ef89f1b2f983d91fce20348\\transformed\\preference-1.1.1\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -59,8 +59,8 @@ companion object{
      val ref = FirebaseDatabase.getInstance().getReference("/latest-message/$fromId")
      ref.addChildEventListener(object: ChildEventListener{
          override fun onChildAdded(snapshot: DataSnapshot, previousChildName: String?) {
-             //val chatMessage = snapshot.getValue(ChatMessage::class.java)
-             //adapter.add(LatestMessage())
+             val chatMessage = snapshot.getValue(ChatMessage::class.java)
+             adapter.add(LatestMessage())
          }
         // These are required for this function to function, but have no use in our program.
          override fun onChildChanged(snapshot: DataSnapshot, previousChildName: String?) {
@@ -89,7 +89,6 @@ companion object{
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
             }
 
         })

@@ -101,16 +101,12 @@ class ChatLogActivity : AppCompatActivity() {
             // These are required for this function to function, but have no use in our program.
             override fun onCancelled(error: DatabaseError) {
             }
-
             override fun onChildChanged(snapshot: DataSnapshot, previousChildName: String?) {
             }
-
             override fun onChildRemoved(snapshot: DataSnapshot) {
             }
             override fun onChildMoved(snapshot: DataSnapshot, previousChildName: String?) {
-
             }
-
         })
     }
 }
