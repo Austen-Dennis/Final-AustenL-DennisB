@@ -62,7 +62,6 @@ class NewMessageActivity : AppCompatActivity() {
                 }
 
             override fun onCancelled(snapshot: DatabaseError) {
-                TODO("Not yet implemented")
             }
 
         })
