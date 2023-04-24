@@ -41,7 +41,7 @@ class HomeActivity : AppCompatActivity() {
         setSupportActionBar(toolbar as Toolbar?)
 
         //sets the intent I.E. calls to the class LatestMessages which displays a layout
-        val intentSMS = Intent(this, NewMessageActivity::class.java)
+        val intentSMS = Intent(this, LatestMessagesActivity::class.java)
         val intentPROFILE = Intent(this, ProfileActivity::class.java)
         val searchView = findViewById<View>(finals.project.R.id.searchView) as SearchView
         val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
