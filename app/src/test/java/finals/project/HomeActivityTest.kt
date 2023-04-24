@@ -1,6 +1,5 @@
 package finals.project
 
-import finals.project.data.HomeActivity
 import junit.framework.TestCase.assertTrue
 import org.junit.Test
 

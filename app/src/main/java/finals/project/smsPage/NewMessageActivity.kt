@@ -14,7 +14,7 @@ import android.view.View
 import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
 import finals.project.R
-import finals.project.data.HomeActivity
+import finals.project.HomeActivity
 
 class NewMessageActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")

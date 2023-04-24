@@ -1,4 +1,4 @@
-package finals.project.data
+package finals.project
 
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -14,29 +14,25 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
-import finals.project.R
+import finals.project.data.ProfileActivity
 import finals.project.smsPage.*
 
 class HomeActivity : AppCompatActivity() {
-    lateinit var searchView: SearchView
-    lateinit var list: ArrayList<String>
-    lateinit var adapter: ArrayAdapter<*>
 
     @SuppressLint("SuspiciousIndentation", "MissingInflatedId")
     companion object {
-        val USER_KEY = "USER_KEY"
-        val ID = "ID"
+        const val USER_KEY = "USER_KEY"
+        const val ID = "ID"
 
-            fun isReachable(): Any {
-                val reachable = true
-                return reachable
-            }
+        fun isReachable(): Any {
+            return true
+        }
 
     }
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(finals.project.R.layout.activity_home) // sets the view using the activity_friend_search
+        setContentView(R.layout.activity_home) // sets the view using the activity_friend_search
         val toolbar = findViewById<View>(io.getstream.chat.android.ui.R.id.toolbar)
         setSupportActionBar(toolbar as Toolbar?)
 
@@ -45,7 +41,7 @@ class HomeActivity : AppCompatActivity() {
         val intentPROFILE = Intent(this, ProfileActivity::class.java)
         val searchView = findViewById<View>(finals.project.R.id.searchView) as SearchView
         val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
-        val layout = findViewById<View>(finals.project.R.id.layout1)
+        val layout = findViewById<View>(R.id.layout1)
         val layout2 = findViewById<View>(finals.project.R.id.layout2)
         val addFriend = findViewById<View>(finals.project.R.id.addFriend)
         val uid = FirebaseAuth.getInstance().uid
@@ -53,8 +49,7 @@ class HomeActivity : AppCompatActivity() {
         val bioValue = findViewById<View>(finals.project.R.id.bioValue) as TextView
         val nameValue = findViewById<View>(finals.project.R.id.nameValue) as TextView
         val gitValue = findViewById<View>(finals.project.R.id.gitValue) as TextView
-        val messageButton = findViewById<View>(finals.project.R.id.messageFriend)
-        val myRef = FirebaseDatabase.getInstance().getReference("users")
+        val messageButton = findViewById<View>(R.id.messageFriend)
 
         layout.visibility = View.VISIBLE
         layout2.visibility = View.GONE
@@ -63,10 +58,8 @@ class HomeActivity : AppCompatActivity() {
 
         val mAuth = FirebaseAuth.getInstance()
         val currentUserId = mAuth.currentUser?.uid
-        val profileUserRef = FirebaseDatabase.getInstance().getReference()
         val database = FirebaseDatabase.getInstance()
         val myRefEmail = database.getReference("users/")
-        val myEmail = FirebaseAuth.getInstance().currentUser?.email
         val chatIntent = Intent(this, ChatLogActivity::class.java)
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
@@ -74,6 +67,7 @@ class HomeActivity : AppCompatActivity() {
             override fun onQueryTextSubmit(query: String): Boolean {
                 myRefEmail.addValueEventListener(object : ValueEventListener {
 
+                    @SuppressLint("SetTextI18n")
                     override fun onDataChange(dataSnapshot: DataSnapshot) {
 
                         if (dataSnapshot.exists()) {
@@ -83,43 +77,43 @@ class HomeActivity : AppCompatActivity() {
                                 layout.visibility = View.GONE
 
                                 val email =
-                                    dataSnapshot.child(query).child("Email").getValue().toString()
+                                    dataSnapshot.child(query).child("Email").value.toString()
                                 val name =
-                                    dataSnapshot.child(query).child("Name").getValue().toString()
+                                    dataSnapshot.child(query).child("Name").value.toString()
                                 val bioSnap =
-                                    dataSnapshot.child(query).child("Bio").getValue().toString()
+                                    dataSnapshot.child(query).child("Bio").value.toString()
                                 val gitLink =
-                                    dataSnapshot.child(query).child("GitHub Link").getValue()
+                                    dataSnapshot.child(query).child("GitHub Link").value
                                         .toString()
                                 val collegeEmailSnap =
-                                    dataSnapshot.child(query).child("College Email").getValue()
+                                    dataSnapshot.child(query).child("College Email").value
                                         .toString()
 
                                 profileTitle.text = "Profile Search"
 
-                                if (dataSnapshot.child(query.toString()).child("Name").exists()) {
+                                if (dataSnapshot.child(query).child("Name").exists()) {
                                     nameValue.text = name
                                 } else {
                                     nameValue.text = email
                                 }
-                                if (dataSnapshot.child(query.toString()).child("Bio").exists()) {
+                                if (dataSnapshot.child(query).child("Bio").exists()) {
                                     bioValue.text = bioSnap
                                 } else {
                                     bioValue.text = "No Bio Yet"
                                 }
-                                if (dataSnapshot.child(query.toString()).child("GitHub Link")
+                                if (dataSnapshot.child(query).child("GitHub Link")
                                         .exists()
                                 ) {
-                                    gitValue.text = "GitHub Link: " + gitLink
+                                    gitValue.text = "GitHub Link: $gitLink"
                                 } else {
                                     gitValue.text = "No GitHub Link Yet"
                                 }
-                                if (dataSnapshot.child(query.toString()).child("College Email")
+                                if (dataSnapshot.child(query).child("College Email")
                                         .exists()
                                 ) {
-                                    emailValue.text = "Contact: " + collegeEmailSnap
+                                    emailValue.text = "Contact: $collegeEmailSnap"
                                 } else {
-                                    emailValue.text = "Contact: " + email
+                                    emailValue.text = "Contact: $email"
                                 }
 
                                 addFriend.setOnClickListener {
@@ -162,11 +156,11 @@ class HomeActivity : AppCompatActivity() {
             }
         })
         //starts the activity onclick
-        val profileButton = findViewById<View>(finals.project.R.id.profile)
+        val profileButton = findViewById<View>(R.id.profile)
         profileButton.setOnClickListener {
             startActivity(intentPROFILE)
         }
-        val smsButton = findViewById<View>(finals.project.R.id.sms)
+        val smsButton = findViewById<View>(R.id.sms)
         smsButton.setOnClickListener {
             startActivity(intentSMS)
         }
@@ -180,8 +174,8 @@ class HomeActivity : AppCompatActivity() {
                 snapshot.children.forEach {
 
                     val value = it.child("UID").getValue(User::class.java)
-                    val key = it.child("Status").getValue()
-                    System.out.println("DJISAJIDJASD " + value + " " + key)
+                    val key = it.child("Status").value
+                    System.out.println("DJISAJIDJASD $value $key")
                     /*if (key!!.equals("Received")) {
                         adapter.add(UserItem(value as User))
                         recyclerview_newmessage.adapter = adapter
@@ -201,7 +195,7 @@ class HomeActivity : AppCompatActivity() {
         val ref = FirebaseDatabase.getInstance().getReference("users").child(key.toString()).child("Name")
         ref.addListenerForSingleValueEvent(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                val name = snapshot.getValue()
+                val name = snapshot.value
             }
 
             override fun onCancelled(error: DatabaseError) {

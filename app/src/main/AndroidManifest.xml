@@ -23,7 +23,7 @@
             android:value=".smsPage.LatestMessagesActivity" />
 
         <activity
-            android:name=".data.HomeActivity"
+            android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".smsPage.LatestMessagesActivity"

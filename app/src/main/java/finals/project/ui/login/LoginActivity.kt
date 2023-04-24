@@ -9,7 +9,7 @@ import android.view.inputmethod.EditorInfo
 import androidx.appcompat.widget.Toolbar
 import com.google.firebase.auth.ktx.auth
 import finals.project.data.DataActivity
-import finals.project.data.HomeActivity
+import finals.project.HomeActivity
 import com.google.firebase.ktx.Firebase
 import androidx.annotation.StringRes
 import androidx.lifecycle.Observer

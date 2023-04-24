@@ -19,6 +19,7 @@ import android.content.*
 import android.view.View
 import android.util.Log
 import android.net.Uri
+import finals.project.HomeActivity
 
 @Suppress("DEPRECATION")
 class ProfileActivity : AppCompatActivity() {
