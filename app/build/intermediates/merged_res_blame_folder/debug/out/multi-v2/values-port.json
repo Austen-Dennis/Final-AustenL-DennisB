@@ -4,17 +4,7 @@
             "outputFile": "finals.project.app-mergeDebugResources-63:/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\auste\\.gradle\\caches\\transforms-3\\3812d10475a817bd4dd8b54e1efde7be\\transformed\\appcompat-1.6.1\\res\\values-port\\values-port.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "55",
-                        "endOffsets": "106"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\auste\\.gradle\\caches\\transforms-3\\32ef89fde305d2a1605e29be23b71fc1\\transformed\\car-ui-lib-2.0.0\\res\\values-port\\values.xml",
+                    "source": "C:\\Users\\Austen Lowder\\.gradle\\caches\\transforms-3\\32ef89fde305d2a1605e29be23b71fc1\\transformed\\car-ui-lib-2.0.0\\res\\values-port\\values.xml",
                     "from": {
                         "startLines": "4,7,8",
                         "startColumns": "0,0,0",
@@ -28,6 +18,16 @@
                         "startOffsets": "111,175,244",
                         "endColumns": "63,68,66",
                         "endOffsets": "170,239,306"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Austen Lowder\\.gradle\\caches\\transforms-3\\3812d10475a817bd4dd8b54e1efde7be\\transformed\\appcompat-1.6.1\\res\\values-port\\values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
                     }
                 }
             ]

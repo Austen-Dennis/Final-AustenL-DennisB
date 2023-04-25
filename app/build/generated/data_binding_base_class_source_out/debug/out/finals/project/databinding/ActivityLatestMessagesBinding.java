@@ -25,10 +25,10 @@ public final class ActivityLatestMessagesBinding implements ViewBinding {
   public final Button home;
 
   @NonNull
-  public final RecyclerView latestMessages;
+  public final Button newMessage;
 
   @NonNull
-  public final Button newMessage;
+  public final RecyclerView newestMessages;
 
   @NonNull
   public final Button profile;
@@ -37,12 +37,12 @@ public final class ActivityLatestMessagesBinding implements ViewBinding {
   public final Toolbar toolbar5;
 
   private ActivityLatestMessagesBinding(@NonNull ConstraintLayout rootView, @NonNull Button home,
-      @NonNull RecyclerView latestMessages, @NonNull Button newMessage, @NonNull Button profile,
+      @NonNull Button newMessage, @NonNull RecyclerView newestMessages, @NonNull Button profile,
       @NonNull Toolbar toolbar5) {
     this.rootView = rootView;
     this.home = home;
-    this.latestMessages = latestMessages;
     this.newMessage = newMessage;
+    this.newestMessages = newestMessages;
     this.profile = profile;
     this.toolbar5 = toolbar5;
   }
@@ -80,15 +80,15 @@ public final class ActivityLatestMessagesBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.latest_messages;
-      RecyclerView latestMessages = ViewBindings.findChildViewById(rootView, id);
-      if (latestMessages == null) {
-        break missingId;
-      }
-
       id = R.id.new_message;
       Button newMessage = ViewBindings.findChildViewById(rootView, id);
       if (newMessage == null) {
+        break missingId;
+      }
+
+      id = R.id.newest_Messages;
+      RecyclerView newestMessages = ViewBindings.findChildViewById(rootView, id);
+      if (newestMessages == null) {
         break missingId;
       }
 
@@ -104,8 +104,8 @@ public final class ActivityLatestMessagesBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityLatestMessagesBinding((ConstraintLayout) rootView, home, latestMessages,
-          newMessage, profile, toolbar5);
+      return new ActivityLatestMessagesBinding((ConstraintLayout) rootView, home, newMessage,
+          newestMessages, profile, toolbar5);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -44,7 +44,6 @@ id imageView2
 id imageView3
 id item_text
 id latestMessage
-id latest_messages
 id layout
 id layout1
 id layout2
@@ -55,6 +54,7 @@ id nameValue
 id navigation
 id newName
 id new_message
+id newest_Messages
 id password
 id profile
 id profilePic

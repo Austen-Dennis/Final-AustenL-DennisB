@@ -5132,7 +5132,6 @@ id large
 id lastMessageLabel
 id lastMessageTimeLabel
 id latestMessage
-id latest_messages
 id layout
 id layout1
 id layout2
@@ -5278,6 +5277,7 @@ id neverCompleteToEnd
 id neverCompleteToStart
 id newName
 id new_message
+id newest_Messages
 id noScroll
 id noState
 id none

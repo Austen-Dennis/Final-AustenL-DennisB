@@ -31,8 +31,11 @@ companion object{
         val intentMessage = Intent(this, NewMessageActivity::class.java)
         val intentHome = Intent(this, HomeActivity::class.java)
         val intentProfile = Intent(this, ProfileActivity::class.java)
+
+        val latest_message = findViewById<RecyclerView>(R.id.newest_Messages)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_latest_messages)
+        //latest_message.adapter = adapter
         listenForNewestMessage()
         fetchUser()
         

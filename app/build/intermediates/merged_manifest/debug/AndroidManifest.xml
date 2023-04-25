@@ -65,6 +65,9 @@
         <activity
             android:name="finals.project.smsPage.NewMessageActivity"
             android:exported="false" />
+        <activity
+            android:name="finals.project.smsPage.LatestMessagesActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
@@ -72,9 +75,6 @@
 
         <activity
             android:name="finals.project.HomeActivity"
-            android:exported="false" />
-        <activity
-            android:name="finals.project.smsPage.LatestMessagesActivity"
             android:exported="false" />
         <activity
             android:name="finals.project.data.DataActivity"

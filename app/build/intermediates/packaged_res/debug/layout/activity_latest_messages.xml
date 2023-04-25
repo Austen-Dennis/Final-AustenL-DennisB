@@ -22,7 +22,7 @@
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/latest_messages"
+        android:id="@+id/newest_Messages"
         android:layout_width="412dp"
         android:layout_height="675dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -52,7 +52,7 @@
         android:background="@drawable/rounded_box4"
         android:text="@string/home_button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/latest_messages" />
+        app:layout_constraintEnd_toEndOf="@+id/newest_Messages" />
 
     <Button
         android:id="@+id/new_message"
