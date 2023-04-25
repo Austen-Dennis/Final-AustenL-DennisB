@@ -17,7 +17,9 @@
         <activity
             android:name=".smsPage.NewMessageActivity"
             android:exported="false" />
-
+        <activity
+            android:name=".smsPage.LatestMessagesActivity"
+            android:exported="false" />
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value=".smsPage.LatestMessagesActivity" />
@@ -25,9 +27,7 @@
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
-        <activity
-            android:name=".smsPage.LatestMessagesActivity"
-            android:exported="false" />
+
         <activity
             android:name=".data.DataActivity"
             android:exported="false" />
