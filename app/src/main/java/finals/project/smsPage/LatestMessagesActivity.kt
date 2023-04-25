@@ -56,8 +56,8 @@ companion object{
         messagesMap.values.forEach{
             adapter.add(LatestMessage(it))
         }
-        val latest_message = findViewById<RecyclerView>(R.id.newest_Messages)
-        latest_message.adapter = adapter
+        val latestMessage = findViewById<RecyclerView>(R.id.newest_Messages)
+        latestMessage.adapter = adapter
     }
  private fun listenForNewestMessage(){
      val fromId = FirebaseAuth.getInstance().uid
