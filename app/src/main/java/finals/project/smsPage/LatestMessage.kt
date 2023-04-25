@@ -7,7 +7,6 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.google.firebase.ktx.Firebase
 import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Item
 import finals.project.R
@@ -20,16 +19,15 @@ private val View.usernameMessage: TextView
         return findViewById<View>(R.id.usernameLatestMessage) as TextView
     }
 
-class LatestMessage(val chatMssage: ChatMessage): Item<GroupieViewHolder>(){
+class LatestMessage(private val chatMessage: ChatMessage): Item<GroupieViewHolder>(){
     override fun bind(viewHolder: GroupieViewHolder, position: Int) {
-    viewHolder.itemView.latestMessageRow.text = chatMssage.text
-        val chatPatner: String
-        if(chatMssage.fromId == FirebaseAuth.getInstance().uid) {
-            chatPatner = chatMssage.toID
+    viewHolder.itemView.latestMessageRow.text = chatMessage.text
+        val chatPartner: String = if(chatMessage.fromId == FirebaseAuth.getInstance().uid) {
+            chatMessage.toID
         }else{
-            chatPatner = chatMssage.fromId
+            chatMessage.fromId
         }
-        val ref = FirebaseDatabase.getInstance().getReference("/users/$chatPatner")
+        val ref = FirebaseDatabase.getInstance().getReference("/users/$chatPartner")
         ref.addListenerForSingleValueEvent(object: ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 val user = snapshot.getValue(User::class.java)
