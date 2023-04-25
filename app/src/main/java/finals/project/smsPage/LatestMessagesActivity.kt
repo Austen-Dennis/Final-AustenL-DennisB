@@ -48,27 +48,31 @@ companion object{
             startActivity(intentProfile)
         }
     }
+    val messagesMap = HashMap<String, ChatMessage>()
+    private fun refreshRecycler(){
+        adapter.clear()
+        messagesMap.values.forEach{
+            adapter.add(LatestMessage(it))
+        }
+    }
  private fun listenForNewestMessage(){
      val fromId = FirebaseAuth.getInstance().uid
      val ref = FirebaseDatabase.getInstance().getReference("/latest-message/$fromId")
      ref.addChildEventListener(object: ChildEventListener{
          override fun onChildAdded(snapshot: DataSnapshot, previousChildName: String?) {
-             val chatMessage = snapshot.getValue(ChatMessage::class.java)
-             adapter.add(LatestMessage())
+             val chatMessage = snapshot.getValue(ChatMessage::class.java) ?: return
+             messagesMap[snapshot.key!!] =chatMessage
+             refreshRecycler()
          }
         // These are required for this function to function, but have no use in our program.
          override fun onChildChanged(snapshot: DataSnapshot, previousChildName: String?) {
+            val chatMessage = snapshot.getValue(ChatMessage::class.java) ?: return
+            messagesMap[snapshot.key!!] =chatMessage
+            refreshRecycler()
          }
-
-         override fun onChildRemoved(snapshot: DataSnapshot) {
-         }
-
-         override fun onChildMoved(snapshot: DataSnapshot, previousChildName: String?) {
-         }
-
-         override fun onCancelled(error: DatabaseError) {
-         }
-
+         override fun onChildRemoved(snapshot: DataSnapshot) {}
+         override fun onChildMoved(snapshot: DataSnapshot, previousChildName: String?) {}
+         override fun onCancelled(error: DatabaseError) {}
      })
  }
 
