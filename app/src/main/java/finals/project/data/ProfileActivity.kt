@@ -64,15 +64,15 @@ class ProfileActivity : AppCompatActivity() {
             @SuppressLint("SetTextI18n")
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.exists()) {
-                    val collegeEmailSnap = dataSnapshot.child(uid.toString()).child("College Email").getValue().toString()
-                    val gitLink = dataSnapshot.child(uid.toString()).child("GitHub Link").getValue().toString()
-                    val bioSnap = dataSnapshot.child(uid.toString()).child("Bio").getValue().toString()
-                    val email = dataSnapshot.child(uid.toString()).child("Email").getValue().toString()
-                    val name = dataSnapshot.child(uid.toString()).child("Name").getValue().toString()
+                    val collegeEmailSnap = dataSnapshot.child(uid.toString()).child("College Email").value.toString()
+                    val gitLink = dataSnapshot.child(uid.toString()).child("GitHub Link").value.toString()
+                    val bioSnap = dataSnapshot.child(uid.toString()).child("Bio").value.toString()
+                    val email = dataSnapshot.child(uid.toString()).child("Email").value.toString()
+                    val name = dataSnapshot.child(uid.toString()).child("Name").value.toString()
                     val clip: ClipData = ClipData.newPlainText("simple text", uid)
 
                     //TODO: add implementation for friend requests to be added to list
-                    val pendingRequest = dataSnapshot.child(uid.toString()).child("Pending Friend Request").getValue().toString()
+                    val pendingRequest = dataSnapshot.child(uid.toString()).child("Pending Friend Request").value.toString()
                     profileTitle.text = "Your Profile"
 
                     //checks if the data value can be found in database, and displays it
@@ -87,22 +87,22 @@ class ProfileActivity : AppCompatActivity() {
                         bioValue.text = "No Bio Yet"
                     }
                     if (dataSnapshot.child(uid.toString()).child("GitHub Link").exists()) {
-                        gitValue.text = "GitHub Link: " + gitLink
+                        gitValue.text = "GitHub Link: $gitLink"
                     } else {
                         gitValue.text = "No GitHub Link Yet"
                     }
                     if (dataSnapshot.child(uid.toString()).child("College Email").exists()) {
-                        emailValue.text = "Contact: " + collegeEmailSnap
+                        emailValue.text = "Contact: $collegeEmailSnap"
                     } else {
-                        emailValue.text = "Contact: " + email
+                        emailValue.text = "Contact: $email"
                     }
 
                     profileTitle.visibility=View.VISIBLE
                     bioValue.visibility=View.VISIBLE
                     gitValue.visibility=View.VISIBLE
                     emailValue.visibility=View.VISIBLE
-                    emailText.text = "Email: \n" + email
-                    userID.text = "User ID: \n" + uid
+                    emailText.text = "Email: \n$email"
+                    userID.text = "User ID: \n$uid"
                     emailText.visibility= View.GONE
                     userID.visibility=View.GONE
                     hideInfoButton.visibility=View.GONE
@@ -126,7 +126,7 @@ class ProfileActivity : AppCompatActivity() {
 
                     //submission onclick verify that provided info is valid, and passed to database
                     submit.setOnClickListener {
-                        val newName = nameText.getText().toString()
+                        val newName = nameText.text.toString()
                         val validName = nameCheck(newName)
                         if (validName == true) {
                             DataActivity.nameChange(uid, newName)
@@ -151,13 +151,13 @@ class ProfileActivity : AppCompatActivity() {
                         copyIDButton.visibility=View.GONE
                     }
                     gitHubSub.setOnClickListener {
-                        val newLink = gitHub.getText().toString()
+                        val newLink = gitHub.text.toString()
                         val validLink = linkCheck(newLink)
                         if (validLink == true) {
                             DataActivity.gitHubLink(uid, newLink)
                             Toast.makeText(
                                 applicationContext,
-                                "Link Added Succesfully!",
+                                "Link Added Successfully!",
                                 Toast.LENGTH_LONG
                             ).show()
                         } else {
@@ -176,9 +176,9 @@ class ProfileActivity : AppCompatActivity() {
                         copyIDButton.visibility=View.GONE
                     }
                     bioSub.setOnClickListener {
-                        val newBio = bio.getText().toString()
+                        val newBio = bio.text.toString()
                         val validBio = bioCheck(newBio)
-                        if (validBio == true) {
+                        if (validBio) {
                             DataActivity.bioAdd(uid, newBio)
                             Toast.makeText(
                                 applicationContext,
@@ -201,7 +201,7 @@ class ProfileActivity : AppCompatActivity() {
                         copyIDButton.visibility=View.GONE
                     }
                     emailSub.setOnClickListener {
-                        val collegeEmail = collegeEmail.getText().toString()
+                        val collegeEmail = collegeEmail.text.toString()
                         val validEmail = emailCheck(collegeEmail)
                         if (validEmail == true) {
                             DataActivity.collegeEmail(uid, collegeEmail)
@@ -237,14 +237,12 @@ class ProfileActivity : AppCompatActivity() {
                     }
                     val updatePassButton = findViewById<View>(finals.project.R.id.update)
                     updatePassButton.setOnClickListener {
-                        if (name != null) {
-                            FirebaseAuth.getInstance().sendPasswordResetEmail(name)
-                            Toast.makeText(
-                                applicationContext,
-                                "Email sent to " + name,
-                                Toast.LENGTH_LONG
-                            ).show()
-                        }
+                        FirebaseAuth.getInstance().sendPasswordResetEmail(name)
+                        Toast.makeText(
+                            applicationContext,
+                            "Email sent to $name",
+                            Toast.LENGTH_LONG
+                        ).show()
                     }
 
                     //launches links as activity
