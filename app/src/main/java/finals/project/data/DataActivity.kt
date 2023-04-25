@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.FirebaseApp
 import com.google.firebase.database.*
 import android.os.Bundle
-import finals.project.smsPage.User
 
 
 class DataActivity : AppCompatActivity() {
