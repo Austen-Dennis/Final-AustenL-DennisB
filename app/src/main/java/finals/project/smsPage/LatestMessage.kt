@@ -20,6 +20,7 @@ private val View.usernameMessage: TextView
     }
 
 class LatestMessage(private val chatMessage: ChatMessage): Item<GroupieViewHolder>(){
+    var chatPartnerUser: User? = null
     override fun bind(viewHolder: GroupieViewHolder, position: Int) {
     viewHolder.itemView.latestMessageRow.text = chatMessage.text
         val chatPartner: String = if(chatMessage.fromId == FirebaseAuth.getInstance().uid) {
@@ -30,8 +31,8 @@ class LatestMessage(private val chatMessage: ChatMessage): Item<GroupieViewHolde
         val ref = FirebaseDatabase.getInstance().getReference("/users/$chatPartner")
         ref.addListenerForSingleValueEvent(object: ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
-                val user = snapshot.getValue(User::class.java)
-                viewHolder.itemView.usernameMessage.text = user?.Name
+                chatPartnerUser = snapshot.getValue(User::class.java)
+                viewHolder.itemView.usernameMessage.text = chatPartnerUser?.Name
             }
             override fun onCancelled(error: DatabaseError) {}
         })

@@ -57,6 +57,7 @@ class NewMessageActivity : AppCompatActivity() {
                     finish()
                 }
                 recyclerviewMessage.adapter = adapter
+
                 }
 
             override fun onCancelled(snapshot: DatabaseError) {

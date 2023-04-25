@@ -1,13 +1,14 @@
 package finals.project.smsPage
 
-import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.auth.FirebaseAuth
+
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -15,13 +16,15 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
-import finals.project.R
 import finals.project.HomeActivity
+import finals.project.R
 import finals.project.data.ProfileActivity
+
 
 class LatestMessagesActivity : AppCompatActivity() {
 companion object{
     var currentUser: User? = null
+    val TAG = "latest Message"
     val adapter = GroupAdapter<GroupieViewHolder>()
     fun isReachable(): Any {
         return true
@@ -58,6 +61,14 @@ companion object{
         }
         val latestMessage = findViewById<RecyclerView>(R.id.newest_Messages)
         latestMessage.adapter = adapter
+        latestMessage.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
+        adapter.setOnItemClickListener{item, view->
+            Log.d(TAG, "124")
+            val intent = Intent(this, ChatLogActivity::class.java)
+            val row = item as LatestMessage
+            intent.putExtra(NewMessageActivity.USER_KEY, row.chatPartnerUser)
+            startActivity(intent)
+        }
     }
  private fun listenForNewestMessage(){
      val fromId = FirebaseAuth.getInstance().uid

@@ -96,6 +96,8 @@ class ChatLogActivity : AppCompatActivity() {
                         adapter.add(ChatFromItem(chatMessage.text, currentUser))
                     }
                 }
+                val chatLog = findViewById<RecyclerView>(R.id.chat_log)
+                chatLog.scrollToPosition(adapter.itemCount - 1)
             }
             // These are required for this function to function, but have no use in our program.
             override fun onCancelled(error: DatabaseError) {
