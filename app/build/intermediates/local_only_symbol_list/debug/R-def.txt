@@ -20,6 +20,7 @@ drawable rounded_box4
 drawable screenshot__9_
 id Enter_message
 id GitHub
+id UserImage
 id accountInfo
 id addFriend
 id back
@@ -41,8 +42,8 @@ id hideInfo
 id home
 id imageView2
 id imageView3
-id imageView4
 id item_text
+id latestMessage
 id latest_messages
 id layout
 id layout1
@@ -73,8 +74,6 @@ id subBio
 id submit
 id submitEmail
 id submitGit
-id textView
-id textView2
 id text_from_row
 id text_to_row
 id to_image
@@ -84,6 +83,7 @@ id unknown
 id update
 id user
 id username
+id usernameLatestMessage
 id username_text
 id verify
 layout activity_chat_log

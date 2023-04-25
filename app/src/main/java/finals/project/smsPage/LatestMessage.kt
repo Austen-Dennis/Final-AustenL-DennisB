@@ -2,6 +2,12 @@ package finals.project.smsPage
 
 import android.view.View
 import android.widget.TextView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.ktx.Firebase
 import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Item
 import finals.project.R
@@ -9,10 +15,31 @@ private val View.latestMessageRow: TextView
     get() {
         return findViewById<View>(R.id.latestMessage) as TextView
     }
-class LatestMessage(val chatmessage: ChatMessage): Item<GroupieViewHolder>(){
-    override fun bind(viewHolder: GroupieViewHolder, position: Int) {
-    viewHolder.itemView.latestMessageRow.text = chatmessage.text
+private val View.usernameMessage: TextView
+    get(){
+        return findViewById<View>(R.id.usernameLatestMessage) as TextView
     }
+
+class LatestMessage(val chatMssage: ChatMessage): Item<GroupieViewHolder>(){
+    override fun bind(viewHolder: GroupieViewHolder, position: Int) {
+    viewHolder.itemView.latestMessageRow.text = chatMssage.text
+        val chatPatner: String
+        if(chatMssage.fromId == FirebaseAuth.getInstance().uid) {
+            chatPatner = chatMssage.toID
+        }else{
+            chatPatner = chatMssage.fromId
+        }
+        val ref = FirebaseDatabase.getInstance().getReference("/users/$chatPatner")
+        ref.addListenerForSingleValueEvent(object: ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val user = snapshot.getValue(User::class.java)
+                viewHolder.itemView.usernameMessage.text = user?.Name
+            }
+            override fun onCancelled(error: DatabaseError) {}
+        })
+
+    }
+
 
     override fun getLayout(): Int {
         return R.layout.latest_messages

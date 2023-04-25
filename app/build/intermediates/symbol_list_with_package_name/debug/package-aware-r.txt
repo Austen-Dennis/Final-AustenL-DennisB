@@ -4620,6 +4620,7 @@ id UX_RESTRICTIONS_NO_SETUP
 id UX_RESTRICTIONS_NO_TEXT_MESSAGE
 id UX_RESTRICTIONS_NO_VIDEO
 id UX_RESTRICTIONS_NO_VOICE_TRANSCRIPTION
+id UserImage
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -5098,7 +5099,6 @@ id imageCountTextView
 id imageView
 id imageView2
 id imageView3
-id imageView4
 id imagesPager
 id immediateStop
 id included
@@ -5131,6 +5131,7 @@ id labeled
 id large
 id lastMessageLabel
 id lastMessageTimeLabel
+id latestMessage
 id latest_messages
 id layout
 id layout1
@@ -5519,8 +5520,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView
-id textView2
 id text_from_row
 id text_input_end_icon
 id text_input_error_icon
@@ -5594,6 +5593,7 @@ id userReactionsTitleTextView
 id userReactionsView
 id userTextView
 id username
+id usernameLatestMessage
 id usernameTextView
 id username_text
 id verify

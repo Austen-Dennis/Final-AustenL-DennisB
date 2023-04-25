@@ -6,6 +6,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -29,9 +31,11 @@ companion object{
         val intentMessage = Intent(this, NewMessageActivity::class.java)
         val intentHome = Intent(this, HomeActivity::class.java)
         val intentProfile = Intent(this, ProfileActivity::class.java)
+        val latestMessagesView = findViewById<View>(R.id.latest_messages) as RecyclerView
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_latest_messages)
-
+        latestMessagesView.adapter = adapter
+        latestMessagesView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
         listenForNewestMessage()
         fetchUser()
         

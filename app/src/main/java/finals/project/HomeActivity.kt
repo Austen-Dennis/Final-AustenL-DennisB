@@ -59,7 +59,7 @@ class HomeActivity : AppCompatActivity() {
         val mAuth = FirebaseAuth.getInstance()
         val currentUserId = mAuth.currentUser?.uid
         val database = FirebaseDatabase.getInstance()
-        val myRefEmail = database.getReference("users/")
+        val myRefEmail = database.getReference("users/uid/Name")
         val chatIntent = Intent(this, ChatLogActivity::class.java)
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
@@ -182,11 +182,7 @@ class HomeActivity : AppCompatActivity() {
                     }*/
                 }
             }
-
-            override fun onCancelled(snapshot: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-
+            override fun onCancelled(snapshot: DatabaseError) {}
         })
 
 
@@ -197,10 +193,7 @@ class HomeActivity : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val name = snapshot.value
             }
-
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
+            override fun onCancelled(error: DatabaseError) {}
         })
             }
 }

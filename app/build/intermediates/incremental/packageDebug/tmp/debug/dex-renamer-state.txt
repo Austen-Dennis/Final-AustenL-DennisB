@@ -1,15 +1,15 @@
-#Mon Apr 24 19:00:03 EDT 2023
-base.0=C\:\\Users\\mrden\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\Users\\mrden\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.10=C\:\\Users\\mrden\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes2.dex
-base.2=C\:\\Users\\mrden\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
-base.3=C\:\\Users\\mrden\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
-base.4=C\:\\Users\\mrden\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
-base.5=C\:\\Users\\mrden\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
-base.6=C\:\\Users\\mrden\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
-base.7=C\:\\Users\\mrden\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-base.8=C\:\\Users\\mrden\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
-base.9=C\:\\Users\\mrden\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes4.dex
+#Mon Apr 24 21:34:07 EDT 2023
+base.0=C\:\\Users\\auste\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\auste\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.10=C\:\\Users\\auste\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes2.dex
+base.2=C\:\\Users\\auste\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
+base.3=C\:\\Users\\auste\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
+base.4=C\:\\Users\\auste\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
+base.5=C\:\\Users\\auste\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
+base.6=C\:\\Users\\auste\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
+base.7=C\:\\Users\\auste\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.8=C\:\\Users\\auste\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
+base.9=C\:\\Users\\auste\\Documents\\GitHub\\Final-AustenL-DennisB-BeethovenM-JulianR\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes4.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.10=0/classes2.dex
