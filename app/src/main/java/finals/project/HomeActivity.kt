@@ -170,15 +170,15 @@ class HomeActivity : AppCompatActivity() {
         ref.addListenerForSingleValueEvent(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val adapter = GroupAdapter<GroupieViewHolder>()
-                val recyclerview_newmessage = findViewById<View>(R.id.recyclerview2) as RecyclerView
+                val recyclerViewNewMessage = findViewById<View>(R.id.recyclerview2) as RecyclerView
                 snapshot.children.forEach {
 
                     val value = it.child("UID").getValue(User::class.java)
                     val key = it.child("Status").value
-                    System.out.println("DJISAJIDJASD $value $key")
+                    println("name $value $key")
                     /*if (key!!.equals("Received")) {
                         adapter.add(UserItem(value as User))
-                        recyclerview_newmessage.adapter = adapter
+                        recyclerViewNewMessage.adapter = adapter
                     }*/
                 }
             }
