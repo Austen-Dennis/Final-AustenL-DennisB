@@ -32,10 +32,8 @@ companion object{
         val intentHome = Intent(this, HomeActivity::class.java)
         val intentProfile = Intent(this, ProfileActivity::class.java)
 
-        val latest_message = findViewById<RecyclerView>(R.id.newest_Messages)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_latest_messages)
-        //latest_message.adapter = adapter
         listenForNewestMessage()
         fetchUser()
         
@@ -58,6 +56,8 @@ companion object{
         messagesMap.values.forEach{
             adapter.add(LatestMessage(it))
         }
+        val latest_message = findViewById<RecyclerView>(R.id.newest_Messages)
+        latest_message.adapter = adapter
     }
  private fun listenForNewestMessage(){
      val fromId = FirebaseAuth.getInstance().uid

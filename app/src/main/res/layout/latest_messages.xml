@@ -14,7 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5"
-        app:srcCompat="@drawable/stream_ui_ic_close" />
+        app:srcCompat="@drawable/stream_ui_ic_single_user"/>
 
     <TextView
         android:id="@+id/usernameLatestMessage"
@@ -22,8 +22,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="8dp"
-        android:background="#FFFFFF"
         android:text="Name"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/latestMessage"
         app:layout_constraintStart_toEndOf="@+id/UserImage"
         app:layout_constraintTop_toTopOf="parent"
@@ -34,6 +36,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         android:text="LatestM"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
