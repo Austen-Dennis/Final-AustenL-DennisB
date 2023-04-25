@@ -11,15 +11,6 @@ import com.google.firebase.auth.FirebaseAuth
 class LoginRepository(val dataSource: LoginDataSource) {
     var user: LoggedInUser? = null
         private set
-    val isLoggedIn: Boolean
-        get() = user != null
-    init {
-        user = null
-    }
-    fun logout() {
-        user = null
-        dataSource.logout()
-    }
 
     //creates user/signs in to user if one already exists for provided email
     fun login(username: String, password: String): Result<LoggedInUser> {
@@ -32,7 +23,7 @@ class LoginRepository(val dataSource: LoginDataSource) {
         return result
     }
 
-    fun setLoggedInUser(loggedInUser: LoggedInUser){
+    private fun setLoggedInUser(loggedInUser: LoggedInUser){
         this.user = loggedInUser
     }
 
