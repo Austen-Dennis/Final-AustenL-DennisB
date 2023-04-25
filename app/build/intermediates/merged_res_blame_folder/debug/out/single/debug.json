@@ -20,12 +20,12 @@
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-main-67:\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-merged_res-65:\\drawable_rounded_box4.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-main-67:\\drawable\\rounded_box4.xml"
-    },
-    {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-merged_res-65:\\layout_activity_login.xml.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-main-67:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-merged_res-65:\\drawable_rounded_box4.xml.flat",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-main-67:\\drawable\\rounded_box4.xml"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-merged_res-65:\\drawable_screenshot__9_.png.flat",
@@ -38,6 +38,10 @@
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-merged_res-65:\\mipmap-mdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-main-67:\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "finals.project.app-merged_res-65:/layout_activity_latest_messages.xml.flat",
+        "source": "finals.project.app-main-67:/layout/activity_latest_messages.xml"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-merged_res-65:\\drawable_rounded_box2.xml.flat",
@@ -70,10 +74,6 @@
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-merged_res-65:\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-main-67:\\mipmap-xxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "finals.project.app-merged_res-65:/layout_latest_messages.xml.flat",
-        "source": "finals.project.app-main-67:/layout/latest_messages.xml"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-merged_res-65:\\xml_backup_rules.xml.flat",
