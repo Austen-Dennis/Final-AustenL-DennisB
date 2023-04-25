@@ -20,12 +20,12 @@
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-main-67:\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-merged_res-65:\\layout_activity_login.xml.flat",
-        "source": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-main-67:\\layout\\activity_login.xml"
-    },
-    {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-merged_res-65:\\drawable_rounded_box4.xml.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-main-67:\\drawable\\rounded_box4.xml"
+    },
+    {
+        "merged": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-merged_res-65:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-main-67:\\layout\\activity_login.xml"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-merged_res-65:\\drawable_screenshot__9_.png.flat",
