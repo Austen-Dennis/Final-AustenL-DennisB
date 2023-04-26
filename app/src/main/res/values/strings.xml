@@ -15,6 +15,7 @@
     <string name="search_button">SEARCH</string>
     <string name="search_hint">  Search</string>
     <string name="add_button">ADD FRIEND</string>
+    <string name="remove_button">REMOVE FRIEND</string>
     <string name="profile_button">PROFILE</string>
     <string name="post_button">POST</string>
     <string name="home_button">HOME</string>
@@ -41,7 +42,7 @@
     <string name="username">username</string>
     <string name="placeholder">PLACEHOLDER</string>
     <string name="new_message">New Message</string>
-    <string name="friends_list">Friend List</string>
+    <string name="friends_list">Friends List</string>
     <string name="no_request">No Pending Friend Requests</string>
     <string name="no_friends">Try Searching and Adding Friends</string>
     <string name="accept">Accept</string>

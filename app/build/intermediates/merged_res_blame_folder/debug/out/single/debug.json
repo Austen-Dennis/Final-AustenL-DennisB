@@ -1,5 +1,9 @@
 [
     {
+        "merged": "finals.project.app-merged_res-65:/layout_activity_home.xml.flat",
+        "source": "finals.project.app-main-67:/layout/activity_home.xml"
+    },
+    {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-merged_res-65:\\layout_activity_home.xml.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-main-67:\\layout\\activity_home.xml"
     },
@@ -66,10 +70,6 @@
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-merged_res-65:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-main-67:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
-    },
-    {
-        "merged": "finals.project.app-merged_res-65:/layout_friend_row.xml.flat",
-        "source": "finals.project.app-main-67:/layout/friend_row.xml"
     },
     {
         "merged": "C:\\Users\\mrden\\.gradle\\daemon\\8.0\\finals.project.app-merged_res-65:\\drawable__522516.png.flat",

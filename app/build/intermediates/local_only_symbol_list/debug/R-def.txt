@@ -21,9 +21,7 @@ drawable screenshot__9_
 id Enter_message
 id GitHub
 id NoFriends
-id NoRequest
 id UserImage
-id accept
 id accountInfo
 id addFriend
 id back
@@ -37,7 +35,6 @@ id displayInfo
 id email
 id emailValue
 id friend
-id friendRequests
 id from_image
 id gitValue
 id help
@@ -64,9 +61,8 @@ id profilePic
 id profileTitle
 id project
 id recyclerview
-id recyclerview2
-id reject
 id release
+id removeFriend
 id request
 id scroll1
 id scroll2
@@ -151,6 +147,7 @@ string project_id
 string prompt_email
 string prompt_password
 string reject
+string remove_button
 string search_button
 string search_hint
 string send_button

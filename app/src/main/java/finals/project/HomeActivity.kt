@@ -41,6 +41,7 @@ class HomeActivity : AppCompatActivity() {
         //sets the intent I.E. calls to the class LatestMessages which displays a layout
         val intentSMS = Intent(this, LatestMessagesActivity::class.java)
         val intentPROFILE = Intent(this, ProfileActivity::class.java)
+        val intentHOME = Intent(this, HomeActivity::class.java)
         val searchView = findViewById<View>(finals.project.R.id.searchView) as SearchView
         val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
         val layout = findViewById<View>(R.id.layout1)
@@ -52,10 +53,10 @@ class HomeActivity : AppCompatActivity() {
         val nameValue = findViewById<View>(finals.project.R.id.nameValue) as TextView
         val gitValue = findViewById<View>(finals.project.R.id.gitValue) as TextView
         val messageButton = findViewById<View>(R.id.messageFriend)
-        val requestMessage = findViewById<View>(R.id.NoRequest) as TextView
         val friendMessage = findViewById<View>(R.id.NoFriends) as TextView
-        requestMessage.visibility = View.VISIBLE
-        friendMessage.visibility = View.VISIBLE
+        val removeButton = findViewById<View>(R.id.removeFriend)
+        removeButton.visibility = View.GONE
+        friendMessage.visibility = View.GONE
         layout.visibility = View.VISIBLE
         layout2.visibility = View.GONE
 
@@ -78,6 +79,10 @@ class HomeActivity : AppCompatActivity() {
                         if (dataSnapshot.exists()) {
 
                             if (dataSnapshot.child(query).exists() && query != currentUserId) {
+                                val homeButton = findViewById<View>(R.id.home)
+                                homeButton.setOnClickListener {
+                                    startActivity(intentHOME)
+                                }
                                 layout2.visibility = View.VISIBLE
                                 layout.visibility = View.GONE
 
@@ -120,16 +125,42 @@ class HomeActivity : AppCompatActivity() {
                                 } else {
                                     emailValue.text = "Contact: $email"
                                 }
+                                val ref = FirebaseDatabase.getInstance().getReference("users").child(uid.toString()).child("Friends")
+                                ref.addListenerForSingleValueEvent(object: ValueEventListener {
+                                    override fun onDataChange(snapshot: DataSnapshot) {
+                                        snapshot.children.forEach {
+                                            if (query == it.child("UID").value) {
+                                                addFriend.visibility = View.GONE
+                                                val removeButton = findViewById<View>(R.id.removeFriend)
+                                                removeButton.visibility = View.VISIBLE
+                                        }
+                                        }
+                                            addFriend.setOnClickListener {
+                                                myRefEmail.child(query).child("Friends").child(uid.toString()).child("UID").setValue(uid.toString())
+                                                myRefEmail.child(uid.toString()).child("Friends").child(query).child("UID").setValue(query)
+                                                Toast.makeText(
+                                                    applicationContext,
+                                                    "Friend Request Sent!",
+                                                    Toast.LENGTH_LONG
+                                                ).show()
+                                            }
+                                        removeButton.setOnClickListener {
+                                            myRefEmail.child(query).child("Friends").child(uid.toString()).removeValue()
+                                            myRefEmail.child(uid.toString()).child("Friends").child(query).removeValue()
+                                            Toast.makeText(
+                                                applicationContext,
+                                                "Friend Removed!",
+                                                Toast.LENGTH_LONG
+                                            ).show()
+                                            removeButton.visibility = View.GONE
+                                            addFriend.visibility = View.VISIBLE
+                                        }
+                                            }
 
-                                addFriend.setOnClickListener {
-                                    myRefEmail.child(query).child("Pending Friend Request").child(uid.toString())
-                                        .child("UID").setValue(uid.toString())
-                                    Toast.makeText(
-                                        applicationContext,
-                                        "Friend Request Sent!",
-                                        Toast.LENGTH_LONG
-                                    ).show()
-                                }
+                                    override fun onCancelled(error: DatabaseError) {
+                                    }
+                                })
+
 
                                 messageButton.setOnClickListener {
                                     chatIntent.putExtra(ID, query)
@@ -170,28 +201,24 @@ class HomeActivity : AppCompatActivity() {
     }
     private fun fetchUsers() {
         val refFriend = FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().currentUser?.uid.toString())
-        val acceptButton = findViewById<View>(R.id.accept)
         refFriend.addListenerForSingleValueEvent(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                val requestMessage = findViewById<View>(R.id.NoRequest) as TextView
+                val friendMessage = findViewById<View>(R.id.NoFriends) as TextView
                 snapshot.children.forEach {
-                    if (snapshot.child("Pending Friend Request").exists()) {
+                    if (snapshot.child("Friends").exists()) {
                         val adapter = GroupAdapter<GroupieViewHolder>()
                         val recyclerViewFriends =
-                            findViewById<View>(R.id.recyclerview2) as RecyclerView
-                        snapshot.child("Pending Friend Request").children.forEach {
+                            findViewById<View>(R.id.recyclerview) as RecyclerView
+                        snapshot.child("Friends").children.forEach {
                             val userName = it.key
                             val ref = FirebaseDatabase.getInstance().getReference("users")
                             ref.addListenerForSingleValueEvent(object: ValueEventListener {
                                 override fun onDataChange(snapshot: DataSnapshot) {
-
                                     snapshot.children.forEach {
                                         val user = it.getValue(User::class.java)
                                         if (user?.uid == userName) {
-                                            requestMessage.visibility = View.GONE
+                                            friendMessage.visibility = View.GONE
                                             adapter.add(Friends(user))
-                                            val fromId = FirebaseAuth.getInstance().uid
-                                            val toId = user?.uid
                                         }
                                     }
                                     /*val fromId = FirebaseAuth.getInstance().uid
@@ -203,8 +230,6 @@ class HomeActivity : AppCompatActivity() {
                                     recyclerViewFriends.adapter = adapter
                                     recyclerViewFriends.addItemDecoration(DividerItemDecoration(this@HomeActivity, DividerItemDecoration.VERTICAL))
                                 }
-
-
                                 override fun onCancelled(snapshot: DatabaseError) {
                                 }
 
@@ -219,7 +244,6 @@ class HomeActivity : AppCompatActivity() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
             }
         })
 

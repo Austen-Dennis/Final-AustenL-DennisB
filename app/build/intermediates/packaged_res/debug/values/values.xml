@@ -13,6 +13,7 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <string name="SMS_button">SMS"</string>
     <string name="about">About the Project</string>
+    <string name="accept">Accept</string>
     <string name="account_info">Account Information</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
@@ -27,7 +28,7 @@
     <string name="display">Display Your Info</string>
     <string name="enter_message">Enter Message</string>
     <string name="friend_requests">Friend Requests</string>
-    <string name="friends_list">Friend List</string>
+    <string name="friends_list">Friends List</string>
     <string name="gcm_defaultSenderId" translatable="false">134883669912</string>
     <string name="generic_message">This is my message</string>
     <string name="github_link">Github Link</string>
@@ -55,6 +56,8 @@
     <string name="project_id" translatable="false">get-together-efaf7</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
+    <string name="reject">Reject</string>
+    <string name="remove_button">REMOVE FRIEND</string>
     <string name="search_button">SEARCH</string>
     <string name="search_hint">  Search</string>
     <string name="send_button">SEND</string>

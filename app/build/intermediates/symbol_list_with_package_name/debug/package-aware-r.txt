@@ -4604,7 +4604,6 @@ id GitHub
 id META
 id NO_DEBUG
 id NoFriends
-id NoRequest
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -4624,7 +4623,6 @@ id UX_RESTRICTIONS_NO_VIDEO
 id UX_RESTRICTIONS_NO_VOICE_TRANSCRIPTION
 id UserImage
 id accelerate
-id accept
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
 id accessibility_custom_action_1
@@ -5044,7 +5042,6 @@ id fragment_container_view_tag
 id fragment_phone
 id fragment_register_email
 id friend
-id friendRequests
 id from_image
 id frost
 id fullscreen_header
@@ -5348,10 +5345,9 @@ id rectangles
 id recyclerView
 id recycler_view
 id recyclerview
-id recyclerview2
-id reject
 id release
 id removeButton
+id removeFriend
 id reply
 id replyAvatarView
 id replyContainer
@@ -6385,6 +6381,7 @@ string project_id
 string prompt_email
 string prompt_password
 string reject
+string remove_button
 string search_button
 string search_hint
 string search_menu_title

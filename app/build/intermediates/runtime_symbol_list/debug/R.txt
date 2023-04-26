@@ -4603,7 +4603,6 @@ int id GitHub 0x7f0a0006
 int id META 0x7f0a0007
 int id NO_DEBUG 0x7f0a0008
 int id NoFriends 0x7f0a0009
-int id NoRequest 0x7f0a000a
 int id SHIFT 0x7f0a000b
 int id SHOW_ALL 0x7f0a000c
 int id SHOW_PATH 0x7f0a000d
@@ -4623,7 +4622,6 @@ int id UX_RESTRICTIONS_NO_VIDEO 0x7f0a001a
 int id UX_RESTRICTIONS_NO_VOICE_TRANSCRIPTION 0x7f0a001b
 int id UserImage 0x7f0a001c
 int id accelerate 0x7f0a001d
-int id accept 0x7f0a001e
 int id accessibility_action_clickable_span 0x7f0a001f
 int id accessibility_custom_action_0 0x7f0a0020
 int id accessibility_custom_action_1 0x7f0a0021
@@ -5043,7 +5041,6 @@ int id fragment_container_view_tag 0x7f0a01be
 int id fragment_phone 0x7f0a01bf
 int id fragment_register_email 0x7f0a01c0
 int id friend 0x7f0a01c1
-int id friendRequests 0x7f0a01c2
 int id from_image 0x7f0a01c3
 int id frost 0x7f0a01c4
 int id fullscreen_header 0x7f0a01c5
@@ -5347,10 +5344,9 @@ int id rectangles 0x7f0a02ee
 int id recyclerView 0x7f0a02ef
 int id recycler_view 0x7f0a02f0
 int id recyclerview 0x7f0a02f1
-int id recyclerview2 0x7f0a02f2
-int id reject 0x7f0a02f3
 int id release 0x7f0a02f4
 int id removeButton 0x7f0a02f5
+int id removeFriend 0x7f0a040d
 int id reply 0x7f0a02f6
 int id replyAvatarView 0x7f0a02f7
 int id replyContainer 0x7f0a02f8
@@ -6384,6 +6380,7 @@ int string project_id 0x7f12014e
 int string prompt_email 0x7f12014f
 int string prompt_password 0x7f120150
 int string reject 0x7f120204
+int string remove_button 0x7f120205
 int string search_button 0x7f120151
 int string search_hint 0x7f120152
 int string search_menu_title 0x7f120153
