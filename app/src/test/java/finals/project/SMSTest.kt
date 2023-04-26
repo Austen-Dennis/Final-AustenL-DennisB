@@ -18,7 +18,7 @@ class SMSTest {
         TestCase.assertTrue(returnValue as Boolean)
     }
     @Test
-    fun newMessageisReachableTest(){
+    fun newMessageIsReachableTest(){
         val returnValue = NewMessageActivity.isReachable()
         TestCase.assertTrue(returnValue as Boolean)
     }

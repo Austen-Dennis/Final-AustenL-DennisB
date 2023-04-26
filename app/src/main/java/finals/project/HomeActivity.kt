@@ -175,7 +175,7 @@ class HomeActivity : AppCompatActivity() {
                 snapshot.children.forEach {
                     if (snapshot.child("Pending Friend Request").exists()) {
                         val adapter = GroupAdapter<GroupieViewHolder>()
-                        val recyclerViewNewMessage =
+                        val recyclerViewFriends =
                             findViewById<View>(R.id.recyclerview2) as RecyclerView
                         snapshot.child("Pending Friend Request").children.forEach {
                             val userName = it.key
@@ -197,7 +197,7 @@ class HomeActivity : AppCompatActivity() {
                                         startActivity(intent)
                                         finish()
                                     }
-                                    recyclerViewNewMessage.adapter = adapter
+                                    recyclerViewFriends.adapter = adapter
                                 }
 
                                 override fun onCancelled(snapshot: DatabaseError) {
