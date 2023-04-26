@@ -10,30 +10,32 @@ import com.google.firebase.database.ValueEventListener
 import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Item
 import finals.project.R
+
 private val View.latestMessageRow: TextView
     get() {
         return findViewById<View>(R.id.latestMessage) as TextView
     }
 private val View.usernameMessage: TextView
-    get(){
+    get() {
         return findViewById<View>(R.id.usernameLatestMessage) as TextView
     }
 
-class LatestMessage(private val chatMessage: ChatMessage): Item<GroupieViewHolder>(){
+class LatestMessage(private val chatMessage: ChatMessage) : Item<GroupieViewHolder>() {
     var chatPartnerUser: User? = null
     override fun bind(viewHolder: GroupieViewHolder, position: Int) {
-    viewHolder.itemView.latestMessageRow.text = chatMessage.text
-        val chatPartner: String = if(chatMessage.fromId == FirebaseAuth.getInstance().uid) {
+        viewHolder.itemView.latestMessageRow.text = chatMessage.text
+        val chatPartner: String = if (chatMessage.fromId == FirebaseAuth.getInstance().uid) {
             chatMessage.toID
-        }else{
+        } else {
             chatMessage.fromId
         }
         val ref = FirebaseDatabase.getInstance().getReference("/users/$chatPartner")
-        ref.addListenerForSingleValueEvent(object: ValueEventListener{
+        ref.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 chatPartnerUser = snapshot.getValue(User::class.java)
                 viewHolder.itemView.usernameMessage.text = chatPartnerUser?.Name
             }
+
             override fun onCancelled(error: DatabaseError) {}
         })
 
