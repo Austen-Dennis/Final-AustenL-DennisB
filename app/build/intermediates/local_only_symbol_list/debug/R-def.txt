@@ -94,6 +94,7 @@ layout activity_new_message
 layout activity_profile
 layout chat_from_row
 layout chat_to_row
+layout friend_row
 layout latest_messages
 layout text_color_layout
 layout user_row

@@ -5824,6 +5824,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout expand_button
+layout friend_row
 layout fui_activity_invisible
 layout fui_activity_register_email
 layout fui_activity_register_phone

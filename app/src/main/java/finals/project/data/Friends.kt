@@ -18,6 +18,6 @@ class Friends(private val key: String) : Item<GroupieViewHolder>() {
 
 
     override fun getLayout(): Int {
-        return R.layout.user_row
+        return R.layout.friend_row
     }
 }
