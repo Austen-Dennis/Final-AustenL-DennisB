@@ -23,7 +23,7 @@ class LoginRepository(val dataSource: LoginDataSource) {
         return result
     }
 
-    private fun setLoggedInUser(loggedInUser: LoggedInUser){
+    private fun setLoggedInUser(loggedInUser: LoggedInUser) {
         this.user = loggedInUser
     }
 

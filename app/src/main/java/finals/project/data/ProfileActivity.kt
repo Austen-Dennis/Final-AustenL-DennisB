@@ -27,8 +27,10 @@ class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(finals.project.R.layout.activity_profile)
-        val urlProjectInfo = "https://github.com/bsu-cs222-spring23-dll/Final-AustenL-DennisB-BeethovenM-JulianR#get-together"
-        val urlRelease = "https://github.com/bsu-cs222-spring23-dll/Final-AustenL-DennisB-BeethovenM-JulianR/releases"
+        val urlProjectInfo =
+            "https://github.com/bsu-cs222-spring23-dll/Final-AustenL-DennisB-BeethovenM-JulianR#get-together"
+        val urlRelease =
+            "https://github.com/bsu-cs222-spring23-dll/Final-AustenL-DennisB-BeethovenM-JulianR/releases"
         val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
         val collegeEmail = findViewById<View>(finals.project.R.id.collegeEmail) as EditText
         val emailValue = findViewById<View>(finals.project.R.id.emailValue) as TextView
@@ -60,19 +62,22 @@ class ProfileActivity : AppCompatActivity() {
         val uid = FirebaseAuth.getInstance().uid
         setSupportActionBar(toolbar as Toolbar?)
 
-        myRef.addValueEventListener(object: ValueEventListener {
+        myRef.addValueEventListener(object : ValueEventListener {
             @SuppressLint("SetTextI18n")
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.exists()) {
-                    val collegeEmailSnap = dataSnapshot.child(uid.toString()).child("College Email").value.toString()
-                    val gitLink = dataSnapshot.child(uid.toString()).child("GitHub Link").value.toString()
+                    val collegeEmailSnap =
+                        dataSnapshot.child(uid.toString()).child("College Email").value.toString()
+                    val gitLink =
+                        dataSnapshot.child(uid.toString()).child("GitHub Link").value.toString()
                     val bioSnap = dataSnapshot.child(uid.toString()).child("Bio").value.toString()
                     val email = dataSnapshot.child(uid.toString()).child("Email").value.toString()
                     val name = dataSnapshot.child(uid.toString()).child("Name").value.toString()
                     val clip: ClipData = ClipData.newPlainText("simple text", uid)
 
                     //TODO: add implementation for friend requests to be added to list
-                    val pendingRequest = dataSnapshot.child(uid.toString()).child("Pending Friend Request").value.toString()
+                    val pendingRequest = dataSnapshot.child(uid.toString())
+                        .child("Pending Friend Request").value.toString()
                     profileTitle.text = "Your Profile"
 
                     //checks if the data value can be found in database, and displays it
@@ -97,31 +102,31 @@ class ProfileActivity : AppCompatActivity() {
                         emailValue.text = "Contact: $email"
                     }
 
-                    profileTitle.visibility=View.VISIBLE
-                    bioValue.visibility=View.VISIBLE
-                    gitValue.visibility=View.VISIBLE
-                    emailValue.visibility=View.VISIBLE
+                    profileTitle.visibility = View.VISIBLE
+                    bioValue.visibility = View.VISIBLE
+                    gitValue.visibility = View.VISIBLE
+                    emailValue.visibility = View.VISIBLE
                     emailText.text = "Email: \n$email"
                     userID.text = "User ID: \n$uid"
-                    emailText.visibility= View.GONE
-                    userID.visibility=View.GONE
-                    hideInfoButton.visibility=View.GONE
-                    copyIDButton.visibility=View.GONE
+                    emailText.visibility = View.GONE
+                    userID.visibility = View.GONE
+                    hideInfoButton.visibility = View.GONE
+                    copyIDButton.visibility = View.GONE
 
                     showInfoButton.setOnClickListener {
-                        emailText.visibility= View.VISIBLE
-                        userID.visibility=View.VISIBLE
-                        hideInfoButton.visibility=View.VISIBLE
-                        showInfoButton.visibility=View.GONE
+                        emailText.visibility = View.VISIBLE
+                        userID.visibility = View.VISIBLE
+                        hideInfoButton.visibility = View.VISIBLE
+                        showInfoButton.visibility = View.GONE
                         profilePicture.visibility = View.VISIBLE
-                        copyIDButton.visibility=View.VISIBLE
+                        copyIDButton.visibility = View.VISIBLE
                     }
                     hideInfoButton.setOnClickListener {
-                        emailText.visibility= View.GONE
-                        userID.visibility=View.GONE
-                        showInfoButton.visibility=View.VISIBLE
-                        hideInfoButton.visibility=View.GONE
-                        copyIDButton.visibility=View.GONE
+                        emailText.visibility = View.GONE
+                        userID.visibility = View.GONE
+                        showInfoButton.visibility = View.VISIBLE
+                        hideInfoButton.visibility = View.GONE
+                        copyIDButton.visibility = View.GONE
                     }
 
                     //submission onclick verify that provided info is valid, and passed to database
@@ -144,11 +149,11 @@ class ProfileActivity : AppCompatActivity() {
                         }
                         val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
                         imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0)
-                        emailText.visibility= View.GONE
-                        userID.visibility=View.GONE
-                        showInfoButton.visibility=View.VISIBLE
-                        hideInfoButton.visibility=View.GONE
-                        copyIDButton.visibility=View.GONE
+                        emailText.visibility = View.GONE
+                        userID.visibility = View.GONE
+                        showInfoButton.visibility = View.VISIBLE
+                        hideInfoButton.visibility = View.GONE
+                        copyIDButton.visibility = View.GONE
                     }
                     gitHubSub.setOnClickListener {
                         val newLink = gitHub.text.toString()
@@ -169,11 +174,11 @@ class ProfileActivity : AppCompatActivity() {
                         }
                         val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
                         imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0)
-                        emailText.visibility= View.GONE
-                        userID.visibility=View.GONE
-                        showInfoButton.visibility=View.VISIBLE
-                        hideInfoButton.visibility=View.GONE
-                        copyIDButton.visibility=View.GONE
+                        emailText.visibility = View.GONE
+                        userID.visibility = View.GONE
+                        showInfoButton.visibility = View.VISIBLE
+                        hideInfoButton.visibility = View.GONE
+                        copyIDButton.visibility = View.GONE
                     }
                     bioSub.setOnClickListener {
                         val newBio = bio.text.toString()
@@ -194,11 +199,11 @@ class ProfileActivity : AppCompatActivity() {
                         }
                         val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
                         imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0)
-                        emailText.visibility= View.GONE
-                        userID.visibility=View.GONE
-                        showInfoButton.visibility=View.VISIBLE
-                        hideInfoButton.visibility=View.GONE
-                        copyIDButton.visibility=View.GONE
+                        emailText.visibility = View.GONE
+                        userID.visibility = View.GONE
+                        showInfoButton.visibility = View.VISIBLE
+                        hideInfoButton.visibility = View.GONE
+                        copyIDButton.visibility = View.GONE
                     }
                     emailSub.setOnClickListener {
                         val collegeEmail = collegeEmail.text.toString()
@@ -219,15 +224,16 @@ class ProfileActivity : AppCompatActivity() {
                         }
                         val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
                         imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0)
-                        emailText.visibility= View.GONE
-                        userID.visibility=View.GONE
-                        showInfoButton.visibility=View.VISIBLE
-                        hideInfoButton.visibility=View.GONE
-                        copyIDButton.visibility=View.GONE
+                        emailText.visibility = View.GONE
+                        userID.visibility = View.GONE
+                        showInfoButton.visibility = View.VISIBLE
+                        hideInfoButton.visibility = View.GONE
+                        copyIDButton.visibility = View.GONE
                     }
                     copyIDButton.setOnClickListener {
                         val clip: ClipData = ClipData.newPlainText("simple text", uid)
-                        val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+                        val clipboard =
+                            getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
                         clipboard.setPrimaryClip(clip)
                         Toast.makeText(
                             applicationContext,
