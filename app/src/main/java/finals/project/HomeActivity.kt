@@ -12,7 +12,6 @@ import android.util.Log
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
-import com.xwray.groupie.Group
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
 import finals.project.data.Friends
@@ -166,34 +165,53 @@ class HomeActivity : AppCompatActivity() {
         }
     }
     private fun fetchUsers() {
-        val ref = FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().currentUser?.uid.toString())
-        ref.addListenerForSingleValueEvent(object: ValueEventListener {
+        val refFriend = FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().currentUser?.uid.toString())
+        refFriend.addListenerForSingleValueEvent(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                if (snapshot.child("Pending Friend Request").exists()) {
-                val adapter = GroupAdapter<GroupieViewHolder>()
-                val recyclerViewNewMessage = findViewById<View>(R.id.recyclerview2) as RecyclerView
-                snapshot.child("Pending Friend Request").children.forEach {
-                    val user = it.key
-                    if (user != null && user != FirebaseAuth.getInstance().currentUser?.uid) {
-                        adapter.add(Friends(user))
-                        recyclerViewNewMessage.adapter = adapter
+                snapshot.children.forEach {
+                    if (snapshot.child("Pending Friend Request").exists()) {
+                        val adapter = GroupAdapter<GroupieViewHolder>()
+                        val recyclerViewNewMessage =
+                            findViewById<View>(R.id.recyclerview2) as RecyclerView
+                        snapshot.child("Pending Friend Request").children.forEach {
+                            val userName = it.key
+                            val ref = FirebaseDatabase.getInstance().getReference("users")
+                            ref.addListenerForSingleValueEvent(object: ValueEventListener {
+                                override fun onDataChange(snapshot: DataSnapshot) {
+
+                                    snapshot.children.forEach {
+                                        val user = it.getValue(User::class.java)
+                                        if (user?.uid==userName) {
+                                            adapter.add(Friends(user))
+                                        }
+                                    }
+
+                                    adapter.setOnItemClickListener{item, view ->
+                                        val userItem = item as UserItem
+                                        val intent = Intent(view.context, ChatLogActivity::class.java)
+                                        intent.putExtra(NewMessageActivity.USER_KEY, userItem.user)
+                                        startActivity(intent)
+                                        finish()
+                                    }
+
+                                }
+
+                                override fun onCancelled(snapshot: DatabaseError) {
+                                }
+
+                            })
+                            recyclerViewNewMessage.adapter = adapter
+                        }
+
                     }
-                }
+
                 }
             }
-            override fun onCancelled(snapshot: DatabaseError) {}
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
         })
 
-
-    }
-    private fun fetchName(key: String?) {
-        val ref = FirebaseDatabase.getInstance().getReference("users").child(key.toString()).child("Name")
-        ref.addListenerForSingleValueEvent(object: ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                val name = snapshot.value
             }
-            override fun onCancelled(error: DatabaseError) {}
-        })
-            }
-}
-
+        }
