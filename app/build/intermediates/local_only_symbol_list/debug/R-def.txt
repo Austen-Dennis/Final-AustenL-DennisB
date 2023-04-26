@@ -20,6 +20,8 @@ drawable rounded_box4
 drawable screenshot__9_
 id Enter_message
 id GitHub
+id NoFriends
+id NoRequest
 id UserImage
 id accountInfo
 id addFriend
@@ -134,6 +136,8 @@ string latest
 string login_failed
 string message
 string new_message
+string no_friends
+string no_request
 string open_camera
 string placeholder
 string post_button

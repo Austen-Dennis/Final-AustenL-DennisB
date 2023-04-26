@@ -4603,6 +4603,8 @@ id FUNCTION
 id GitHub
 id META
 id NO_DEBUG
+id NoFriends
+id NoRequest
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -6361,6 +6363,8 @@ string mtrl_switch_track_path
 string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
 string new_message
+string no_friends
+string no_request
 string not_set
 string open_camera
 string password_toggle_content_description

@@ -43,5 +43,8 @@
     <string name="placeholder">PLACEHOLDER</string>
     <string name="new_message">New Message</string>
     <string name="friends_list">Friend List</string>
+    <string name="no_request">No Pending Friend Requests</string>
+    <string name="no_friends">Try Searching and Adding Friends</string>
+
 
 </resources>

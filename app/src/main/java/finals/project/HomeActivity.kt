@@ -51,7 +51,10 @@ class HomeActivity : AppCompatActivity() {
         val nameValue = findViewById<View>(finals.project.R.id.nameValue) as TextView
         val gitValue = findViewById<View>(finals.project.R.id.gitValue) as TextView
         val messageButton = findViewById<View>(R.id.messageFriend)
-
+        val requestMessage = findViewById<View>(R.id.NoRequest) as TextView
+        val friendMessage = findViewById<View>(R.id.NoFriends) as TextView
+        requestMessage.visibility = View.VISIBLE
+        friendMessage.visibility = View.VISIBLE
         layout.visibility = View.VISIBLE
         layout2.visibility = View.GONE
 
@@ -168,6 +171,7 @@ class HomeActivity : AppCompatActivity() {
         val refFriend = FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().currentUser?.uid.toString())
         refFriend.addListenerForSingleValueEvent(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
+                val requestMessage = findViewById<View>(R.id.NoRequest) as TextView
                 snapshot.children.forEach {
                     if (snapshot.child("Pending Friend Request").exists()) {
                         val adapter = GroupAdapter<GroupieViewHolder>()
@@ -181,29 +185,30 @@ class HomeActivity : AppCompatActivity() {
 
                                     snapshot.children.forEach {
                                         val user = it.getValue(User::class.java)
-                                        if (user?.uid==userName) {
+                                        if (user?.uid == userName) {
+                                            requestMessage.visibility = View.GONE
                                             adapter.add(Friends(user))
                                         }
                                     }
-
-                                    adapter.setOnItemClickListener{item, view ->
-                                        val userItem = item as UserItem
+                                    adapter.setOnItemClickListener{user, view ->
+                                        val userItem = user as UserItem
                                         val intent = Intent(view.context, ChatLogActivity::class.java)
                                         intent.putExtra(NewMessageActivity.USER_KEY, userItem.user)
                                         startActivity(intent)
                                         finish()
                                     }
-
+                                    recyclerViewNewMessage.adapter = adapter
                                 }
 
                                 override fun onCancelled(snapshot: DatabaseError) {
                                 }
 
                             })
-                            recyclerViewNewMessage.adapter = adapter
+
                         }
 
                     }
+
 
                 }
             }
