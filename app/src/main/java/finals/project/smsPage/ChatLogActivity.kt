@@ -44,7 +44,7 @@ class ChatLogActivity : AppCompatActivity() {
         chatLog.adapter = adapter
 
         sendButton.setOnClickListener {
-            Log.d(TAG,"Attempt to send message")
+            Log.d(TAG, "Attempt to send message")
             sendMessage()
         }
         backButton.setOnClickListener {
@@ -64,18 +64,22 @@ class ChatLogActivity : AppCompatActivity() {
         if (fromId == null) return
         val chatLog = findViewById<View>(R.id.chat_log) as RecyclerView
         val ref = FirebaseDatabase.getInstance().getReference("/user-messages/$fromId/$toId").push()
-        val toRef = FirebaseDatabase.getInstance().getReference("/user-messages/$toId/$fromId").push()
-        val chatMessage = ChatMessage(ref.key!!, text, fromId, toId, System.currentTimeMillis() / 1000)
+        val toRef =
+            FirebaseDatabase.getInstance().getReference("/user-messages/$toId/$fromId").push()
+        val chatMessage =
+            ChatMessage(ref.key!!, text, fromId, toId, System.currentTimeMillis() / 1000)
         ref.setValue(chatMessage)
             .addOnSuccessListener {
-                Log.d(TAG,"Message saved")
+                Log.d(TAG, "Message saved")
                 message.text.clear()
                 chatLog.scrollToPosition(adapter.itemCount - 1)
             }
         toRef.setValue(chatMessage)
 
-        val latestMessageFromRef = FirebaseDatabase.getInstance().getReference("/latest-message/$fromId/$toId")
-        val latestMessageToRef = FirebaseDatabase.getInstance().getReference("/latest-message/$toId/$fromId")
+        val latestMessageFromRef =
+            FirebaseDatabase.getInstance().getReference("/latest-message/$fromId/$toId")
+        val latestMessageToRef =
+            FirebaseDatabase.getInstance().getReference("/latest-message/$toId/$fromId")
         latestMessageFromRef.setValue(chatMessage)
         latestMessageToRef.setValue(chatMessage)
     }
@@ -85,7 +89,7 @@ class ChatLogActivity : AppCompatActivity() {
         val fromId = FirebaseAuth.getInstance().uid
         val toId = toUser?.uid
         val ref = FirebaseDatabase.getInstance().getReference("/user-messages/$fromId/$toId")
-        ref.addChildEventListener(object: ChildEventListener {
+        ref.addChildEventListener(object : ChildEventListener {
             override fun onChildAdded(snapshot: DataSnapshot, snapshot2: String?) {
                 val chatMessage = snapshot.getValue(ChatMessage::class.java)
                 if (chatMessage != null) {
@@ -99,13 +103,17 @@ class ChatLogActivity : AppCompatActivity() {
                 val chatLog = findViewById<RecyclerView>(R.id.chat_log)
                 chatLog.scrollToPosition(adapter.itemCount - 1)
             }
+
             // These are required for this function to function, but have no use in our program.
             override fun onCancelled(error: DatabaseError) {
             }
+
             override fun onChildChanged(snapshot: DataSnapshot, previousChildName: String?) {
             }
+
             override fun onChildRemoved(snapshot: DataSnapshot) {
             }
+
             override fun onChildMoved(snapshot: DataSnapshot, previousChildName: String?) {
             }
         })
