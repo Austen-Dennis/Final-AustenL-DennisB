@@ -23,14 +23,11 @@ class HomeActivity : AppCompatActivity() {
 
     @SuppressLint("SuspiciousIndentation", "MissingInflatedId")
     companion object {
-        const val USER_KEY = "USER_KEY"
-        const val ID = "ID"
-
         fun isReachable(): Any {
             return true
         }
-
     }
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,46 +35,43 @@ class HomeActivity : AppCompatActivity() {
         val toolbar = findViewById<View>(io.getstream.chat.android.ui.R.id.toolbar)
         setSupportActionBar(toolbar as Toolbar?)
 
-        //sets the intent I.E. calls to the class LatestMessages which displays a layout
-        val intentSMS = Intent(this, LatestMessagesActivity::class.java)
-        val intentPROFILE = Intent(this, ProfileActivity::class.java)
-        val intentHOME = Intent(this, HomeActivity::class.java)
-        val searchView = findViewById<View>(finals.project.R.id.searchView) as SearchView
+        //data display
         val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
-        val layout = findViewById<View>(R.id.layout1)
-        val layout2 = findViewById<View>(finals.project.R.id.layout2)
-        val addFriend = findViewById<View>(finals.project.R.id.addFriend)
-        val uid = FirebaseAuth.getInstance().uid
+        val searchView = findViewById<View>(finals.project.R.id.searchView) as SearchView
         val emailValue = findViewById<View>(finals.project.R.id.emailValue) as TextView
-        val bioValue = findViewById<View>(finals.project.R.id.bioValue) as TextView
         val nameValue = findViewById<View>(finals.project.R.id.nameValue) as TextView
         val gitValue = findViewById<View>(finals.project.R.id.gitValue) as TextView
-        val messageButton = findViewById<View>(R.id.messageFriend)
+        val bioValue = findViewById<View>(finals.project.R.id.bioValue) as TextView
         val friendMessage = findViewById<View>(R.id.NoFriends) as TextView
+
+        //navigation
+        val intentSMS = Intent(this, LatestMessagesActivity::class.java)
+        val intentPROFILE = Intent(this, ProfileActivity::class.java)
+        val chatIntent = Intent(this, ChatLogActivity::class.java)
+        val intentHOME = Intent(this, HomeActivity::class.java)
+
+        val addFriend = findViewById<View>(finals.project.R.id.addFriend)
+        val layout2 = findViewById<View>(finals.project.R.id.layout2)
         val removeButton = findViewById<View>(R.id.removeFriend)
-        removeButton.visibility = View.GONE
-        friendMessage.visibility = View.GONE
-        layout.visibility = View.VISIBLE
-        layout2.visibility = View.GONE
-
-        fetchUsers()
-
+        val layout = findViewById<View>(R.id.layout1)
+        val uid = FirebaseAuth.getInstance().uid
         val mAuth = FirebaseAuth.getInstance()
         val currentUserId = mAuth.currentUser?.uid
         val database = FirebaseDatabase.getInstance()
         val myRefEmail = database.getReference("users/")
-        val chatIntent = Intent(this, ChatLogActivity::class.java)
+
+        removeButton.visibility = View.GONE
+        friendMessage.visibility = View.GONE
+        layout.visibility = View.VISIBLE
+        layout2.visibility = View.GONE
+        fetchUsers()
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-
             override fun onQueryTextSubmit(query: String): Boolean {
                 myRefEmail.addValueEventListener(object : ValueEventListener {
-
                     @SuppressLint("SetTextI18n")
                     override fun onDataChange(dataSnapshot: DataSnapshot) {
-
                         if (dataSnapshot.exists()) {
-
                             if (dataSnapshot.child(query).exists() && query != currentUserId) {
                                 val homeButton = findViewById<View>(R.id.home)
                                 homeButton.setOnClickListener {
@@ -156,16 +150,13 @@ class HomeActivity : AppCompatActivity() {
                                             addFriend.visibility = View.VISIBLE
                                         }
                                             }
-
                                     override fun onCancelled(error: DatabaseError) {
                                     }
                                 })
-
-
                                 messageButton.setOnClickListener {
-                                    chatIntent.putExtra(ID, query)
-                                    chatIntent.putExtra(USER_KEY, name)
+                                    chatIntent.putExtra(NewMessageActivity.USER_KEY, query)
                                     startActivity(chatIntent)
+                                    finish()
                                 }
                             } else {
                                 layout.visibility = View.GONE
@@ -177,7 +168,6 @@ class HomeActivity : AppCompatActivity() {
                             }
                         }
                     }
-
                     override fun onCancelled(error: DatabaseError) {
                         Log.w(ContentValues.TAG, "Failed to read value.", error.toException())
                     }
@@ -221,31 +211,18 @@ class HomeActivity : AppCompatActivity() {
                                             adapter.add(Friends(user))
                                         }
                                     }
-                                    /*val fromId = FirebaseAuth.getInstance().uid
-                                    val toId = user?.uid
-                                    acceptButton.setOnClickListener {
-                                        FirebaseDatabase.getInstance().getReference("users/").child(fromId.toString()).child("Friends").push().setValue(toId)
-                                        FirebaseDatabase.getInstance().getReference("users/").child(toId.toString()).child("Friends").push().setValue(fromId)
-                                    }*/
                                     recyclerViewFriends.adapter = adapter
                                     recyclerViewFriends.addItemDecoration(DividerItemDecoration(this@HomeActivity, DividerItemDecoration.VERTICAL))
                                 }
                                 override fun onCancelled(snapshot: DatabaseError) {
                                 }
-
                             })
-
                         }
-
                     }
-
-
                 }
             }
-
             override fun onCancelled(error: DatabaseError) {
             }
         })
-
-            }
-        }
+    }
+}
