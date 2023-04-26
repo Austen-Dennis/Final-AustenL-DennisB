@@ -10,6 +10,7 @@ import android.view.View
 import android.os.Bundle
 import android.util.Log
 import android.widget.*
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import com.xwray.groupie.GroupAdapter
@@ -169,6 +170,7 @@ class HomeActivity : AppCompatActivity() {
     }
     private fun fetchUsers() {
         val refFriend = FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().currentUser?.uid.toString())
+        val acceptButton = findViewById<View>(R.id.accept)
         refFriend.addListenerForSingleValueEvent(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val requestMessage = findViewById<View>(R.id.NoRequest) as TextView
@@ -188,17 +190,20 @@ class HomeActivity : AppCompatActivity() {
                                         if (user?.uid == userName) {
                                             requestMessage.visibility = View.GONE
                                             adapter.add(Friends(user))
+                                            val fromId = FirebaseAuth.getInstance().uid
+                                            val toId = user?.uid
                                         }
                                     }
-                                    adapter.setOnItemClickListener{user, view ->
-                                        val userItem = user as UserItem
-                                        val intent = Intent(view.context, ChatLogActivity::class.java)
-                                        intent.putExtra(NewMessageActivity.USER_KEY, userItem.user)
-                                        startActivity(intent)
-                                        finish()
-                                    }
+                                    /*val fromId = FirebaseAuth.getInstance().uid
+                                    val toId = user?.uid
+                                    acceptButton.setOnClickListener {
+                                        FirebaseDatabase.getInstance().getReference("users/").child(fromId.toString()).child("Friends").push().setValue(toId)
+                                        FirebaseDatabase.getInstance().getReference("users/").child(toId.toString()).child("Friends").push().setValue(fromId)
+                                    }*/
                                     recyclerViewFriends.adapter = adapter
+                                    recyclerViewFriends.addItemDecoration(DividerItemDecoration(this@HomeActivity, DividerItemDecoration.VERTICAL))
                                 }
+
 
                                 override fun onCancelled(snapshot: DatabaseError) {
                                 }

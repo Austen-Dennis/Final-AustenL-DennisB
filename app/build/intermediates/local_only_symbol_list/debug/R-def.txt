@@ -23,6 +23,7 @@ id GitHub
 id NoFriends
 id NoRequest
 id UserImage
+id accept
 id accountInfo
 id addFriend
 id back
@@ -64,6 +65,7 @@ id profileTitle
 id project
 id recyclerview
 id recyclerview2
+id reject
 id release
 id request
 id scroll1
@@ -105,6 +107,7 @@ mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 string SMS_button
 string about
+string accept
 string account_info
 string action_sign_in
 string action_sign_in_short
@@ -147,6 +150,7 @@ string profile_pic
 string project_id
 string prompt_email
 string prompt_password
+string reject
 string search_button
 string search_hint
 string send_button
