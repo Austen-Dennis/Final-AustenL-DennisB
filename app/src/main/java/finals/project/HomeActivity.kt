@@ -59,7 +59,7 @@ class HomeActivity : AppCompatActivity() {
         val mAuth = FirebaseAuth.getInstance()
         val currentUserId = mAuth.currentUser?.uid
         val database = FirebaseDatabase.getInstance()
-        val myRefEmail = database.getReference("users/uid/Name")
+        val myRefEmail = database.getReference("users/")
         val chatIntent = Intent(this, ChatLogActivity::class.java)
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
@@ -166,9 +166,10 @@ class HomeActivity : AppCompatActivity() {
         }
     }
     private fun fetchUsers() {
-        val ref = FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().currentUser?.uid.toString()).child("Pending Friend Request")
+        val ref = FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().currentUser?.uid.toString())
         ref.addListenerForSingleValueEvent(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.child("Pending Friend Requests").exists()) {
                 val adapter = GroupAdapter<GroupieViewHolder>()
                 val recyclerViewNewMessage = findViewById<View>(R.id.recyclerview2) as RecyclerView
                 snapshot.children.forEach {
@@ -176,10 +177,11 @@ class HomeActivity : AppCompatActivity() {
                     val value = it.child("UID").getValue(User::class.java)
                     val key = it.child("Status").value
                     println("name $value $key")
-                    /*if (key!!.equals("Received")) {
+                    if (key!!.equals("Received")) {
                         adapter.add(UserItem(value as User))
                         recyclerViewNewMessage.adapter = adapter
-                    }*/
+                    }
+                }
                 }
             }
             override fun onCancelled(snapshot: DatabaseError) {}
