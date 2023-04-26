@@ -12,7 +12,6 @@ private val View.username_text: TextView
     }
 
 class Friends(private val key: String) : Item<GroupieViewHolder>() {
-
     override fun bind(viewHolder: GroupieViewHolder, position: Int) {
         viewHolder.itemView.username_text.text = key
     }

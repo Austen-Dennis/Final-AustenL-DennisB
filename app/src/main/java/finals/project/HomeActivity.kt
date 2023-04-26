@@ -12,8 +12,10 @@ import android.util.Log
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
+import com.xwray.groupie.Group
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
+import finals.project.data.Friends
 import finals.project.data.ProfileActivity
 import finals.project.smsPage.*
 
@@ -117,10 +119,8 @@ class HomeActivity : AppCompatActivity() {
                                 }
 
                                 addFriend.setOnClickListener {
-                                    myRefEmail.child(query).child("Pending Friend Request")
-                                        .child(uid.toString()).child("Status").setValue("Received")
-                                    myRefEmail.child(query).child("Pending Friend Request")
-                                        .child(uid.toString()).child("UID").setValue(uid.toString())
+                                    myRefEmail.child(query).child("Pending Friend Request").child(uid.toString())
+                                        .child("UID").setValue(uid.toString())
                                     Toast.makeText(
                                         applicationContext,
                                         "Friend Request Sent!",
@@ -169,16 +169,13 @@ class HomeActivity : AppCompatActivity() {
         val ref = FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().currentUser?.uid.toString())
         ref.addListenerForSingleValueEvent(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                if (snapshot.child("Pending Friend Requests").exists()) {
+                if (snapshot.child("Pending Friend Request").exists()) {
                 val adapter = GroupAdapter<GroupieViewHolder>()
                 val recyclerViewNewMessage = findViewById<View>(R.id.recyclerview2) as RecyclerView
-                snapshot.children.forEach {
-
-                    val value = it.child("UID").getValue(User::class.java)
-                    val key = it.child("Status").value
-                    println("name $value $key")
-                    if (key!!.equals("Received")) {
-                        adapter.add(UserItem(value as User))
+                snapshot.child("Pending Friend Request").children.forEach {
+                    val user = it.key
+                    if (user != null && user != FirebaseAuth.getInstance().currentUser?.uid) {
+                        adapter.add(Friends(user))
                         recyclerViewNewMessage.adapter = adapter
                     }
                 }
