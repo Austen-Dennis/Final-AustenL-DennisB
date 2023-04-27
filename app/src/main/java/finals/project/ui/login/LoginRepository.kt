@@ -1,7 +1,8 @@
-package finals.project.data
+package finals.project.ui.login
 
-import finals.project.data.model.LoggedInUser
+import finals.project.activities.LoggedInUser
 import com.google.firebase.auth.FirebaseAuth
+import finals.project.data.Result
 
 /**
  * Class that requests authentication and user information from the remote data source and

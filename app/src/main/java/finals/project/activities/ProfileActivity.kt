@@ -1,13 +1,11 @@
-package finals.project.data
+package finals.project.activities
 
 import com.google.firebase.database.ValueEventListener
-import finals.project.smsPage.LatestMessagesActivity
 import com.google.firebase.database.FirebaseDatabase
 import android.view.inputmethod.InputMethodManager
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DataSnapshot
 import androidx.appcompat.app.AppCompatActivity
-import finals.project.ui.login.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 import android.widget.EditText
 import android.widget.TextView
@@ -17,7 +15,7 @@ import android.content.*
 import android.view.View
 import android.util.Log
 import android.net.Uri
-import finals.project.HomeActivity
+import finals.project.data.DataActivity
 
 @Suppress("DEPRECATION", "SetTextI18n")
 class ProfileActivity : AppCompatActivity() {

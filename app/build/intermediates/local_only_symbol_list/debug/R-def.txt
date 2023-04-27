@@ -42,7 +42,6 @@ id hideInfo
 id home
 id imageView2
 id imageView3
-id item_text
 id latestMessage
 id layout
 id layout1
@@ -76,6 +75,7 @@ id submitGit
 id text_from_row
 id text_to_row
 id to_image
+id toolbar2
 id toolbar4
 id toolbar5
 id unknown
@@ -95,7 +95,6 @@ layout chat_from_row
 layout chat_to_row
 layout friend_row
 layout latest_messages
-layout text_color_layout
 layout user_row
 mipmap ic_launcher
 mipmap ic_launcher_foreground
@@ -136,6 +135,7 @@ string message
 string new_message
 string no_friends
 string no_request
+string not_a_robot
 string open_camera
 string placeholder
 string post_button

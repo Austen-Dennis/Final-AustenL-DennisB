@@ -1,4 +1,4 @@
-package finals.project.ui.login
+package finals.project.activities
 
 import finals.project.databinding.ActivityLoginBinding
 import androidx.appcompat.app.AppCompatActivity
@@ -9,7 +9,6 @@ import android.view.inputmethod.EditorInfo
 import androidx.appcompat.widget.Toolbar
 import com.google.firebase.auth.ktx.auth
 import finals.project.data.DataActivity
-import finals.project.HomeActivity
 import com.google.firebase.ktx.Firebase
 import androidx.annotation.StringRes
 import androidx.lifecycle.Observer
@@ -22,6 +21,8 @@ import java.lang.Exception
 import android.os.Bundle
 import android.view.View
 import finals.project.R
+import finals.project.ui.login.LoginViewModel
+import finals.project.ui.login.LoginViewModelFactory
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var loginViewModel: LoginViewModel

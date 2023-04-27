@@ -1,4 +1,4 @@
-package finals.project.data.model
+package finals.project.activities
 
 /**
  * Data class that captures user information for logged in users retrieved from LoginRepository

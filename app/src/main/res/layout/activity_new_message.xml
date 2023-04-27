@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="#131111"
     android:layout_height="match_parent"
-    tools:context=".smsPage.NewMessageActivity">
+    tools:context=".activities.NewMessageActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar4"

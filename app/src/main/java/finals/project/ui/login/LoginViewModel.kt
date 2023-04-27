@@ -1,6 +1,5 @@
 package finals.project.ui.login
 
-import finals.project.data.LoginRepository
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.LiveData

@@ -1,8 +1,6 @@
 package finals.project.ui.login
 
 import androidx.lifecycle.ViewModelProvider
-import finals.project.data.LoginDataSource
-import finals.project.data.LoginRepository
 import androidx.lifecycle.ViewModel
 
 /**

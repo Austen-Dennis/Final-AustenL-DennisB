@@ -34,17 +34,17 @@ public final class ActivityLatestMessagesBinding implements ViewBinding {
   public final Button profile;
 
   @NonNull
-  public final Toolbar toolbar5;
+  public final Toolbar toolbar2;
 
   private ActivityLatestMessagesBinding(@NonNull ConstraintLayout rootView, @NonNull Button home,
       @NonNull Button newMessage, @NonNull RecyclerView newestMessages, @NonNull Button profile,
-      @NonNull Toolbar toolbar5) {
+      @NonNull Toolbar toolbar2) {
     this.rootView = rootView;
     this.home = home;
     this.newMessage = newMessage;
     this.newestMessages = newestMessages;
     this.profile = profile;
-    this.toolbar5 = toolbar5;
+    this.toolbar2 = toolbar2;
   }
 
   @Override
@@ -98,14 +98,14 @@ public final class ActivityLatestMessagesBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.toolbar5;
-      Toolbar toolbar5 = ViewBindings.findChildViewById(rootView, id);
-      if (toolbar5 == null) {
+      id = R.id.toolbar2;
+      Toolbar toolbar2 = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar2 == null) {
         break missingId;
       }
 
       return new ActivityLatestMessagesBinding((ConstraintLayout) rootView, home, newMessage,
-          newestMessages, profile, toolbar5);
+          newestMessages, profile, toolbar2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

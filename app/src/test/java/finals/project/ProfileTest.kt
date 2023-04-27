@@ -1,6 +1,6 @@
 package finals.project
 
-import finals.project.data.ProfileActivity
+import finals.project.activities.ProfileActivity
 import junit.framework.TestCase
 import org.junit.Test
 

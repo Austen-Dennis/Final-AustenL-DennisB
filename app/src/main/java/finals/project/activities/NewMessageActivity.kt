@@ -1,4 +1,4 @@
-package finals.project.smsPage
+package finals.project.activities
 
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.FirebaseDatabase
@@ -13,7 +13,9 @@ import android.view.View
 import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
 import finals.project.R
-import finals.project.HomeActivity
+import finals.project.smsPage.chatitems.ChatLogActivity
+import finals.project.smsPage.userinfo.User
+import finals.project.smsPage.userinfo.UserItem
 
 class NewMessageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

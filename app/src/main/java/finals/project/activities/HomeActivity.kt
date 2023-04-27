@@ -1,4 +1,4 @@
-package finals.project
+package finals.project.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -14,9 +14,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
-import finals.project.data.Friends
-import finals.project.data.ProfileActivity
-import finals.project.smsPage.*
+import finals.project.R
+import finals.project.smsPage.userinfo.User
 
 @Suppress("MissingInflatedId", "SuspiciousIndentation", "SetTextI18n")
 class HomeActivity : AppCompatActivity() {
@@ -33,22 +32,22 @@ class HomeActivity : AppCompatActivity() {
         setSupportActionBar(toolbar as Toolbar?)
 
         //data display
-        val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
-        val searchView = findViewById<View>(finals.project.R.id.searchView) as SearchView
-        val emailValue = findViewById<View>(finals.project.R.id.emailValue) as TextView
-        val nameValue = findViewById<View>(finals.project.R.id.nameValue) as TextView
-        val gitValue = findViewById<View>(finals.project.R.id.gitValue) as TextView
-        val bioValue = findViewById<View>(finals.project.R.id.bioValue) as TextView
+        val profileTitle = findViewById<View>(R.id.profileTitle) as TextView
+        val searchView = findViewById<View>(R.id.searchView) as SearchView
+        val emailValue = findViewById<View>(R.id.emailValue) as TextView
+        val nameValue = findViewById<View>(R.id.nameValue) as TextView
+        val gitValue = findViewById<View>(R.id.gitValue) as TextView
+        val bioValue = findViewById<View>(R.id.bioValue) as TextView
         val friendMessage = findViewById<View>(R.id.NoFriends) as TextView
 
         //navigation and views
         val intentSMS = Intent(this, LatestMessagesActivity::class.java)
         val intentPROFILE = Intent(this, ProfileActivity::class.java)
         val intentHOME = Intent(this, HomeActivity::class.java)
-        val addFriend = findViewById<View>(finals.project.R.id.addFriend)
+        val addFriend = findViewById<View>(R.id.addFriend)
         val removeFriend = findViewById<View>(R.id.removeFriend)
         val layout = findViewById<View>(R.id.layout1)
-        val layout2 = findViewById<View>(finals.project.R.id.layout2)
+        val layout2 = findViewById<View>(R.id.layout2)
 
         //Firebase Information
         val uid = FirebaseAuth.getInstance().uid

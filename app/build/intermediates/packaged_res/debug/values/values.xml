@@ -47,6 +47,7 @@
     <string name="new_message">New Message</string>
     <string name="no_friends">Try Searching and Adding Friends</string>
     <string name="no_request">No Pending Friend Requests</string>
+    <string name="not_a_robot">Not a robot?</string>
     <string name="open_camera">Open Camera</string>
     <string name="placeholder">PLACEHOLDER</string>
     <string name="post_button">POST</string>

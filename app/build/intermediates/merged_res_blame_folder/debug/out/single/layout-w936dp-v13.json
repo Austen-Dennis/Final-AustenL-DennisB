@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\auste\\.gradle\\daemon\\8.0\\finals.project.app-mergeDebugResources-64:\\layout-w936dp-v13\\activity_login.xml",
+        "source": "C:\\Users\\auste\\.gradle\\daemon\\8.0\\finals.project.app-main-67:\\layout-w936dp\\activity_login.xml"
+    },
+    {
         "merged": "finals.project.app-mergeDebugResources-64:/layout-w936dp-v13/activity_login.xml",
         "source": "finals.project.app-main-67:/layout-w936dp/activity_login.xml"
     }

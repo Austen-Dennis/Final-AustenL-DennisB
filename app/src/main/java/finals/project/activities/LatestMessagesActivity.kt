@@ -1,4 +1,4 @@
-package finals.project.smsPage
+package finals.project.activities
 
 
 import android.content.Intent
@@ -16,9 +16,11 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
-import finals.project.HomeActivity
 import finals.project.R
-import finals.project.data.ProfileActivity
+import finals.project.smsPage.chatitems.ChatLogActivity
+import finals.project.smsPage.chatitems.ChatMessage
+import finals.project.smsPage.chatitems.LatestMessage
+import finals.project.smsPage.userinfo.User
 
 
 class LatestMessagesActivity : AppCompatActivity() {

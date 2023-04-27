@@ -1,7 +1,9 @@
-package finals.project.data
+package finals.project.ui.login
 
-import finals.project.data.model.LoggedInUser
+import finals.project.data.Result
+import finals.project.activities.LoggedInUser
 import java.io.IOException
+import java.util.UUID
 
 /**
  * Class that handles authentication w/ login credentials and retrieves user information.
@@ -10,7 +12,7 @@ class LoginDataSource {
     fun login(username: String): Result<LoggedInUser> {
         return try {
             //handle loggedInUser authentication
-            val fakeUser = LoggedInUser(java.util.UUID.randomUUID().toString(), username)
+            val fakeUser = LoggedInUser(UUID.randomUUID().toString(), username)
             Result.Success(fakeUser)
         } catch (e: Throwable) {
             Result.Error(IOException("Error logging in", e))

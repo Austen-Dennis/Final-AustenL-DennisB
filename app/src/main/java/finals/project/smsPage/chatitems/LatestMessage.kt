@@ -1,4 +1,4 @@
-package finals.project.smsPage
+package finals.project.smsPage.chatitems
 
 import android.view.View
 import android.widget.TextView
@@ -10,6 +10,7 @@ import com.google.firebase.database.ValueEventListener
 import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Item
 import finals.project.R
+import finals.project.smsPage.userinfo.User
 
 private val View.latestMessageRow: TextView
     get() {

@@ -1,4 +1,4 @@
-package finals.project.smsPage
+package finals.project.smsPage.userinfo
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

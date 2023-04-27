@@ -1,10 +1,11 @@
-package finals.project.smsPage
+package finals.project.smsPage.chatitems
 
 import com.xwray.groupie.GroupieViewHolder
 import android.widget.TextView
 import com.xwray.groupie.Item
 import android.view.View
 import finals.project.R
+import finals.project.smsPage.userinfo.User
 
 private val View.text_to_row: TextView
     get() {

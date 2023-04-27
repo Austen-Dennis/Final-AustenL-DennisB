@@ -1,8 +1,8 @@
 package finals.project
 
-import finals.project.smsPage.ChatLogActivity
-import finals.project.smsPage.LatestMessagesActivity
-import finals.project.smsPage.NewMessageActivity
+import finals.project.smsPage.chatitems.ChatLogActivity
+import finals.project.activities.LatestMessagesActivity
+import finals.project.activities.NewMessageActivity
 import junit.framework.TestCase
 import org.junit.Test
 

@@ -3,56 +3,45 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="#131111"
-    tools:context=".smsPage.LatestMessagesActivity">
+    tools:context=".activities.HomeActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar5"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="#2B2B2B"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-    </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/newest_Messages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:paddingTop="40dp"
-        android:layout_width="423dp"
-        android:layout_height="619dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@+id/home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar5"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/profile"
         android:layout_width="137dp"
         android:layout_height="55dp"
-        android:text="@string/profile_button"
-        tools:ignore="MissingConstraints"
         android:background="@drawable/rounded_box3"
+        android:text="@string/profile_button"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        tools:ignore="MissingConstraints,TextContrastCheck" />
 
     <Button
         android:id="@+id/home"
         android:layout_width="137dp"
-        android:background="@drawable/rounded_box4"
         android:layout_height="55dp"
-        android:text="@string/home_button"
         android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@drawable/rounded_box4"
+        android:text="@string/home_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/new_message"
         app:layout_constraintLeft_toRightOf="@id/profile"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toEndOf="@+id/profile"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/new_message"
@@ -60,7 +49,19 @@
         android:layout_height="55dp"
         android:background="@drawable/rounded_box2"
         android:text="@string/new_message"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="486dp"
+        android:layout_height="wrap_content"
+        android:background="#2B2B2B"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VisualLintBounds" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

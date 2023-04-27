@@ -5,28 +5,32 @@
     android:layout_width="match_parent"
     android:background="#131111"
     android:layout_height="match_parent"
-    tools:context=".smsPage.NewMessageActivity">
+    tools:context=".activities.NewMessageActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar4"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
+        android:layout_width="426dp"
+        android:layout_height="54dp"
         android:background="#2B2B2B"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VisualLintBounds">
+
         <Button
             android:id="@+id/back"
             android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="0dp"
+            android:layout_height="48dp"
             android:background="@drawable/rounded_box"
             android:text="@string/back_button"
             android:textAlignment="center"
-            tools:ignore="RtlCompat" />
+            tools:ignore="RtlCompat,TextContrastCheck"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="7dp" />
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView

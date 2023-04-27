@@ -26,21 +26,7 @@ public final class ActivityLoginBinding implements ViewBinding {
   @NonNull
   public final ConstraintLayout container;
 
-  /**
-   * This binding is not available in all configurations.
-   * <p>
-   * Present:
-   * <ul>
-   *   <li>layout/</li>
-   * </ul>
-   *
-   * Absent:
-   * <ul>
-   *   <li>layout-w1240dp/</li>
-   *   <li>layout-w936dp/</li>
-   * </ul>
-   */
-  @Nullable
+  @NonNull
   public final ImageView imageView3;
 
   @NonNull
@@ -55,27 +41,13 @@ public final class ActivityLoginBinding implements ViewBinding {
   @NonNull
   public final EditText username;
 
-  /**
-   * This binding is not available in all configurations.
-   * <p>
-   * Present:
-   * <ul>
-   *   <li>layout/</li>
-   * </ul>
-   *
-   * Absent:
-   * <ul>
-   *   <li>layout-w1240dp/</li>
-   *   <li>layout-w936dp/</li>
-   * </ul>
-   */
-  @Nullable
+  @NonNull
   public final CheckBox verify;
 
   private ActivityLoginBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout container, @Nullable ImageView imageView3,
+      @NonNull ConstraintLayout container, @NonNull ImageView imageView3,
       @NonNull ProgressBar loading, @NonNull Button login, @NonNull EditText password,
-      @NonNull EditText username, @Nullable CheckBox verify) {
+      @NonNull EditText username, @NonNull CheckBox verify) {
     this.rootView = rootView;
     this.container = container;
     this.imageView3 = imageView3;
@@ -117,6 +89,9 @@ public final class ActivityLoginBinding implements ViewBinding {
 
       id = R.id.imageView3;
       ImageView imageView3 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView3 == null) {
+        break missingId;
+      }
 
       id = R.id.loading;
       ProgressBar loading = ViewBindings.findChildViewById(rootView, id);
@@ -144,6 +119,9 @@ public final class ActivityLoginBinding implements ViewBinding {
 
       id = R.id.verify;
       CheckBox verify = ViewBindings.findChildViewById(rootView, id);
+      if (verify == null) {
+        break missingId;
+      }
 
       return new ActivityLoginBinding((ConstraintLayout) rootView, container, imageView3, loading,
           login, password, username, verify);

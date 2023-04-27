@@ -1,5 +1,6 @@
 package finals.project
 
+import finals.project.activities.HomeActivity
 import junit.framework.TestCase
 import org.junit.Test
 

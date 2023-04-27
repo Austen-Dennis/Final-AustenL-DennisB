@@ -1,4 +1,4 @@
-package finals.project.smsPage
+package finals.project.smsPage.chatitems
 
 import android.content.Intent
 import com.google.firebase.database.ChildEventListener
@@ -15,6 +15,9 @@ import android.view.View
 import android.os.Bundle
 import android.util.Log
 import finals.project.R
+import finals.project.activities.LatestMessagesActivity
+import finals.project.activities.NewMessageActivity
+import finals.project.smsPage.userinfo.User
 
 @Suppress("DEPRECATION")
 class ChatLogActivity : AppCompatActivity() {
