@@ -24,7 +24,7 @@ import finals.project.data.ProfileActivity
 class LatestMessagesActivity : AppCompatActivity() {
     companion object {
         var currentUser: User? = null
-        val TAG = "latest Message"
+        const val TAG = "latest Message"
         val adapter = GroupAdapter<GroupieViewHolder>()
         fun isReachable(): Any {
             return true
@@ -64,7 +64,7 @@ class LatestMessagesActivity : AppCompatActivity() {
         val latestMessage = findViewById<RecyclerView>(R.id.newest_Messages)
         latestMessage.adapter = adapter
         latestMessage.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
-        adapter.setOnItemClickListener { item, view ->
+        adapter.setOnItemClickListener { item, _ ->
             Log.d(TAG, "124")
             val intent = Intent(this, ChatLogActivity::class.java)
             val row = item as LatestMessage

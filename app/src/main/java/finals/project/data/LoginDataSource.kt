@@ -1,7 +1,6 @@
 package finals.project.data
 
 import finals.project.data.model.LoggedInUser
-import com.google.firebase.auth.FirebaseAuth
 import java.io.IOException
 
 /**
@@ -16,9 +15,5 @@ class LoginDataSource {
         } catch (e: Throwable) {
             Result.Error(IOException("Error logging in", e))
         }
-    }
-
-    fun logout() {
-        FirebaseAuth.getInstance().signOut()
     }
 }

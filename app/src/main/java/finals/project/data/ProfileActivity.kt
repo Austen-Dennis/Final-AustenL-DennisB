@@ -21,7 +21,7 @@ import android.util.Log
 import android.net.Uri
 import finals.project.HomeActivity
 
-@Suppress("DEPRECATION")
+@Suppress("DEPRECATION", "NAME_SHADOWING")
 class ProfileActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,7 +34,6 @@ class ProfileActivity : AppCompatActivity() {
         val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
         val collegeEmail = findViewById<View>(finals.project.R.id.collegeEmail) as EditText
         val emailValue = findViewById<View>(finals.project.R.id.emailValue) as TextView
-        val intentSearch = Intent(this, HomeActivity::class.java)
         val nameValue = findViewById<View>(finals.project.R.id.nameValue) as TextView
         val intentSms = Intent(this, LatestMessagesActivity::class.java)
         val bioValue = findViewById<View>(finals.project.R.id.bioValue) as TextView
@@ -50,7 +49,6 @@ class ProfileActivity : AppCompatActivity() {
         val userID = findViewById<View>(finals.project.R.id.user) as TextView
         val hideInfoButton = findViewById<View>(finals.project.R.id.hideInfo)
         val myRef = FirebaseDatabase.getInstance().getReference("users")
-        val friendButton = findViewById<View>(finals.project.R.id.addFriend)
         val emailSub = findViewById<View>(finals.project.R.id.submitEmail)
         val bio = findViewById<View>(finals.project.R.id.bio) as EditText
         val gitHubSub = findViewById<View>(finals.project.R.id.submitGit)
@@ -73,11 +71,7 @@ class ProfileActivity : AppCompatActivity() {
                     val bioSnap = dataSnapshot.child(uid.toString()).child("Bio").value.toString()
                     val email = dataSnapshot.child(uid.toString()).child("Email").value.toString()
                     val name = dataSnapshot.child(uid.toString()).child("Name").value.toString()
-                    val clip: ClipData = ClipData.newPlainText("simple text", uid)
 
-                    //TODO: add implementation for friend requests to be added to list
-                    val pendingRequest = dataSnapshot.child(uid.toString())
-                        .child("Pending Friend Request").value.toString()
                     profileTitle.text = "Your Profile"
 
                     //checks if the data value can be found in database, and displays it

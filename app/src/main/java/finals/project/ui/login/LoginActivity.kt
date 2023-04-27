@@ -50,8 +50,7 @@ class LoginActivity : AppCompatActivity() {
             login.visibility = View.VISIBLE
         }
 
-        loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
-            .get(LoginViewModel::class.java)
+        loginViewModel = ViewModelProvider(this, LoginViewModelFactory())[LoginViewModel::class.java]
 
         loginViewModel.loginFormState.observe(this@LoginActivity, Observer {
             val loginState = it ?: return@Observer
@@ -105,7 +104,7 @@ class LoginActivity : AppCompatActivity() {
             login.setOnClickListener {
                 loginViewModel.login(username.text.toString(), password.text.toString())
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(1000)
                     loading.visibility = View.VISIBLE
                 } catch (e: Exception) {
                     e.printStackTrace()
@@ -117,7 +116,7 @@ class LoginActivity : AppCompatActivity() {
                     if (FirebaseAuth.getInstance().currentUser?.isEmailVerified == true) {
                         Toast.makeText(
                             applicationContext,
-                            "Successful Login for User: " + name,
+                            "Successful Login for User: $name",
                             Toast.LENGTH_LONG
                         ).show()
                         DataActivity.dataBase(uid, name, displayName)
@@ -126,7 +125,7 @@ class LoginActivity : AppCompatActivity() {
                         FirebaseAuth.getInstance().currentUser?.sendEmailVerification()
                         Toast.makeText(
                             applicationContext,
-                            "Email verification link sent to " + displayName,
+                            "Email verification link sent to $displayName",
                             Toast.LENGTH_LONG
                         ).show()
                     }
@@ -148,28 +147,25 @@ class LoginActivity : AppCompatActivity() {
 
     companion object {
         fun isReachable(): Any {
-            val reachable = true
-            return reachable
+            return true
         }
 
-        fun emailTrim(email: String): String? {
-            val name = email?.substring(0, email.indexOf("@"))
-            name?.trim()
+        fun emailTrim(email: String): String {
+            val name = email.substring(0, email.indexOf("@"))
+            name.trim()
             return name
         }
 
         fun nameGrab(): String? {
-            var displayName = Firebase.auth.currentUser?.email
-            return displayName
+            return Firebase.auth.currentUser?.email
         }
 
         fun uidGrab(): String? {
-            var uid = Firebase.auth.currentUser?.uid
-            return uid
+            return Firebase.auth.currentUser?.uid
         }
     }
 
-    fun EditText.afterTextChanged(afterTextChanged: (String) -> Unit) {
+    private fun EditText.afterTextChanged(afterTextChanged: (String) -> Unit) {
         this.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(editable: Editable?) {
                 afterTextChanged.invoke(editable.toString())
