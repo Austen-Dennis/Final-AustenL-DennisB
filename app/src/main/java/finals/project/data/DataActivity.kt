@@ -29,6 +29,7 @@ class DataActivity : AppCompatActivity() {
                         myRef.child("uid").setValue(uid)
                     }
                 }
+
                 override fun onCancelled(error: DatabaseError) {
                     TODO("Not yet implemented")
                 }
