@@ -4,10 +4,6 @@ import finals.project.data.Result
 import finals.project.activities.LoggedInUser
 import java.io.IOException
 import java.util.UUID
-
-/**
- * Class that handles authentication w/ login credentials and retrieves user information.
- */
 class LoginDataSource {
     fun login(username: String): Result<LoggedInUser> {
         return try {

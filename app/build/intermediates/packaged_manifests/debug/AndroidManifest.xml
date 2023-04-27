@@ -60,30 +60,30 @@
         android:testOnly="true"
         android:theme="@style/Theme.FInalProject" >
         <activity
-            android:name="finals.project.smsPage.chatitems.ChatLogActivity"
+            android:name="finals.project.smsPage.ChatLogActivity"
             android:exported="false" />
         <activity
-            android:name="finals.project.activities.NewMessageActivity"
+            android:name="finals.project.smsPage.NewMessageActivity"
             android:exported="false" />
         <activity
-            android:name="finals.project.activities.LatestMessagesActivity"
+            android:name="finals.project.smsPage.LatestMessagesActivity"
             android:exported="false" />
 
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value=".activities.LatestMessagesActivity" />
+            android:value=".smsPage.LatestMessagesActivity" />
 
         <activity
-            android:name="finals.project.activities.HomeActivity"
+            android:name="finals.project.HomeActivity"
             android:exported="false" />
         <activity
             android:name="finals.project.data.DataActivity"
             android:exported="false" />
         <activity
-            android:name="finals.project.activities.ProfileActivity"
+            android:name="finals.project.data.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name="finals.project.activities.LoginActivity"
+            android:name="finals.project.ui.login.LoginActivity"
             android:exported="true"
             android:label="@string/app_name" >
             <intent-filter>

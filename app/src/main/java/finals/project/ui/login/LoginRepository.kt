@@ -3,12 +3,6 @@ package finals.project.ui.login
 import finals.project.activities.LoggedInUser
 import com.google.firebase.auth.FirebaseAuth
 import finals.project.data.Result
-
-/**
- * Class that requests authentication and user information from the remote data source and
- * maintains an in-memory cache of login status and user credentials information.
- */
-
 class LoginRepository(val dataSource: LoginDataSource) {
     var user: LoggedInUser? = null
         private set
