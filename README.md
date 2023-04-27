@@ -27,5 +27,5 @@ Julian Rodriguez
 *For any questions or bugs, please reach out to gettogetherdomain@gmail.com!\
 
 # Suppressed Warning and Justification
-*SetTextI18n: This warning relates to the apps use of "$" when pulling data. Since some of our data is hardcoded, it made more sense to suppress this warning.\
+*SetTextI18n: This warning relates to the app's use of "$" when pulling data. Since some of our data is hardcoded, it made more sense to suppress this warning.\
 *DEPRECATION: This warning relates to our use of deprecated features in the process of accepting user input. While we did find other methods for accepting these values, the deprecated features were most efficient for what we were trying to accomplish.

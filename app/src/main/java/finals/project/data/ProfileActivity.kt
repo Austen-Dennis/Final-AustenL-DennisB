@@ -24,35 +24,41 @@ class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(finals.project.R.layout.activity_profile)
-        val urlProjectInfo =
-            "https://github.com/bsu-cs222-spring23-dll/Final-AustenL-DennisB-BeethovenM-JulianR#get-together"
-        val urlRelease =
-            "https://github.com/bsu-cs222-spring23-dll/Final-AustenL-DennisB-BeethovenM-JulianR/releases"
+
+        //data display
         val profileTitle = findViewById<View>(finals.project.R.id.profileTitle) as TextView
         val collegeEmail = findViewById<View>(finals.project.R.id.collegeEmail) as EditText
         val emailValue = findViewById<View>(finals.project.R.id.emailValue) as TextView
         val nameValue = findViewById<View>(finals.project.R.id.nameValue) as TextView
-        val intentSms = Intent(this, LatestMessagesActivity::class.java)
         val bioValue = findViewById<View>(finals.project.R.id.bioValue) as TextView
         val gitValue = findViewById<View>(finals.project.R.id.gitValue) as TextView
         val nameText = findViewById<View>(finals.project.R.id.newName) as EditText
         val emailText = findViewById<View>(finals.project.R.id.email) as TextView
-        val showInfoButton = findViewById<View>(finals.project.R.id.displayInfo)
-        val gitHub = findViewById<View>(finals.project.R.id.GitHub) as EditText
-        val profilePicture = findViewById<View>(finals.project.R.id.profilePic)
-        val intentReturn = Intent(this, HomeActivity::class.java)
-        val intentLogin = Intent(this, LoginActivity::class.java)
-        val userID = findViewById<View>(finals.project.R.id.user) as TextView
-        val hideInfoButton = findViewById<View>(finals.project.R.id.hideInfo)
-        val myRef = FirebaseDatabase.getInstance().getReference("users")
         val emailSub = findViewById<View>(finals.project.R.id.submitEmail)
         val bio = findViewById<View>(finals.project.R.id.bio) as EditText
         val gitHubSub = findViewById<View>(finals.project.R.id.submitGit)
         val copyIDButton = findViewById<View>(finals.project.R.id.copyID)
         val submit = findViewById<View>(finals.project.R.id.submit)
         val bioSub = findViewById<View>(finals.project.R.id.subBio)
+
+        //navigation and views
+        val urlProjectInfo =
+            "https://github.com/bsu-cs222-spring23-dll/Final-AustenL-DennisB-BeethovenM-JulianR#get-together"
+        val urlRelease =
+            "https://github.com/bsu-cs222-spring23-dll/Final-AustenL-DennisB-BeethovenM-JulianR/releases"
+        val intentSms = Intent(this, LatestMessagesActivity::class.java)
+        val intentReturn = Intent(this, HomeActivity::class.java)
+        val intentLogin = Intent(this, LoginActivity::class.java)
         val projectInfoIntent = Intent(Intent.ACTION_VIEW)
         val releaseIntent = Intent(Intent.ACTION_VIEW)
+        val showInfoButton = findViewById<View>(finals.project.R.id.displayInfo)
+        val gitHub = findViewById<View>(finals.project.R.id.GitHub) as EditText
+        val profilePicture = findViewById<View>(finals.project.R.id.profilePic)
+        val userID = findViewById<View>(finals.project.R.id.user) as TextView
+        val hideInfoButton = findViewById<View>(finals.project.R.id.hideInfo)
+
+        //Firebase Information
+        val myRef = FirebaseDatabase.getInstance().getReference("users")
         val uid = FirebaseAuth.getInstance().uid
 
         myRef.addValueEventListener(object : ValueEventListener {

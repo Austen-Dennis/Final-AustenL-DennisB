@@ -17,7 +17,6 @@ class Friends(private val key: User?) : Item<GroupieViewHolder>() {
         viewHolder.itemView.username_text.text = key?.Name
     }
 
-
     override fun getLayout(): Int {
         return R.layout.friend_row
     }
