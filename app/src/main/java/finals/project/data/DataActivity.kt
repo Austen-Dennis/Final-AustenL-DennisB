@@ -7,6 +7,7 @@ import com.google.firebase.database.*
 import android.os.Bundle
 
 
+@SuppressLint("SetTextI18n")
 class DataActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,31 +17,25 @@ class DataActivity : AppCompatActivity() {
     //companion object contains all functions for passing data into the realtime database via firebase
     companion object {
         fun dataBase(uid: String?, name: String?, email: String?) {
-            val database = FirebaseDatabase.getInstance()
-            val myRef = database.getReference("users/$uid")
-            nameFinder(uid, name, email)
-        }
-
-        private fun nameFinder(uid: String?, name: String?, email:String?) {
             val myRef = FirebaseDatabase.getInstance().getReference("users").child(uid.toString())
             myRef.addValueEventListener(object : ValueEventListener {
-                @SuppressLint("SetTextI18n")
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     if (dataSnapshot.child("Name").exists()) {
-                        myRef.child("Email").setValue(email)
-                        myRef.child("uid").setValue(uid)
-                    } else {
-                        myRef.child("Email").setValue(email)
-                        myRef.child("Name").setValue(name)
-                        myRef.child("uid").setValue(uid)
+                            myRef.child("Email").setValue(email)
+                            myRef.child("uid").setValue(uid)
+                        } else {
+                            myRef.child("Email").setValue(email)
+                            myRef.child("Name").setValue(name)
+                            myRef.child("uid").setValue(uid)
+                        }
                     }
-                }
 
-                override fun onCancelled(error: DatabaseError) {
-                    TODO("Not yet implemented")
-                }
-            })
+                    override fun onCancelled(error: DatabaseError) {
+                        TODO("Not yet implemented")
+                    }
+                })
         }
+
                     //verifies that companion object can be reached
                     fun isReachable(): Boolean {
                         return true
