@@ -132,7 +132,7 @@ class HomeActivity : AppCompatActivity() {
                                                 .child(query).child("UID").setValue(query)
                                             Toast.makeText(
                                                 applicationContext,
-                                                "Friend Request Sent!",
+                                                "Friend Added!",
                                                 Toast.LENGTH_LONG
                                             ).show()
                                         }
