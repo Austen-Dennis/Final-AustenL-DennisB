@@ -6,7 +6,7 @@ import org.junit.Test
 
 class HomeActivityTest {
     @Test
-    fun isReachableTest(){
+    fun isReachableTest() {
         val returnValue = HomeActivity.isReachable()
         assertTrue(returnValue as Boolean)
     }
