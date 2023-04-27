@@ -63,9 +63,9 @@ class ProfileActivity : AppCompatActivity() {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.exists()) {
                     val collegeEmailSnap =
-                        dataSnapshot.child(uid.toString()).child("College Email").value.toString()
+                        dataSnapshot.child(uid.toString()).child("CollegeEmail").value.toString()
                     val gitLink =
-                        dataSnapshot.child(uid.toString()).child("GitHub Link").value.toString()
+                        dataSnapshot.child(uid.toString()).child("GitHubLink").value.toString()
                     val bioSnap = dataSnapshot.child(uid.toString()).child("Bio").value.toString()
                     val email = dataSnapshot.child(uid.toString()).child("Email").value.toString()
                     val name = dataSnapshot.child(uid.toString()).child("Name").value.toString()
@@ -83,12 +83,12 @@ class ProfileActivity : AppCompatActivity() {
                     } else {
                         bioValue.text = "No Bio Yet"
                     }
-                    if (dataSnapshot.child(uid.toString()).child("GitHub Link").exists()) {
+                    if (dataSnapshot.child(uid.toString()).child("GitHubLink").exists()) {
                         gitValue.text = "GitHub Link: $gitLink"
                     } else {
                         gitValue.text = "No GitHub Link Yet"
                     }
-                    if (dataSnapshot.child(uid.toString()).child("College Email").exists()) {
+                    if (dataSnapshot.child(uid.toString()).child("CollegeEmail").exists()) {
                         emailValue.text = "Contact: $collegeEmailSnap"
                     } else {
                         emailValue.text = "Contact: $email"

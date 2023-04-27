@@ -15,6 +15,7 @@ import com.google.firebase.database.*
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
 import finals.project.R
+import finals.project.activities.LatestMessagesActivity
 import finals.project.smsPage.userinfo.User
 
 @Suppress("MissingInflatedId", "SuspiciousIndentation", "SetTextI18n")
@@ -86,24 +87,24 @@ class HomeActivity : AppCompatActivity() {
                                 val bioSnap =
                                     dataSnapshot.child(query).child("Bio").value.toString()
                                 val gitLink =
-                                    dataSnapshot.child(query).child("GitHub Link").value
+                                    dataSnapshot.child(query).child("GitHubLink").value
                                         .toString()
                                 val collegeEmailSnap =
-                                    dataSnapshot.child(query).child("College Email").value
+                                    dataSnapshot.child(query).child("CollegeEmail").value
                                         .toString()
                                 if (dataSnapshot.child(query).child("Bio").exists()) {
                                     bioValue.text = bioSnap
                                 } else {
                                     bioValue.text = "No Bio Yet"
                                 }
-                                if (dataSnapshot.child(query).child("GitHub Link")
+                                if (dataSnapshot.child(query).child("GitHubLink")
                                         .exists()
                                 ) {
                                     gitValue.text = "GitHub Link: $gitLink"
                                 } else {
                                     gitValue.text = "No GitHub Link Yet"
                                 }
-                                if (dataSnapshot.child(query).child("College Email")
+                                if (dataSnapshot.child(query).child("CollegeEmail")
                                         .exists()
                                 ) {
                                     emailValue.text = "Contact: $collegeEmailSnap"

@@ -47,7 +47,7 @@ class DataActivity : AppCompatActivity() {
             val database = FirebaseDatabase.getInstance()
             val myRef = database.getReference("users/$uid")
             if (uid != null) {
-                myRef.child("GitHub Link").setValue(newLink)
+                myRef.child("GitHubLink").setValue(newLink)
             }
         }
 
@@ -63,7 +63,7 @@ class DataActivity : AppCompatActivity() {
             val database = FirebaseDatabase.getInstance()
             val myRef = database.getReference("users/$uid")
             if (uid != null) {
-                myRef.child("College Email").setValue(collegeEmail)
+                myRef.child("CollegeEmail").setValue(collegeEmail)
             }
         }
 
