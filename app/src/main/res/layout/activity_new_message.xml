@@ -28,7 +28,7 @@
             android:background="@drawable/rounded_box"
             android:text="@string/back_button"
             android:textAlignment="center"
-            tools:ignore="RtlCompat"
+            tools:ignore="RtlCompat,TextContrastCheck"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="7dp" />
     </androidx.appcompat.widget.Toolbar>

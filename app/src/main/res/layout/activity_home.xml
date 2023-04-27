@@ -11,7 +11,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="52dp"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
+        tools:ignore="MissingConstraints,VisualLintBounds"
         tools:layout_editor_absoluteY="-4dp">
         <SearchView
             android:id="@+id/searchView"
@@ -54,16 +54,18 @@
             android:textColor="#FFFFFF"
             android:text="@string/friends_list"
             android:textSize="34sp" />
+
         <TextView
             android:id="@+id/NoFriends"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
             android:padding="10dp"
+            android:text="@string/no_friends"
+            android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="#FFFFFF"
-            android:text="@string/no_friends"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:ignore="TextContrastCheck" />
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview"
             android:layout_width="match_parent"
@@ -162,7 +164,9 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="#FFFFFF"
                 android:textSize="26sp"
-                android:translationY="0dp" />
+                android:translationY="0dp"
+                tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+
             <Button
                 android:id="@+id/removeFriend"
                 android:layout_width="match_parent"
@@ -173,18 +177,20 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="#FFFFFF"
                 android:textSize="26sp"
-                android:translationY="0dp"/>
+                android:translationY="0dp"
+                tools:ignore="TextContrastCheck,VisualLintButtonSize" />
         </LinearLayout>
     </ScrollView>
+
     <Button
         android:id="@+id/profile"
         android:layout_width="137dp"
         android:layout_height="55dp"
-        android:text="@string/profile_button"
-        tools:ignore="MissingConstraints"
         android:background="@drawable/rounded_box3"
+        android:text="@string/profile_button"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        tools:ignore="MissingConstraints,TextContrastCheck" />
 
     <Button
         android:id="@+id/home"
@@ -196,7 +202,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/sms"
         app:layout_constraintLeft_toRightOf="@id/profile"
-        app:layout_constraintStart_toEndOf="@+id/profile" />
+        app:layout_constraintStart_toEndOf="@+id/profile"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/sms"
@@ -204,7 +211,8 @@
         android:layout_height="55dp"
         android:background="@drawable/rounded_box2"
         android:text="@string/SMS_button"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        tools:ignore="TextContrastCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
