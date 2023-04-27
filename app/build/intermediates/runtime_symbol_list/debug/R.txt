@@ -5206,7 +5206,6 @@ int id messageContainer 0x7f0a0261
 int id messageEditText 0x7f0a0262
 int id messageFooterContainer 0x7f0a0263
 int id messageFooterLabel 0x7f0a0264
-int id messageFriend 0x7f0a0265
 int id messageInputContainer 0x7f0a0266
 int id messageInputFieldView 0x7f0a0267
 int id messageInputView 0x7f0a0268

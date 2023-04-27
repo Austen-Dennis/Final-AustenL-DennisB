@@ -5207,7 +5207,6 @@ id messageContainer
 id messageEditText
 id messageFooterContainer
 id messageFooterLabel
-id messageFriend
 id messageInputContainer
 id messageInputFieldView
 id messageInputView

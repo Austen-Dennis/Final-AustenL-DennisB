@@ -19,16 +19,14 @@ import finals.project.data.Friends
 import finals.project.data.ProfileActivity
 import finals.project.smsPage.*
 
+@Suppress("NAME_SHADOWING", "MissingInflatedId", "SuspiciousIndentation")
 class HomeActivity : AppCompatActivity() {
-
-    @SuppressLint("SuspiciousIndentation", "MissingInflatedId")
     companion object {
         fun isReachable(): Any {
             return true
         }
     }
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home) // sets the view using the activity_friend_search
@@ -44,31 +42,33 @@ class HomeActivity : AppCompatActivity() {
         val bioValue = findViewById<View>(finals.project.R.id.bioValue) as TextView
         val friendMessage = findViewById<View>(R.id.NoFriends) as TextView
 
-        //navigation
+        //navigation and views
         val intentSMS = Intent(this, LatestMessagesActivity::class.java)
         val intentPROFILE = Intent(this, ProfileActivity::class.java)
-        val chatIntent = Intent(this, ChatLogActivity::class.java)
         val intentHOME = Intent(this, HomeActivity::class.java)
-
         val addFriend = findViewById<View>(finals.project.R.id.addFriend)
-        val layout2 = findViewById<View>(finals.project.R.id.layout2)
         val removeButton = findViewById<View>(R.id.removeFriend)
         val layout = findViewById<View>(R.id.layout1)
+        val layout2 = findViewById<View>(finals.project.R.id.layout2)
+
+        //Firebase Information
         val uid = FirebaseAuth.getInstance().uid
         val mAuth = FirebaseAuth.getInstance()
         val currentUserId = mAuth.currentUser?.uid
         val database = FirebaseDatabase.getInstance()
-        val myRefEmail = database.getReference("users/")
+        val userRef = database.getReference("users/")
 
+        //View Initialization
         removeButton.visibility = View.GONE
         friendMessage.visibility = View.GONE
         layout.visibility = View.VISIBLE
         layout2.visibility = View.GONE
+
         fetchUsers()
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
-                myRefEmail.addValueEventListener(object : ValueEventListener {
+                userRef.addValueEventListener(object : ValueEventListener {
                     @SuppressLint("SetTextI18n")
                     override fun onDataChange(dataSnapshot: DataSnapshot) {
                         if (dataSnapshot.exists()) {
@@ -79,6 +79,8 @@ class HomeActivity : AppCompatActivity() {
                                 }
                                 layout2.visibility = View.VISIBLE
                                 layout.visibility = View.GONE
+
+                                profileTitle.text = "Profile Search"
 
                                 val email =
                                     dataSnapshot.child(query).child("Email").value.toString()
@@ -92,14 +94,6 @@ class HomeActivity : AppCompatActivity() {
                                 val collegeEmailSnap =
                                     dataSnapshot.child(query).child("College Email").value
                                         .toString()
-
-                                profileTitle.text = "Profile Search"
-
-                                if (dataSnapshot.child(query).child("Name").exists()) {
-                                    nameValue.text = name
-                                } else {
-                                    nameValue.text = email
-                                }
                                 if (dataSnapshot.child(query).child("Bio").exists()) {
                                     bioValue.text = bioSnap
                                 } else {
@@ -119,6 +113,8 @@ class HomeActivity : AppCompatActivity() {
                                 } else {
                                     emailValue.text = "Contact: $email"
                                 }
+                                nameValue.text = name
+
                                 val ref = FirebaseDatabase.getInstance().getReference("users").child(uid.toString()).child("Friends")
                                 ref.addListenerForSingleValueEvent(object: ValueEventListener {
                                     override fun onDataChange(snapshot: DataSnapshot) {
@@ -130,8 +126,8 @@ class HomeActivity : AppCompatActivity() {
                                         }
                                         }
                                             addFriend.setOnClickListener {
-                                                myRefEmail.child(query).child("Friends").child(uid.toString()).child("UID").setValue(uid.toString())
-                                                myRefEmail.child(uid.toString()).child("Friends").child(query).child("UID").setValue(query)
+                                                userRef.child(query).child("Friends").child(uid.toString()).child("UID").setValue(uid.toString())
+                                                userRef.child(uid.toString()).child("Friends").child(query).child("UID").setValue(query)
                                                 Toast.makeText(
                                                     applicationContext,
                                                     "Friend Request Sent!",
@@ -139,8 +135,8 @@ class HomeActivity : AppCompatActivity() {
                                                 ).show()
                                             }
                                         removeButton.setOnClickListener {
-                                            myRefEmail.child(query).child("Friends").child(uid.toString()).removeValue()
-                                            myRefEmail.child(uid.toString()).child("Friends").child(query).removeValue()
+                                            userRef.child(query).child("Friends").child(uid.toString()).removeValue()
+                                            userRef.child(uid.toString()).child("Friends").child(query).removeValue()
                                             Toast.makeText(
                                                 applicationContext,
                                                 "Friend Removed!",
@@ -153,11 +149,6 @@ class HomeActivity : AppCompatActivity() {
                                     override fun onCancelled(error: DatabaseError) {
                                     }
                                 })
-                                messageButton.setOnClickListener {
-                                    chatIntent.putExtra(NewMessageActivity.USER_KEY, query)
-                                    startActivity(chatIntent)
-                                    finish()
-                                }
                             } else {
                                 layout.visibility = View.GONE
                                 Toast.makeText(
@@ -194,7 +185,7 @@ class HomeActivity : AppCompatActivity() {
         refFriend.addListenerForSingleValueEvent(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val friendMessage = findViewById<View>(R.id.NoFriends) as TextView
-                snapshot.children.forEach {
+                snapshot.children.forEach { _ ->
                     if (snapshot.child("Friends").exists()) {
                         val adapter = GroupAdapter<GroupieViewHolder>()
                         val recyclerViewFriends =
@@ -204,8 +195,8 @@ class HomeActivity : AppCompatActivity() {
                             val ref = FirebaseDatabase.getInstance().getReference("users")
                             ref.addListenerForSingleValueEvent(object: ValueEventListener {
                                 override fun onDataChange(snapshot: DataSnapshot) {
-                                    snapshot.children.forEach {
-                                        val user = it.getValue(User::class.java)
+                                    snapshot.children.forEach { friendRef ->
+                                        val user = friendRef.getValue(User::class.java)
                                         if (user?.uid == userName) {
                                             friendMessage.visibility = View.GONE
                                             adapter.add(Friends(user))

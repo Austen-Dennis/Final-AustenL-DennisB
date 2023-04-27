@@ -49,7 +49,6 @@ id layout1
 id layout2
 id loading
 id login
-id messageFriend
 id nameValue
 id navigation
 id newName
