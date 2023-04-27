@@ -38,17 +38,17 @@
         android:background="@drawable/rounded_box4"
         android:text="@string/home_button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/sms"
+        app:layout_constraintEnd_toStartOf="@+id/new_message"
         app:layout_constraintLeft_toRightOf="@id/profile"
         app:layout_constraintStart_toEndOf="@+id/profile"
         tools:ignore="TextContrastCheck" />
 
     <Button
-        android:id="@+id/sms"
+        android:id="@+id/new_message"
         android:layout_width="137dp"
         android:layout_height="55dp"
         android:background="@drawable/rounded_box2"
-        android:text="@string/SMS_button"
+        android:text="@string/new_message"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         tools:ignore="TextContrastCheck" />
