@@ -1,6 +1,5 @@
 package finals.project.smsPage
 
-import android.annotation.SuppressLint
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.DatabaseError
@@ -17,7 +16,6 @@ import finals.project.R
 import finals.project.HomeActivity
 
 class NewMessageActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_message)

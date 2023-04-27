@@ -9,8 +9,6 @@ import com.google.firebase.database.DataSnapshot
 import androidx.appcompat.app.AppCompatActivity
 import finals.project.ui.login.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
-import androidx.appcompat.widget.Toolbar
-import android.annotation.SuppressLint
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -21,9 +19,8 @@ import android.util.Log
 import android.net.Uri
 import finals.project.HomeActivity
 
-@Suppress("DEPRECATION", "NAME_SHADOWING")
+@Suppress("DEPRECATION", "SetTextI18n")
 class ProfileActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(finals.project.R.layout.activity_profile)
@@ -38,7 +35,6 @@ class ProfileActivity : AppCompatActivity() {
         val intentSms = Intent(this, LatestMessagesActivity::class.java)
         val bioValue = findViewById<View>(finals.project.R.id.bioValue) as TextView
         val gitValue = findViewById<View>(finals.project.R.id.gitValue) as TextView
-        val toolbar = findViewById<View>(io.getstream.chat.android.ui.R.id.toolbar)
         val nameText = findViewById<View>(finals.project.R.id.newName) as EditText
         val emailText = findViewById<View>(finals.project.R.id.email) as TextView
         val showInfoButton = findViewById<View>(finals.project.R.id.displayInfo)
@@ -58,10 +54,8 @@ class ProfileActivity : AppCompatActivity() {
         val projectInfoIntent = Intent(Intent.ACTION_VIEW)
         val releaseIntent = Intent(Intent.ACTION_VIEW)
         val uid = FirebaseAuth.getInstance().uid
-        setSupportActionBar(toolbar as Toolbar?)
 
         myRef.addValueEventListener(object : ValueEventListener {
-            @SuppressLint("SetTextI18n")
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.exists()) {
                     val collegeEmailSnap =
@@ -200,10 +194,10 @@ class ProfileActivity : AppCompatActivity() {
                         copyIDButton.visibility = View.GONE
                     }
                     emailSub.setOnClickListener {
-                        val collegeEmail = collegeEmail.text.toString()
-                        val validEmail = emailCheck(collegeEmail)
+                        val collegeEmailText = collegeEmail.text.toString()
+                        val validEmail = emailCheck(collegeEmailText)
                         if (validEmail == true) {
-                            DataActivity.collegeEmail(uid, collegeEmail)
+                            DataActivity.collegeEmail(uid, collegeEmailText)
                             Toast.makeText(
                                 applicationContext,
                                 "Email Added Successfully!",

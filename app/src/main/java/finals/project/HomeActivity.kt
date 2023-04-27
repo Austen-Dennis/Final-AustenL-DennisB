@@ -3,7 +3,6 @@ package finals.project
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import androidx.appcompat.widget.Toolbar
-import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Intent
 import android.view.View
@@ -19,7 +18,7 @@ import finals.project.data.Friends
 import finals.project.data.ProfileActivity
 import finals.project.smsPage.*
 
-@Suppress("NAME_SHADOWING", "MissingInflatedId", "SuspiciousIndentation")
+@Suppress("MissingInflatedId", "SuspiciousIndentation", "SetTextI18n")
 class HomeActivity : AppCompatActivity() {
     companion object {
         fun isReachable(): Any {
@@ -47,7 +46,7 @@ class HomeActivity : AppCompatActivity() {
         val intentPROFILE = Intent(this, ProfileActivity::class.java)
         val intentHOME = Intent(this, HomeActivity::class.java)
         val addFriend = findViewById<View>(finals.project.R.id.addFriend)
-        val removeButton = findViewById<View>(R.id.removeFriend)
+        val removeFriend = findViewById<View>(R.id.removeFriend)
         val layout = findViewById<View>(R.id.layout1)
         val layout2 = findViewById<View>(finals.project.R.id.layout2)
 
@@ -59,7 +58,7 @@ class HomeActivity : AppCompatActivity() {
         val userRef = database.getReference("users/")
 
         //View Initialization
-        removeButton.visibility = View.GONE
+        removeFriend.visibility = View.GONE
         friendMessage.visibility = View.GONE
         layout.visibility = View.VISIBLE
         layout2.visibility = View.GONE
@@ -69,7 +68,6 @@ class HomeActivity : AppCompatActivity() {
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
                 userRef.addValueEventListener(object : ValueEventListener {
-                    @SuppressLint("SetTextI18n")
                     override fun onDataChange(dataSnapshot: DataSnapshot) {
                         if (dataSnapshot.exists()) {
                             if (dataSnapshot.child(query).exists() && query != currentUserId) {
@@ -134,7 +132,7 @@ class HomeActivity : AppCompatActivity() {
                                                     Toast.LENGTH_LONG
                                                 ).show()
                                             }
-                                        removeButton.setOnClickListener {
+                                        removeFriend.setOnClickListener {
                                             userRef.child(query).child("Friends").child(uid.toString()).removeValue()
                                             userRef.child(uid.toString()).child("Friends").child(query).removeValue()
                                             Toast.makeText(
@@ -142,7 +140,7 @@ class HomeActivity : AppCompatActivity() {
                                                 "Friend Removed!",
                                                 Toast.LENGTH_LONG
                                             ).show()
-                                            removeButton.visibility = View.GONE
+                                            removeFriend.visibility = View.GONE
                                             addFriend.visibility = View.VISIBLE
                                         }
                                             }
