@@ -15,7 +15,6 @@ import com.google.firebase.database.*
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
 import finals.project.R
-import finals.project.activities.LatestMessagesActivity
 import finals.project.smsPage.userinfo.User
 
 @Suppress("MissingInflatedId", "SuspiciousIndentation", "SetTextI18n")
@@ -113,28 +112,35 @@ class HomeActivity : AppCompatActivity() {
                                 }
                                 nameValue.text = name
 
-                                val ref = FirebaseDatabase.getInstance().getReference("users").child(uid.toString()).child("Friends")
-                                ref.addListenerForSingleValueEvent(object: ValueEventListener {
+                                val ref = FirebaseDatabase.getInstance().getReference("users")
+                                    .child(uid.toString()).child("Friends")
+                                ref.addListenerForSingleValueEvent(object : ValueEventListener {
                                     override fun onDataChange(snapshot: DataSnapshot) {
                                         snapshot.children.forEach {
                                             if (query == it.child("UID").value) {
                                                 addFriend.visibility = View.GONE
-                                                val removeButton = findViewById<View>(R.id.removeFriend)
+                                                val removeButton =
+                                                    findViewById<View>(R.id.removeFriend)
                                                 removeButton.visibility = View.VISIBLE
-                                        }
-                                        }
-                                            addFriend.setOnClickListener {
-                                                userRef.child(query).child("Friends").child(uid.toString()).child("UID").setValue(uid.toString())
-                                                userRef.child(uid.toString()).child("Friends").child(query).child("UID").setValue(query)
-                                                Toast.makeText(
-                                                    applicationContext,
-                                                    "Friend Request Sent!",
-                                                    Toast.LENGTH_LONG
-                                                ).show()
                                             }
+                                        }
+                                        addFriend.setOnClickListener {
+                                            userRef.child(query).child("Friends")
+                                                .child(uid.toString()).child("UID")
+                                                .setValue(uid.toString())
+                                            userRef.child(uid.toString()).child("Friends")
+                                                .child(query).child("UID").setValue(query)
+                                            Toast.makeText(
+                                                applicationContext,
+                                                "Friend Request Sent!",
+                                                Toast.LENGTH_LONG
+                                            ).show()
+                                        }
                                         removeFriend.setOnClickListener {
-                                            userRef.child(query).child("Friends").child(uid.toString()).removeValue()
-                                            userRef.child(uid.toString()).child("Friends").child(query).removeValue()
+                                            userRef.child(query).child("Friends")
+                                                .child(uid.toString()).removeValue()
+                                            userRef.child(uid.toString()).child("Friends")
+                                                .child(query).removeValue()
                                             Toast.makeText(
                                                 applicationContext,
                                                 "Friend Removed!",
@@ -143,7 +149,8 @@ class HomeActivity : AppCompatActivity() {
                                             removeFriend.visibility = View.GONE
                                             addFriend.visibility = View.VISIBLE
                                         }
-                                            }
+                                    }
+
                                     override fun onCancelled(error: DatabaseError) {
                                     }
                                 })
@@ -157,6 +164,7 @@ class HomeActivity : AppCompatActivity() {
                             }
                         }
                     }
+
                     override fun onCancelled(error: DatabaseError) {
                         Log.w(ContentValues.TAG, "Failed to read value.", error.toException())
                     }
@@ -178,10 +186,14 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intentSMS)
         }
     }
+
     private fun fetchUsers() {
-        val refFriend = FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().currentUser?.uid.toString())
-        refFriend.addListenerForSingleValueEvent(object: ValueEventListener {
+        val refFriend = FirebaseDatabase.getInstance().getReference("users")
+            .child(FirebaseAuth.getInstance().currentUser?.uid!!)
+        refFriend.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
+                LatestMessagesActivity.currentUser = snapshot.getValue(User::class.java)
+                Log.d("LatestMessages", "Current user ${LatestMessagesActivity.currentUser?.Name}")
                 val friendMessage = findViewById<View>(R.id.NoFriends) as TextView
                 snapshot.children.forEach { _ ->
                     if (snapshot.child("Friends").exists()) {
@@ -191,7 +203,7 @@ class HomeActivity : AppCompatActivity() {
                         snapshot.child("Friends").children.forEach {
                             val userName = it.key
                             val ref = FirebaseDatabase.getInstance().getReference("users")
-                            ref.addListenerForSingleValueEvent(object: ValueEventListener {
+                            ref.addListenerForSingleValueEvent(object : ValueEventListener {
                                 override fun onDataChange(snapshot: DataSnapshot) {
                                     snapshot.children.forEach { friendRef ->
                                         val user = friendRef.getValue(User::class.java)
@@ -203,13 +215,15 @@ class HomeActivity : AppCompatActivity() {
                                     recyclerViewFriends.adapter = adapter
                                     recyclerViewFriends.addItemDecoration(DividerItemDecoration(this@HomeActivity, DividerItemDecoration.VERTICAL))
                                 }
-                                override fun onCancelled(snapshot: DatabaseError) {
+
+                                override fun onCancelled(error: DatabaseError) {
                                 }
                             })
                         }
                     }
                 }
             }
+
             override fun onCancelled(error: DatabaseError) {
             }
         })
