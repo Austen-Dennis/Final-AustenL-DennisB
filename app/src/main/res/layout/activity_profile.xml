@@ -369,12 +369,14 @@
     <Button
         android:id="@+id/home"
         android:layout_width="137dp"
-        android:background="@drawable/rounded_box4"
         android:layout_height="55dp"
-        android:text="@string/home_button"
         android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@drawable/rounded_box4"
+        android:text="@string/home_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sms"
         app:layout_constraintLeft_toRightOf="@id/profile"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toEndOf="@+id/profile" />
 
     <Button
         android:id="@+id/sms"

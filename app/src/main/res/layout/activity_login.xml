@@ -20,20 +20,23 @@
         android:layout_marginStart="119dp"
         android:layout_marginBottom="-500dp"
         android:buttonTint="@color/stream_gray_dark"
-        android:text="Not a robot?"
+        android:text="@string/not_a_robot"
         android:textColor="@color/stream_gray_dark"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="@id/imageView3" />
+        app:layout_constraintStart_toStartOf="@id/imageView3"
+        tools:ignore="VisualLintOverlap" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="379dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="-75dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/screenshot__9_" />
+        app:srcCompat="@drawable/screenshot__9_"
+        tools:ignore="ContentDescription,VisualLintBounds" />
 
     <EditText
         android:id="@+id/username"
@@ -50,7 +53,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="Autofill,MissingConstraints,VisualLintTextFieldSize" />
 
     <EditText
         android:id="@+id/password"
@@ -68,7 +71,8 @@
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        tools:ignore="Autofill,VisualLintTextFieldSize" />
 
     <Button
         android:id="@+id/login"

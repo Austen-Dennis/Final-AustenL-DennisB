@@ -26,7 +26,7 @@
         android:layout_width="52dp"
         android:layout_height="43dp"
         android:layout_marginStart="11dp"
-        android:layout_marginTop="14dp"
         app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints"
         tools:srcCompat="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>

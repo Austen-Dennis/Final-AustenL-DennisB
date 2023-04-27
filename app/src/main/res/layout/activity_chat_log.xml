@@ -22,12 +22,14 @@
         <Button
             android:id="@+id/back"
             android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="0dp"
+            android:layout_height="48dp"
             android:background="@drawable/rounded_box"
             android:text="@string/back_button"
             android:textAlignment="center"
-            tools:ignore="RtlCompat" />
+            android:textColor="#263238"
+            tools:ignore="RtlCompat"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="8dp" />
     </androidx.appcompat.widget.Toolbar>
 
     <EditText
