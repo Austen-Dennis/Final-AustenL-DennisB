@@ -24,8 +24,8 @@ Julian Rodriguez
 *In order to run app, add an android app under the configuration settings, and ensure that it runs under the main module, then the app should be ready to run!\
 *When closing application, make sure to sign out to avoid potential errors with account data storage.\
 *When creating an account, please use a Google email to ensure proper email address validation.\
-*For any questions or bugs, please reach out to gettogetherdomain@gmail.com!
+*For any questions or bugs, please reach out to gettogetherdomain@gmail.com!\
 
 # Suppressed Warning and Justification
 *SetTextI18n: This warning relates to the apps use of "$" when pulling data. Since some of our data is hardcoded, it made more sense to suppress this warning.\
-*DEPRECATION: This warning relates to our use of deprecated features in the process of accepting user input. While we did find other methods for accepting these values, the deprecated features were most efficient for what we were trying to accomplish.\
+*DEPRECATION: This warning relates to our use of deprecated features in the process of accepting user input. While we did find other methods for accepting these values, the deprecated features were most efficient for what we were trying to accomplish.
